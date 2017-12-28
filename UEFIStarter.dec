@@ -1,0 +1,9 @@
+[Defines]
+  DEC_SPECIFICATION              = 0x00010005
+  PACKAGE_NAME                   = UEFIStarter
+  PACKAGE_GUID                   = 871898a8-41d5-4fa5-a813-f6bea9f00000
+  PACKAGE_VERSION                = 0.01
+
+
+[Includes]
+  include

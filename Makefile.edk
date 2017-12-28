@@ -1,0 +1,55 @@
+BUILD_DIR = UEFIStarter/target
+PROJECT_NAME = UEFIStarter
+VERSIONFILE = .version
+OVMF_IMAGE = /usr/share/qemu/OVMF.fd
+
+CURRENT_USER = $(shell whoami)
+SRCFILES = $(shell find /mnt/ueficode/UEFIStarter/ -name '*.c' -or -name '*.h')
+STATICS = $(shell find /mnt/ueficode/UEFIStarter/static -type f ! -name '.*.swp')
+
+
+all: build $(BUILD_DIR)/uefi.img
+
+build:
+#	UEFIStarter/tools/generate_test_runner.sh
+	build
+
+free:
+	mount | grep "/mnt/uefi " && sudo umount /mnt/uefi/ || true
+	losetup | grep /dev/loop0 && sudo losetup -d /dev/loop0 || true
+
+clean:
+	find UEFIStarter/ -name '*.o' -or -name '*.so' -or -name '*.efi' | xargs -r rm
+	rm -f $(BUILD_DIR)/uefi.img $(BUILD_DIR)/uefi.iso
+
+$(BUILD_DIR)/uefi.img: $(SRCFILES) $(STATICS) FORCE
+	test -f $(BUILD_DIR)/uefi.img || dd if=/dev/zero of=$(BUILD_DIR)/uefi.img bs=512 count=93750
+	sgdisk -o -n 1:2048:93716 -t 1:ef00 $(BUILD_DIR)/uefi.img >/dev/null
+	sudo losetup --offset 1048576 --sizelimit 46934528 /dev/loop0 $(BUILD_DIR)/uefi.img
+	sudo mkdosfs -F 32 /dev/loop0 >/dev/null
+	sudo mount -o uid=$(CURRENT_USER) /dev/loop0 /mnt/uefi/
+
+	echo "$(PROJECT_NAME)" > /mnt/uefi/$(VERSIONFILE)
+	date +"%Y-%m-%d %H:%M:%S UTC%:::z (%Z)" >> /mnt/uefi/$(VERSIONFILE)
+
+	cp /usr/src/edk2/Build/UEFIStarter/DEBUG_GCC5/X64/*.efi /mnt/uefi/
+	cp -R UEFIStarter/static/* /mnt/uefi/
+
+#	mkdir -p /mnt/uefi/drivers
+#	cp /usr/src/edk2/Build/MdeModule/DEBUG_GCC5/X64/*Mouse*.efi /mnt/uefi/drivers/
+
+#	mkdir -p /mnt/uefi/tests
+#	mv /mnt/uefi/test*.efi /mnt/uefi/tests/
+
+#	UEFIStarter/tools/generate_runall_tests_script.sh UEFIStarter/tests/suites >> /mnt/uefi/tests/run.nsh
+
+	mkisofs -quiet -input-charset utf8 -o $(BUILD_DIR)/uefi.iso /mnt/uefi/
+	sudo umount /mnt/uefi/
+	sudo losetup -d /dev/loop0
+
+img: $(BUILD_DIR)/uefi.img
+
+FORCE:
+
+run: $(BUILD_DIR)/uefi.img
+	qemu-system-x86_64 -cpu qemu64 -bios $(OVMF_IMAGE) -nographic -drive file=$(BUILD_DIR)/uefi.img,format=raw,if=ide -net none -soundhw ac97 -no-reboot

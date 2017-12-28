@@ -1,0 +1,33 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = quit
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00007
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT = ShellCEntryLib
+
+[Sources]
+  quit.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiLib
+  ShellCEntryLib
+  UefiBootServicesTableLib
+  logger
+  console
+  cmdline
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+
