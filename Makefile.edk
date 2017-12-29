@@ -11,7 +11,7 @@ STATICS = $(shell find /mnt/ueficode/UEFIStarter/static -type f ! -name '.*.swp'
 all: build $(BUILD_DIR)/uefi.img
 
 build:
-#	UEFIStarter/tools/generate_test_runner.sh
+	UEFIStarter/tools/generate_test_runner.sh
 	build
 
 free:
@@ -38,10 +38,10 @@ $(BUILD_DIR)/uefi.img: $(SRCFILES) $(STATICS) FORCE
 #	mkdir -p /mnt/uefi/drivers
 #	cp /usr/src/edk2/Build/MdeModule/DEBUG_GCC5/X64/*Mouse*.efi /mnt/uefi/drivers/
 
-#	mkdir -p /mnt/uefi/tests
-#	mv /mnt/uefi/test*.efi /mnt/uefi/tests/
+	mkdir -p /mnt/uefi/tests
+	mv /mnt/uefi/test*.efi /mnt/uefi/tests/
 
-#	UEFIStarter/tools/generate_runall_tests_script.sh UEFIStarter/tests/suites >> /mnt/uefi/tests/run.nsh
+	UEFIStarter/tools/generate_runall_tests_script.sh UEFIStarter/tests/suites >> /mnt/uefi/tests/run.nsh
 
 	mkisofs -quiet -input-charset utf8 -o $(BUILD_DIR)/uefi.iso /mnt/uefi/
 	sudo umount /mnt/uefi/

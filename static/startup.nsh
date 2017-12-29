@@ -5,4 +5,5 @@ alias ll "ls"
 alias clear "cls"
 alias q "quit"
 
-echo "Startup finished."
+cd tests
+run.nsh

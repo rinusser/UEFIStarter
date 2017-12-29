@@ -54,4 +54,7 @@
   UEFIStarter/library/memory.inf
   UEFIStarter/library/console.inf
 
+  UEFIStarter/tests/suites/selftest/testself.inf
+  UEFIStarter/tests/suites/lib/testlib.inf
+
 !include StdLib/StdLib.inc
