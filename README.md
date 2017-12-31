@@ -37,6 +37,10 @@ I had I'm happy.
 * Linux (tested with Ubuntu 17.04) with sgdisk, mkisofs and mkdosfs installed (you'll need root access)
 * a working TianoCore EDK2017 development setup (earlier versions might be OK too) with GCC
 
+### Optional
+
+* Doxygen (if you want to generate the documentation), plus whatever you may need for your desired output format
+
 ### Recommendations
 
 You can reboot into the UEFI applications if you want (and have the spare machine or don't mind rebooting all the time),
@@ -83,7 +87,7 @@ You'll need to edit Conf/target.txt and set these values:
 Set the maximum thread number to the number of available CPU cores +1. I'm working in a VM with 6 cores, so I'm using 7
 threads. If you can spare the cores the build process will make good use of these.
 
-The Makefile needs a few changes (a lot of these issues will be improved in [EFI-5](https://github.com/rinusser/UEFIStarter/issues/5):
+The Makefile needs a few changes (a lot of these issues will be improved in [EFI-5](https://github.com/rinusser/UEFIStarter/issues/5)):
 
 * set OVMF\_IMAGE to a copy of the OVMF image
 * replace /mnt/ueficode/ with the path to your copy of this repository
@@ -145,7 +149,10 @@ The root directory contains all built applications.
 
 ### Development
 
-The developer's documentation is coming soonish ([EFI-4](https://github.com/rinusser/UEFIStarter/issues/4)).
+There is a semi-automatically generated documentation hosted on [GitHub](https://rinusser.github.io/UEFIStarter/).
+The functions, data types etc. are described on the [Modules](https://rinusser.github.io/UEFIStarter/modules.html) page.
+
+The documentation is still a work in progress.
 
 
 # Tests

@@ -1,11 +1,11 @@
-/**
+/** \file
  * This is the basis for all test suites.
  * This handles the test execution, the test suite is just responsible for producing results.
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
- * \link https://github.com/rinusser/UEFIStarter
+ * \sa https://github.com/rinusser/UEFIStarter
  */
 #include <Uefi.h>
 #include <Library/UefiLib.h>

@@ -1,26 +1,34 @@
-/**
+/** \file
  * Memory tracker, will find memory leaks
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
- * \link https://github.com/rinusser/UEFIStarter
+ * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_lib_memory
  */
+
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
 #include <Library/MemoryAllocationLib.h>
 #include "../include/memory.h"
 #include "../include/logger.h"
 
+/** the number of pages required for each allocation list node */
 #define MEMORY_PAGE_LIST_PAGE_COUNT ((sizeof(memory_page_list_t)-1)/4096+1)
 
 void *allocate_pages_ex(UINTN,BOOLEAN);
 
+/** internal pointer to first memory page allocation list node */
 static memory_page_list_t *_memory_page_list;
 
+/** internal pointer to first pool memory allocation list node */
 static pool_memory_list_t _pool_memory_list;
 
 
+/**
+ * Debugging function: prints a human-readable list of tracked memory pages.
+ */
 void print_memory_page_list()
 {
   unsigned int tc;
@@ -41,11 +49,24 @@ void print_memory_page_list()
   }
 }
 
+/**
+ * Resets the internal memory tracking.
+ *
+ * This will forget all currently tracked memory, resulting in untracked memory leaks if you're not freeing those pages
+ * later.
+ */
 void reset_memory_tracking()
 {
   _memory_page_list=NULL;
 }
 
+/**
+ * internal: finds next memory page allocation list entry
+ *
+ * \param page_list the page list node to look in
+ * \param index     the index variable to write any matches to
+ * \return whether the lookup succeeded
+ */
 static BOOLEAN _get_next_free_entry(memory_page_list_t **page_list, UINTN *index)
 {
   unsigned int tc;
@@ -70,7 +91,7 @@ static BOOLEAN _get_next_free_entry(memory_page_list_t **page_list, UINTN *index
     }
   }
   
-  //TODO: if there's a next page_list, check that. if not, allocate new page_list and link to it
+  /** \TODO if there's a next page_list, check that. if not, allocate new page_list and link to it */
   if(_memory_page_list->entry_count+1>=MEMORY_PAGE_LIST_MAX_ENTRY_COUNT)
     return FALSE;
 
@@ -79,6 +100,12 @@ static BOOLEAN _get_next_free_entry(memory_page_list_t **page_list, UINTN *index
   return TRUE;
 }
 
+/**
+ * internal: finds a page list entry with the given start address
+ *
+ * \param address the first page's address to look for
+ * \return a pointer to the list entry, or NULL if address isn't tracked
+ */
 static memory_page_list_entry_t *_find_page_list_entry(void *address)
 {
   unsigned int tc;
@@ -90,6 +117,14 @@ static memory_page_list_entry_t *_find_page_list_entry(void *address)
   return NULL;
 }
 
+/**
+ * internal: allocates memory pages.
+ * This function isn't static - if you declare it with "extern" in a header you can access it directly.
+ *
+ * \param pages the amount of pages to allocate
+ * \param track whether to track the pages
+ * \return the first page's address, or NULL on error
+ */
 void *allocate_pages_ex(UINTN pages, BOOLEAN track)
 {
   EFI_STATUS result;
@@ -123,11 +158,26 @@ void *allocate_pages_ex(UINTN pages, BOOLEAN track)
   return (void *)address;
 }
 
+/**
+ * Allocate tracked memory pages
+ *
+ * \param pages the number of pages to allocate
+ * \return the first page's address, or NULL on error
+ */
 void *allocate_pages(UINTN pages)
 {
   return allocate_pages_ex(pages,TRUE);
 }
 
+/**
+ * internal: frees memory pages.
+ * This function isn't static - if you declare it with "extern" in a header you can access it directly.
+ *
+ * \param address the first page's address
+ * \param pages   the number of pages allocated
+ * \param track   whether the pages were tracked
+ * \return whether the pages were freed successfully
+ */
 BOOLEAN free_pages_ex(void *address, UINTN pages, BOOLEAN track)
 {
   EFI_STATUS result;
@@ -164,12 +214,29 @@ BOOLEAN free_pages_ex(void *address, UINTN pages, BOOLEAN track)
   return TRUE;
 }
 
+/**
+ * Frees tracked memory pages.
+ *
+ * \param address the first page's address
+ * \param pages   the number of pages allocated
+ * \return whether the pages were freed successfully
+ */
 BOOLEAN free_pages(void *address, UINTN pages)
 {
   return free_pages_ex(address,pages,TRUE);
 }
 
 
+/**
+ * Starts tracking a pool memory address.
+ *
+ * Once pool memory is tracked the next call to free_pool_memory_entries() will free all currently tracked pool memory
+ * entries. Consider this function call to mean "I don't need this piece of memory anymore, free it whenever".
+ *
+ * \param address the start of the pool memory
+ *
+ * \TODO implement linked list for pool memory tracking
+ */
 void track_pool_memory(void *address)
 {
   UINTN tc;
@@ -193,6 +260,9 @@ void track_pool_memory(void *address)
   _pool_memory_list.entry_count++;
 }
 
+/**
+ * Debugging function: prints a human-readable list of tracked pool memory entries.
+ */
 void print_pool_memory_list()
 {
   UINTN tc;
@@ -201,6 +271,11 @@ void print_pool_memory_list()
     Print(L"  entry %d: %016lX\n",tc,_pool_memory_list.entries[tc]);
 }
 
+/**
+ * Frees all currently tracked pool memory entries.
+ *
+ * \return the number of entries freed.
+ */
 UINTN free_pool_memory_entries()
 {
   UINTN rv=0;
@@ -222,18 +297,27 @@ UINTN free_pool_memory_entries()
 }
 
 
+/**
+ * Initialize the memory tracker.
+ */
 void init_tracking_memory()
 {
   _memory_page_list=NULL;
   _pool_memory_list.entry_count=0;
 }
 
+/**
+ * Stops tracking all memory.
+ * This will log errors if there are unfreed memory pages.
+ *
+ * \return the number of errors, 0 if there were no tracked memory pages remaining
+ */
 UINTN stop_tracking_memory()
 {
   unsigned int tc;
   UINTN errors=0;
 
-  free_pool_memory_entries(); //XXX this was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below
+  free_pool_memory_entries(); /** \XXX the free_pool_memory_entries() call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below */
 
   if(_memory_page_list==NULL)
     return 0;

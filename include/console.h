@@ -1,11 +1,13 @@
-/**
+/** \file
  * CLI initialization and I/O helpers
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
- * \link https://github.com/rinusser/UEFIStarter
+ * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_lib_console
  */
+
 #ifndef __CONSOLE_H
 #define __CONSOLE_H
 

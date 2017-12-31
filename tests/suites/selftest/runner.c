@@ -1,11 +1,11 @@
-/**
+/** \file
  * Self-tests for test runner
  * This generates "incomplete" and "failure" results on purpose; the default test runner script will skip this test.
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
- * \link https://github.com/rinusser/UEFIStarter
+ * \sa https://github.com/rinusser/UEFIStarter
  */
 #include <Uefi.h>
 #include <Library/UefiLib.h>

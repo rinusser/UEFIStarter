@@ -1,12 +1,14 @@
-/**
+/** \file
  * This application will halt the UEFI environment.
  * QEMU will exit and return to the system shell, VirtualBox will halt the VM.
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
- * \link https://github.com/rinusser/UEFIStarter
+ * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_apps
  */
+
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/ShellCEntryLib.h>
@@ -14,7 +16,13 @@
 #include "../include/cmdline.h"
 #include "../include/console.h"
 
-
+/**
+ * Main function, gets invoked by UEFI shell.
+ *
+ * \param argc the number of command-line arguments passed
+ * \param argv the command-line arguments passed
+ * \return an EFI status code for the shell
+ */
 INTN EFIAPI ShellAppMain(UINTN argc, CHAR16 **argv)
 {
   EFI_STATUS rv;

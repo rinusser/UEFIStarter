@@ -1,11 +1,13 @@
-/**
+/** \file
  * String functions missing from EDK
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
- * \link https://github.com/rinusser/UEFIStarter
+ * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_lib_string
  */
+
 #ifndef __STRING_H
 #define __STRING_H
 

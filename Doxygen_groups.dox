@@ -1,0 +1,18 @@
+/**
+ * \defgroup group_apps Applications
+ * \brief Executable .efi applications
+ */
+
+/**
+ * \defgroup group_lib Library Functions
+ * \brief Commonly used functions
+ * \{
+ */
+
+/** \defgroup group_lib_cmdline Command-line Functions */
+/** \defgroup group_lib_console Console Functions */
+/** \defgroup group_lib_logger Logging Functions */
+/** \defgroup group_lib_memory Memory Tracking Functions */
+/** \defgroup group_lib_string String Functions */
+
+/** \} */

@@ -1,10 +1,10 @@
-/**
+/** \file
  * General assertions for tests
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
- * \link https://github.com/rinusser/UEFIStarter
+ * \sa https://github.com/rinusser/UEFIStarter
  */
 #include <Library/UefiLib.h>
 #include <Library/BaseMemoryLib.h>
