@@ -1,36 +1,26 @@
 [Defines]
   INF_VERSION = 1.25
-  BASE_NAME = testlib
-  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f0000f
+  BASE_NAME = timer
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f0000e
   MODULE_TYPE = UEFI_APPLICATION
   VERSION_STRING = 1.0
   ENTRY_POINT = ShellCEntryLib
 
 [Sources]
-  ../../framework/tests.c
-  ../../framework/asserts.c
-  ../../framework/output.c
-  generated/runner.c
-  cmdline.c
-  logger.c
-  memory.c
-  string.c
-  files.c
+  timer.c
 
 [Packages]
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec
-  StdLib/StdLib.dec
 
 [LibraryClasses]
   UefiLib
   ShellCEntryLib
-  LibMath
-  StdLib
+  logger
   console
   cmdline
+  timestamp
   string
-  files
 
 [Guids]
 

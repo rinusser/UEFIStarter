@@ -28,6 +28,7 @@
   MemoryAllocationLib|MdePkg/Library/UefiMemoryAllocationLib/UefiMemoryAllocationLib.inf
   DevicePathLib|MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
   UefiRuntimeServicesTableLib|MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.inf
+  IoLib|MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic.inf
 
   DebugLib|MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
 
@@ -43,16 +44,25 @@
   string|UEFIStarter/library/string.inf
   console|UEFIStarter/library/console.inf
   memory|UEFIStarter/library/memory.inf
+  timestamp|UEFIStarter/library/timestamp.inf
+  files|UEFIStarter/library/files.inf
 
 
 [Components]
   UEFIStarter/apps/quit.inf
+  UEFIStarter/apps/cpuid.inf
+  UEFIStarter/apps/helloworld.inf
+  UEFIStarter/apps/input.inf
+  UEFIStarter/apps/snow.inf
+  UEFIStarter/apps/timer.inf
 
   UEFIStarter/library/logger.inf
   UEFIStarter/library/cmdline.inf
   UEFIStarter/library/string.inf
   UEFIStarter/library/memory.inf
   UEFIStarter/library/console.inf
+  UEFIStarter/library/timestamp.inf
+  UEFIStarter/library/files.inf
 
   UEFIStarter/tests/suites/selftest/testself.inf
   UEFIStarter/tests/suites/lib/testlib.inf

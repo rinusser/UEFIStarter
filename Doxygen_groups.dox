@@ -14,5 +14,7 @@
 /** \defgroup group_lib_logger Logging Functions */
 /** \defgroup group_lib_memory Memory Tracking Functions */
 /** \defgroup group_lib_string String Functions */
+/** \defgroup group_lib_files File I/O Functions */
+/** \defgroup group_lib_timestamp Timer Functions */
 
 /** \} */

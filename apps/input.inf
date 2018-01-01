@@ -1,32 +1,25 @@
 [Defines]
   INF_VERSION = 1.25
-  BASE_NAME = testself
-  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00010
+  BASE_NAME = input
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f0000c
   MODULE_TYPE = UEFI_APPLICATION
   VERSION_STRING = 1.0
   ENTRY_POINT = ShellCEntryLib
 
 [Sources]
-  ../../framework/tests.c
-  ../../framework/asserts.c
-  ../../framework/output.c
-  generated/runner.c
-  asserts.c
-  runner.c
+  input.c
 
 [Packages]
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec
-  StdLib/StdLib.dec
 
 [LibraryClasses]
   UefiLib
   ShellCEntryLib
-  LibMath
-  StdLib
-  console
+  UefiBootServicesTableLib
+  logger
   cmdline
-  string
+  console
 
 [Guids]
 
