@@ -5,7 +5,9 @@
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_tests_runner
  */
+
 #ifndef __TEST_OUTPUT_H
 #define __TEST_OUTPUT_H
 

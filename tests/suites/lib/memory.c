@@ -1,11 +1,13 @@
 /** \file
- * Memory tracker tests
+ * Tests for the memory allocation tracker
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_lib_memory
  */
+
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/MemoryAllocationLib.h>
@@ -14,6 +16,13 @@
 #include "../../framework/tests.h"
 
 
+/**
+ * Makes sure memory page tracking works.
+ *
+ * \test stopping the memory tracker with unfreed tracked pages results in a logged error
+ * \test freeing tracked pages twice shouldn't work and result in a logged error
+ * \test stopping the memory tracker with unfreed untracked pages should not log an error
+ */
 void test_page_tracking()
 {
   void *ptr;
@@ -50,6 +59,11 @@ void test_page_tracking()
   free_pages_ex(ptr,1,FALSE);
 }
 
+/**
+ * Makes sure pool memory tracking works.
+ *
+ * \test free_pool_memory_entries() should return the number of freed pool memory entries
+ */
 void test_pool_tracking()
 {
   UINTN result;
@@ -65,6 +79,12 @@ void test_pool_tracking()
 }
 
 
+/**
+ * Test runner for this group.
+ * Gets called via the generated test runner.
+ *
+ * \return whether the test group was executed
+ */
 BOOLEAN run_memory_tests()
 {
   INIT_TESTGROUP(L"memory");

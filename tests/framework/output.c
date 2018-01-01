@@ -5,7 +5,9 @@
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_tests_runner
  */
+
 #include "output.h"
 #include "tests.h"
 
@@ -21,6 +23,11 @@
 extern test_verbosity_t test_verbosity;
 
 
+/**
+ * Internal: prints either a suitable whitespace prefix if multiline output is enabled, or the given string if not.
+ *
+ * \param or the alternative string to print if multiline output is disabled, may be NULL
+ */
 static void _print_optional_multiline_test_prefix_or(CHAR16 *or)
 {
   if(test_verbosity.multiple_lines_per_test)
@@ -30,6 +37,11 @@ static void _print_optional_multiline_test_prefix_or(CHAR16 *or)
 }
 
 
+/**
+ * Prints the start of a test group.
+ *
+ * \param name the test group's name
+ */
 void print_test_group_start(CHAR16 *name)
 {
   TRACE_STARTTYPE(L"grp start");
@@ -40,6 +52,9 @@ void print_test_group_start(CHAR16 *name)
   TRACE_ENDTYPE(L"grp start");
 }
 
+/**
+ * Prints the end of a test group.
+ */
 void print_test_group_end()
 {
   TRACE_STARTTYPE(L"grp end");
@@ -48,6 +63,12 @@ void print_test_group_end()
   TRACE_ENDTYPE(L"grp end");
 }
 
+/**
+ * Prints assertion counts, if enabled.
+ *
+ * \param fails   the number of failed assertions
+ * \param asserts the total number of assertions
+ */
 void print_assert_counts(INT64 fails, INT64 asserts)
 {
   TRACE_STARTTYPE(L"assert cnt");
@@ -63,6 +84,11 @@ void print_assert_counts(INT64 fails, INT64 asserts)
   TRACE_ENDTYPE(L"assert cnt");
 }
 
+/**
+ * Internal: prints a test result status.
+ *
+ * \param outcome the result to print
+ */
 static void _print_outcome(test_outcome outcome)
 {
   if(outcome==SUCCESS)
@@ -73,6 +99,11 @@ static void _print_outcome(test_outcome outcome)
     color_print(EFI_LIGHTRED,L"ERROR");
 }
 
+/**
+ * Internal: prints a test result status, as 1 character.
+ *
+ * \param outcome the result to print
+ */
 static void _print_1char_outcome(test_outcome outcome)
 {
   if(outcome==SUCCESS)
@@ -83,6 +114,11 @@ static void _print_1char_outcome(test_outcome outcome)
     Print(L"E");
 }
 
+/**
+ * Prints a test group's results.
+ *
+ * \param results the results to print
+ */
 void print_group_result(test_results_t *results)
 {
   TRACE_STARTTYPE(L"grp result");
@@ -94,6 +130,11 @@ void print_group_result(test_results_t *results)
   TRACE_ENDTYPE(L"grp result");
 }
 
+/**
+ * Prints an individual test's results.
+ *
+ * \param results the results to print
+ */
 void print_individual_result(test_results_t *results)
 {
   TRACE_STARTTYPE(L"indiv result");
@@ -108,6 +149,11 @@ void print_individual_result(test_results_t *results)
   TRACE_ENDTYPE(L"indiv result");
 }
 
+/**
+ * Prints test result summary, if enabled.
+ *
+ * \param results the results to summarize
+ */
 void print_test_result_summary(test_results_t *results)
 {
   TRACE_STARTTYPE(L"res summary");
@@ -126,6 +172,11 @@ void print_test_result_summary(test_results_t *results)
   TRACE_ENDTYPE(L"res summary");
 }
 
+/**
+ * Prints the start of an indivual test, if enabled.
+ *
+ * \param description the test's description to print
+ */
 void print_individual_test_start(CHAR16 *description)
 {
   TRACE_STARTTYPE(L"indiv start");
@@ -136,6 +187,13 @@ void print_individual_test_start(CHAR16 *description)
   TRACE_ENDTYPE(L"indiv start");
 }
 
+/**
+ * Prints an assertion's result.
+ *
+ * \param success     whether the assertion passed
+ * \param description the assertion's description to print, if enabled
+ * \param message     the assertion's error message to print, if enabled
+ */
 void print_assertion(BOOLEAN success, CHAR16 *description, CHAR16 *message)
 {
   TRACE_STARTTYPE(L"assert");
@@ -163,6 +221,9 @@ void print_assertion(BOOLEAN success, CHAR16 *description, CHAR16 *message)
 }
 
 
+/**
+ * Internal: prints verbosity settings.
+ */
 void debug_print_verbosity()
 {
   ErrorPrint(L"individual groups=%d tests=%d asserts=%d, 1c/t=%d, assertion_cnt=%d, multiline/t=%d, stats=%d\n",
@@ -175,6 +236,9 @@ void debug_print_verbosity()
              test_verbosity.summary_statistics);
 }
 
+/**
+ * Internal: prints raw test results.
+ */
 void debug_print_results(test_results_t *results)
 {
   ErrorPrint(L"assert_count=%d, assert_fails=%d, successful_test_count=%d, failed_test_count=%d, incomplete_count=%d, skipped_count=%d, outcome=",

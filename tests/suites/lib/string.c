@@ -1,11 +1,13 @@
 /** \file
- * String functions tests
+ * Tests for string functions.
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_lib_string
  */
+
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include "../../../include/string.h"
@@ -15,12 +17,14 @@
 #include "../../framework/tests.h"
 
 
+/** data structure for wctype_* function test cases */
 typedef struct
 {
-	BOOLEAN expected;
-	CHAR16 *input;
+  BOOLEAN expected;  /**< the expected result */
+  CHAR16 *input;     /**< the input string to test */
 } wctype_testcase_t;
 
+/** common testcases for test_wctype_int() and test_wctype_float() */
 wctype_testcase_t wctype_floatint_testcases[]={
   {FALSE,NULL},
   {FALSE,L""},
@@ -35,10 +39,12 @@ wctype_testcase_t wctype_floatint_testcases[]={
   {FALSE,L"abcd12"}
 };
 
+/** testcases specific to test_wctype_int() */
 wctype_testcase_t wctype_int_testcases[]={
   {FALSE,L"1.0"},
 };
 
+/** testcases specific to test_wctype_float() */
 wctype_testcase_t wctype_float_testcases[]={
   {TRUE, L"1.1"},
   {TRUE, L"-1.1"},
@@ -48,6 +54,13 @@ wctype_testcase_t wctype_float_testcases[]={
   {FALSE,L"1."}
 };
 
+/**
+ * Runs given test cases against given wctype_* function.
+ *
+ * \param count the number of test cases
+ * \param cases the test cases
+ * \param func  the function to test inputs against
+ */
 void _run_wctype_testcases(UINTN count, wctype_testcase_t *cases, BOOLEAN (*func)(CHAR16 *))
 {
   UINTN tc;
@@ -55,14 +68,35 @@ void _run_wctype_testcases(UINTN count, wctype_testcase_t *cases, BOOLEAN (*func
     assert_intn_equals(cases[tc].expected,func(cases[tc].input),L"wctype");
 }
 
+/**
+ * helper macro to run wctype_* test cases
+ *
+ * \param FUNC  the function to test inputs against
+ * \param CASES the test cases to run
+ */
 #define RUN_WCTYPE_TESTCASES(FUNC,CASES) _run_wctype_testcases(sizeof(CASES)/sizeof(wctype_testcase_t),CASES,FUNC);
 
+/**
+ * Makes sure wctype_int() works.
+ *
+ * \test wctype_int() should fail NULL, empty strings and non-numeric strings
+ * \test wctype_int() should pass positive and negative integers
+ * \test wctype_int() should fail decimal numbers
+ */
 void test_wctype_int()
 {
   RUN_WCTYPE_TESTCASES(wctype_int,wctype_floatint_testcases);
   RUN_WCTYPE_TESTCASES(wctype_int,wctype_int_testcases);
 }
 
+/**
+ * Makes sure wctype_float() works.
+ *
+ * \test wctype_float() should fail NULL, empty strings and non-numeric strings
+ * \test wctype_float() should pass positive and negative integers
+ * \test wctype_float() should pass positive and negative decimal numbers
+ * \test wctype_float() should fail invalid number-like strings similar to decimals
+ */
 void test_wctype_float()
 {
   RUN_WCTYPE_TESTCASES(wctype_float,wctype_floatint_testcases);
@@ -70,12 +104,14 @@ void test_wctype_float()
 }
 
 
+/** data type for test_ftowcs() test cases */
 typedef struct
 {
-  CHAR16 *expectation;
-  double input;
+  CHAR16 *expectation;  /**< the expected resulting string */
+  double input;         /**< the input number to convert */
 } ftowcs_testcase_t;
 
+/** test cases for test_ftowcs() */
 ftowcs_testcase_t ftowcs_testcases[]=
 {
   {L"-1000000000.00",-1000000000.00},
@@ -103,6 +139,12 @@ ftowcs_testcase_t ftowcs_testcases[]=
   {L"1000000000.00",1000000000.00},
 };
 
+/**
+ * Makes sure ftowcs() works.
+ *
+ * \test ftowcs() rounds positive and negative values to 2 decimals with "half away from zero"
+ * \test ftowcs() always zero-pads to 2 decimals
+ */
 void test_ftowcs()
 {
   UINTN tc;
@@ -113,6 +155,11 @@ void test_ftowcs()
     assert_wcstr_equals(cases[tc].expectation,ftowcs(cases[tc].input),L"wcstr");
 }
 
+/**
+ * Makes sure ftowcs() errors out if input exceeds value boundaries.
+ *
+ * \test ftowcs() logs an error when trying to convert very low or very high numbers
+ */
 void test_ftowcs_boundaries()
 {
   LOGLEVEL previous_log_level;
@@ -133,11 +180,13 @@ void test_ftowcs_boundaries()
 }
 
 
+/** data structure for test_wcstof() test cases */
 typedef struct {
-  double expectation;
-  CHAR16 *input;
+  double expectation;  /**< the expected result */
+  CHAR16 *input;       /**< the input string to convert */
 } wcstof_testcase_t;
 
+/** test cases for test_wcstof() */
 wcstof_testcase_t wcstof_testcases[]=
 {
   {1.2,L"1.2"},
@@ -148,8 +197,14 @@ wcstof_testcase_t wcstof_testcases[]=
   {123456789.0123,L"123456789.0123"}
 };
 
+/** margin of error for wcstof() tests */
 #define WCSTOF_EPSILON 0.0000001
 
+/**
+ * Makes sure wcstof() works.
+ *
+ * \test wcstof() parses a numeric string into a double value
+ */
 void test_wcstof()
 {
   UINTN tc;
@@ -161,12 +216,14 @@ void test_wcstof()
 }
 
 
+/** data type for test_atoui64() test cases */
 typedef struct
 {
-  UINT64 expectation;
-  char *input;
+  UINT64 expectation;  /**< the expected conversion result */
+  char *input;         /**< the input string to convert */
 } atoui64_testcase_t;
 
+/** test cases for test_atoui64() */
 atoui64_testcase_t atoui64_testcases[]=
 {
   {0,"0"},
@@ -181,6 +238,11 @@ atoui64_testcase_t atoui64_testcases[]=
   {18446744073709551615u,"18446744073709551615"}, //2^64-1
 };
 
+/**
+ * Makes sure atoui64() works.
+ *
+ * \test atoui64() parses integer strings from 0 to 2^64-1
+ */
 void test_atoui64()
 {
   UINTN tc;
@@ -192,19 +254,28 @@ void test_atoui64()
 }
 
 
+/** data type for test_sprint_status() test cases */
 typedef struct
 {
-  EFI_STATUS code;
-  CHAR16 *function_name;
-  CHAR16 *expected_message;
+  EFI_STATUS code;           /**< the EFI status code to format */
+  CHAR16 *function_name;     /**< the function name to format */
+  CHAR16 *expected_message;  /**< the expected resulting message */
 } sprint_status_testcase_t;
 
+/** test cases for test_sprint_status() */
 sprint_status_testcase_t sprint_status_testcases[]=
 {
   {EFI_UNSUPPORTED,      L"case1",L"case1() returned status 3 (Unsupported)"},
   {EFI_INVALID_PARAMETER,L"case2",L"case2() returned status 2 (Invalid Parameter)"},
 };
 
+/**
+ * Makes sure sprint_status() works.
+ *
+ * \test sprint_status() includes the given function's name in the result
+ * \test sprint_status() includes the raw EFI_STATUS code in the result
+ * \test sprint_status() converts EFI_STATUS codes to readable messages in the result
+ */
 void test_sprint_status()
 {
   UINTN tc;
@@ -216,6 +287,11 @@ void test_sprint_status()
 }
 
 
+/**
+ * Makes sure memsprintf() tracks the pool memory it reserves.
+ *
+ * \test each call to memsprintf() should add exactly 1 tracked pool memory entry, regardless of how many arguments were passed.
+ */
 void test_memsprintf()
 {
   free_pool_memory_entries();
@@ -230,6 +306,14 @@ void test_memsprintf()
 }
 
 
+/**
+ * Makes sure split_string() works.
+ *
+ * \test split_string() returns 0 entries and writes NULL when requested to split a NULL string
+ * \test split_string() splits a string by the given delimiter into the correct parts
+ * \test split_string() includes empty string parts between delimiters
+ * \test split_string() returns 1 entry and outputs the input string as array when requested to split an empty string
+ */
 void test_split_string()
 {
   CHAR16 **list;
@@ -261,6 +345,12 @@ void test_split_string()
 }
 
 
+/**
+ * Test runner for this group.
+ * Gets called via the generated test runner.
+ *
+ * \return whether the test group was executed
+ */
 BOOLEAN run_string_tests()
 {
   INIT_TESTGROUP(L"string");

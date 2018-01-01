@@ -62,7 +62,7 @@ LOOKUP_CACHE_SIZE      = 0
 # Build related configuration options
 #---------------------------------------------------------------------------
 
-#TODO: set to NO when tests are doc'd
+#TODO: set to NO if possible, see if there's a way to disable return requirement for helper macros
 EXTRACT_ALL            = YES
 
 EXTRACT_PRIVATE        = YES

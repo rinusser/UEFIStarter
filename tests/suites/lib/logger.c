@@ -1,21 +1,33 @@
 /** \file
- * Logger tests
+ * Tests for the logging facility.
  *
  * \author Richard Nusser
  * \copyright 2017 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
+ * \ingroup group_lib_logger
  */
+
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include "../../../include/logger.h"
 #include "../../framework/tests.h"
 
-//index is of type LOGLEVEL; "OFF" is 0, "TRACE" starts at 1, so we need to reserve the index 0 entry
+/**
+ * The number of entries in the log counter array.
+ * Index is of type LOGLEVEL: "OFF" is 0, "TRACE" starts at 1, so we need to reserve the index 0 entry.
+ */
 #define LOG_COUNT_ENTRIES 6
 
+/**
+ * Internal storage for the _counting_logger() function.
+ * Contains the number of entries issued per log level.
+ */
 static UINTN _log_counts[LOG_COUNT_ENTRIES];
 
+/**
+ * Reset's the log message counters to 0.
+ */
 static void _reset_log_counts()
 {
   UINTN tc;
@@ -23,9 +35,16 @@ static void _reset_log_counts()
     _log_counts[tc]=0;
 }
 
+/**
+ * A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entries were
+ * generated at which log level.
+ *
+ * \param level the entry's log level
+ * \param msg   the entry's log message
+ */
 static void _counting_logger(CHAR16 *level, CHAR16 *msg)
 {
-  //XXX there _has_ to be a better way to do this.. maybe add numeric level to print function?
+  /** \XXX there _has_ to be a better way to match log levels.. maybe add numeric level to print function? */
   if(StrCmp(level,L"ERROR")==0)
     _log_counts[ERROR]++;
   else if(StrCmp(level,L"WARN")==0)
@@ -40,6 +59,16 @@ static void _counting_logger(CHAR16 *level, CHAR16 *msg)
     ErrorPrint(L"unhandled level \"%s\"\n",level);
 }
 
+/**
+ * Assertion for log counters.
+ * Compares all counters to expected values.
+ *
+ * \param error the expected number of entries at level ERROR
+ * \param warn  the expected number of entries at level WARN
+ * \param info  the expected number of entries at level INFO
+ * \param debug the expected number of entries at level DEBUG
+ * \param trace the expected number of entries at level TRACE
+ */
 static void _assert_log_counts(UINTN error, UINTN warn, UINTN info, UINTN debug, UINTN trace)
 {
   assert_intn_equals(error,_log_counts[ERROR],L"error count");
@@ -49,6 +78,14 @@ static void _assert_log_counts(UINTN error, UINTN warn, UINTN info, UINTN debug,
   assert_intn_equals(trace,_log_counts[TRACE],L"trace count");
 }
 
+/**
+ * Makes sure the log level threshold works.
+ *
+ * \test a log event at the current log level should be printed
+ * \test a log event above the current log level should be printed
+ * \test a log event below the current log level should be ignored
+ * \test when the current log level is OFF all log events should be ignored
+ */
 void test_logger()
 {
   _reset_log_counts();
@@ -78,6 +115,12 @@ void test_logger()
 }
 
 
+/**
+ * Test runner for this group.
+ * Gets called via the generated test runner.
+ *
+ * \return whether the test group was executed
+ */
 BOOLEAN run_logger_tests()
 {
   INIT_TESTGROUP(L"logger");

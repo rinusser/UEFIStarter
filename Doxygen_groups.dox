@@ -9,12 +9,35 @@
  * \{
  */
 
-/** \defgroup group_lib_cmdline Command-line Functions */
-/** \defgroup group_lib_console Console Functions */
-/** \defgroup group_lib_logger Logging Functions */
-/** \defgroup group_lib_memory Memory Tracking Functions */
-/** \defgroup group_lib_string String Functions */
-/** \defgroup group_lib_files File I/O Functions */
-/** \defgroup group_lib_timestamp Timer Functions */
+  /** \defgroup group_lib_cmdline Command-line Functions */
+  /** \defgroup group_lib_console Console Functions */
+  /** \defgroup group_lib_logger Logging Functions */
+  /** \defgroup group_lib_memory Memory Tracking Functions */
+  /** \defgroup group_lib_string String Functions */
+  /** \defgroup group_lib_files File I/O Functions */
+  /** \defgroup group_lib_timestamp Timer Functions */
+
+/** \} */
+
+/**
+ * \defgroup group_tests Testing Framework
+ * \brief Generates executable .efi test suites
+ * \{
+ */
+
+  /**
+   * \defgroup group_tests_runner Test Runner
+   * \brief The basis for all tests
+   */
+
+  /**
+   * \defgroup group_tests_asserts Assertions
+   * \brief Assertions to use in tests
+   */
+
+  /**
+   * \defgroup group_tests_selftest Self Tests
+   * \brief A test suite to make sure the testing framework works as expected
+   */
 
 /** \} */
