@@ -3,6 +3,7 @@ var searchData=
   ['library_20functions',['Library Functions',['../group__group__lib.html',1,'']]],
   ['logging_20functions',['Logging Functions',['../group__group__lib__logger.html',1,'']]],
   ['level',['level',['../structlogger__args__mapping__t.html#ae441dba4578f018f44079ccc0128d3d5',1,'logger_args_mapping_t']]],
+  ['limit',['limit',['../structidt__reg__t.html#a6fbe3d7f9f468326f5b615fb8e43a121',1,'idt_reg_t']]],
   ['list',['list',['../structcmdline__argument__group__t.html#a1d19203ef9d733620bac4cb59c98c35d',1,'cmdline_argument_group_t']]],
   ['log',['LOG',['../logger_8h.html#aab15722f3fa88851610e6bafc90bd014',1,'LOG():&#160;logger.c'],['../library_2logger_8c.html#aab15722f3fa88851610e6bafc90bd014',1,'LOG():&#160;logger.c']]],
   ['log_5fcount_5fentries',['LOG_COUNT_ENTRIES',['../tests_2suites_2lib_2logger_8c.html#a9fca5b5cbb9666f431d1af4b02d3d2d8',1,'logger.c']]],

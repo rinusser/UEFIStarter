@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wcstof_5ftestcase_5ft',['wcstof_testcase_t',['../structwcstof__testcase__t.html',1,'']]],
-  ['wctype_5ftestcase_5ft',['wctype_testcase_t',['../structwctype__testcase__t.html',1,'']]]
+  ['test_5fresults_5ft',['test_results_t',['../structtest__results__t.html',1,'']]],
+  ['test_5fverbosity_5ft',['test_verbosity_t',['../structtest__verbosity__t.html',1,'']]]
 ];

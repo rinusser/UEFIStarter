@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['trace_5fendtype',['TRACE_ENDTYPE',['../output_8c.html#a3499481c1433fe9ebfc674e843c9117a',1,'output.c']]],
-  ['trace_5fhere',['TRACE_HERE',['../logger_8h.html#af334ae5173bb59feec3c8b6e653a3b60',1,'logger.h']]],
-  ['trace_5fstarttype',['TRACE_STARTTYPE',['../output_8c.html#aa13d6c1d3caec5d64ea79fbfa9619549',1,'output.c']]]
+  ['run_5ftest',['RUN_TEST',['../tests_8h.html#a323a441dbbbfc0b332560f2d2160294a',1,'tests.h']]],
+  ['run_5fwctype_5ftestcases',['RUN_WCTYPE_TESTCASES',['../tests_2suites_2lib_2string_8c.html#ad35565d2be0214fe3a8f8a45a7b9e482',1,'string.c']]],
+  ['rv_5fhelp',['RV_HELP',['../cmdline_8h.html#a4178f5b10bef1969e3a68f77fe0c00fa',1,'cmdline.h']]]
 ];

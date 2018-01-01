@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['mark_5ftest_5fincomplete',['mark_test_incomplete',['../tests_8h.html#a354bfb12e271f104e25ed7841d971ef9',1,'tests.h']]],
-  ['memory_5fpage_5flist_5fmax_5fentry_5fcount',['MEMORY_PAGE_LIST_MAX_ENTRY_COUNT',['../memory_8h.html#ae52d8739a63c59ac291c7422ec675d69',1,'memory.h']]],
-  ['memory_5fpage_5flist_5fpage_5fcount',['MEMORY_PAGE_LIST_PAGE_COUNT',['../library_2memory_8c.html#a231143ad5cbbdfc5dfde6f51f0f3c5a3',1,'memory.c']]]
+  ['log_5fcount_5fentries',['LOG_COUNT_ENTRIES',['../tests_2suites_2lib_2logger_8c.html#a9fca5b5cbb9666f431d1af4b02d3d2d8',1,'logger.c']]],
+  ['logger_5fforward_5ffunc',['LOGGER_FORWARD_FUNC',['../library_2logger_8c.html#a89e5384da05e1e7f9f6bf32bbcebd5aa',1,'logger.c']]]
 ];

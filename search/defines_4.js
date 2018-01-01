@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['log_5fcount_5fentries',['LOG_COUNT_ENTRIES',['../tests_2suites_2lib_2logger_8c.html#a9fca5b5cbb9666f431d1af4b02d3d2d8',1,'logger.c']]],
-  ['logger_5fforward_5ffunc',['LOGGER_FORWARD_FUNC',['../library_2logger_8c.html#a89e5384da05e1e7f9f6bf32bbcebd5aa',1,'logger.c']]]
+  ['init_5ftestgroup',['INIT_TESTGROUP',['../tests_8h.html#a32573f79e790cb332f9d84a578ce723c',1,'tests.h']]],
+  ['int_5frange_5fvalidator',['INT_RANGE_VALIDATOR',['../cmdline_8h.html#a5842bce61f2b94b34f1d8064c878a6d7',1,'cmdline.h']]]
 ];

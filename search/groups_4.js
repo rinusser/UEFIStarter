@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['string_20functions',['String Functions',['../group__group__lib__string.html',1,'']]]
+  ['memory_20tracking_20functions',['Memory Tracking Functions',['../group__group__lib__memory.html',1,'']]]
 ];

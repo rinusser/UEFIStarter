@@ -2,7 +2,25 @@ var searchData=
 [
   ['failed_5ftest_5fcount',['failed_test_count',['../structtest__results__t.html#afe2eeb6fd8185d3550500cfce755ecde',1,'test_results_t']]],
   ['failure',['FAILURE',['../types_8h.html#a7720296e6ec277feacb66733eb07c60faa5571864412c8275a2e18a931fddcaa6',1,'types.h']]],
+  ['file_5fcontents_5ft',['file_contents_t',['../structfile__contents__t.html',1,'']]],
+  ['files_2ec',['files.c',['../library_2files_8c.html',1,'(Global Namespace)'],['../tests_2suites_2lib_2files_8c.html',1,'(Global Namespace)']]],
+  ['files_2eh',['files.h',['../files_8h.html',1,'']]],
+  ['find_5fdevice',['find_device',['../input_8c.html#a960225c5465570e06a91c01f67dbb0eb',1,'input.c']]],
+  ['find_5ffile',['find_file',['../files_8h.html#a53cd7abad23979f4ea43ab657e0c6c19',1,'find_file(CHAR16 *pathname):&#160;files.c'],['../library_2files_8c.html#a53cd7abad23979f4ea43ab657e0c6c19',1,'find_file(CHAR16 *pathname):&#160;files.c']]],
+  ['find_5finput_5fex',['find_input_ex',['../input_8c.html#a908961912faaa3d7516915fb3bd7f3ba',1,'input.c']]],
+  ['find_5froot_5fvolume',['find_root_volume',['../files_8h.html#a397de77c411f84d876f6b71176f94d3d',1,'find_root_volume():&#160;files.c'],['../library_2files_8c.html#a397de77c411f84d876f6b71176f94d3d',1,'find_root_volume():&#160;files.c']]],
   ['finish_5ftestgroup',['FINISH_TESTGROUP',['../tests_8h.html#a23a4ffd47d668912adc33ccfeddc2f2f',1,'tests.h']]],
+  ['flake_5fcross_5fspeed_5fbase',['FLAKE_CROSS_SPEED_BASE',['../snow_8c.html#a7fa870a33d975637344ff22758321aaf',1,'snow.c']]],
+  ['flake_5fcross_5fspeed_5ffalloff_5fmult',['FLAKE_CROSS_SPEED_FALLOFF_MULT',['../snow_8c.html#a71b5a70197cb0a84d0886aaad5aa79a4',1,'snow.c']]],
+  ['flake_5fcross_5fstep',['FLAKE_CROSS_STEP',['../snow_8c.html#a5ac38d6c9c99d6ef40900554420173d7',1,'snow.c']]],
+  ['flake_5fdefault_5fcount',['FLAKE_DEFAULT_COUNT',['../snow_8c.html#ac26028456996d3d3bac2cc5b1c8e1e31',1,'snow.c']]],
+  ['flake_5fdefault_5fduration_5fseconds',['FLAKE_DEFAULT_DURATION_SECONDS',['../snow_8c.html#ae39dde1b5cff80cc38b09fb2f8659c75',1,'snow.c']]],
+  ['flake_5fdefault_5fground_5flifetime',['FLAKE_DEFAULT_GROUND_LIFETIME',['../snow_8c.html#a7550fa03eb3e833b6c4482b07e61fd73',1,'snow.c']]],
+  ['flake_5fdefault_5fupdate_5finterval_5fmilliseconds',['FLAKE_DEFAULT_UPDATE_INTERVAL_MILLISECONDS',['../snow_8c.html#aaabbd0d9a248cb2e230a8e59c5b79d58',1,'snow.c']]],
+  ['flake_5fmax_5fcross_5fspeed',['FLAKE_MAX_CROSS_SPEED',['../snow_8c.html#a94c2adb351c4adbd56d01d15b89db549',1,'snow.c']]],
+  ['flake_5fscreen_5fheight',['FLAKE_SCREEN_HEIGHT',['../snow_8c.html#acc8dd46835761c0e4c6ec0e50afde948',1,'snow.c']]],
+  ['flake_5fscreen_5fwidth',['FLAKE_SCREEN_WIDTH',['../snow_8c.html#a641bb45154ea042bc893b4dba2b3bbaa',1,'snow.c']]],
+  ['flake_5ft',['flake_t',['../structflake__t.html',1,'']]],
   ['free_5fargv',['free_argv',['../console_8h.html#a0403d8fdaac4eeab200551e15b4b95bc',1,'free_argv():&#160;console.c'],['../console_8c.html#a0403d8fdaac4eeab200551e15b4b95bc',1,'free_argv():&#160;console.c']]],
   ['free_5fpages',['free_pages',['../memory_8h.html#a0232c1810b1a055707e468a1e0e619ee',1,'free_pages(void *address, UINTN pages):&#160;memory.c'],['../library_2memory_8c.html#a0232c1810b1a055707e468a1e0e619ee',1,'free_pages(void *address, UINTN pages):&#160;memory.c']]],
   ['free_5fpages_5fex',['free_pages_ex',['../memory_8h.html#a884d555413c1881bbf129c527f17013f',1,'free_pages_ex(void *address, UINTN pages, BOOLEAN track):&#160;memory.c'],['../library_2memory_8c.html#a884d555413c1881bbf129c527f17013f',1,'free_pages_ex(void *address, UINTN pages, BOOLEAN track):&#160;memory.c']]],
@@ -12,5 +30,6 @@ var searchData=
   ['ftowcs_5fmin_5fvalue',['FTOWCS_MIN_VALUE',['../library_2string_8c.html#a53cccd8acf8f92e2b1a65840026f9559',1,'string.c']]],
   ['ftowcs_5ftestcase_5ft',['ftowcs_testcase_t',['../structftowcs__testcase__t.html',1,'']]],
   ['ftowcs_5ftestcases',['ftowcs_testcases',['../tests_2suites_2lib_2string_8c.html#a746c788512676cdf8d26deaa58a2c770',1,'string.c']]],
-  ['function_5fname',['function_name',['../structsprint__status__testcase__t.html#a23541c6445970b60e5d7393a126dcaef',1,'sprint_status_testcase_t']]]
+  ['function_5fname',['function_name',['../structsprint__status__testcase__t.html#a23541c6445970b60e5d7393a126dcaef',1,'sprint_status_testcase_t']]],
+  ['file_20i_2fo_20functions',['File I/O Functions',['../group__group__lib__files.html',1,'']]]
 ];
