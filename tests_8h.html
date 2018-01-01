@@ -68,7 +68,7 @@ $(function() {
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">tests.h File Reference</div>  </div>
+<div class="title">tests.h File Reference<div class="ingroups"><a class="el" href="group__group__tests.html">Testing Framework</a> &raquo; <a class="el" href="group__group__tests__runner.html">Test Runner</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -85,32 +85,43 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a32573f79e790cb332f9d84a578ce723c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a32573f79e790cb332f9d84a578ce723c">INIT_TESTGROUP</a>(NAME)</td></tr>
+<tr class="memdesc:a32573f79e790cb332f9d84a578ce723c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to start a testgroup.  <a href="#a32573f79e790cb332f9d84a578ce723c">More...</a><br /></td></tr>
 <tr class="separator:a32573f79e790cb332f9d84a578ce723c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a4ffd47d668912adc33ccfeddc2f2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a23a4ffd47d668912adc33ccfeddc2f2f">FINISH_TESTGROUP</a>()&#160;&#160;&#160;return TRUE;</td></tr>
+<tr class="memdesc:a23a4ffd47d668912adc33ccfeddc2f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to end a testgroup.  <a href="#a23a4ffd47d668912adc33ccfeddc2f2f">More...</a><br /></td></tr>
 <tr class="separator:a23a4ffd47d668912adc33ccfeddc2f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a323a441dbbbfc0b332560f2d2160294a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a323a441dbbbfc0b332560f2d2160294a">RUN_TEST</a>(FUNC,  DESC)&#160;&#160;&#160;<a class="el" href="tests_8h.html#ab3b8047092b9175ca79ca022d31bcae6">run_test</a>(FUNC,DESC);</td></tr>
+<tr class="memdesc:a323a441dbbbfc0b332560f2d2160294a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to run a test.  <a href="#a323a441dbbbfc0b332560f2d2160294a">More...</a><br /></td></tr>
 <tr class="separator:a323a441dbbbfc0b332560f2d2160294a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a354bfb12e271f104e25ed7841d971ef9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a354bfb12e271f104e25ed7841d971ef9">mark_test_incomplete</a>()&#160;&#160;&#160;individual_test_results.incomplete_count++;</td></tr>
+<tr class="memdesc:a354bfb12e271f104e25ed7841d971ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper macro to mark a test as incomplete.  <a href="#a354bfb12e271f104e25ed7841d971ef9">More...</a><br /></td></tr>
 <tr class="separator:a354bfb12e271f104e25ed7841d971ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac3ef4e4ac9b8681e56bf390cb4c152cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#ac3ef4e4ac9b8681e56bf390cb4c152cd">run_tests</a> ()</td></tr>
+<tr class="memdesc:ac3ef4e4ac9b8681e56bf390cb4c152cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs a test group.  <a href="#ac3ef4e4ac9b8681e56bf390cb4c152cd">More...</a><br /></td></tr>
 <tr class="separator:ac3ef4e4ac9b8681e56bf390cb4c152cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b8047092b9175ca79ca022d31bcae6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#ab3b8047092b9175ca79ca022d31bcae6">run_test</a> (void(*func)(), CHAR16 *description)</td></tr>
+<tr class="memdesc:ab3b8047092b9175ca79ca022d31bcae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs an individual test.  <a href="#ab3b8047092b9175ca79ca022d31bcae6">More...</a><br /></td></tr>
 <tr class="separator:ab3b8047092b9175ca79ca022d31bcae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a636f981bb9fd4cb17143a021a4b0956d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a636f981bb9fd4cb17143a021a4b0956d">run_group</a> (BOOLEAN(*func)())</td></tr>
+<tr class="memdesc:a636f981bb9fd4cb17143a021a4b0956d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs a test group.  <a href="#a636f981bb9fd4cb17143a021a4b0956d">More...</a><br /></td></tr>
 <tr class="separator:a636f981bb9fd4cb17143a021a4b0956d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0c0862fa57a2ce84082f7b3e64b2c44"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#ae0c0862fa57a2ce84082f7b3e64b2c44">is_skipped_test</a> (CHAR16 *name)</td></tr>
+<tr class="memdesc:ae0c0862fa57a2ce84082f7b3e64b2c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests whether a given test should be skipped.  <a href="#ae0c0862fa57a2ce84082f7b3e64b2c44">More...</a><br /></td></tr>
 <tr class="separator:ae0c0862fa57a2ce84082f7b3e64b2c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a4f20ad41cb441d1986328a2735e33f5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtest__results__t.html">test_results_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a4f20ad41cb441d1986328a2735e33f5c">individual_test_results</a></td></tr>
+<tr class="memdesc:a4f20ad41cb441d1986328a2735e33f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">results for the current test  <a href="#a4f20ad41cb441d1986328a2735e33f5c">More...</a><br /></td></tr>
 <tr class="separator:a4f20ad41cb441d1986328a2735e33f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16a96d2a191a29d87170af7a044a5a5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtest__results__t.html">test_results_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a16a96d2a191a29d87170af7a044a5a5c">global_test_results</a></td></tr>
+<tr class="memdesc:a16a96d2a191a29d87170af7a044a5a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">results for all tests in this suite  <a href="#a16a96d2a191a29d87170af7a044a5a5c">More...</a><br /></td></tr>
 <tr class="separator:a16a96d2a191a29d87170af7a044a5a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43707e73354178e8d2c4edf67770ae8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtest__verbosity__t.html">test_verbosity_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8h.html#a43707e73354178e8d2c4edf67770ae8e">test_verbosity</a></td></tr>
+<tr class="memdesc:a43707e73354178e8d2c4edf67770ae8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current test verbosity  <a href="#a43707e73354178e8d2c4edf67770ae8e">More...</a><br /></td></tr>
 <tr class="separator:a43707e73354178e8d2c4edf67770ae8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -135,8 +146,16 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(<a class="code" href="tests_8h.html#ae0c0862fa57a2ce84082f7b3e64b2c44">is_skipped_test</a>(NAME)) \</div><div class="line">  { \</div><div class="line">    global_test_results.skipped_count++; \</div><div class="line">    return FALSE; \</div><div class="line">  } \</div><div class="line">  print_test_group_start(NAME);</div><div class="ttc" id="tests_8h_html_ae0c0862fa57a2ce84082f7b3e64b2c44"><div class="ttname"><a href="tests_8h.html#ae0c0862fa57a2ce84082f7b3e64b2c44">is_skipped_test</a></div><div class="ttdeci">BOOLEAN is_skipped_test(CHAR16 *name)</div><div class="ttdef"><b>Definition:</b> tests.c:168</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(<a class="code" href="tests_8h.html#ae0c0862fa57a2ce84082f7b3e64b2c44">is_skipped_test</a>(NAME)) \</div><div class="line">  { \</div><div class="line">    global_test_results.skipped_count++; \</div><div class="line">    return FALSE; \</div><div class="line">  } \</div><div class="line">  print_test_group_start(NAME);</div><div class="ttc" id="tests_8h_html_ae0c0862fa57a2ce84082f7b3e64b2c44"><div class="ttname"><a href="tests_8h.html#ae0c0862fa57a2ce84082f7b3e64b2c44">is_skipped_test</a></div><div class="ttdeci">BOOLEAN is_skipped_test(CHAR16 *name)</div><div class="ttdoc">Tests whether a given test should be skipped. </div><div class="ttdef"><b>Definition:</b> tests.c:233</div></div>
 </div><!-- fragment -->
+<p>Helper macro to start a testgroup. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NAME</td><td>the test group's name </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a23a4ffd47d668912adc33ccfeddc2f2f"></a>
@@ -153,6 +172,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Helper macro to end a testgroup. </p>
 
 </div>
 </div>
@@ -182,6 +203,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Helper macro to run a test. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FUNC</td><td>the test's function to execute </td></tr>
+    <tr><td class="paramname">DESC</td><td>the test's description </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a354bfb12e271f104e25ed7841d971ef9"></a>
@@ -198,6 +228,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Helper macro to mark a test as incomplete. </p>
 
 </div>
 </div>
@@ -216,6 +248,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Runs a test group. </p>
+<p>This gets created automatically (in generated/runner.c in the test suite's directory). </p>
 
 </div>
 </div>
@@ -245,6 +280,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Runs an individual test. </p>
+<p>This function takes care of required setup/teardown around tests.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>the test function to execute </td></tr>
+    <tr><td class="paramname">description</td><td>the test's description </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a636f981bb9fd4cb17143a021a4b0956d"></a>
@@ -262,6 +307,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Runs a test group. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">func</td><td>the test group to run </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -281,6 +334,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Tests whether a given test should be skipped. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the test's name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the test should be skipped </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -296,6 +358,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>results for the current test </p>
+
 </div>
 </div>
 <a id="a16a96d2a191a29d87170af7a044a5a5c"></a>
@@ -309,6 +373,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>results for all tests in this suite </p>
 
 </div>
 </div>
@@ -324,12 +390,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>the current test verbosity </p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 12:46:39 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -68,11 +68,11 @@ $(function() {
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">logger.c File Reference</div>  </div>
+<div class="title">logger.c File Reference<div class="ingroups"><a class="el" href="group__group__lib.html">Library Functions</a> &raquo; <a class="el" href="group__group__lib__logger.html">Logging Functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Logger tests.  
+<p>Tests for the logging facility.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
@@ -82,28 +82,35 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a9fca5b5cbb9666f431d1af4b02d3d2d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a9fca5b5cbb9666f431d1af4b02d3d2d8">LOG_COUNT_ENTRIES</a>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:a9fca5b5cbb9666f431d1af4b02d3d2d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of entries in the log counter array.  <a href="#a9fca5b5cbb9666f431d1af4b02d3d2d8">More...</a><br /></td></tr>
 <tr class="separator:a9fca5b5cbb9666f431d1af4b02d3d2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a05add72887ab237a563fe8f9ce9769d1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a05add72887ab237a563fe8f9ce9769d1">_reset_log_counts</a> ()</td></tr>
+<tr class="memdesc:a05add72887ab237a563fe8f9ce9769d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset's the log message counters to 0.  <a href="#a05add72887ab237a563fe8f9ce9769d1">More...</a><br /></td></tr>
 <tr class="separator:a05add72887ab237a563fe8f9ce9769d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fbbe49bc180d0fc5b9a3bfe081c725"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725">_counting_logger</a> (CHAR16 *level, CHAR16 *msg)</td></tr>
+<tr class="memdesc:a04fbbe49bc180d0fc5b9a3bfe081c725"><td class="mdescLeft">&#160;</td><td class="mdescRight">A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entries were generated at which log level.  <a href="#a04fbbe49bc180d0fc5b9a3bfe081c725">More...</a><br /></td></tr>
 <tr class="separator:a04fbbe49bc180d0fc5b9a3bfe081c725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaeeea6af3a3cb18f3f96f38c881eae4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#abaeeea6af3a3cb18f3f96f38c881eae4">_assert_log_counts</a> (UINTN error, UINTN warn, UINTN info, UINTN debug, UINTN trace)</td></tr>
+<tr class="memdesc:abaeeea6af3a3cb18f3f96f38c881eae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assertion for log counters.  <a href="#abaeeea6af3a3cb18f3f96f38c881eae4">More...</a><br /></td></tr>
 <tr class="separator:abaeeea6af3a3cb18f3f96f38c881eae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea13f6c9d2f9540cdec9d177f6fd025"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#acea13f6c9d2f9540cdec9d177f6fd025">test_logger</a> ()</td></tr>
+<tr class="memdesc:acea13f6c9d2f9540cdec9d177f6fd025"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure the log level threshold works.  <a href="#acea13f6c9d2f9540cdec9d177f6fd025">More...</a><br /></td></tr>
 <tr class="separator:acea13f6c9d2f9540cdec9d177f6fd025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a0e817936ece529cc2f6e445ff6d26f"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a1a0e817936ece529cc2f6e445ff6d26f">run_logger_tests</a> ()</td></tr>
+<tr class="memdesc:a1a0e817936ece529cc2f6e445ff6d26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner for this group.  <a href="#a1a0e817936ece529cc2f6e445ff6d26f">More...</a><br /></td></tr>
 <tr class="separator:a1a0e817936ece529cc2f6e445ff6d26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a48222912b8d99a96726d91c3a160e8fa"><td class="memItemLeft" align="right" valign="top">static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a48222912b8d99a96726d91c3a160e8fa">_log_counts</a> [<a class="el" href="tests_2suites_2lib_2logger_8c.html#a9fca5b5cbb9666f431d1af4b02d3d2d8">LOG_COUNT_ENTRIES</a>]</td></tr>
+<tr class="memdesc:a48222912b8d99a96726d91c3a160e8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal storage for the <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725" title="A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entr...">_counting_logger()</a> function.  <a href="#a48222912b8d99a96726d91c3a160e8fa">More...</a><br /></td></tr>
 <tr class="separator:a48222912b8d99a96726d91c3a160e8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Logger tests. </p>
+<div class="textblock"><p>Tests for the logging facility. </p>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
@@ -120,6 +127,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The number of entries in the log counter array. </p>
+<p>Index is of type LOGLEVEL: "OFF" is 0, "TRACE" starts at 1, so we need to reserve the index 0 entry. </p>
 
 </div>
 </div>
@@ -146,6 +156,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reset's the log message counters to 0. </p>
 
 </div>
 </div>
@@ -182,6 +194,16 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entries were generated at which log level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>the entry's log level </td></tr>
+    <tr><td class="paramname">msg</td><td>the entry's log message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>there <em>has</em> to be a better way to match log levels.. maybe add numeric level to print function? </dd></dl>
 
 </div>
 </div>
@@ -237,6 +259,19 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Assertion for log counters. </p>
+<p>Compares all counters to expected values.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>the expected number of entries at level ERROR </td></tr>
+    <tr><td class="paramname">warn</td><td>the expected number of entries at level WARN </td></tr>
+    <tr><td class="paramname">info</td><td>the expected number of entries at level INFO </td></tr>
+    <tr><td class="paramname">debug</td><td>the expected number of entries at level DEBUG </td></tr>
+    <tr><td class="paramname">trace</td><td>the expected number of entries at level TRACE </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="acea13f6c9d2f9540cdec9d177f6fd025"></a>
@@ -254,6 +289,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes sure the log level threshold works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000003">Test:</a></b></dt><dd><p class="startdd">a log event at the current log level should be printed </p>
+<p>a log event above the current log level should be printed </p>
+<p>a log event below the current log level should be ignored </p>
+<p class="enddd">when the current log level is OFF all log events should be ignored </p>
+</dd></dl>
+
 </div>
 </div>
 <a id="a1a0e817936ece529cc2f6e445ff6d26f"></a>
@@ -270,6 +312,10 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Test runner for this group. </p>
+<p>Gets called via the generated test runner.</p>
+<dl class="section return"><dt>Returns</dt><dd>whether the test group was executed </dd></dl>
 
 </div>
 </div>
@@ -294,12 +340,15 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Internal storage for the <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725" title="A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entr...">_counting_logger()</a> function. </p>
+<p>Contains the number of entries issued per log level. </p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 12:46:39 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['string_20functions',['String Functions',['../group__group__lib__string.html',1,'']]],
+  ['self_20tests',['Self Tests',['../group__group__tests__selftest.html',1,'']]],
   ['synopsis',['Synopsis',['../index.html',1,'']]],
   ['set_5fconsole_5fmode',['set_console_mode',['../console_8h.html#ad859f19f86d2e0f4907e9a32a5b0dd6f',1,'set_console_mode(unsigned int requested_mode):&#160;console.c'],['../console_8c.html#ad859f19f86d2e0f4907e9a32a5b0dd6f',1,'set_console_mode(unsigned int requested_mode):&#160;console.c']]],
   ['set_5flog_5flevel',['set_log_level',['../logger_8h.html#a6e4d847cb0481c628771ee7c18bdaa80',1,'set_log_level(LOGLEVEL level):&#160;logger.c'],['../library_2logger_8c.html#a6e4d847cb0481c628771ee7c18bdaa80',1,'set_log_level(LOGLEVEL level):&#160;logger.c']]],

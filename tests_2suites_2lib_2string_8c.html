@@ -69,11 +69,11 @@ $(function() {
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
-<div class="title">string.c File Reference</div>  </div>
+<div class="title">string.c File Reference<div class="ingroups"><a class="el" href="group__group__lib.html">Library Functions</a> &raquo; <a class="el" href="group__group__lib__string.html">String Functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>String functions tests.  
+<p>Tests for string functions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
@@ -86,67 +86,92 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwctype__testcase__t.html">wctype_testcase_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data structure for wctype_* function test cases  <a href="structwctype__testcase__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structftowcs__testcase__t.html">ftowcs_testcase_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data type for <a class="el" href="tests_2suites_2lib_2string_8c.html#a994f8d1e001f5d50c4d89539d710d75d" title="Makes sure ftowcs() works. ">test_ftowcs()</a> test cases  <a href="structftowcs__testcase__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwcstof__testcase__t.html">wcstof_testcase_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data structure for <a class="el" href="tests_2suites_2lib_2string_8c.html#a34fc4ccd5d54228c0dce0cc8769d6aac" title="Makes sure wcstof() works. ">test_wcstof()</a> test cases  <a href="structwcstof__testcase__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structatoui64__testcase__t.html">atoui64_testcase_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data type for <a class="el" href="tests_2suites_2lib_2string_8c.html#a1cc989d3dceb351426b33f603b1cb7ab" title="Makes sure atoui64() works. ">test_atoui64()</a> test cases  <a href="structatoui64__testcase__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsprint__status__testcase__t.html">sprint_status_testcase_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data type for <a class="el" href="tests_2suites_2lib_2string_8c.html#ab6d951c8dc524b41b1721290a4e32042" title="Makes sure sprint_status() works. ">test_sprint_status()</a> test cases  <a href="structsprint__status__testcase__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ad35565d2be0214fe3a8f8a45a7b9e482"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#ad35565d2be0214fe3a8f8a45a7b9e482">RUN_WCTYPE_TESTCASES</a>(FUNC,  CASES)&#160;&#160;&#160;<a class="el" href="tests_2suites_2lib_2string_8c.html#a20dc29f173d528642eaf3bd755d15a9d">_run_wctype_testcases</a>(sizeof(CASES)/sizeof(<a class="el" href="structwctype__testcase__t.html">wctype_testcase_t</a>),CASES,FUNC);</td></tr>
+<tr class="memdesc:ad35565d2be0214fe3a8f8a45a7b9e482"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper macro to run wctype_* test cases  <a href="#ad35565d2be0214fe3a8f8a45a7b9e482">More...</a><br /></td></tr>
 <tr class="separator:ad35565d2be0214fe3a8f8a45a7b9e482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a331767ddef9ca4f79ff3ac611cedd47d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a331767ddef9ca4f79ff3ac611cedd47d">WCSTOF_EPSILON</a>&#160;&#160;&#160;0.0000001</td></tr>
+<tr class="memdesc:a331767ddef9ca4f79ff3ac611cedd47d"><td class="mdescLeft">&#160;</td><td class="mdescRight">margin of error for wcstof() tests  <a href="#a331767ddef9ca4f79ff3ac611cedd47d">More...</a><br /></td></tr>
 <tr class="separator:a331767ddef9ca4f79ff3ac611cedd47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a20dc29f173d528642eaf3bd755d15a9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a20dc29f173d528642eaf3bd755d15a9d">_run_wctype_testcases</a> (UINTN count, <a class="el" href="structwctype__testcase__t.html">wctype_testcase_t</a> *cases, BOOLEAN(*func)(CHAR16 *))</td></tr>
+<tr class="memdesc:a20dc29f173d528642eaf3bd755d15a9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs given test cases against given wctype_* function.  <a href="#a20dc29f173d528642eaf3bd755d15a9d">More...</a><br /></td></tr>
 <tr class="separator:a20dc29f173d528642eaf3bd755d15a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a134cf4044ad67f5785d3c7b6e6e229ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a134cf4044ad67f5785d3c7b6e6e229ac">test_wctype_int</a> ()</td></tr>
+<tr class="memdesc:a134cf4044ad67f5785d3c7b6e6e229ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> works.  <a href="#a134cf4044ad67f5785d3c7b6e6e229ac">More...</a><br /></td></tr>
 <tr class="separator:a134cf4044ad67f5785d3c7b6e6e229ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a59a646f51ab27144dfa3a9ea2538f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a31a59a646f51ab27144dfa3a9ea2538f">test_wctype_float</a> ()</td></tr>
+<tr class="memdesc:a31a59a646f51ab27144dfa3a9ea2538f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> works.  <a href="#a31a59a646f51ab27144dfa3a9ea2538f">More...</a><br /></td></tr>
 <tr class="separator:a31a59a646f51ab27144dfa3a9ea2538f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a994f8d1e001f5d50c4d89539d710d75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a994f8d1e001f5d50c4d89539d710d75d">test_ftowcs</a> ()</td></tr>
+<tr class="memdesc:a994f8d1e001f5d50c4d89539d710d75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> works.  <a href="#a994f8d1e001f5d50c4d89539d710d75d">More...</a><br /></td></tr>
 <tr class="separator:a994f8d1e001f5d50c4d89539d710d75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5daf14c772977bf830309e80911c540e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a5daf14c772977bf830309e80911c540e">test_ftowcs_boundaries</a> ()</td></tr>
+<tr class="memdesc:a5daf14c772977bf830309e80911c540e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> errors out if input exceeds value boundaries.  <a href="#a5daf14c772977bf830309e80911c540e">More...</a><br /></td></tr>
 <tr class="separator:a5daf14c772977bf830309e80911c540e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34fc4ccd5d54228c0dce0cc8769d6aac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a34fc4ccd5d54228c0dce0cc8769d6aac">test_wcstof</a> ()</td></tr>
+<tr class="memdesc:a34fc4ccd5d54228c0dce0cc8769d6aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure wcstof() works.  <a href="#a34fc4ccd5d54228c0dce0cc8769d6aac">More...</a><br /></td></tr>
 <tr class="separator:a34fc4ccd5d54228c0dce0cc8769d6aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc989d3dceb351426b33f603b1cb7ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a1cc989d3dceb351426b33f603b1cb7ab">test_atoui64</a> ()</td></tr>
+<tr class="memdesc:a1cc989d3dceb351426b33f603b1cb7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> works.  <a href="#a1cc989d3dceb351426b33f603b1cb7ab">More...</a><br /></td></tr>
 <tr class="separator:a1cc989d3dceb351426b33f603b1cb7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d951c8dc524b41b1721290a4e32042"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#ab6d951c8dc524b41b1721290a4e32042">test_sprint_status</a> ()</td></tr>
+<tr class="memdesc:ab6d951c8dc524b41b1721290a4e32042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> works.  <a href="#ab6d951c8dc524b41b1721290a4e32042">More...</a><br /></td></tr>
 <tr class="separator:ab6d951c8dc524b41b1721290a4e32042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83bee20755aa4a144b5196503c21f18b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a83bee20755aa4a144b5196503c21f18b">test_memsprintf</a> ()</td></tr>
+<tr class="memdesc:a83bee20755aa4a144b5196503c21f18b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> tracks the pool memory it reserves.  <a href="#a83bee20755aa4a144b5196503c21f18b">More...</a><br /></td></tr>
 <tr class="separator:a83bee20755aa4a144b5196503c21f18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14f6361a68f2f85b04c26c53f81bff8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a14f6361a68f2f85b04c26c53f81bff8b">test_split_string</a> ()</td></tr>
+<tr class="memdesc:a14f6361a68f2f85b04c26c53f81bff8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> works.  <a href="#a14f6361a68f2f85b04c26c53f81bff8b">More...</a><br /></td></tr>
 <tr class="separator:a14f6361a68f2f85b04c26c53f81bff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a287326013d264549fc0aff9dc3b0bae1"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a287326013d264549fc0aff9dc3b0bae1">run_string_tests</a> ()</td></tr>
+<tr class="memdesc:a287326013d264549fc0aff9dc3b0bae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner for this group.  <a href="#a287326013d264549fc0aff9dc3b0bae1">More...</a><br /></td></tr>
 <tr class="separator:a287326013d264549fc0aff9dc3b0bae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a96bdc60926323c70c2a94eccbd0b6be6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwctype__testcase__t.html">wctype_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a96bdc60926323c70c2a94eccbd0b6be6">wctype_floatint_testcases</a> []</td></tr>
+<tr class="memdesc:a96bdc60926323c70c2a94eccbd0b6be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">common testcases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a134cf4044ad67f5785d3c7b6e6e229ac" title="Makes sure wctype_int() works. ">test_wctype_int()</a> and <a class="el" href="tests_2suites_2lib_2string_8c.html#a31a59a646f51ab27144dfa3a9ea2538f" title="Makes sure wctype_float() works. ">test_wctype_float()</a>  <a href="#a96bdc60926323c70c2a94eccbd0b6be6">More...</a><br /></td></tr>
 <tr class="separator:a96bdc60926323c70c2a94eccbd0b6be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973c2e098d4e6e578adad6a94355b669"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwctype__testcase__t.html">wctype_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a973c2e098d4e6e578adad6a94355b669">wctype_int_testcases</a> []</td></tr>
+<tr class="memdesc:a973c2e098d4e6e578adad6a94355b669"><td class="mdescLeft">&#160;</td><td class="mdescRight">testcases specific to <a class="el" href="tests_2suites_2lib_2string_8c.html#a134cf4044ad67f5785d3c7b6e6e229ac" title="Makes sure wctype_int() works. ">test_wctype_int()</a>  <a href="#a973c2e098d4e6e578adad6a94355b669">More...</a><br /></td></tr>
 <tr class="separator:a973c2e098d4e6e578adad6a94355b669"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa94434584aaea822f3e5de7368b973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwctype__testcase__t.html">wctype_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#acaa94434584aaea822f3e5de7368b973">wctype_float_testcases</a> []</td></tr>
+<tr class="memdesc:acaa94434584aaea822f3e5de7368b973"><td class="mdescLeft">&#160;</td><td class="mdescRight">testcases specific to <a class="el" href="tests_2suites_2lib_2string_8c.html#a31a59a646f51ab27144dfa3a9ea2538f" title="Makes sure wctype_float() works. ">test_wctype_float()</a>  <a href="#acaa94434584aaea822f3e5de7368b973">More...</a><br /></td></tr>
 <tr class="separator:acaa94434584aaea822f3e5de7368b973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a746c788512676cdf8d26deaa58a2c770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structftowcs__testcase__t.html">ftowcs_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a746c788512676cdf8d26deaa58a2c770">ftowcs_testcases</a> []</td></tr>
+<tr class="memdesc:a746c788512676cdf8d26deaa58a2c770"><td class="mdescLeft">&#160;</td><td class="mdescRight">test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a994f8d1e001f5d50c4d89539d710d75d" title="Makes sure ftowcs() works. ">test_ftowcs()</a>  <a href="#a746c788512676cdf8d26deaa58a2c770">More...</a><br /></td></tr>
 <tr class="separator:a746c788512676cdf8d26deaa58a2c770"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a474ba7891bdb5c40ff22ff2e9437a686"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structwcstof__testcase__t.html">wcstof_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a474ba7891bdb5c40ff22ff2e9437a686">wcstof_testcases</a> []</td></tr>
+<tr class="memdesc:a474ba7891bdb5c40ff22ff2e9437a686"><td class="mdescLeft">&#160;</td><td class="mdescRight">test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a34fc4ccd5d54228c0dce0cc8769d6aac" title="Makes sure wcstof() works. ">test_wcstof()</a>  <a href="#a474ba7891bdb5c40ff22ff2e9437a686">More...</a><br /></td></tr>
 <tr class="separator:a474ba7891bdb5c40ff22ff2e9437a686"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0a0414d8a53a75c5f431dde0aae8500"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structatoui64__testcase__t.html">atoui64_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#af0a0414d8a53a75c5f431dde0aae8500">atoui64_testcases</a> []</td></tr>
+<tr class="memdesc:af0a0414d8a53a75c5f431dde0aae8500"><td class="mdescLeft">&#160;</td><td class="mdescRight">test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a1cc989d3dceb351426b33f603b1cb7ab" title="Makes sure atoui64() works. ">test_atoui64()</a>  <a href="#af0a0414d8a53a75c5f431dde0aae8500">More...</a><br /></td></tr>
 <tr class="separator:af0a0414d8a53a75c5f431dde0aae8500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a204b467866c980a6646baac0ac9c5979"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structsprint__status__testcase__t.html">sprint_status_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a204b467866c980a6646baac0ac9c5979">sprint_status_testcases</a> []</td></tr>
+<tr class="memdesc:a204b467866c980a6646baac0ac9c5979"><td class="mdescLeft">&#160;</td><td class="mdescRight">test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#ab6d951c8dc524b41b1721290a4e32042" title="Makes sure sprint_status() works. ">test_sprint_status()</a>  <a href="#a204b467866c980a6646baac0ac9c5979">More...</a><br /></td></tr>
 <tr class="separator:a204b467866c980a6646baac0ac9c5979"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>String functions tests. </p>
+<div class="textblock"><p>Tests for string functions. </p>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
@@ -178,6 +203,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>helper macro to run wctype_* test cases </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FUNC</td><td>the function to test inputs against </td></tr>
+    <tr><td class="paramname">CASES</td><td>the test cases to run </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a331767ddef9ca4f79ff3ac611cedd47d"></a>
@@ -191,6 +225,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>margin of error for wcstof() tests </p>
 
 </div>
 </div>
@@ -227,6 +263,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Runs given test cases against given wctype_* function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>the number of test cases </td></tr>
+    <tr><td class="paramname">cases</td><td>the test cases </td></tr>
+    <tr><td class="paramname">func</td><td>the function to test inputs against </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a134cf4044ad67f5785d3c7b6e6e229ac"></a>
@@ -243,6 +289,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes sure <a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000006">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> should fail NULL, empty strings and non-numeric strings </p>
+<p><a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> should pass positive and negative integers </p>
+<p class="enddd"><a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> should fail decimal numbers </p>
+</dd></dl>
 
 </div>
 </div>
@@ -261,6 +313,13 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes sure <a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000007">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should fail NULL, empty strings and non-numeric strings </p>
+<p><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should pass positive and negative integers </p>
+<p><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should pass positive and negative decimal numbers </p>
+<p class="enddd"><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should fail invalid number-like strings similar to decimals </p>
+</dd></dl>
+
 </div>
 </div>
 <a id="a994f8d1e001f5d50c4d89539d710d75d"></a>
@@ -277,6 +336,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000008">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> rounds positive and negative values to 2 decimals with "half away from zero" </p>
+<p class="enddd"><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> always zero-pads to 2 decimals </p>
+</dd></dl>
 
 </div>
 </div>
@@ -295,6 +359,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> errors out if input exceeds value boundaries. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000009">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> logs an error when trying to convert very low or very high numbers </dd></dl>
+
 </div>
 </div>
 <a id="a34fc4ccd5d54228c0dce0cc8769d6aac"></a>
@@ -311,6 +378,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes sure wcstof() works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000010">Test:</a></b></dt><dd>wcstof() parses a numeric string into a double value </dd></dl>
 
 </div>
 </div>
@@ -329,6 +399,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes sure <a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000011">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> parses integer strings from 0 to 2^64-1 </dd></dl>
+
 </div>
 </div>
 <a id="ab6d951c8dc524b41b1721290a4e32042"></a>
@@ -345,6 +418,12 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes sure <a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000012">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the given function's name in the result </p>
+<p><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the raw EFI_STATUS code in the result </p>
+<p class="enddd"><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> converts EFI_STATUS codes to readable messages in the result </p>
+</dd></dl>
 
 </div>
 </div>
@@ -363,6 +442,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes sure <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> tracks the pool memory it reserves. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000013">Test:</a></b></dt><dd>each call to <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> should add exactly 1 tracked pool memory entry, regardless of how many arguments were passed. </dd></dl>
+
 </div>
 </div>
 <a id="a14f6361a68f2f85b04c26c53f81bff8b"></a>
@@ -379,6 +461,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes sure <a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000014">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 0 entries and writes NULL when requested to split a NULL string </p>
+<p><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> splits a string by the given delimiter into the correct parts </p>
+<p><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> includes empty string parts between delimiters </p>
+<p class="enddd"><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 1 entry and outputs the input string as array when requested to split an empty string </p>
+</dd></dl>
 
 </div>
 </div>
@@ -397,6 +486,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Test runner for this group. </p>
+<p>Gets called via the generated test runner.</p>
+<dl class="section return"><dt>Returns</dt><dd>whether the test group was executed </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -412,6 +505,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">={</div><div class="line">  {FALSE,NULL},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;-a&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;-&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;1a&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;-1a&quot;</span>},</div><div class="line">  {TRUE, L<span class="stringliteral">&quot;1&quot;</span>},</div><div class="line">  {TRUE, L<span class="stringliteral">&quot;1123&quot;</span>},</div><div class="line">  {TRUE, L<span class="stringliteral">&quot;-1123&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;-1123a&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;abcd12&quot;</span>}</div><div class="line">}</div></div><!-- fragment -->
+<p>common testcases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a134cf4044ad67f5785d3c7b6e6e229ac" title="Makes sure wctype_int() works. ">test_wctype_int()</a> and <a class="el" href="tests_2suites_2lib_2string_8c.html#a31a59a646f51ab27144dfa3a9ea2538f" title="Makes sure wctype_float() works. ">test_wctype_float()</a> </p>
+
 </div>
 </div>
 <a id="a973c2e098d4e6e578adad6a94355b669"></a>
@@ -426,6 +521,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">={</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;1.0&quot;</span>},</div><div class="line">}</div></div><!-- fragment -->
+<p>testcases specific to <a class="el" href="tests_2suites_2lib_2string_8c.html#a134cf4044ad67f5785d3c7b6e6e229ac" title="Makes sure wctype_int() works. ">test_wctype_int()</a> </p>
+
 </div>
 </div>
 <a id="acaa94434584aaea822f3e5de7368b973"></a>
@@ -440,6 +537,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">={</div><div class="line">  {TRUE, L<span class="stringliteral">&quot;1.1&quot;</span>},</div><div class="line">  {TRUE, L<span class="stringliteral">&quot;-1.1&quot;</span>},</div><div class="line">  {TRUE, L<span class="stringliteral">&quot;0.123456789&quot;</span>},</div><div class="line">  {TRUE, L<span class="stringliteral">&quot;-99999999.9&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;1.1.1&quot;</span>},</div><div class="line">  {FALSE,L<span class="stringliteral">&quot;1.&quot;</span>}</div><div class="line">}</div></div><!-- fragment -->
+<p>testcases specific to <a class="el" href="tests_2suites_2lib_2string_8c.html#a31a59a646f51ab27144dfa3a9ea2538f" title="Makes sure wctype_float() works. ">test_wctype_float()</a> </p>
+
 </div>
 </div>
 <a id="a746c788512676cdf8d26deaa58a2c770"></a>
@@ -454,6 +553,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  {L<span class="stringliteral">&quot;-1000000000.00&quot;</span>,-1000000000.00},</div><div class="line">  {L<span class="stringliteral">&quot;-999999999.99&quot;</span>,-999999999.99},</div><div class="line">  {L<span class="stringliteral">&quot;-123456789.01&quot;</span>,-123456789.012},</div><div class="line">  {L<span class="stringliteral">&quot;-10.00&quot;</span>,-10.001},</div><div class="line">  {L<span class="stringliteral">&quot;-10.00&quot;</span>,-10.000},</div><div class="line">  {L<span class="stringliteral">&quot;-10.00&quot;</span>,-9.999},</div><div class="line">  {L<span class="stringliteral">&quot;-10.00&quot;</span>,-9.995001},</div><div class="line">  {L<span class="stringliteral">&quot;-9.99&quot;</span>,-9.9949},</div><div class="line">  {L<span class="stringliteral">&quot;-9.00&quot;</span>,-9.0},</div><div class="line">  {L<span class="stringliteral">&quot;-0.51&quot;</span>,-0.51},</div><div class="line">  {L<span class="stringliteral">&quot;-0.50&quot;</span>,-0.5},</div><div class="line">  {L<span class="stringliteral">&quot;-0.49&quot;</span>,-0.49},</div><div class="line">  {L<span class="stringliteral">&quot;-0.00&quot;</span>,-0.001},</div><div class="line">  {L<span class="stringliteral">&quot;0.00&quot;</span>,0.0},</div><div class="line">  {L<span class="stringliteral">&quot;0.00&quot;</span>,0.001},</div><div class="line">  {L<span class="stringliteral">&quot;0.45&quot;</span>,0.449},</div><div class="line">  {L<span class="stringliteral">&quot;0.45&quot;</span>,0.45},</div><div class="line">  {L<span class="stringliteral">&quot;10.00&quot;</span>,9.999},</div><div class="line">  {L<span class="stringliteral">&quot;10.00&quot;</span>,10.00},</div><div class="line">  {L<span class="stringliteral">&quot;99999.99&quot;</span>,99999.99},</div><div class="line">  {L<span class="stringliteral">&quot;100000.00&quot;</span>,100000.00},</div><div class="line">  {L<span class="stringliteral">&quot;999999999.99&quot;</span>,999999999.99},</div><div class="line">  {L<span class="stringliteral">&quot;1000000000.00&quot;</span>,1000000000.00},</div><div class="line">}</div></div><!-- fragment -->
+<p>test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a994f8d1e001f5d50c4d89539d710d75d" title="Makes sure ftowcs() works. ">test_ftowcs()</a> </p>
+
 </div>
 </div>
 <a id="a474ba7891bdb5c40ff22ff2e9437a686"></a>
@@ -468,6 +569,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  {1.2,L<span class="stringliteral">&quot;1.2&quot;</span>},</div><div class="line">  {-3.1,L<span class="stringliteral">&quot;-3.1&quot;</span>},</div><div class="line">  {4321.987,L<span class="stringliteral">&quot;4321.987&quot;</span>},</div><div class="line">  {654321.654,L<span class="stringliteral">&quot;654321.654&quot;</span>},</div><div class="line">  {87654321.321,L<span class="stringliteral">&quot;87654321.321&quot;</span>},</div><div class="line">  {123456789.0123,L<span class="stringliteral">&quot;123456789.0123&quot;</span>}</div><div class="line">}</div></div><!-- fragment -->
+<p>test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a34fc4ccd5d54228c0dce0cc8769d6aac" title="Makes sure wcstof() works. ">test_wcstof()</a> </p>
+
 </div>
 </div>
 <a id="af0a0414d8a53a75c5f431dde0aae8500"></a>
@@ -482,6 +585,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  {0,<span class="stringliteral">&quot;0&quot;</span>},</div><div class="line">  {12,<span class="stringliteral">&quot;12&quot;</span>},</div><div class="line">  {4294967295,<span class="stringliteral">&quot;4294967295&quot;</span>}, </div><div class="line">  {4294967296,<span class="stringliteral">&quot;4294967296&quot;</span>}, </div><div class="line">  {4294967297,<span class="stringliteral">&quot;4294967297&quot;</span>}, </div><div class="line">  {9223372036854775807,<span class="stringliteral">&quot;9223372036854775807&quot;</span>}, </div><div class="line">  {9223372036854775808u,<span class="stringliteral">&quot;9223372036854775808&quot;</span>}, </div><div class="line">  {9223372036854775809u,<span class="stringliteral">&quot;9223372036854775809&quot;</span>}, </div><div class="line">  {18446744073709551614u,<span class="stringliteral">&quot;18446744073709551614&quot;</span>}, </div><div class="line">  {18446744073709551615u,<span class="stringliteral">&quot;18446744073709551615&quot;</span>}, </div><div class="line">}</div></div><!-- fragment -->
+<p>test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#a1cc989d3dceb351426b33f603b1cb7ab" title="Makes sure atoui64() works. ">test_atoui64()</a> </p>
+
 </div>
 </div>
 <a id="a204b467866c980a6646baac0ac9c5979"></a>
@@ -496,12 +601,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  {EFI_UNSUPPORTED,      L<span class="stringliteral">&quot;case1&quot;</span>,L<span class="stringliteral">&quot;case1() returned status 3 (Unsupported)&quot;</span>},</div><div class="line">  {EFI_INVALID_PARAMETER,L<span class="stringliteral">&quot;case2&quot;</span>,L<span class="stringliteral">&quot;case2() returned status 2 (Invalid Parameter)&quot;</span>},</div><div class="line">}</div></div><!-- fragment -->
+<p>test cases for <a class="el" href="tests_2suites_2lib_2string_8c.html#ab6d951c8dc524b41b1721290a4e32042" title="Makes sure sprint_status() works. ">test_sprint_status()</a> </p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 12:46:39 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

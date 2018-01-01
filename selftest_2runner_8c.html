@@ -66,11 +66,11 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">runner.c File Reference</div>  </div>
+<div class="title">runner.c File Reference<div class="ingroups"><a class="el" href="group__group__tests.html">Testing Framework</a> &raquo; <a class="el" href="group__group__tests__selftest.html">Self Tests</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Self-tests for test runner This generates "incomplete" and "failure" results on purpose; the default test runner script will skip this test.  
+<p>Self-tests for test runner.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
@@ -79,20 +79,27 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5e60a340c0ffd036e35aae7f6561afe9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="selftest_2runner_8c.html#a5e60a340c0ffd036e35aae7f6561afe9">test_runner_success</a> ()</td></tr>
+<tr class="memdesc:a5e60a340c0ffd036e35aae7f6561afe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should produce a SUCCESS result in the test runner.  <a href="#a5e60a340c0ffd036e35aae7f6561afe9">More...</a><br /></td></tr>
 <tr class="separator:a5e60a340c0ffd036e35aae7f6561afe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a625ccf5c04010f46cca3a69722d2aa96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="selftest_2runner_8c.html#a625ccf5c04010f46cca3a69722d2aa96">test_runner_failure</a> ()</td></tr>
+<tr class="memdesc:a625ccf5c04010f46cca3a69722d2aa96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should produce an ERROR result in the test runner.  <a href="#a625ccf5c04010f46cca3a69722d2aa96">More...</a><br /></td></tr>
 <tr class="separator:a625ccf5c04010f46cca3a69722d2aa96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9669a0f2c1ee55cf6f81546f0a01e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="selftest_2runner_8c.html#ab9669a0f2c1ee55cf6f81546f0a01e6d">test_runner_incomplete_success</a> ()</td></tr>
+<tr class="memdesc:ab9669a0f2c1ee55cf6f81546f0a01e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should produce an INCOMPLETE but successful result in the test runner.  <a href="#ab9669a0f2c1ee55cf6f81546f0a01e6d">More...</a><br /></td></tr>
 <tr class="separator:ab9669a0f2c1ee55cf6f81546f0a01e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f642884513e2b9a86a50081ceb7d0eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="selftest_2runner_8c.html#a6f642884513e2b9a86a50081ceb7d0eb">test_runner_incomplete_failure</a> ()</td></tr>
+<tr class="memdesc:a6f642884513e2b9a86a50081ceb7d0eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should produce an INCOMPLETE but unsucessful result in the test runner.  <a href="#a6f642884513e2b9a86a50081ceb7d0eb">More...</a><br /></td></tr>
 <tr class="separator:a6f642884513e2b9a86a50081ceb7d0eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbed08f9ea9feb18c79820731fe9e97f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="selftest_2runner_8c.html#adbed08f9ea9feb18c79820731fe9e97f">test_runner_empty</a> ()</td></tr>
+<tr class="memdesc:adbed08f9ea9feb18c79820731fe9e97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should produce an INCOMPLETE (no assertions) result in the test runner.  <a href="#adbed08f9ea9feb18c79820731fe9e97f">More...</a><br /></td></tr>
 <tr class="separator:adbed08f9ea9feb18c79820731fe9e97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8630a501e512c95cf3a91fed4cdc90f0"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="selftest_2runner_8c.html#a8630a501e512c95cf3a91fed4cdc90f0">run_runner_tests</a> ()</td></tr>
+<tr class="memdesc:a8630a501e512c95cf3a91fed4cdc90f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner for this group.  <a href="#a8630a501e512c95cf3a91fed4cdc90f0">More...</a><br /></td></tr>
 <tr class="separator:a8630a501e512c95cf3a91fed4cdc90f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Self-tests for test runner This generates "incomplete" and "failure" results on purpose; the default test runner script will skip this test. </p>
+<div class="textblock"><p>Self-tests for test runner. </p>
+<p>This generates "incomplete" and "failure" results on purpose; the default test runner script will skip this test. You'll have to check the test's result yourself, the console should show results matching the descriptions.</p>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
@@ -113,6 +120,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Should produce a SUCCESS result in the test runner. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000020">Test:</a></b></dt><dd>making a successful assertion results in SUCCESS for the test </dd></dl>
+
 </div>
 </div>
 <a id="a625ccf5c04010f46cca3a69722d2aa96"></a>
@@ -129,6 +139,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Should produce an ERROR result in the test runner. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000021">Test:</a></b></dt><dd>making a failing assertion results in FAILURE for the test </dd></dl>
 
 </div>
 </div>
@@ -147,6 +160,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Should produce an INCOMPLETE but successful result in the test runner. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000022">Test:</a></b></dt><dd>marking a test incomplete when there are successful assertions results in INCOMPLETE but success for the test </dd></dl>
+
 </div>
 </div>
 <a id="a6f642884513e2b9a86a50081ceb7d0eb"></a>
@@ -163,6 +179,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Should produce an INCOMPLETE but unsucessful result in the test runner. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000023">Test:</a></b></dt><dd>marking a test incomplete when there are failed assertions results in INCOMPLETE but failure for the test </dd></dl>
 
 </div>
 </div>
@@ -181,6 +200,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Should produce an INCOMPLETE (no assertions) result in the test runner. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000024">Test:</a></b></dt><dd>tests without any assertions are marked as incomplete </dd></dl>
+
 </div>
 </div>
 <a id="a8630a501e512c95cf3a91fed4cdc90f0"></a>
@@ -198,12 +220,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Test runner for this group. </p>
+<p>Gets called via the generated test runner.</p>
+<dl class="section return"><dt>Returns</dt><dd>whether the test group was executed </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 12:46:39 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

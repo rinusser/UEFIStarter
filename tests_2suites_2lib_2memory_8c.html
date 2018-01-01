@@ -66,11 +66,11 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">memory.c File Reference</div>  </div>
+<div class="title">memory.c File Reference<div class="ingroups"><a class="el" href="group__group__lib.html">Library Functions</a> &raquo; <a class="el" href="group__group__lib__memory.html">Memory Tracking Functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Memory tracker tests.  
+<p>Tests for the memory allocation tracker.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
@@ -82,14 +82,17 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6342f032036cd075c37e84041e55486e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2memory_8c.html#a6342f032036cd075c37e84041e55486e">test_page_tracking</a> ()</td></tr>
+<tr class="memdesc:a6342f032036cd075c37e84041e55486e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure memory page tracking works.  <a href="#a6342f032036cd075c37e84041e55486e">More...</a><br /></td></tr>
 <tr class="separator:a6342f032036cd075c37e84041e55486e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bf99b8fc8584718a5e506101ab037c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2memory_8c.html#a5bf99b8fc8584718a5e506101ab037c7">test_pool_tracking</a> ()</td></tr>
+<tr class="memdesc:a5bf99b8fc8584718a5e506101ab037c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure pool memory tracking works.  <a href="#a5bf99b8fc8584718a5e506101ab037c7">More...</a><br /></td></tr>
 <tr class="separator:a5bf99b8fc8584718a5e506101ab037c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a601829a5743b970b85562ba469c13996"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2memory_8c.html#a601829a5743b970b85562ba469c13996">run_memory_tests</a> ()</td></tr>
+<tr class="memdesc:a601829a5743b970b85562ba469c13996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner for this group.  <a href="#a601829a5743b970b85562ba469c13996">More...</a><br /></td></tr>
 <tr class="separator:a601829a5743b970b85562ba469c13996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Memory tracker tests. </p>
+<div class="textblock"><p>Tests for the memory allocation tracker. </p>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
@@ -110,6 +113,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes sure memory page tracking works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000004">Test:</a></b></dt><dd><p class="startdd">stopping the memory tracker with unfreed tracked pages results in a logged error </p>
+<p>freeing tracked pages twice shouldn't work and result in a logged error </p>
+<p class="enddd">stopping the memory tracker with unfreed untracked pages should not log an error </p>
+</dd></dl>
+
 </div>
 </div>
 <a id="a5bf99b8fc8584718a5e506101ab037c7"></a>
@@ -126,6 +135,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Makes sure pool memory tracking works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000005">Test:</a></b></dt><dd><a class="el" href="library_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> should return the number of freed pool memory entries </dd></dl>
 
 </div>
 </div>
@@ -144,12 +156,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Test runner for this group. </p>
+<p>Gets called via the generated test runner.</p>
+<dl class="section return"><dt>Returns</dt><dd>whether the test group was executed </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 12:46:39 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

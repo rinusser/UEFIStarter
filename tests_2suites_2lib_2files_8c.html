@@ -66,11 +66,11 @@ $(function() {
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">files.c File Reference</div>  </div>
+<div class="title">files.c File Reference<div class="ingroups"><a class="el" href="group__group__lib.html">Library Functions</a> &raquo; <a class="el" href="group__group__lib__files.html">File I/O Functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>File I/O tests.  
+<p>Tests for file I/O functions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
@@ -81,12 +81,14 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a54e8355e5435a53f5c9dd57e3afafd26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2files_8c.html#a54e8355e5435a53f5c9dd57e3afafd26">test_get_file_contents</a> ()</td></tr>
+<tr class="memdesc:a54e8355e5435a53f5c9dd57e3afafd26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure get_file_content() works.  <a href="#a54e8355e5435a53f5c9dd57e3afafd26">More...</a><br /></td></tr>
 <tr class="separator:a54e8355e5435a53f5c9dd57e3afafd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac320ebd58ee09e56c92633b13ed97c35"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2files_8c.html#ac320ebd58ee09e56c92633b13ed97c35">run_files_tests</a> ()</td></tr>
+<tr class="memdesc:ac320ebd58ee09e56c92633b13ed97c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner for this group.  <a href="#ac320ebd58ee09e56c92633b13ed97c35">More...</a><br /></td></tr>
 <tr class="separator:ac320ebd58ee09e56c92633b13ed97c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>File I/O tests. </p>
+<div class="textblock"><p>Tests for file I/O functions. </p>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
@@ -107,6 +109,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Makes sure get_file_content() works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000002">Test:</a></b></dt><dd>file_get_contents() returns a file's contents</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>read a file that's guarantueed to exist, e.g. the currently running .efi, instead of startup.nsh. </dd></dl>
+
 </div>
 </div>
 <a id="ac320ebd58ee09e56c92633b13ed97c35"></a>
@@ -124,12 +130,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Test runner for this group. </p>
+<p>Gets called via the generated test runner.</p>
+<dl class="section return"><dt>Returns</dt><dd>whether the test group was executed </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 12:46:39 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

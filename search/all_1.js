@@ -59,5 +59,6 @@ var searchData=
   ['atoui64',['atoui64',['../string_8h.html#a334eeda5794fa2b34dfb3d56db38d100',1,'atoui64(char *str):&#160;string.c'],['../library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100',1,'atoui64(char *str):&#160;string.c']]],
   ['atoui64_5ftestcase_5ft',['atoui64_testcase_t',['../structatoui64__testcase__t.html',1,'']]],
   ['atoui64_5ftestcases',['atoui64_testcases',['../tests_2suites_2lib_2string_8c.html#af0a0414d8a53a75c5f431dde0aae8500',1,'string.c']]],
-  ['applications',['Applications',['../group__group__apps.html',1,'']]]
+  ['applications',['Applications',['../group__group__apps.html',1,'']]],
+  ['assertions',['Assertions',['../group__group__tests__asserts.html',1,'']]]
 ];

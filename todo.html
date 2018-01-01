@@ -64,6 +64,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
+<dt><a class="anchor" id="_todo000024"></a>Global <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725">_counting_logger</a>  (CHAR16 *level, CHAR16 *msg)</dt>
+<dd>there <em>has</em> to be a better way to match log levels.. maybe add numeric level to print function?  </dd>
 <dt><a class="anchor" id="_todo000015"></a>Global <a class="el" href="library_2memory_8c.html#a0479354cc6d998e88f047845028bf222">_get_next_free_entry</a>  (<a class="el" href="structmemory__page__list__t.html" title="type for a list node of tracked memory page allocations ">memory_page_list_t</a> **page_list, UINTN *index)</dt>
 <dd>if there's a next page_list, check that. if not, allocate new page_list and link to it  </dd>
 <dt><a class="anchor" id="_todo000009"></a>Global <a class="el" href="library_2cmdline_8c.html#a205da2eaeb062e118e4ff6a8499d5d2b">_print_argument_group_help</a>  (<a class="el" href="structcmdline__argument__group__t.html" title="model for group of command line arguments ">cmdline_argument_group_t</a> *arguments)</dt>
@@ -98,6 +100,14 @@ $(function() {
 <dd>There's a GetRandomNumber32() function in EDK2 but it seems to segfault all the time, see what's up  </dd>
 <dt><a class="anchor" id="_todo000017"></a>Global <a class="el" href="library_2memory_8c.html#a8de4777fe265e2153dd7b98b355c9de4">stop_tracking_memory</a>  ()</dt>
 <dd>the <a class="el" href="memory_8h.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below  </dd>
+<dt><a class="anchor" id="_todo000023"></a>Global <a class="el" href="tests_2suites_2lib_2files_8c.html#a54e8355e5435a53f5c9dd57e3afafd26">test_get_file_contents</a>  ()</dt>
+<dd>read a file that's guarantueed to exist, e.g. the currently running .efi, instead of startup.nsh.  </dd>
+<dt><a class="anchor" id="_todo000025"></a>Global <a class="el" href="suites_2selftest_2asserts_8c.html#a89bcf76ed80de320ba177bb1851ac640">test_graphics</a>  ()</dt>
+<dd>move this to the graphics tests, once they're in this repository  </dd>
+<dt><a class="anchor" id="_todo000022"></a>File <a class="el" href="tests_8c.html">tests.c</a>  </dt>
+<dd><p class="startdd">add pause-on-error/incomplete feature </p>
+<p class="enddd">could add a way to capture error messages and output them later  </p>
+</dd>
 <dt><a class="anchor" id="_todo000021"></a>Global <a class="el" href="timestamp_8c.html#a17015b82d7011fd14cf69d4b168506f8">timestamp_diff_seconds</a>  (UINT64 start, UINT64 end)</dt>
 <dd>this doesn't check for division by 0 errors on purpose, maybe check performance hit and add it if insignificant  </dd>
 <dt><a class="anchor" id="_todo000016"></a>Global <a class="el" href="library_2memory_8c.html#a2d54518679f8257223791a8a767531de">track_pool_memory</a>  (void *address)</dt>
@@ -110,7 +120,7 @@ $(function() {
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 12:46:39 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
