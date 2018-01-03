@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['logger_2ec',['logger.c',['../library_2logger_8c.html',1,'(Global Namespace)'],['../tests_2suites_2lib_2logger_8c.html',1,'(Global Namespace)']]],
-  ['logger_2eh',['logger.h',['../logger_8h.html',1,'']]]
+  ['memory_2ec',['memory.c',['../library_2memory_8c.html',1,'(Global Namespace)'],['../tests_2suites_2lib_2memory_8c.html',1,'(Global Namespace)']]],
+  ['memory_2eh',['memory.h',['../memory_8h.html',1,'']]]
 ];

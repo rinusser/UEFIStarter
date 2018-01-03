@@ -13,7 +13,7 @@ var searchData=
   ['arg_5fdouble',['ARG_DOUBLE',['../cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15',1,'cmdline.h']]],
   ['arg_5fflake_5fcount',['ARG_FLAKE_COUNT',['../snow_8c.html#a8f876774f86432f093b6fb5a7a2a0215',1,'snow.c']]],
   ['arg_5fground_5flifetime',['ARG_GROUND_LIFETIME',['../snow_8c.html#afdbea298d41add085cb1763975184953',1,'snow.c']]],
-  ['arg_5fgroup',['ARG_GROUP',['../cmdline_8h.html#a11c931f63d2e508858e26c38953ca93f',1,'ARG_GROUP():&#160;cmdline.h'],['../helloworld_8c.html#a22075534ec2da3e46d662d801027e916',1,'ARG_GROUP(_arg_group1, args1, L&quot;Group 1&quot;):&#160;helloworld.c'],['../helloworld_8c.html#a2c3d90aa6f4699e43b108488b166839c',1,'ARG_GROUP(_arg_group2, args2, L&quot;Group 2&quot;):&#160;helloworld.c'],['../input_8c.html#a2a52915a4fc02876de82d3b80fa9decd',1,'ARG_GROUP(_arguments, _args, L&quot;Application-specific options&quot;):&#160;input.c'],['../snow_8c.html#a8e45d472fe2d8a07d5c9ece564794e53',1,'ARG_GROUP(_arguments, _argument_list, L&quot;Weather options (in a UEFI boot time executable, mind you)&quot;):&#160;snow.c']]],
+  ['arg_5fgroup',['ARG_GROUP',['../cmdline_8h.html#a11c931f63d2e508858e26c38953ca93f',1,'cmdline.h']]],
   ['arg_5fhandle',['ARG_HANDLE',['../input_8c.html#a48d1e0ff535e0ced1b100310ae8f07b2',1,'input.c']]],
   ['arg_5fint',['ARG_INT',['../cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993',1,'cmdline.h']]],
   ['arg_5fmax_5fcross_5fspeed',['ARG_MAX_CROSS_SPEED',['../snow_8c.html#a958a8a0fbbb5dc1f208d0216e558203b',1,'snow.c']]],

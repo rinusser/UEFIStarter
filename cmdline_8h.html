@@ -94,8 +94,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4178f5b10bef1969e3a68f77fe0c00fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a4178f5b10bef1969e3a68f77fe0c00fa">RV_HELP</a>&#160;&#160;&#160;0x10000000</td></tr>
-<tr class="memdesc:a4178f5b10bef1969e3a68f77fe0c00fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFI_STATUS compatible return value, indicating user wanted the help screen.  <a href="#a4178f5b10bef1969e3a68f77fe0c00fa">More...</a><br /></td></tr>
+<tr class="memitem:a4178f5b10bef1969e3a68f77fe0c00fa"><td class="memItemLeft" align="right" valign="top"><a id="a4178f5b10bef1969e3a68f77fe0c00fa"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a4178f5b10bef1969e3a68f77fe0c00fa">RV_HELP</a>&#160;&#160;&#160;0x10000000</td></tr>
+<tr class="memdesc:a4178f5b10bef1969e3a68f77fe0c00fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">EFI_STATUS compatible return value, indicating user wanted the help screen. <br /></td></tr>
 <tr class="separator:a4178f5b10bef1969e3a68f77fe0c00fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11c931f63d2e508858e26c38953ca93f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a11c931f63d2e508858e26c38953ca93f">ARG_GROUP</a>(VARIABLE,  LIST,  DESCRIPTION)&#160;&#160;&#160;<a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a> VARIABLE={DESCRIPTION,sizeof(LIST)/sizeof(<a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>),LIST};</td></tr>
 <tr class="memdesc:a11c931f63d2e508858e26c38953ca93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro for quickly defining an argument group  <a href="#a11c931f63d2e508858e26c38953ca93f">More...</a><br /></td></tr>
@@ -109,8 +110,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a31e5789f35e7f930cad34f9027c2e5a5"><td class="memItemLeft" align="right" valign="top">typedef BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a31e5789f35e7f930cad34f9027c2e5a5">validate_argument_f</a>(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>)</td></tr>
-<tr class="memdesc:a31e5789f35e7f930cad34f9027c2e5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">function pointer type for command line argument validators  <a href="#a31e5789f35e7f930cad34f9027c2e5a5">More...</a><br /></td></tr>
+<tr class="memitem:a31e5789f35e7f930cad34f9027c2e5a5"><td class="memItemLeft" align="right" valign="top"><a id="a31e5789f35e7f930cad34f9027c2e5a5"></a>
+typedef BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a31e5789f35e7f930cad34f9027c2e5a5">validate_argument_f</a>(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>)</td></tr>
+<tr class="memdesc:a31e5789f35e7f930cad34f9027c2e5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">function pointer type for command line argument validators <br /></td></tr>
 <tr class="separator:a31e5789f35e7f930cad34f9027c2e5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -154,22 +156,6 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a4178f5b10bef1969e3a68f77fe0c00fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4178f5b10bef1969e3a68f77fe0c00fa">&#9670;&nbsp;</a></span>RV_HELP</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RV_HELP&#160;&#160;&#160;0x10000000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>EFI_STATUS compatible return value, indicating user wanted the help screen. </p>
-
-</div>
-</div>
 <a id="a11c931f63d2e508858e26c38953ca93f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11c931f63d2e508858e26c38953ca93f">&#9670;&nbsp;</a></span>ARG_GROUP</h2>
 
@@ -316,23 +302,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a31e5789f35e7f930cad34f9027c2e5a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31e5789f35e7f930cad34f9027c2e5a5">&#9670;&nbsp;</a></span>validate_argument_f</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef BOOLEAN validate_argument_f(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>function pointer type for command line argument validators </p>
-
-</div>
-</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a3ba763fb77eb06a8628d013e1aff8058"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3ba763fb77eb06a8628d013e1aff8058">&#9670;&nbsp;</a></span>argument_type</h2>
@@ -440,7 +409,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed number; -1.0 on error</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>replace wcstof with built-in, or move to separate file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
 
 </div>
 </div>
@@ -493,7 +462,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>add test </dd></dl>
 
 </div>
 </div>
@@ -546,7 +515,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>add test </dd></dl>
 
 </div>
 </div>
@@ -642,7 +611,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 3 2018 18:32:09 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

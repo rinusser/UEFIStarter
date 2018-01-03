@@ -13,6 +13,5 @@ var searchData=
   ['do_5ftimestamp_5ftests',['do_timestamp_tests',['../timer_8c.html#a88c3ea3a4b7ec42a116f32d3edec717e',1,'timer.c']]],
   ['double_5frange_5fvalidator',['DOUBLE_RANGE_VALIDATOR',['../cmdline_8h.html#a2d3f0f236e4eb5879b3bf42fef481651',1,'cmdline.h']]],
   ['double_5fuint64_5ft',['double_uint64_t',['../uniondouble__uint64__t.html',1,'']]],
-  ['doxygen_5fgroups_2edox',['Doxygen_groups.dox',['../Doxygen__groups_8dox.html',1,'']]],
   ['drain_5fkey_5fbuffer',['drain_key_buffer',['../console_8h.html#a57623079fc65ddea96d74353bfd2d5d2',1,'drain_key_buffer():&#160;console.c'],['../console_8c.html#a57623079fc65ddea96d74353bfd2d5d2',1,'drain_key_buffer():&#160;console.c']]]
 ];

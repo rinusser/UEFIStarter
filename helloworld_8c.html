@@ -85,14 +85,8 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a45b0ebd71838726f131aa5eac8d8d7bb"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#a45b0ebd71838726f131aa5eac8d8d7bb">validate_int</a> (<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> value)</td></tr>
-<tr class="memdesc:a45b0ebd71838726f131aa5eac8d8d7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">TODO pkg/mod config incomplete, why does this need a relative path?!  <a href="#a45b0ebd71838726f131aa5eac8d8d7bb">More...</a><br /></td></tr>
+<tr class="memdesc:a45b0ebd71838726f131aa5eac8d8d7bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validator function for "-int" parameter.  <a href="#a45b0ebd71838726f131aa5eac8d8d7bb">More...</a><br /></td></tr>
 <tr class="separator:a45b0ebd71838726f131aa5eac8d8d7bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22075534ec2da3e46d662d801027e916"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#a22075534ec2da3e46d662d801027e916">ARG_GROUP</a> (_arg_group1, <a class="el" href="helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d">args1</a>, L&quot;Group 1&quot;)</td></tr>
-<tr class="memdesc:a22075534ec2da3e46d662d801027e916"><td class="mdescLeft">&#160;</td><td class="mdescRight">command-line argument group 1  <a href="#a22075534ec2da3e46d662d801027e916">More...</a><br /></td></tr>
-<tr class="separator:a22075534ec2da3e46d662d801027e916"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c3d90aa6f4699e43b108488b166839c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#a2c3d90aa6f4699e43b108488b166839c">ARG_GROUP</a> (_arg_group2, <a class="el" href="helloworld_8c.html#ae9f8aba11890e4ac9625a53861a72c94">args2</a>, L&quot;Group 2&quot;)</td></tr>
-<tr class="memdesc:a2c3d90aa6f4699e43b108488b166839c"><td class="mdescLeft">&#160;</td><td class="mdescRight">command-line argument group 2  <a href="#a2c3d90aa6f4699e43b108488b166839c">More...</a><br /></td></tr>
-<tr class="separator:a2c3d90aa6f4699e43b108488b166839c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab78f8f08204072124ace7317c3b9728e"><td class="memItemLeft" align="right" valign="top">INTN EFIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#ab78f8f08204072124ace7317c3b9728e">ShellAppMain</a> (UINTN argc, CHAR16 **argv)</td></tr>
 <tr class="memdesc:ab78f8f08204072124ace7317c3b9728e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function, gets invoked by UEFI shell.  <a href="#ab78f8f08204072124ace7317c3b9728e">More...</a><br /></td></tr>
 <tr class="separator:ab78f8f08204072124ace7317c3b9728e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -102,16 +96,25 @@ Variables</h2></td></tr>
 <tr class="memitem:ac96e26ff3b0cd954247d7e0816397b6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d">args1</a> []</td></tr>
 <tr class="memdesc:ac96e26ff3b0cd954247d7e0816397b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">command-line arguments in group 1  <a href="#ac96e26ff3b0cd954247d7e0816397b6d">More...</a><br /></td></tr>
 <tr class="separator:ac96e26ff3b0cd954247d7e0816397b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78ff96c48f4edf1aba657a064895314"><td class="memItemLeft" align="right" valign="top"><a id="ad78ff96c48f4edf1aba657a064895314"></a>
+<a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#ad78ff96c48f4edf1aba657a064895314">_arg_group1</a> ={ L&quot;Group 1&quot; ,sizeof( <a class="el" href="helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d">args1</a> )/sizeof(<a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>), <a class="el" href="helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d">args1</a> }</td></tr>
+<tr class="memdesc:ad78ff96c48f4edf1aba657a064895314"><td class="mdescLeft">&#160;</td><td class="mdescRight">command-line argument group 1 <br /></td></tr>
+<tr class="separator:ad78ff96c48f4edf1aba657a064895314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f8aba11890e4ac9625a53861a72c94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#ae9f8aba11890e4ac9625a53861a72c94">args2</a> []</td></tr>
 <tr class="memdesc:ae9f8aba11890e4ac9625a53861a72c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">command-line arguments in group 2  <a href="#ae9f8aba11890e4ac9625a53861a72c94">More...</a><br /></td></tr>
 <tr class="separator:ae9f8aba11890e4ac9625a53861a72c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d793050f1e687147ff158fa9e8a6489"><td class="memItemLeft" align="right" valign="top"><a id="a6d793050f1e687147ff158fa9e8a6489"></a>
+<a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="helloworld_8c.html#a6d793050f1e687147ff158fa9e8a6489">_arg_group2</a> ={ L&quot;Group 2&quot; ,sizeof( <a class="el" href="helloworld_8c.html#ae9f8aba11890e4ac9625a53861a72c94">args2</a> )/sizeof(<a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>), <a class="el" href="helloworld_8c.html#ae9f8aba11890e4ac9625a53861a72c94">args2</a> }</td></tr>
+<tr class="memdesc:a6d793050f1e687147ff158fa9e8a6489"><td class="mdescLeft">&#160;</td><td class="mdescRight">command-line argument group 2 <br /></td></tr>
+<tr class="separator:a6d793050f1e687147ff158fa9e8a6489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This application is a simple example of how to read command line arguments and output to console. </p>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>pkg/mod config must be incomplete, why do we need relative paths for includes?! </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a45b0ebd71838726f131aa5eac8d8d7bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45b0ebd71838726f131aa5eac8d8d7bb">&#9670;&nbsp;</a></span>validate_int()</h2>
@@ -129,8 +132,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>TODO pkg/mod config incomplete, why does this need a relative path?! </p>
-<p>Validator function for "-int" parameter. Values must be greater than or equal to 2 to be valid.</p>
+<p>Validator function for "-int" parameter. </p>
+<p>Values must be greater than or equal to 2 to be valid.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>the value to validate </td></tr>
@@ -138,78 +141,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the value is &gt;=2 </dd></dl>
-
-</div>
-</div>
-<a id="a22075534ec2da3e46d662d801027e916"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22075534ec2da3e46d662d801027e916">&#9670;&nbsp;</a></span>ARG_GROUP() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ARG_GROUP </td>
-          <td>(</td>
-          <td class="paramtype">_arg_group1&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d">args1</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">L&quot;Group 1&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>command-line argument group 1 </p>
-
-</div>
-</div>
-<a id="a2c3d90aa6f4699e43b108488b166839c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c3d90aa6f4699e43b108488b166839c">&#9670;&nbsp;</a></span>ARG_GROUP() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ARG_GROUP </td>
-          <td>(</td>
-          <td class="paramtype">_arg_group2&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="helloworld_8c.html#ae9f8aba11890e4ac9625a53861a72c94">args2</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">L&quot;Group 2&quot;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>command-line argument group 2 </p>
 
 </div>
 </div>
@@ -281,7 +212,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {{uint64:2},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,<a class="code" href="helloworld_8c.html#a45b0ebd71838726f131aa5eac8d8d7bb">validate_int</a>,L<span class="stringliteral">&quot;-int&quot;</span>,L<span class="stringliteral">&quot;integer parameter&quot;</span>},</div><div class="line">}</div><div class="ttc" id="helloworld_8c_html_a45b0ebd71838726f131aa5eac8d8d7bb"><div class="ttname"><a href="helloworld_8c.html#a45b0ebd71838726f131aa5eac8d8d7bb">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(double_uint64_t value)</div><div class="ttdoc">TODO pkg/mod config incomplete, why does this need a relative path?! </div><div class="ttdef"><b>Definition:</b> helloworld.c:28</div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {{uint64:2},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,<a class="code" href="helloworld_8c.html#a45b0ebd71838726f131aa5eac8d8d7bb">validate_int</a>,L<span class="stringliteral">&quot;-int&quot;</span>,L<span class="stringliteral">&quot;integer parameter&quot;</span>},</div><div class="line">}</div><div class="ttc" id="helloworld_8c_html_a45b0ebd71838726f131aa5eac8d8d7bb"><div class="ttname"><a href="helloworld_8c.html#a45b0ebd71838726f131aa5eac8d8d7bb">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(double_uint64_t value)</div><div class="ttdoc">Validator function for &quot;-int&quot; parameter. </div><div class="ttdef"><b>Definition:</b> helloworld.c:30</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a></div><div class="ttdoc">integer </div><div class="ttdef"><b>Definition:</b> cmdline.h:23</div></div>
 </div><!-- fragment -->
 <p>command-line arguments in group 2 </p>
@@ -291,7 +222,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 23:13:22 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 3 2018 18:32:09 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

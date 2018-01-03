@@ -79,9 +79,13 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa13d6c1d3caec5d64ea79fbfa9619549"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#aa13d6c1d3caec5d64ea79fbfa9619549">TRACE_STARTTYPE</a>(NAME)</td></tr>
+<tr class="memitem:aa13d6c1d3caec5d64ea79fbfa9619549"><td class="memItemLeft" align="right" valign="top"><a id="aa13d6c1d3caec5d64ea79fbfa9619549"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#aa13d6c1d3caec5d64ea79fbfa9619549">TRACE_STARTTYPE</a>(NAME)</td></tr>
+<tr class="memdesc:aa13d6c1d3caec5d64ea79fbfa9619549"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper macro for debugging output logic - the silent version is active, this won't do anything <br /></td></tr>
 <tr class="separator:aa13d6c1d3caec5d64ea79fbfa9619549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3499481c1433fe9ebfc674e843c9117a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a3499481c1433fe9ebfc674e843c9117a">TRACE_ENDTYPE</a>(NAME)</td></tr>
+<tr class="memitem:a3499481c1433fe9ebfc674e843c9117a"><td class="memItemLeft" align="right" valign="top"><a id="a3499481c1433fe9ebfc674e843c9117a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a3499481c1433fe9ebfc674e843c9117a">TRACE_ENDTYPE</a>(NAME)</td></tr>
+<tr class="memdesc:a3499481c1433fe9ebfc674e843c9117a"><td class="mdescLeft">&#160;</td><td class="mdescRight">helper macro for debugging output logic - the silent version is active, this won't do anything <br /></td></tr>
 <tr class="separator:a3499481c1433fe9ebfc674e843c9117a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -92,8 +96,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a766e9fda46956e7021112a3460fc797e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a766e9fda46956e7021112a3460fc797e">print_test_group_start</a> (CHAR16 *name)</td></tr>
 <tr class="memdesc:a766e9fda46956e7021112a3460fc797e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the start of a test group.  <a href="#a766e9fda46956e7021112a3460fc797e">More...</a><br /></td></tr>
 <tr class="separator:a766e9fda46956e7021112a3460fc797e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa816774884de251e987a8aef3b07cd3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#aa816774884de251e987a8aef3b07cd3e">print_test_group_end</a> ()</td></tr>
-<tr class="memdesc:aa816774884de251e987a8aef3b07cd3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the end of a test group.  <a href="#aa816774884de251e987a8aef3b07cd3e">More...</a><br /></td></tr>
+<tr class="memitem:aa816774884de251e987a8aef3b07cd3e"><td class="memItemLeft" align="right" valign="top"><a id="aa816774884de251e987a8aef3b07cd3e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#aa816774884de251e987a8aef3b07cd3e">print_test_group_end</a> ()</td></tr>
+<tr class="memdesc:aa816774884de251e987a8aef3b07cd3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the end of a test group. <br /></td></tr>
 <tr class="separator:aa816774884de251e987a8aef3b07cd3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7404ef8b42c4d009b80110364e0ff6c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a7404ef8b42c4d009b80110364e0ff6c7">print_assert_counts</a> (INT64 fails, INT64 asserts)</td></tr>
 <tr class="memdesc:a7404ef8b42c4d009b80110364e0ff6c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints assertion counts, if enabled.  <a href="#a7404ef8b42c4d009b80110364e0ff6c7">More...</a><br /></td></tr>
@@ -119,8 +124,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a46f9f512069e45f7875567b41c40160c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a46f9f512069e45f7875567b41c40160c">print_assertion</a> (BOOLEAN success, CHAR16 *description, CHAR16 *message)</td></tr>
 <tr class="memdesc:a46f9f512069e45f7875567b41c40160c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints an assertion's result.  <a href="#a46f9f512069e45f7875567b41c40160c">More...</a><br /></td></tr>
 <tr class="separator:a46f9f512069e45f7875567b41c40160c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498470db9f47675fd3243f3052873266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a498470db9f47675fd3243f3052873266">debug_print_verbosity</a> ()</td></tr>
-<tr class="memdesc:a498470db9f47675fd3243f3052873266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal: prints verbosity settings.  <a href="#a498470db9f47675fd3243f3052873266">More...</a><br /></td></tr>
+<tr class="memitem:a498470db9f47675fd3243f3052873266"><td class="memItemLeft" align="right" valign="top"><a id="a498470db9f47675fd3243f3052873266"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a498470db9f47675fd3243f3052873266">debug_print_verbosity</a> ()</td></tr>
+<tr class="memdesc:a498470db9f47675fd3243f3052873266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal: prints verbosity settings. <br /></td></tr>
 <tr class="separator:a498470db9f47675fd3243f3052873266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5041ec3b4d746997d61e14a84f9acb48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a5041ec3b4d746997d61e14a84f9acb48">debug_print_results</a> (<a class="el" href="structtest__results__t.html">test_results_t</a> *results)</td></tr>
 <tr class="memdesc:a5041ec3b4d746997d61e14a84f9acb48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal: prints raw test results.  <a href="#a5041ec3b4d746997d61e14a84f9acb48">More...</a><br /></td></tr>
@@ -128,8 +134,9 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a43707e73354178e8d2c4edf67770ae8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtest__verbosity__t.html">test_verbosity_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a43707e73354178e8d2c4edf67770ae8e">test_verbosity</a></td></tr>
-<tr class="memdesc:a43707e73354178e8d2c4edf67770ae8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current test verbosity  <a href="#a43707e73354178e8d2c4edf67770ae8e">More...</a><br /></td></tr>
+<tr class="memitem:a43707e73354178e8d2c4edf67770ae8e"><td class="memItemLeft" align="right" valign="top"><a id="a43707e73354178e8d2c4edf67770ae8e"></a>
+<a class="el" href="structtest__verbosity__t.html">test_verbosity_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="output_8c.html#a43707e73354178e8d2c4edf67770ae8e">test_verbosity</a></td></tr>
+<tr class="memdesc:a43707e73354178e8d2c4edf67770ae8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current test verbosity <br /></td></tr>
 <tr class="separator:a43707e73354178e8d2c4edf67770ae8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -138,44 +145,7 @@ Variables</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa13d6c1d3caec5d64ea79fbfa9619549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa13d6c1d3caec5d64ea79fbfa9619549">&#9670;&nbsp;</a></span>TRACE_STARTTYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TRACE_STARTTYPE</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">NAME</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3499481c1433fe9ebfc674e843c9117a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3499481c1433fe9ebfc674e843c9117a">&#9670;&nbsp;</a></span>TRACE_ENDTYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TRACE_ENDTYPE</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">NAME</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a427e8615a92e4d981d423f0a76047b9a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a427e8615a92e4d981d423f0a76047b9a">&#9670;&nbsp;</a></span>_print_optional_multiline_test_prefix_or()</h2>
 
@@ -233,25 +203,6 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="aa816774884de251e987a8aef3b07cd3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa816774884de251e987a8aef3b07cd3e">&#9670;&nbsp;</a></span>print_test_group_end()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void print_test_group_end </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Prints the end of a test group. </p>
 
 </div>
 </div>
@@ -508,25 +459,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a498470db9f47675fd3243f3052873266"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a498470db9f47675fd3243f3052873266">&#9670;&nbsp;</a></span>debug_print_verbosity()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void debug_print_verbosity </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Internal: prints verbosity settings. </p>
-
-</div>
-</div>
 <a id="a5041ec3b4d746997d61e14a84f9acb48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5041ec3b4d746997d61e14a84f9acb48">&#9670;&nbsp;</a></span>debug_print_results()</h2>
 
@@ -544,30 +476,19 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Internal: prints raw test results. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a43707e73354178e8d2c4edf67770ae8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43707e73354178e8d2c4edf67770ae8e">&#9670;&nbsp;</a></span>test_verbosity</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structtest__verbosity__t.html">test_verbosity_t</a> test_verbosity</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>the current test verbosity </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">results</td><td>the test results to output </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 1 2018 23:13:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 3 2018 18:32:09 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

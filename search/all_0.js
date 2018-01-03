@@ -1,15 +1,21 @@
 var searchData=
 [
+  ['_5farg_5fgroup1',['_arg_group1',['../helloworld_8c.html#ad78ff96c48f4edf1aba657a064895314',1,'helloworld.c']]],
+  ['_5farg_5fgroup2',['_arg_group2',['../helloworld_8c.html#a6d793050f1e687147ff158fa9e8a6489',1,'helloworld.c']]],
   ['_5fargs',['_args',['../input_8c.html#aba60c4f0d7f55179e5c48d5d056615e8',1,'input.c']]],
   ['_5fargument_5flist',['_argument_list',['../snow_8c.html#a95c73778bd4020e2e94a866012f84994',1,'snow.c']]],
+  ['_5farguments',['_arguments',['../input_8c.html#a8cce9f8b526c2942e7541defc2bdd040',1,'_arguments():&#160;input.c'],['../snow_8c.html#a8cce9f8b526c2942e7541defc2bdd040',1,'_arguments():&#160;snow.c']]],
   ['_5fargv',['_argv',['../console_8c.html#a261f07162c8ee16bb2550e308963f057',1,'console.c']]],
   ['_5fargv_5fpages',['_argv_pages',['../console_8c.html#a06678e11ba7bfff4d6eb038faffd48db',1,'console.c']]],
   ['_5fassert_5flog_5fcounts',['_assert_log_counts',['../tests_2suites_2lib_2logger_8c.html#abaeeea6af3a3cb18f3f96f38c881eae4',1,'logger.c']]],
   ['_5fcombine_5foutcomes',['_combine_outcomes',['../tests_8c.html#a465511c2976279e5124737f32c9403e1',1,'tests.c']]],
   ['_5fcounting_5flogger',['_counting_logger',['../tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725',1,'logger.c']]],
+  ['_5fdebug',['_debug',['../library_2logger_8c.html#adfb7e311f8189642e6f0d18d4ea68b5e',1,'logger.c']]],
+  ['_5ferror',['_error',['../library_2logger_8c.html#a2d2ae4090d4c522cb0e9f6dfae5b1b4f',1,'logger.c']]],
   ['_5ffind_5fpage_5flist_5fentry',['_find_page_list_entry',['../library_2memory_8c.html#a268997395ce324da8b94cc008e44f7a5',1,'memory.c']]],
   ['_5fget_5fnext_5ffree_5fentry',['_get_next_free_entry',['../library_2memory_8c.html#a0479354cc6d998e88f047845028bf222',1,'memory.c']]],
   ['_5fground_5flifetime_5fframes',['_ground_lifetime_frames',['../snow_8c.html#ad9290569b186ab208abfa17a8a7f5100',1,'snow.c']]],
+  ['_5finfo',['_info',['../library_2logger_8c.html#a26814b872d0da906339b87443766b7bc',1,'logger.c']]],
   ['_5finitial_5flog_5flevel',['_initial_log_level',['../tests_8c.html#a48971c20c2dc1877de23dd59e44e3f84',1,'tests.c']]],
   ['_5flog_5fcounts',['_log_counts',['../tests_2suites_2lib_2logger_8c.html#a48222912b8d99a96726d91c3a160e8fa',1,'logger.c']]],
   ['_5flogger_5ffunction_5fva',['_logger_function_va',['../library_2logger_8c.html#aae9543ef02c75d8633494685911b5098',1,'logger.c']]],
@@ -30,6 +36,8 @@ var searchData=
   ['_5fsimple_5fassert',['_simple_assert',['../framework_2asserts_8c.html#a24b7d4a94107ff7afdbc02cf19db285f',1,'asserts.c']]],
   ['_5fskipped_5ftests_5fcount',['_skipped_tests_count',['../tests_8c.html#a6b7148c4d186070708f841f592f62c60',1,'tests.c']]],
   ['_5fskipped_5ftests_5flist',['_skipped_tests_list',['../tests_8c.html#a5a8ab0568498d6810db9a9021e665d59',1,'tests.c']]],
+  ['_5ftrace',['_trace',['../library_2logger_8c.html#aa10573f383069ee16b91ccc86a3dabae',1,'logger.c']]],
+  ['_5fwarn',['_warn',['../library_2logger_8c.html#aa66e123140057f58ef3e0979dd0ad5e8',1,'logger.c']]],
   ['_5fwcstof',['_wcstof',['../cmdline_8h.html#a556233560a87ebefba6d1ea766df485e',1,'_wcstof(CHAR16 *str):&#160;cmdline.c'],['../library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e',1,'_wcstof(CHAR16 *str):&#160;cmdline.c']]],
   ['_5fwctype_5fnumber',['_wctype_number',['../library_2cmdline_8c.html#a286cc95f103f019b4dd825ba3e72bc0b',1,'cmdline.c']]]
 ];

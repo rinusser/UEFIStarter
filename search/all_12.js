@@ -38,6 +38,7 @@ var searchData=
   ['test_5fwctype_5fint',['test_wctype_int',['../tests_2suites_2lib_2string_8c.html#a134cf4044ad67f5785d3c7b6e6e229ac',1,'string.c']]],
   ['tests_2ec',['tests.c',['../tests_8c.html',1,'']]],
   ['tests_2eh',['tests.h',['../tests_8h.html',1,'']]],
+  ['tests_5farggroup',['tests_arggroup',['../tests_8c.html#a41aff95aa4487f8b585ee11e786b4f50',1,'tests.c']]],
   ['tests_5fargs',['tests_args',['../tests_8c.html#ad36f41956b780b516a0f3e28b1964a80',1,'tests.c']]],
   ['time_5foffset',['time_offset',['../structflake__t.html#ac2f13034251862ab2370ae724f1730de',1,'flake_t']]],
   ['timer_2ec',['timer.c',['../timer_8c.html',1,'']]],

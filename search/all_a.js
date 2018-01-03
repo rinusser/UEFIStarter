@@ -14,7 +14,7 @@ var searchData=
   ['logger_5fargs',['logger_args',['../library_2cmdline_8c.html#ae86deb68b5607efc8a7d3af2b3ce31d1',1,'cmdline.c']]],
   ['logger_5fargs_5fmapping_5ft',['logger_args_mapping_t',['../structlogger__args__mapping__t.html',1,'']]],
   ['logger_5fentry_5fcounts',['logger_entry_counts',['../library_2logger_8c.html#ab4ed22e44749ee3b46ef542f3eb47b3e',1,'logger.c']]],
-  ['logger_5fforward_5ffunc',['LOGGER_FORWARD_FUNC',['../library_2logger_8c.html#a89e5384da05e1e7f9f6bf32bbcebd5aa',1,'LOGGER_FORWARD_FUNC():&#160;logger.c'],['../library_2logger_8c.html#a314a18651042d9820a8e80a9fd7f18c6',1,'LOGGER_FORWARD_FUNC(trace, TRACE):&#160;logger.c'],['../library_2logger_8c.html#a86a32a089c5e35c51505b05eb8973683',1,'LOGGER_FORWARD_FUNC(debug, DEBUG):&#160;logger.c'],['../library_2logger_8c.html#afdc7fc827337f0a01304d08fc4983f29',1,'LOGGER_FORWARD_FUNC(info, INFO):&#160;logger.c'],['../library_2logger_8c.html#adad0d692a1ec7317a12c2264607d49f1',1,'LOGGER_FORWARD_FUNC(warn, WARN):&#160;logger.c'],['../library_2logger_8c.html#a42a5d8b88364b58ca1f90ca1bd587812',1,'LOGGER_FORWARD_FUNC(error, ERROR):&#160;logger.c']]],
+  ['logger_5fforward_5ffunc',['LOGGER_FORWARD_FUNC',['../library_2logger_8c.html#a89e5384da05e1e7f9f6bf32bbcebd5aa',1,'logger.c']]],
   ['logger_5ffunction_5ft',['logger_function_t',['../logger_8h.html#ade6095cb484cc04f7664c23d108faf15',1,'logger.h']]],
   ['logger_5flevel_5fnames',['logger_level_names',['../library_2logger_8c.html#a88c136a169bc517bde0e093db7eac349',1,'logger.c']]],
   ['logger_5fprint_5ffunc',['logger_print_func',['../library_2logger_8c.html#a549c290c34527ed65ef5ac5993185cb9',1,'logger.c']]],

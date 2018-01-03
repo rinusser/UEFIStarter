@@ -1,7 +1,10 @@
 var searchData=
 [
+  ['_5farg_5fgroup1',['_arg_group1',['../helloworld_8c.html#ad78ff96c48f4edf1aba657a064895314',1,'helloworld.c']]],
+  ['_5farg_5fgroup2',['_arg_group2',['../helloworld_8c.html#a6d793050f1e687147ff158fa9e8a6489',1,'helloworld.c']]],
   ['_5fargs',['_args',['../input_8c.html#aba60c4f0d7f55179e5c48d5d056615e8',1,'input.c']]],
   ['_5fargument_5flist',['_argument_list',['../snow_8c.html#a95c73778bd4020e2e94a866012f84994',1,'snow.c']]],
+  ['_5farguments',['_arguments',['../input_8c.html#a8cce9f8b526c2942e7541defc2bdd040',1,'_arguments():&#160;input.c'],['../snow_8c.html#a8cce9f8b526c2942e7541defc2bdd040',1,'_arguments():&#160;snow.c']]],
   ['_5fargv',['_argv',['../console_8c.html#a261f07162c8ee16bb2550e308963f057',1,'console.c']]],
   ['_5fargv_5fpages',['_argv_pages',['../console_8c.html#a06678e11ba7bfff4d6eb038faffd48db',1,'console.c']]],
   ['_5fground_5flifetime_5fframes',['_ground_lifetime_frames',['../snow_8c.html#ad9290569b186ab208abfa17a8a7f5100',1,'snow.c']]],

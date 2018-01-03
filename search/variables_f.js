@@ -1,6 +1,7 @@
 var searchData=
 [
   ['test_5fverbosity',['test_verbosity',['../output_8c.html#a43707e73354178e8d2c4edf67770ae8e',1,'test_verbosity():&#160;tests.c'],['../tests_8c.html#a43707e73354178e8d2c4edf67770ae8e',1,'test_verbosity():&#160;tests.c'],['../tests_8h.html#a43707e73354178e8d2c4edf67770ae8e',1,'test_verbosity():&#160;tests.c']]],
+  ['tests_5farggroup',['tests_arggroup',['../tests_8c.html#a41aff95aa4487f8b585ee11e786b4f50',1,'tests.c']]],
   ['tests_5fargs',['tests_args',['../tests_8c.html#ad36f41956b780b516a0f3e28b1964a80',1,'tests.c']]],
   ['time_5foffset',['time_offset',['../structflake__t.html#ac2f13034251862ab2370ae724f1730de',1,'flake_t']]],
   ['trace',['trace',['../structloggers__t.html#aef08f772e43fd098adc2bb6c9ff43692',1,'loggers_t']]],
