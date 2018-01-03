@@ -45,7 +45,13 @@ test_results_t global_test_results;     /**< results for all tests in this suite
 #define ARG_NO_STATISTICS tests_args[5].value.uint64 /**< helper macro to access the -no-statistics argument's value */
 
 
-INT_RANGE_VALIDATOR(validate_verbosity,L"verbosity",1,4); /**< validator for the -verbosity argument */
+/**
+ * Validator for the `-verbosity <level>` argument.
+ *
+ * \param v the input to validate
+ * \return whether the given value is a valid verbosity
+ */
+INT_RANGE_VALIDATOR(validate_verbosity,L"verbosity",1,4);
 
 
 /** list of command-line arguments */

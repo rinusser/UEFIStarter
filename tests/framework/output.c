@@ -13,10 +13,16 @@
 
 
 #if 0
+  /** helper macro for debugging output logic - this will mark the start of an output function */
   #define TRACE_STARTTYPE(NAME) ErrorPrint(L"[%s]",NAME);
+
+  /** helper macro for debugging output logic - this will mark the end of an output function */
   #define TRACE_ENDTYPE(NAME)   ErrorPrint(L"[/%s]",NAME);
 #else
+  /** helper macro for debugging output logic - the silent version is active, this won't do anything */
   #define TRACE_STARTTYPE(NAME)
+
+  /** helper macro for debugging output logic - the silent version is active, this won't do anything */
   #define TRACE_ENDTYPE(NAME)
 #endif
 
@@ -238,6 +244,8 @@ void debug_print_verbosity()
 
 /**
  * Internal: prints raw test results.
+ *
+ * \param results the test results to output
  */
 void debug_print_results(test_results_t *results)
 {

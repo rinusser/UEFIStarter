@@ -68,11 +68,11 @@ typedef void EFIAPI logger_function_t(UINT16 *fmt, ...);
 /** logging facility data type, contains logging function pointer for each log level */
 typedef struct
 {
-  logger_function_t *trace;
-  logger_function_t *debug;
-  logger_function_t *info;
-  logger_function_t *warn;
-  logger_function_t *error;
+  logger_function_t *trace;  /**< logger for TRACE level */
+  logger_function_t *debug;  /**< logger for DEBUG level */
+  logger_function_t *info;   /**< logger for INFO level */
+  logger_function_t *warn;   /**< logger for WARN level */
+  logger_function_t *error;  /**< logger for ERROR level */
 } loggers_t;
 
 extern const loggers_t LOG;

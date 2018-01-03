@@ -10,7 +10,7 @@
 
 #include <Library/UefiLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "../include/logger.h" //TODO: this shouldn't need to be relative, the package/module config must be incomplete
+#include "../include/logger.h"
 
 
 /** list of log level's printable names */
@@ -88,19 +88,48 @@ static void _logger_function_va(LOGLEVEL level, UINT16 *message, VA_LIST args)
  * \param NAME  the logging function's name
  * \param LEVEL the log level to log at
  */
-#define LOGGER_FORWARD_FUNC(NAME,LEVEL) static void EFIAPI NAME(CHAR16 *message, ...) \
+#define LOGGER_FORWARD_FUNC(NAME,LEVEL) static void EFIAPI NAME(CHAR16 *fmt, ...) \
 { \
   VA_LIST args; \
-  VA_START(args,message); \
-  _logger_function_va(LEVEL,message,args); \
+  VA_START(args,fmt); \
+  _logger_function_va(LEVEL,fmt,args); \
   VA_END(args); \
 }
 
-LOGGER_FORWARD_FUNC(trace,TRACE); /**< defines "trace", the user-callable logging function for TRACE level */
-LOGGER_FORWARD_FUNC(debug,DEBUG); /**< defines "debug", the user-callable logging function for DEBUG level */
-LOGGER_FORWARD_FUNC(info, INFO);  /**< defines "info", the user-callable logging function for INFO level */
-LOGGER_FORWARD_FUNC(warn, WARN);  /**< defines "warn", the user-callable logging function for WARN level */
-LOGGER_FORWARD_FUNC(error,ERROR); /**< defines "error", the user-callable logging function for ERROR level */
+/**
+ * internal: forwards TRACE messages to internal handler
+ * \param fmt the log entry's format string
+ * \param ... any additional parameters to be formatted
+ */
+LOGGER_FORWARD_FUNC(_trace,TRACE);
+
+/**
+ * internal: forwards DEBUG messages to internal handler
+ * \param fmt the log entry's format string
+ * \param ... any additional parameters to be formatted
+ */
+LOGGER_FORWARD_FUNC(_debug,DEBUG);
+
+/**
+ * internal: forwards INFO messages to internal handler
+ * \param fmt the log entry's format string
+ * \param ... any additional parameters to be formatted
+ */
+LOGGER_FORWARD_FUNC(_info,INFO);
+
+/**
+ * internal: forwards WARN messages to internal handler
+ * \param fmt the log entry's format string
+ * \param ... any additional parameters to be formatted
+ */
+LOGGER_FORWARD_FUNC(_warn,WARN);
+
+/**
+ * internal: forwards ERROR messages to internal handler
+ * \param fmt the log entry's format string
+ * \param ... any additional parameters to be formatted
+ */
+LOGGER_FORWARD_FUNC(_error,ERROR);
 
 /**
  * The global logging facility.
@@ -108,11 +137,11 @@ LOGGER_FORWARD_FUNC(error,ERROR); /**< defines "error", the user-callable loggin
  * This contains function pointers for each log level, so users can call e.g. LOG.debug() to log a debug message.
  */
 const loggers_t LOG={
-  .trace=trace,
-  .debug=debug,
-  .info=info,
-  .warn=warn,
-  .error=error
+  .trace=_trace,
+  .debug=_debug,
+  .info=_info,
+  .warn=_warn,
+  .error=_error
 };
 
 /**

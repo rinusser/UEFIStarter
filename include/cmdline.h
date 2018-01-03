@@ -30,9 +30,9 @@ typedef enum
  * \TODO rename this to something generic, strings have been added since the first version
  */
 typedef union {
-  double dbl;
-  UINT64 uint64;
-  CHAR16 *wcstr;
+  double dbl;    /**< double variant */
+  UINT64 uint64; /**< UINT64 variant */
+  CHAR16 *wcstr; /**< UTF-16 string variant */
 } double_uint64_t;
 
 /** function pointer type for command line argument validators */
@@ -64,7 +64,6 @@ typedef struct {
 #define ARG_GROUP(VARIABLE,LIST,DESCRIPTION) cmdline_argument_group_t VARIABLE={DESCRIPTION,sizeof(LIST)/sizeof(cmdline_argument_t),LIST};
 
 
-//TODO: move these
 BOOLEAN wctype_int(CHAR16 *string);
 BOOLEAN wctype_float(CHAR16 *string);
 double _wcstof(CHAR16 *str);

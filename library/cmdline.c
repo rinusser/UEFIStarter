@@ -82,7 +82,7 @@ BOOLEAN wctype_float(CHAR16 *string)
  * \param str the string to convert
  * \return the parsed number; -1.0 on error
  *
- * \TODO replace wcstof with built-in, or move to separate file
+ * \TODO replace _wcstof() with built-in, or move to separate file
  */
 double _wcstof(CHAR16 *str)
 {

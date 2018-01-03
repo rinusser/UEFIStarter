@@ -62,8 +62,7 @@ LOOKUP_CACHE_SIZE      = 0
 # Build related configuration options
 #---------------------------------------------------------------------------
 
-#TODO: set to NO if possible, see if there's a way to disable return requirement for helper macros
-EXTRACT_ALL            = YES
+EXTRACT_ALL            = NO
 
 EXTRACT_PRIVATE        = YES
 EXTRACT_PACKAGE        = YES
@@ -309,7 +308,12 @@ SEARCH_INCLUDES        = YES
 INCLUDE_PATH           =
 INCLUDE_FILE_PATTERNS  =
 PREDEFINED             = __attribute__(x)=
-EXPAND_AS_DEFINED      =
+
+EXPAND_AS_DEFINED      = ARG_GROUP \
+                         LOGGER_FORWARD_FUNC \
+                         DOUBLE_RANGE_VALIDATOR \
+                         INT_RANGE_VALIDATOR
+
 SKIP_FUNCTION_MACROS   = YES
 
 #---------------------------------------------------------------------------

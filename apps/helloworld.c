@@ -6,12 +6,14 @@
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
  * \ingroup group_apps
+ *
+ * \TODO pkg/mod config must be incomplete, why do we need relative paths for includes?!
  */
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/ShellCEntryLib.h>
-#include "../include/logger.h" /** TODO pkg/mod config incomplete, why does this need a relative path?! */
+#include "../include/logger.h"
 #include "../include/cmdline.h"
 #include "../include/string.h"
 #include "../include/console.h"
