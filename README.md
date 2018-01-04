@@ -201,3 +201,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+### Credits
+
+Contains an excerpt from [The PCI ID Repository](http://pci-ids.ucw.cz/), licensed under GPLv3.

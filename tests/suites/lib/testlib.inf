@@ -16,6 +16,7 @@
   memory.c
   string.c
   files.c
+  pci.c
 
 [Packages]
   MdePkg/MdePkg.dec
@@ -31,6 +32,7 @@
   cmdline
   string
   files
+  pci
 
 [Guids]
 

@@ -1,0 +1,33 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = pci
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00012
+  MODULE_TYPE = UEFI_DRIVER
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS = pci|UEFI_APPLICATION UEFI_DRIVER DXE_RUNTIME_DRIVER DXE_DRIVER
+
+[Sources]
+  pci.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiBootServicesTableLib
+  IoLib
+  PciLib
+  logger
+  memory
+  files
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+

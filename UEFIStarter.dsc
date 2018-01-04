@@ -29,6 +29,8 @@
   DevicePathLib|MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
   UefiRuntimeServicesTableLib|MdePkg/Library/UefiRuntimeServicesTableLib/UefiRuntimeServicesTableLib.inf
   IoLib|MdePkg/Library/BaseIoLibIntrinsic/BaseIoLibIntrinsic.inf
+  PciLib|MdePkg/Library/BasePciLibCf8/BasePciLibCf8.inf
+  PciCf8Lib|MdePkg/Library/BasePciLibCf8/BasePciLibCf8.inf
 
   DebugLib|MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
 
@@ -46,6 +48,7 @@
   memory|UEFIStarter/library/memory.inf
   timestamp|UEFIStarter/library/timestamp.inf
   files|UEFIStarter/library/files.inf
+  pci|UEFIStarter/library/pci.inf
 
 
 [Components]
@@ -55,6 +58,7 @@
   UEFIStarter/apps/input.inf
   UEFIStarter/apps/snow.inf
   UEFIStarter/apps/timer.inf
+  UEFIStarter/apps/lspci.inf
 
   UEFIStarter/library/logger.inf
   UEFIStarter/library/cmdline.inf
@@ -63,6 +67,7 @@
   UEFIStarter/library/console.inf
   UEFIStarter/library/timestamp.inf
   UEFIStarter/library/files.inf
+  UEFIStarter/library/pci.inf
 
   UEFIStarter/tests/suites/selftest/testself.inf
   UEFIStarter/tests/suites/lib/testlib.inf

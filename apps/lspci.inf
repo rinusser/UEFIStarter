@@ -1,0 +1,34 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = lspci
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00011
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT = ShellCEntryLib
+
+[Sources]
+  lspci.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiLib
+  ShellCEntryLib
+  PciLib
+  logger
+  console
+  pci
+  cmdline
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+
