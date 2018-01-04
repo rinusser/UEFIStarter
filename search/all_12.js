@@ -10,6 +10,8 @@ var searchData=
   ['test_5fdouble',['test_double',['../suites_2selftest_2asserts_8c.html#a426d36b7fd8d66fd02d8427bcff38853',1,'asserts.c']]],
   ['test_5fex_5finput',['test_ex_input',['../input_8c.html#ae4e72bb3427cd6befd7ba2e9484e021a',1,'input.c']]],
   ['test_5fex_5fnotify',['test_ex_notify',['../input_8c.html#a61b268e16837d3fc9950808bf21c00be',1,'input.c']]],
+  ['test_5ffind_5fpci_5fclass_5fname',['test_find_pci_class_name',['../tests_2suites_2lib_2pci_8c.html#aa091cffd5b5dc8aadf5add4dc3c265ed',1,'pci.c']]],
+  ['test_5ffind_5fpci_5fdevice_5fname',['test_find_pci_device_name',['../tests_2suites_2lib_2pci_8c.html#a76b52f6e496aea59b076ea2f5213aab2',1,'pci.c']]],
   ['test_5fftowcs',['test_ftowcs',['../tests_2suites_2lib_2string_8c.html#a994f8d1e001f5d50c4d89539d710d75d',1,'string.c']]],
   ['test_5fftowcs_5fboundaries',['test_ftowcs_boundaries',['../tests_2suites_2lib_2string_8c.html#a5daf14c772977bf830309e80911c540e',1,'string.c']]],
   ['test_5fget_5ffile_5fcontents',['test_get_file_contents',['../tests_2suites_2lib_2files_8c.html#a54e8355e5435a53f5c9dd57e3afafd26',1,'files.c']]],

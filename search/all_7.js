@@ -5,5 +5,6 @@ var searchData=
   ['handle_5fresult',['handle_result',['../tests_8c.html#a17ca7b341f6f4ba9bafa1b9b925a8015',1,'tests.c']]],
   ['handler',['handler',['../cpuid_8c.html#a2f62e12057ef5971465770f7effbebdd',1,'cpuid.c']]],
   ['helloworld_2ec',['helloworld.c',['../helloworld_8c.html',1,'']]],
-  ['helptext',['helptext',['../structcmdline__argument__t.html#a086bde6eca029c4fa8801ddcc63dbf6c',1,'cmdline_argument_t']]]
+  ['helptext',['helptext',['../structcmdline__argument__t.html#a086bde6eca029c4fa8801ddcc63dbf6c',1,'cmdline_argument_t']]],
+  ['hexdigita',['hexdigita',['../library_2pci_8c.html#ab697dec954879f9f7a8b6b1380cd6695',1,'pci.c']]]
 ];

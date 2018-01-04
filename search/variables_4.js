@@ -6,9 +6,11 @@ var searchData=
   ['expectation',['expectation',['../structftowcs__testcase__t.html#a89bcc43672b51f9fd5d81a1b7de77bce',1,'ftowcs_testcase_t::expectation()'],['../structwcstof__testcase__t.html#a22fb7f81f02ca5620a1815cae2dcd1c7',1,'wcstof_testcase_t::expectation()'],['../structatoui64__testcase__t.html#a85dece3f54cd70cf836f55907dc04a85',1,'atoui64_testcase_t::expectation()']]],
   ['expected',['expected',['../structwctype__testcase__t.html#ae4ff7d2a457db0c6254508ccf3da7df8',1,'wctype_testcase_t']]],
   ['expected_5fbool',['expected_bool',['../structcmdline__args__testcase__t.html#aefa3526825c6b447704f7d758132f63e',1,'cmdline_args_testcase_t']]],
+  ['expected_5fclass',['expected_class',['../structpci__class__name__testcase__t.html#a54aade647518d25860af4717168f9849',1,'pci_class_name_testcase_t']]],
   ['expected_5fdouble',['expected_double',['../structcmdline__args__testcase__t.html#ade2e19ff0c22a1466f14ff331ee141a6',1,'cmdline_args_testcase_t']]],
   ['expected_5fint',['expected_int',['../structcmdline__args__testcase__t.html#a1c23149dc3386b42966ba98ac3360630',1,'cmdline_args_testcase_t']]],
   ['expected_5fmessage',['expected_message',['../structsprint__status__testcase__t.html#a2b86cb9f3234b19b94a82812d37da9e2',1,'sprint_status_testcase_t']]],
+  ['expected_5fname',['expected_name',['../structpci__device__name__testcase__t.html#a17e062a71ddd254d7eab8ae99110a817',1,'pci_device_name_testcase_t']]],
   ['expected_5fstring',['expected_string',['../structcmdline__args__testcase__t.html#a30641d0c1b04d01285bb7a74113707c2',1,'cmdline_args_testcase_t']]],
   ['expected_5fsuccess',['expected_success',['../structcmdline__args__testcase__t.html#a050cc5b85cda4c80c36c91977ed2f44a',1,'cmdline_args_testcase_t']]]
 ];

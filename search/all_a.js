@@ -21,5 +21,6 @@ var searchData=
   ['logger_5fprint_5ffunction_5ft',['logger_print_function_t',['../logger_8h.html#a4b9a473d8a6274cf6c9ffb1c8c43ed12',1,'logger.h']]],
   ['loggers_5ft',['loggers_t',['../structloggers__t.html',1,'']]],
   ['logging_5fthreshold',['logging_threshold',['../library_2logger_8c.html#af5f6241a327ccceab6c221cca710736b',1,'logger.c']]],
-  ['loglevel',['LOGLEVEL',['../logger_8h.html#acc58a0a25bf6982de2b101803e46130a',1,'logger.h']]]
+  ['loglevel',['LOGLEVEL',['../logger_8h.html#acc58a0a25bf6982de2b101803e46130a',1,'logger.h']]],
+  ['lspci_2ec',['lspci.c',['../lspci_8c.html',1,'']]]
 ];

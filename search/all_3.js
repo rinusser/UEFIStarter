@@ -6,6 +6,8 @@ var searchData=
   ['debug',['debug',['../structloggers__t.html#ae3e0562581282863051940b9b7c18bfd',1,'loggers_t::debug()'],['../logger_8h.html#acc58a0a25bf6982de2b101803e46130aa0593585da9181e972974c1274d8f2b4f',1,'DEBUG():&#160;logger.h']]],
   ['debug_5fprint_5fresults',['debug_print_results',['../output_8c.html#a5041ec3b4d746997d61e14a84f9acb48',1,'debug_print_results(test_results_t *results):&#160;output.c'],['../output_8h.html#a5041ec3b4d746997d61e14a84f9acb48',1,'debug_print_results(test_results_t *results):&#160;output.c']]],
   ['debug_5fprint_5fverbosity',['debug_print_verbosity',['../output_8c.html#a498470db9f47675fd3243f3052873266',1,'debug_print_verbosity():&#160;output.c'],['../output_8h.html#a498470db9f47675fd3243f3052873266',1,'debug_print_verbosity():&#160;output.c']]],
+  ['describe_5fpci_5fdevice',['describe_pci_device',['../library_2pci_8c.html#acde67cbcf74fbbb35c42f1979f97c99c',1,'pci.c']]],
+  ['device_5fid',['device_id',['../structpci__device__name__testcase__t.html#a370d41d8969b02bf572eab84371ddc3a',1,'pci_device_name_testcase_t']]],
   ['do_5fevent_5ftests',['do_event_tests',['../timer_8c.html#a96c23b390f4237de03d57ae05a17b37d',1,'timer.c']]],
   ['do_5fgettime_5ftests',['do_gettime_tests',['../timer_8c.html#a61b90a87958ab88cc60acb2abe593020',1,'timer.c']]],
   ['do_5fparse_5fparameters_5ftestcase',['do_parse_parameters_testcase',['../tests_2suites_2lib_2cmdline_8c.html#af7249ac486a7916e18bb3782d5757874',1,'cmdline.c']]],

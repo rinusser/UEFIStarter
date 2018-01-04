@@ -64,7 +64,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000025"></a>Global <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725">_counting_logger</a>  (CHAR16 *level, CHAR16 *msg)</dt>
+<dt><a class="anchor" id="_todo000027"></a>Global <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725">_counting_logger</a>  (CHAR16 *level, CHAR16 *msg)</dt>
 <dd>there <em>has</em> to be a better way to match log levels.. maybe add numeric level to print function?  </dd>
 <dt><a class="anchor" id="_todo000016"></a>Global <a class="el" href="library_2memory_8c.html#a0479354cc6d998e88f047845028bf222">_get_next_free_entry</a>  (<a class="el" href="structmemory__page__list__t.html" title="type for a list node of tracked memory page allocations ">memory_page_list_t</a> **page_list, UINTN *index)</dt>
 <dd>if there's a next page_list, check that. if not, allocate new page_list and link to it  </dd>
@@ -82,13 +82,15 @@ $(function() {
 <dd>rename this to something generic, strings have been added since the first version  </dd>
 <dt><a class="anchor" id="_todo000002"></a>Global <a class="el" href="input_8c.html#a960225c5465570e06a91c01f67dbb0eb">find_device</a>  (EFI_GUID *guid, unsigned int offset)</dt>
 <dd>extract to lib and rename to open_protocol()  </dd>
+<dt><a class="anchor" id="_todo000020"></a>Global <a class="el" href="library_2pci_8c.html#a9c945d77c4760bc9edfc8fae99bd1955">find_pci_device_name</a>  (UINT16 vendor_id, UINT16 device_id, UINT16 subvendor_id, UINT16 subdevice_id)</dt>
+<dd>later: implement sub IDs.  </dd>
 <dt><a class="anchor" id="_todo000013"></a>Global <a class="el" href="console_8c.html#a0403d8fdaac4eeab200551e15b4b95bc">free_argv</a>  ()</dt>
 <dd>move the argv functions to cmdline.c  </dd>
-<dt><a class="anchor" id="_todo000019"></a>Global <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de">ftowcs</a>  (double value)</dt>
+<dt><a class="anchor" id="_todo000021"></a>Global <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de">ftowcs</a>  (double value)</dt>
 <dd>make number of decimals configurable  </dd>
 <dt><a class="anchor" id="_todo000015"></a>Global <a class="el" href="library_2files_8c.html#a976089765fe5769ac0cfdc2b1859370e">get_file_contents</a>  (CHAR16 *filename)</dt>
 <dd>start a list of pitfalls, e.g. this: bufsize was too small (unsigned int instead of UINTN), so this call changed the last declared uninitialized variable in this function  </dd>
-<dt><a class="anchor" id="_todo000021"></a>Global <a class="el" href="timestamp_8c.html#a0e455a1c0056bb415a50ce0893e16e4f">get_timestamp</a>  ()</dt>
+<dt><a class="anchor" id="_todo000023"></a>Global <a class="el" href="timestamp_8c.html#a0e455a1c0056bb415a50ce0893e16e4f">get_timestamp</a>  ()</dt>
 <dd>this could be made inline for improved timing accuracy  </dd>
 <dt><a class="anchor" id="_todo000001"></a>File <a class="el" href="helloworld_8c.html">helloworld.c</a>  </dt>
 <dd>pkg/mod config must be incomplete, why do we need relative paths for includes?!  </dd>
@@ -96,21 +98,23 @@ $(function() {
 <dd>could add cmdline arg  </dd>
 <dt><a class="anchor" id="_todo000004"></a>Global <a class="el" href="snow_8c.html#aceae224df6b78e7712b97176f4e2b244">init_flake</a>  (<a class="el" href="structflake__t.html" title="data type describing a snowflake ">flake_t</a> *flake, int time_offset)</dt>
 <dd>use screen height and max cross speed to accurately calculate this  </dd>
-<dt><a class="anchor" id="_todo000020"></a>Global <a class="el" href="library_2string_8c.html#a5af445235f477b36929c477a207a77e2">print_status</a>  (CHAR16 *function, EFI_STATUS code)</dt>
+<dt><a class="anchor" id="_todo000019"></a>File <a class="el" href="library_2pci_8c.html">pci.c</a>  </dt>
+<dd>read classes and subclasses from pci.ids  </dd>
+<dt><a class="anchor" id="_todo000022"></a>Global <a class="el" href="library_2string_8c.html#a5af445235f477b36929c477a207a77e2">print_status</a>  (CHAR16 *function, EFI_STATUS code)</dt>
 <dd>check if this function is still required  </dd>
 <dt><a class="anchor" id="_todo000003"></a>Global <a class="el" href="snow_8c.html#af27706b0a5e9d1b913d9d9df1c6d6925">random</a>  ()</dt>
 <dd>There's a GetRandomNumber32() function in EDK2 but it seems to segfault all the time, see what's up  </dd>
 <dt><a class="anchor" id="_todo000018"></a>Global <a class="el" href="library_2memory_8c.html#a8de4777fe265e2153dd7b98b355c9de4">stop_tracking_memory</a>  ()</dt>
 <dd>the <a class="el" href="memory_8h.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below  </dd>
-<dt><a class="anchor" id="_todo000024"></a>Global <a class="el" href="tests_2suites_2lib_2files_8c.html#a54e8355e5435a53f5c9dd57e3afafd26">test_get_file_contents</a>  ()</dt>
+<dt><a class="anchor" id="_todo000026"></a>Global <a class="el" href="tests_2suites_2lib_2files_8c.html#a54e8355e5435a53f5c9dd57e3afafd26">test_get_file_contents</a>  ()</dt>
 <dd>read a file that's guarantueed to exist, e.g. the currently running .efi, instead of startup.nsh.  </dd>
-<dt><a class="anchor" id="_todo000026"></a>Global <a class="el" href="suites_2selftest_2asserts_8c.html#a89bcf76ed80de320ba177bb1851ac640">test_graphics</a>  ()</dt>
+<dt><a class="anchor" id="_todo000028"></a>Global <a class="el" href="suites_2selftest_2asserts_8c.html#a89bcf76ed80de320ba177bb1851ac640">test_graphics</a>  ()</dt>
 <dd>move this to the graphics tests, once they're in this repository  </dd>
-<dt><a class="anchor" id="_todo000023"></a>File <a class="el" href="tests_8c.html">tests.c</a>  </dt>
+<dt><a class="anchor" id="_todo000025"></a>File <a class="el" href="tests_8c.html">tests.c</a>  </dt>
 <dd><p class="startdd">add pause-on-error/incomplete feature </p>
 <p class="enddd">could add a way to capture error messages and output them later  </p>
 </dd>
-<dt><a class="anchor" id="_todo000022"></a>Global <a class="el" href="timestamp_8c.html#a17015b82d7011fd14cf69d4b168506f8">timestamp_diff_seconds</a>  (UINT64 start, UINT64 end)</dt>
+<dt><a class="anchor" id="_todo000024"></a>Global <a class="el" href="timestamp_8c.html#a17015b82d7011fd14cf69d4b168506f8">timestamp_diff_seconds</a>  (UINT64 start, UINT64 end)</dt>
 <dd>this doesn't check for division by 0 errors on purpose, maybe check performance hit and add it if insignificant  </dd>
 <dt><a class="anchor" id="_todo000017"></a>Global <a class="el" href="library_2memory_8c.html#a2d54518679f8257223791a8a767531de">track_pool_memory</a>  (void *address)</dt>
 <dd>implement linked list for pool memory tracking  </dd>
@@ -122,7 +126,7 @@ $(function() {
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 3 2018 18:32:09 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 4 2018 07:48:15 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

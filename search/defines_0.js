@@ -14,6 +14,7 @@ var searchData=
   ['arg_5fno_5fcounts',['ARG_NO_COUNTS',['../tests_8c.html#a993d7b0614fd7c808b50387467b33dbb',1,'tests.c']]],
   ['arg_5fno_5fstatistics',['ARG_NO_STATISTICS',['../tests_8c.html#af5444b6c1f057a4e39e5ccb37aa8aa4c',1,'tests.c']]],
   ['arg_5fother_5fwait_5fevent',['ARG_OTHER_WAIT_EVENT',['../input_8c.html#a5af04a4cccebe6cc4ac1514cf9e05dd7',1,'input.c']]],
+  ['arg_5fprint_5fclasses',['ARG_PRINT_CLASSES',['../lspci_8c.html#a0d8713cafd1d960382aae63dfc72c194',1,'lspci.c']]],
   ['arg_5fseconds',['ARG_SECONDS',['../snow_8c.html#a2b99375dc298bda2a2a72dc713d62524',1,'snow.c']]],
   ['arg_5fskip_5ftests',['ARG_SKIP_TESTS',['../tests_8c.html#a7f965f6c7a1df0a0fced6482d3e03edf',1,'tests.c']]],
   ['arg_5fupdate_5finterval',['ARG_UPDATE_INTERVAL',['../snow_8c.html#a03a4d3ca114894ab3bf2017ae1e86bb1',1,'snow.c']]],
