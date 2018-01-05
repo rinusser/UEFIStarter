@@ -1,0 +1,4 @@
+# Configuration file for UEFIStarter VM
+
+hostname: "uefistarter-dev"
+timezone: "UTC"

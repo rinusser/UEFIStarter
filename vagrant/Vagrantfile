@@ -1,0 +1,94 @@
+# Vagrantfile for UEFIStarter development VM
+require 'yaml'
+
+settings = YAML.load_file './config/vagrant-config.yml'
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/artful64"
+  config.vm.define "dev"
+
+  config.vm.post_up_message = "'UEFIStarter' development VM. Use 'vagrant ssh' or your installed ssh key (localhost:2222) to connect, then go to /usr/src/edk2 and execute 'make run'"
+  config.ssh.forward_agent = true
+
+  config.vm.synced_folder "/", "/vagrant", disabled: true
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = true
+    vb.memory = "2048"
+
+    docker_disk_file="./data.vdi"
+    if not File.exists?(docker_disk_file)
+      vb.customize ["createmedium","--filename",docker_disk_file,"--variant","Standard","--size",8192]
+    end
+    vb.customize ["storageattach",:id,"--storagectl","SCSI","--port",3,"--device",0,"--type","hdd","--medium",docker_disk_file]
+  end
+
+  config.vm.provision "file", source: "config", destination: "/dev/shm/config"
+
+  config.vm.provision "shell" do |sh|
+    sh.inline = "
+      sed -i \"s/stretch/$1/g\" /etc/hosts
+      hostnamectl set-hostname $1
+      timedatectl set-timezone $2"
+    sh.args = [settings["hostname"],settings["timezone"]]
+  end
+
+  config.vm.provision "shell", privileged: false, inline: "
+    cd /home/vagrant/
+    cp /dev/shm/config/gitconfig ./.gitconfig
+    cat /dev/shm/config/authorized_keys >> .ssh/authorized_keys
+    echo \"alias ll='ls -la'\" >> .bashrc"
+
+  config.vm.provision "shell", inline: "
+    #create and format partition on bigger storage disk, then mount it on /mnt/data
+    echo -e \"n\np\n1\n\n\nw\nq\n\" | fdisk /dev/sdc
+    mkfs.ext4 /dev/sdc1
+    mkdir /mnt/data
+    mount /dev/sdc1 /mnt/data
+    chown -R vagrant /mnt/data/
+
+    apt-get update
+    apt-get install -y git vim ctags vim-scripts screen dos2unix build-essential uuid-dev iasl nasm python mkisofs qemu-system-x86
+
+    ln -s /mnt/data/edk2 /usr/src/edk2
+    ln -s /mnt/data/UEFIStarter /usr/src/UEFIStarter
+
+    mkdir -p /mnt/ueficode
+    ln -s /usr/src/UEFIStarter /mnt/ueficode/UEFIStarter
+
+    mkdir /mnt/uefi"
+
+  config.vm.provision "shell", privileged: false, inline: "
+    mkdir /mnt/data/UEFIStarter
+    cd /usr/src/UEFIStarter
+    git init
+    git remote add github https://github.com/rinusser/UEFIStarter.git
+    git pull github master
+
+    mkdir /mnt/data/edk2
+    cd /usr/src/edk2
+    git init
+    git remote add origin https://github.com/tianocore/edk2.git
+    git pull origin UDK2017
+
+    make -C BaseTools
+    . edksetup.sh
+    sed -i 's/^TARGET_ARCH.*=.*/TARGET_ARCH = X64/' Conf/target.txt
+    sed -i 's/^TOOL_CHAIN_TAG.*=.*/TOOL_CHAIN_TAG = GCC5/' Conf/target.txt
+    sed -i 's/^MAX_CONCURRENT_THREAD_NUMBER.*=.*/MAX_CONCURRENT_THREAD_NUMBER = 3/' Conf/target.txt
+    sed -i 's/^DEFINE GCC5_X64_CC_FLAGS.*=.*/DEFINE GCC5_X64_CC_FLAGS = DEF(GCC49_X64_CC_FLAGS) -Wno-error=unused-const-variable -Wno-error=misleading-indentation/' Conf/tools_def.txt
+    ln -s /usr/src/UEFIStarter
+    ln -s UEFIStarter/Makefile.edk Makefile
+    chmod a+x UEFIStarter/tools/*.sh
+
+    sed -i 's/^ACTIVE_PLATFORM.*=.*/ACTIVE_PLATFORM = OvmfPkg\\/OvmfPkgX64.dsc/' Conf/target.txt
+    build
+    sudo cp Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd /usr/share/qemu/
+
+    sed -i 's/^ACTIVE_PLATFORM.*=.*/ACTIVE_PLATFORM = UEFIStarter\\/UEFIStarter.dsc/' Conf/target.txt
+    make
+  "
+
+end
+# -*- mode: ruby -*-
+# vi: set ft=ruby :

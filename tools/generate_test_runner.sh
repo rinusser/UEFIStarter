@@ -18,6 +18,7 @@ generate() {
     exit
   fi
 
+  mkdir -p $testsdir/generated
   runner=$testsdir/generated/runner.c
   echo generating $runner
   funcs=`\grep -hoE "BOOLEAN run_.*_tests\(\)" $testsdir/*.c | colrm 1 7 | tr '()' ' '`

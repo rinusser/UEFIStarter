@@ -203,7 +203,7 @@ wcstof_testcase_t wcstof_testcases[]=
 /**
  * Makes sure wcstof() works.
  *
- * \test wcstof() parses a numeric string into a double value
+ * \test _wcstof() parses a numeric string into a double value
  */
 void test_wcstof()
 {

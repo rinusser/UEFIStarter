@@ -17,7 +17,7 @@
 /**
  * Makes sure get_file_content() works.
  *
- * \test file_get_contents() returns a file's contents
+ * \test get_file_contents() returns a file's contents
  *
  * \TODO read a file that's guarantueed to exist, e.g. the currently running .efi, instead of startup.nsh.
  */

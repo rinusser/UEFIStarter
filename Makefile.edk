@@ -8,9 +8,10 @@ SRCFILES = $(shell find /mnt/ueficode/UEFIStarter/ -name '*.c' -or -name '*.h')
 STATICS = $(shell find /mnt/ueficode/UEFIStarter/static -type f ! -name '.*.swp')
 
 
-all: build $(BUILD_DIR)/uefi.img
+all: free build $(BUILD_DIR)/uefi.img
 
 build:
+	mkdir -p $(BUILD_DIR)
 	UEFIStarter/tools/generate_test_runner.sh
 	build
 
@@ -23,6 +24,7 @@ clean:
 	rm -f $(BUILD_DIR)/uefi.img $(BUILD_DIR)/uefi.iso
 
 $(BUILD_DIR)/uefi.img: $(SRCFILES) $(STATICS) FORCE
+	mkdir -p $(BUILD_DIR)
 	test -f $(BUILD_DIR)/uefi.img || dd if=/dev/zero of=$(BUILD_DIR)/uefi.img bs=512 count=93750
 	sgdisk -o -n 1:2048:93716 -t 1:ef00 $(BUILD_DIR)/uefi.img >/dev/null
 	sudo losetup --offset 1048576 --sizelimit 46934528 /dev/loop0 $(BUILD_DIR)/uefi.img
