@@ -73,7 +73,18 @@ $(function() {
 <p>This project started out with another UEFI development kit (gnu-efi) but eventually outgrew the original SDK, so I migrated it to TianoCore EDK2017. As a result of this there are still a few library functions included that are already built-in into TianoCore.</p>
 <p>It is my hope that this code helps anyone looking into, or starting with, UEFI development: I did that myself a few months ago and found parts of the various documentations frustratingly lacking. If I can spare you some of the headache I had I'm happy.</p>
 <h1>Requirements</h1>
+<p>You can either set up your own development environment ("Standalone" in the rest of this document), or use the supplied Vagrantfile to create a development VM ("Vagrant").</p>
+<h2>Vagrant</h2>
+<p>To use the included Vagrantfile you'll need:</p>
+<ul>
+<li>a 64-bit x86 processor (physical or virtual, see Recommendations below)</li>
+<li>a UEFI-capable mainboard (physical or virtual, see Recommendations below)</li>
+<li>Vagrant (tested with 2.0)</li>
+<li>VirtualBox (tested with 5.1)</li>
+</ul>
+<h2>Standalone</h2>
 <h3>Bare Minimum</h3>
+<p>To set up your own development environment you'll need at least:</p>
 <ul>
 <li>a 64-bit x86 processor (physical or virtual, see Recommendations below)</li>
 <li>a UEFI-capable mainboard (physical or virtual, see Recommendations below)</li>
@@ -92,6 +103,33 @@ $(function() {
 <li>Other: you're probably fine with any hypervisor that supports EFI.</li>
 </ul>
 <h1>Installation</h1>
+<h2>Vagrant</h2>
+<h3>General</h3>
+<p>The included Vagrantfile (in the <code>vagrant/</code> directory) automates the setup process by creating a new virtual machine for you. This VM contains all the tools required to build UEFI applications and run the console-based ones.</p>
+<p>The virtual machine will be based on Ubuntu 17.10 (Artful Aardvark).</p>
+<p>By using the supplied Vagrantfile you agree to the licenses of all automatically installed pieces of software, including, but not limited to:</p>
+<ul>
+<li>Ubuntu and its components, see <a href="https://www.ubuntu.com/about/about-ubuntu/licensing">https://www.ubuntu.com/about/about-ubuntu/licensing</a></li>
+<li>TianoCore and its components, see <a href="https://github.com/tianocore/tianocore.github.io/wiki/Legalese">https://github.com/tianocore/tianocore.github.io/wiki/Legalese</a></li>
+<li>UEFIStarter of course, see "License" near the end of this document.</li>
+</ul>
+<h3>Configuration</h3>
+<p>In the <code>vagrant/config/</code> directory there are 3 files you can edit:</p>
+<ul>
+<li><code>authorized_keys</code>: this file's contents will be added to <code>~vagrant/.ssh/authorized_keys</code>, allowing you to include as many ssh keys as you want to access the VM. You can leave this file empty if you want, in which case you can still access the VM with <code>vagrant ssh</code>.</li>
+<li><code>gitconfig</code>: this will be user "vagrant"'s global git configuration. If you're planning on pushing commits somewhere you can add your user information here.</li>
+<li><code>vagrant-config.yml</code>: this contains configuration settings for the virtual machine. Currently there's just one useful setting there: the VM's timezone, set it to e.g. "Antarctica/South\_Pole" if you happen to live there.</li>
+</ul>
+<h3>Creating the Virtual Machine</h3>
+<p>Once you have working VirtualBox and Vagrant installations and have edited the VM's configuration files to suit your needs you can tell Vagrant to build the VM: </p><pre class="fragment">$ vagrant up
+</pre><p>If all goes well this will create the virtual machine, install a basic system, download and build parts of TianoCore edk2, then download and build UEFIStarter's "master" branch.</p>
+<p>This will take a few minutes. Once it's done you should get output similar to this: </p><pre class="fragment">==&gt; dev: 'UEFIStarter' development VM. Use 'vagrant ssh' or your installed ssh key
+    (localhost:2222) to connect, then go to /usr/src/edk2 and execute 'make run'
+</pre><h3>Using the Virtual Machine</h3>
+<p>You can always use <code>vagrant ssh</code> to access the VM. If you added keys to <code>config/authorized_keys</code> you can use those to connect as well. By default Vagrant will make the VM listen for ssh connections on localhost, port 2222.</p>
+<p>The sources root for TianoCore edk2 is <code>/usr/src/edk2</code>. The UEFIStarter image should already be built and ready to be started: </p><pre class="fragment">$ cd /usr/src/edk2
+make run
+</pre><h2>Standalone</h2>
 <h3>Basic Structure</h3>
 <p>Before you start you should have a working EDK2 setup, e.g. in /usr/src/edk2. All following relative paths are relative to this.</p>
 <p>In your sources root you'll need a UEFIStarter/ directory - either clone the repository directly into this directory or create a symlink pointing to the UEFIStarter directory.</p>
@@ -167,11 +205,15 @@ Skipped groups:   0
 <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
 <p>You should have received a copy of the GNU General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
 <h3>Credits</h3>
-<p>Contains an excerpt from <a href="http://pci-ids.ucw.cz/">The PCI ID Repository</a>, licensed under GPLv3. </p>
+<p>Contains an excerpt from <a href="http://pci-ids.ucw.cz/">The PCI ID Repository</a>, licensed under GPLv3.</p>
+<p>Contains an optional automated installer, a "Vagrantfile". By using this installer you additionally agree to the licenses of all installed components, see the respective websites for details:</p><ul>
+<li>Ubuntu: <a href="https://www.ubuntu.com/about/about-ubuntu/licensing">https://www.ubuntu.com/about/about-ubuntu/licensing</a></li>
+<li>TianoCore: <a href="https://github.com/tianocore/tianocore.github.io/wiki/Legalese">https://github.com/tianocore/tianocore.github.io/wiki/Legalese</a> </li>
+</ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 4 2018 07:48:15 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 5 2018 19:24:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
