@@ -10,8 +10,15 @@ Vagrant.configure("2") do |config|
   config.vm.post_up_message = "'UEFIStarter' development VM. Use 'vagrant ssh' or your installed ssh key (localhost:2222) to connect, then go to /usr/src/edk2 and execute 'make run'"
   config.ssh.forward_agent = true
 
+  # disable default global share: in some setups this attempts to copy all your harddisks' and mounted volumes' data into the VM.
   config.vm.synced_folder "/", "/vagrant", disabled: true
 
+  # mount the "code" share if it's configured in the settings file
+  if settings.key?('shares') and settings['shares'] and settings['shares'].key?('code') and settings['shares']['code']
+    config.vm.synced_folder settings['shares']['code'], "/mnt/ueficode"
+  end
+
+  # set basic VM settings and add a larger disk
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "2048"
@@ -23,8 +30,10 @@ Vagrant.configure("2") do |config|
     vb.customize ["storageattach",:id,"--storagectl","SCSI","--port",3,"--device",0,"--type","hdd","--medium",docker_disk_file]
   end
 
+  # copy configuration and preference files to VM
   config.vm.provision "file", source: "config", destination: "/dev/shm/config"
 
+  # set VM's hostname and timezone
   config.vm.provision "shell" do |sh|
     sh.inline = "
       sed -i \"s/stretch/$1/g\" /etc/hosts
@@ -33,58 +42,78 @@ Vagrant.configure("2") do |config|
     sh.args = [settings["hostname"],settings["timezone"]]
   end
 
+  # customize user account's git and ssh
   config.vm.provision "shell", privileged: false, inline: "
     cd /home/vagrant/
     cp /dev/shm/config/gitconfig ./.gitconfig
     cat /dev/shm/config/authorized_keys >> .ssh/authorized_keys
-    echo \"alias ll='ls -la'\" >> .bashrc"
+    ln -s /usr/src/edk2"
 
+  # prepare the build environment
   config.vm.provision "shell", inline: "
-    #create and format partition on bigger storage disk, then mount it on /mnt/data
+    # create and format partition on bigger storage disk, then mount it on /mnt/data
     echo -e \"n\np\n1\n\n\nw\nq\n\" | fdisk /dev/sdc
     mkfs.ext4 /dev/sdc1
     mkdir /mnt/data
     mount /dev/sdc1 /mnt/data
     chown -R vagrant /mnt/data/
 
+    # install additional software
     apt-get update
-    apt-get install -y git vim ctags vim-scripts screen dos2unix build-essential uuid-dev iasl nasm python mkisofs qemu-system-x86
+    apt-get install -y git vim ctags vim-scripts screen dos2unix build-essential uuid-dev iasl nasm python mkisofs \\
+                       qemu-system-x86 doxygen
 
+    # customize a few applications and services
+    cat /dev/shm/config/screenrc.additional >> /etc/screenrc
+    cat /dev/shm/config/vimrc.additional >> /etc/vim/vimrc
+    cat /dev/shm/config/bashrc.additional >> /etc/bash.bashrc
+    cp /dev/shm/config/pablo_rnfix.vim /usr/share/vim/vim80/colors/
+    chmod a-x /etc/update-motd.d/[1-5]*
+
+    # prepare edk2 sources root on larger filesystem
     ln -s /mnt/data/edk2 /usr/src/edk2
-    ln -s /mnt/data/UEFIStarter /usr/src/UEFIStarter
 
-    mkdir -p /mnt/ueficode
-    ln -s /usr/src/UEFIStarter /mnt/ueficode/UEFIStarter
+    # forward base directory for custom code to larger filesystem if it isn't mounted as a shared volume already
+    [ -d /mnt/ueficode ] || ln -s /mnt/data /mnt/ueficode
 
+    # create mount point for building UEFI images
     mkdir /mnt/uefi"
 
+  # fetch code, finish setup and build
   config.vm.provision "shell", privileged: false, inline: "
-    mkdir /mnt/data/UEFIStarter
-    cd /usr/src/UEFIStarter
-    git init
-    git remote add github https://github.com/rinusser/UEFIStarter.git
-    git pull github master
-
+    # download edk2
     mkdir /mnt/data/edk2
     cd /usr/src/edk2
     git init
     git remote add origin https://github.com/tianocore/edk2.git
     git pull origin UDK2017
 
+    # add UEFIStarter to edk2, download if necessary
+    ln -s /mnt/ueficode/UEFIStarter
+    ln -s UEFIStarter/Makefile.edk Makefile
+    if [ ! -d /mnt/ueficode/UEFIStarter ]; then
+      mkdir /mnt/ueficode/UEFIStarter
+      cd /usr/src/edk2/UEFIStarter
+      git init
+      git remote add github https://github.com/rinusser/UEFIStarter.git
+      git pull github master
+    fi
+
+    # prepare build environment
+    cd /usr/src/edk2
     make -C BaseTools
     . edksetup.sh
     sed -i 's/^TARGET_ARCH.*=.*/TARGET_ARCH = X64/' Conf/target.txt
     sed -i 's/^TOOL_CHAIN_TAG.*=.*/TOOL_CHAIN_TAG = GCC5/' Conf/target.txt
     sed -i 's/^MAX_CONCURRENT_THREAD_NUMBER.*=.*/MAX_CONCURRENT_THREAD_NUMBER = 3/' Conf/target.txt
     sed -i 's/^DEFINE GCC5_X64_CC_FLAGS.*=.*/DEFINE GCC5_X64_CC_FLAGS = DEF(GCC49_X64_CC_FLAGS) -Wno-error=unused-const-variable -Wno-error=misleading-indentation/' Conf/tools_def.txt
-    ln -s /usr/src/UEFIStarter
-    ln -s UEFIStarter/Makefile.edk Makefile
-    chmod a+x UEFIStarter/tools/*.sh
 
+    # build OVMF image
     sed -i 's/^ACTIVE_PLATFORM.*=.*/ACTIVE_PLATFORM = OvmfPkg\\/OvmfPkgX64.dsc/' Conf/target.txt
     build
     sudo cp Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd /usr/share/qemu/
 
+    # build UEFIStarter
     sed -i 's/^ACTIVE_PLATFORM.*=.*/ACTIVE_PLATFORM = UEFIStarter\\/UEFIStarter.dsc/' Conf/target.txt
     make
   "

@@ -1,0 +1,52 @@
+" this will be appended to /etc/vim/vimrc
+syntax on
+set background=dark
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+set ignorecase
+set ruler
+set showmatch
+set showmode
+set esckeys
+set backspace=indent,eol,start
+color pablo_rnfix
+set shiftwidth=2
+set tabstop=2
+set hlsearch
+set smartcase
+set smartindent
+set number
+set expandtab
+highlight StatusLine ctermbg=236 ctermfg=253 guifg=#d0d0d0 guibg=#303030
+set laststatus=2
+set pastetoggle=<F11>
+
+set foldmethod=indent
+set foldlevelstart=20
+
+highlight TAG_DEBUG ctermbg=242 ctermfg=255
+match TAG_DEBUG /DEBUG/
+
+highlight Search ctermbg=192
+highlight Todo ctermbg=202
+
+"F9/[shift-]F10: comments color
+map [33~ :hi comment ctermfg=247
+map [34~ :hi comment ctermfg=244
+map [21~ :hi comment ctermfg=8
+
+
+"F2: remove search highlights
+map [[B :noh
+
+"F5/F6: open/close indents
+map [[E zc
+map [17~ zo
+
+"shift-F5/shift-F6: open/close all
+"map [28~ zC
+"map [29~ zO
+
+command W w
+command Q q

@@ -1,4 +1,15 @@
 # Configuration file for UEFIStarter VM
 
-hostname: "uefistarter-dev"
+shares:
+  # Set this to your UEFI projects' root directory, e.g. "/my/code" if your copy of UEFIStarter is in /my/code/UEFIStarter.
+  # Make sure you escape backslashes in Windows paths, e.g. "c:\\my\\code".
+  #
+  # You can comment this out if you want, in which case UEFIStarter will be fetched from GitHub.
+  code: "/path/to/uefiprojects"
+
+# Set this to your preferred timezone as listed in the tz database, for example "Antarctica/South_Pole"
+# See e.g. https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for reference.
 timezone: "UTC"
+
+# You can change the VM's hostname here if you want
+hostname: "uefistarter-dev"

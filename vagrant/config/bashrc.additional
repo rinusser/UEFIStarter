@@ -1,0 +1,12 @@
+# this will get appended to /etc/bash.bashrc
+
+alias ls='ls --color=auto'
+alias ll='ls -la'
+alias NOW='date +%Y%m%d%H%M%S'
+alias TODAY='date +%Y%m%d'
+alias grep='grep -H -n --color=auto'
+
+export TERM=xterm-256color
+export EDITOR=vim
+
+alias hi='history | \grep'

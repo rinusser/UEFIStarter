@@ -2,6 +2,9 @@
 
 This is a small C framework for UEFI development built on top of TianoCore EDK2.
 
+This repository includes a Vagrantfile for setting up a virtual machine to develop and run UEFI applications. If you're
+familiar with Vagrant and have it set up already you can run your first UEFI applications in just a few minutes!
+
 The sources are hosted on [GitHub](https://github.com/rinusser/UEFIStarter).
 
 
@@ -30,8 +33,8 @@ I had I'm happy.
 
 # Requirements
 
-You can either set up your own development environment ("Standalone" in the rest of this document), or use the supplied
-Vagrantfile to create a development VM ("Vagrant").
+You can either set up your own development environment ("Manual Installation"), or use the supplied Vagrantfile to
+create a development VM ("Vagrant").
 
 ## Vagrant
 
@@ -42,7 +45,7 @@ To use the included Vagrantfile you'll need:
 * Vagrant (tested with 2.0)
 * VirtualBox (tested with 5.1)
 
-## Standalone
+## Manual Installation
 
 ### Bare Minimum
 
@@ -71,138 +74,11 @@ but it's easier to use virtualization for development. There are multiple option
 
 # Installation
 
-## Vagrant
+The instructions on how to install the Vagrant virtual machine are in
+[INSTALL.vagrant.md](https://github.com/rinusser/UEFIStarter/blob/master/INSTALL.vagrant%2Emd).
 
-### General
-
-The included Vagrantfile (in the `vagrant/` directory) automates the setup process by creating a new virtual machine for
-you. This VM contains all the tools required to build UEFI applications and run the console-based ones.
-
-The virtual machine will be based on Ubuntu 17.10 (Artful Aardvark).
-
-By using the supplied Vagrantfile you agree to the licenses of all automatically installed pieces of software,
-including, but not limited to:
-
-* Ubuntu and its components, see [https://www.ubuntu.com/about/about-ubuntu/licensing](https://www.ubuntu.com/about/about-ubuntu/licensing)
-* TianoCore and its components, see [https://github.com/tianocore/tianocore.github.io/wiki/Legalese](https://github.com/tianocore/tianocore.github.io/wiki/Legalese)
-* UEFIStarter of course, see "License" near the end of this document.
-
-### Configuration
-
-In the `vagrant/config/` directory there are 3 files you can edit:
-
-* `authorized_keys`: this file's contents will be added to `~vagrant/.ssh/authorized_keys`, allowing you to include as
-  many ssh keys as you want to access the VM. You can leave this file empty if you want, in which case you can still
-  access the VM with `vagrant ssh`.
-* `gitconfig`: this will be user "vagrant"'s global git configuration. If you're planning on pushing commits somewhere
-  you can add your user information here.
-* `vagrant-config.yml`: this contains configuration settings for the virtual machine. Currently there's just one useful
-  setting there: the VM's timezone, set it to e.g. "Antarctica/South\_Pole" if you happen to live there.
-
-### Creating the Virtual Machine
-
-Once you have working VirtualBox and Vagrant installations and have edited the VM's configuration files to suit your
-needs you can tell Vagrant to build the VM:
-
-    $ vagrant up
-
-If all goes well this will create the virtual machine, install a basic system, download and build parts of TianoCore
-edk2, then download and build UEFIStarter's "master" branch.
-
-This will take a few minutes. Once it's done you should get output similar to this:
-
-    ==> dev: 'UEFIStarter' development VM. Use 'vagrant ssh' or your installed ssh key
-        (localhost:2222) to connect, then go to /usr/src/edk2 and execute 'make run'
-
-### Using the Virtual Machine
-
-You can always use `vagrant ssh` to access the VM. If you added keys to `config/authorized_keys` you can use those to
-connect as well. By default Vagrant will make the VM listen for ssh connections on localhost, port 2222.
-
-The sources root for TianoCore edk2 is `/usr/src/edk2`. The UEFIStarter image should already be built and ready to be
-started:
-
-    $ cd /usr/src/edk2
-    make run
-
-## Standalone
-
-### Basic Structure
-
-Before you start you should have a working EDK2 setup, e.g. in /usr/src/edk2. All following relative paths are relative
-to this.
-
-In your sources root you'll need a UEFIStarter/ directory - either clone the repository directly into this directory or
-create a symlink pointing to the UEFIStarter directory.
-
-The framework comes with a Makefile that needs to be linked into the sources root:
-
-    ln -s UEFIStarter/Makefile.edk Makefile
-
-After this you should have 2 new entries in your sources root (I have the sources on another volume so "UEFIStarter" is
-a symlink in my setup):
-
-    /usr/src/edk2$ ls -lnd Makefile UEFIStarter
-    lrwxrwxrwx 1 1000 1000 24 Dec 28 20:39 Makefile -> UEFIStarter/Makefile.edk
-    lrwxrwxrwx 1 1000 1000 26 Dec 28 20:39 UEFIStarter -> /mnt/ueficode/UEFIStarter
-
-
-### Configuration
-
-You'll need to edit Conf/target.txt and set these values:
-
-    ACTIVE_PLATFORM = UEFIStarter/UEFIStarter.dsc
-    TARGET_ARCH = X64
-    TOOL_CHAIN_TAG = GCC5
-    MAX_CONCURRENT_THREAD_NUMBER = 7
-
-Set the maximum thread number to the number of available CPU cores +1. I'm working in a VM with 6 cores, so I'm using 7
-threads. If you can spare the cores the build process will make good use of these.
-
-The Makefile needs a few changes (a lot of these issues will be improved in [EFI-5](https://github.com/rinusser/UEFIStarter/issues/5)):
-
-* set OVMF\_IMAGE to a copy of the OVMF image
-* replace /mnt/ueficode/ with the path to your copy of this repository
-* replace /mnt/uefi with a mount point for the generated file system
-* replace /dev/loop0 with an available loop device
-
-The system user needs sudo privileges for these commands:
-
-* losetup
-* mkdosfs
-* mount
-* umount
-
-`UEFIStarter/Makefile.edk` contains a list of all commands executed as root: you can grant sudo access to individual
-command lines, allow general sudo access or do anything in between.
-
-### Building
-
-Once you set everything up you should be able to just invoke `make` (output shortened):
-
-    $ make
-    [...]
-    make[1]: Leaving directory '/usr/src/edk2/Build/UEFIStarter/DEBUG_GCC5/X64/UEFIStarter/tests/suites/lib/testlib'
-
-    - Done -
-    Build end time: 10:05:16, Dec.30 2017
-    Build total time: 00:00:14
-
-    test -f UEFIStarter/target/uefi.img || dd if=/dev/zero of=UEFIStarter/target/uefi.img bs=512 count=93750
-    [...]
-    mkisofs -quiet -input-charset utf8 -o UEFIStarter/target/uefi.iso /mnt/uefi/
-    sudo umount /mnt/uefi/
-    sudo losetup -d /dev/loop0
-
-When this finishes successfully the UEFIStarter/target directory contains an .img file with a filesystem for QEMU, and
-an .iso image with the same contents for e.g. a VirtualBox virtual CD/DVD drive.
-
-If you encounter build issues while the loopback device is mounted the mount point or the loopback device may be left
-active and following `make` attempts will fail with e.g. "Device is busy". To fix this there's a Makefile target:
-
-    $ make free
-
-This will unmount and free the loopback device. After that `make` should work again.
+If you prefer to set up your own development environment see
+[INSTALL.manual.md](https://github.com/rinusser/UEFIStarter/blob/master/INSTALL.manual%2Emd).
 
 
 # Usage
@@ -226,6 +102,17 @@ The functions, data types etc. are described on the [Modules](https://rinusser.g
 
 The documentation is still a work in progress.
 
+Each shell you want to run the edk2 build process in needs to import `edksetup.sh` in the edk2 sources root:
+
+    $ . edksetup.sh
+
+You only need to do this once per shell. The Makefile contains everything else you need to build the UEFIStarter
+package:
+
+    $ make
+
+When this finishes successfully the UEFIStarter/target directory contains an .img file with a filesystem for QEMU, and
+an .iso image with the same contents for e.g. a VirtualBox virtual CD/DVD drive.
 
 # Tests
 

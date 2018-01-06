@@ -1,0 +1,8 @@
+# this will be appended to /etc/screenrc
+startup_message off
+backtick 1 0 1 date '+%Y-%m-%d %H:%M:%S UTC%:::z'
+hardstatus alwayslastline "%{kg}%?%-Lw%?%{WK}%f%n %t%{kg}%?%+Lw%?%-46=%{Kg}[%{kg}%{kg}uefistarter-dev %{Kg}|%{kg} %1`%{Kg}]"
+vbell on
+defscrollback 3000
+bind j select
+bind x
