@@ -17,6 +17,7 @@
   /** \defgroup group_lib_files File I/O Functions */
   /** \defgroup group_lib_timestamp Timer Functions */
   /** \defgroup group_lib_pci PCI Functions */
+  /** \defgroup group_lib_graphics Graphics Functions */
 
 /** \} */
 

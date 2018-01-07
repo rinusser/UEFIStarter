@@ -1,0 +1,34 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = graphics
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00013
+  MODULE_TYPE = UEFI_DRIVER
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS = graphics|UEFI_APPLICATION UEFI_DRIVER DXE_RUNTIME_DRIVER DXE_DRIVER
+
+[Sources]
+  graphics.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiBootServicesTableLib
+  IoLib
+  PciLib
+  logger
+  memory
+  files
+  timestamp
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+

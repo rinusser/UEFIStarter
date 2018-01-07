@@ -10,9 +10,11 @@
   ../../framework/tests.c
   ../../framework/asserts.c
   ../../framework/output.c
+  ../../framework/graphics.c
   generated/runner.c
   asserts.c
   runner.c
+  graphics.c
 
 [Packages]
   MdePkg/MdePkg.dec
@@ -27,6 +29,7 @@
   console
   cmdline
   string
+  graphics
 
 [Guids]
 

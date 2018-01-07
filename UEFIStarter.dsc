@@ -49,6 +49,7 @@
   timestamp|UEFIStarter/library/timestamp.inf
   files|UEFIStarter/library/files.inf
   pci|UEFIStarter/library/pci.inf
+  graphics|UEFIStarter/library/graphics.inf
 
 
 [Components]
@@ -68,6 +69,7 @@
   UEFIStarter/library/timestamp.inf
   UEFIStarter/library/files.inf
   UEFIStarter/library/pci.inf
+  UEFIStarter/library/graphics.inf
 
   UEFIStarter/tests/suites/selftest/testself.inf
   UEFIStarter/tests/suites/lib/testlib.inf
