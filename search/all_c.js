@@ -1,5 +1,18 @@
 var searchData=
 [
-  ['name',['name',['../structcmdline__argument__t.html#a1061f59c34517567c617c81689c7c62e',1,'cmdline_argument_t::name()'],['../structcmdline__argument__group__t.html#a2dac26c3e52eab2bad9a07ee4088c65d',1,'cmdline_argument_group_t::name()']]],
-  ['next',['next',['../structmemory__page__list__t.html#a9042093ce129e98655220d67d04c306d',1,'memory_page_list_t::next()'],['../structpool__memory__list__t.html#ae523b318b5d0e2dd51fdd63a5e568da5',1,'pool_memory_list_t::next()']]]
+  ['memory_20tracking_20functions',['Memory Tracking Functions',['../group__group__lib__memory.html',1,'']]],
+  ['main',['main',['../tests_8c.html#a6a075e19e959ac8482add6d97ed1288a',1,'tests.c']]],
+  ['mark_5ftest_5fincomplete',['mark_test_incomplete',['../tests_8h.html#a354bfb12e271f104e25ed7841d971ef9',1,'tests.h']]],
+  ['max_5fpci_5fdevices',['MAX_PCI_DEVICES',['../library_2pci_8c.html#abed043652a5019b125206d40605f445c',1,'pci.c']]],
+  ['memory_2ec',['memory.c',['../library_2memory_8c.html',1,'(Global Namespace)'],['../tests_2suites_2lib_2memory_8c.html',1,'(Global Namespace)']]],
+  ['memory_2eh',['memory.h',['../memory_8h.html',1,'']]],
+  ['memory_5fpage_5flist_5fentry_5ft',['memory_page_list_entry_t',['../structmemory__page__list__entry__t.html',1,'']]],
+  ['memory_5fpage_5flist_5fmax_5fentry_5fcount',['MEMORY_PAGE_LIST_MAX_ENTRY_COUNT',['../memory_8h.html#ae52d8739a63c59ac291c7422ec675d69',1,'memory.h']]],
+  ['memory_5fpage_5flist_5fpage_5fcount',['MEMORY_PAGE_LIST_PAGE_COUNT',['../library_2memory_8c.html#a231143ad5cbbdfc5dfde6f51f0f3c5a3',1,'memory.c']]],
+  ['memory_5fpage_5flist_5ft',['memory_page_list_t',['../structmemory__page__list__t.html',1,'']]],
+  ['memory_5fpages',['memory_pages',['../structfile__contents__t.html#a6b0a8033e724c8d9bfd5fbbac3d82be6',1,'file_contents_t::memory_pages()'],['../structimage__t.html#afa7e1d7d3ac0dffbfa4de4362532170b',1,'image_t::memory_pages()'],['../structglyph__list__t.html#a6ba417b2856170b2a24065bdf7e85e8d',1,'glyph_list_t::memory_pages()']]],
+  ['memsprintf',['memsprintf',['../string_8h.html#adcf21f4d14ad55087948b17ad51f9f5c',1,'memsprintf(const CHAR16 *fmt,...):&#160;string.c'],['../library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c',1,'memsprintf(const CHAR16 *fmt,...):&#160;string.c']]],
+  ['message',['message',['../structcmdline__args__testcase__t.html#a9920f23c957324f83c6566db05b93b92',1,'cmdline_args_testcase_t']]],
+  ['mix_5fchannel',['MIX_CHANNEL',['../library_2graphics_8c.html#aed6c725323c62f8a02d78a38d9ba84b1',1,'graphics.c']]],
+  ['multiple_5flines_5fper_5ftest',['multiple_lines_per_test',['../structtest__verbosity__t.html#aa1d679777990648f1a36e80d4fabe5bd',1,'test_verbosity_t']]]
 ];

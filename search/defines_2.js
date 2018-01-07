@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['double_5frange_5fvalidator',['DOUBLE_RANGE_VALIDATOR',['../cmdline_8h.html#a2d3f0f236e4eb5879b3bf42fef481651',1,'cmdline.h']]]
+  ['ci',['CI',['../cpuid_8c.html#af0cee399d0a3103b9c12b6d401029b31',1,'cpuid.c']]],
+  ['color',['COLOR',['../include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82',1,'graphics.h']]]
 ];

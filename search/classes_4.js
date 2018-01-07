@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['idt_5freg_5ft',['idt_reg_t',['../structidt__reg__t.html',1,'']]]
+  ['file_5fcontents_5ft',['file_contents_t',['../structfile__contents__t.html',1,'']]],
+  ['flake_5ft',['flake_t',['../structflake__t.html',1,'']]],
+  ['ftowcs_5ftestcase_5ft',['ftowcs_testcase_t',['../structftowcs__testcase__t.html',1,'']]]
 ];

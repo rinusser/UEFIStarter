@@ -1,24 +1,5 @@
 var searchData=
 [
-  ['random',['random',['../snow_8c.html#af27706b0a5e9d1b913d9d9df1c6d6925',1,'snow.c']]],
-  ['rdmsr',['rdmsr',['../cpuid_8c.html#a648def5cbfba5132eccf405c5bce3de4',1,'cpuid.c']]],
-  ['read_5fkey',['read_key',['../snow_8c.html#a8c126ef9111ef26107452e385655d9ca',1,'snow.c']]],
-  ['read_5fmsrs',['read_msrs',['../cpuid_8c.html#aea0d239c1c776d143b20c58c69938b19',1,'cpuid.c']]],
-  ['reset_5flogger_5fentry_5fcounts',['reset_logger_entry_counts',['../logger_8h.html#a7b1872e29768fcd3883cd4b9338c21e0',1,'reset_logger_entry_counts():&#160;logger.c'],['../library_2logger_8c.html#a7b1872e29768fcd3883cd4b9338c21e0',1,'reset_logger_entry_counts():&#160;logger.c']]],
-  ['reset_5fmemory_5ftracking',['reset_memory_tracking',['../memory_8h.html#a9aaf466c28166f5aa95bf8fc6ae88a4b',1,'reset_memory_tracking():&#160;memory.c'],['../library_2memory_8c.html#a9aaf466c28166f5aa95bf8fc6ae88a4b',1,'reset_memory_tracking():&#160;memory.c']]],
-  ['reset_5ftest_5fresults',['reset_test_results',['../tests_8c.html#a5643a7cb6974e6a6e853b0db516a63b8',1,'tests.c']]],
-  ['run_5fasserts_5ftests',['run_asserts_tests',['../suites_2selftest_2asserts_8c.html#a1c7155eb2188cc0b69e6f723136b6a0a',1,'asserts.c']]],
-  ['run_5fcmdline_5ftests',['run_cmdline_tests',['../tests_2suites_2lib_2cmdline_8c.html#a40274b843fad7aaded0499cd06dd4d0a',1,'cmdline.c']]],
-  ['run_5ffiles_5ftests',['run_files_tests',['../tests_2suites_2lib_2files_8c.html#ac320ebd58ee09e56c92633b13ed97c35',1,'files.c']]],
-  ['run_5fgroup',['run_group',['../tests_8c.html#a636f981bb9fd4cb17143a021a4b0956d',1,'run_group(BOOLEAN(*func)()):&#160;tests.c'],['../tests_8h.html#a636f981bb9fd4cb17143a021a4b0956d',1,'run_group(BOOLEAN(*func)()):&#160;tests.c']]],
-  ['run_5flogger_5ftests',['run_logger_tests',['../tests_2suites_2lib_2logger_8c.html#a1a0e817936ece529cc2f6e445ff6d26f',1,'logger.c']]],
-  ['run_5fmemory_5ftests',['run_memory_tests',['../tests_2suites_2lib_2memory_8c.html#a601829a5743b970b85562ba469c13996',1,'memory.c']]],
-  ['run_5fpci_5ftests',['run_pci_tests',['../tests_2suites_2lib_2pci_8c.html#a71a5bb10c2a23e905f8a68b2feecbfa1',1,'pci.c']]],
-  ['run_5frunner_5ftests',['run_runner_tests',['../selftest_2runner_8c.html#a8630a501e512c95cf3a91fed4cdc90f0',1,'runner.c']]],
-  ['run_5fstring_5ftests',['run_string_tests',['../tests_2suites_2lib_2string_8c.html#a287326013d264549fc0aff9dc3b0bae1',1,'string.c']]],
-  ['run_5ftest',['RUN_TEST',['../tests_8h.html#a323a441dbbbfc0b332560f2d2160294a',1,'RUN_TEST():&#160;tests.h'],['../tests_8c.html#ab3b8047092b9175ca79ca022d31bcae6',1,'run_test(void(*func)(), CHAR16 *description):&#160;tests.c'],['../tests_8h.html#ab3b8047092b9175ca79ca022d31bcae6',1,'run_test(void(*func)(), CHAR16 *description):&#160;tests.c']]],
-  ['run_5ftests',['run_tests',['../tests_8h.html#ac3ef4e4ac9b8681e56bf390cb4c152cd',1,'runner.c']]],
-  ['run_5fwctype_5ftestcases',['RUN_WCTYPE_TESTCASES',['../tests_2suites_2lib_2string_8c.html#ad35565d2be0214fe3a8f8a45a7b9e482',1,'string.c']]],
-  ['runner_2ec',['runner.c',['../selftest_2runner_8c.html',1,'']]],
-  ['rv_5fhelp',['RV_HELP',['../cmdline_8h.html#a4178f5b10bef1969e3a68f77fe0c00fa',1,'cmdline.h']]]
+  ['query_5fcurrent_5fmode',['query_current_mode',['../include_2graphics_8h.html#a0919444a24b08b7aef7c916f6a508f98',1,'query_current_mode(EFI_GRAPHICS_OUTPUT_PROTOCOL *gop, EFI_GRAPHICS_OUTPUT_MODE_INFORMATION **info):&#160;graphics.c'],['../library_2graphics_8c.html#a0919444a24b08b7aef7c916f6a508f98',1,'query_current_mode(EFI_GRAPHICS_OUTPUT_PROTOCOL *gop, EFI_GRAPHICS_OUTPUT_MODE_INFORMATION **info):&#160;graphics.c']]],
+  ['quit_2ec',['quit.c',['../quit_8c.html',1,'']]]
 ];

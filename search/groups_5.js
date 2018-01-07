@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pci_20functions',['PCI Functions',['../group__group__lib__pci.html',1,'']]]
+  ['memory_20tracking_20functions',['Memory Tracking Functions',['../group__group__lib__memory.html',1,'']]]
 ];

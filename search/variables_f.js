@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['test_5fverbosity',['test_verbosity',['../output_8c.html#a43707e73354178e8d2c4edf67770ae8e',1,'test_verbosity():&#160;tests.c'],['../tests_8c.html#a43707e73354178e8d2c4edf67770ae8e',1,'test_verbosity():&#160;tests.c'],['../tests_8h.html#a43707e73354178e8d2c4edf67770ae8e',1,'test_verbosity():&#160;tests.c']]],
-  ['tests_5farggroup',['tests_arggroup',['../tests_8c.html#a41aff95aa4487f8b585ee11e786b4f50',1,'tests.c']]],
-  ['tests_5fargs',['tests_args',['../tests_8c.html#ad36f41956b780b516a0f3e28b1964a80',1,'tests.c']]],
-  ['time_5foffset',['time_offset',['../structflake__t.html#ac2f13034251862ab2370ae724f1730de',1,'flake_t']]],
-  ['trace',['trace',['../structloggers__t.html#aef08f772e43fd098adc2bb6c9ff43692',1,'loggers_t']]],
-  ['type',['type',['../structcmdline__argument__t.html#a4c28f4405d0c5745351f1b717302f9d3',1,'cmdline_argument_t']]]
+  ['right',['right',['../structbounding__box__t.html#adf97d208d7311aaac812186415098cd1',1,'bounding_box_t']]],
+  ['rotation_5fcolor_5fnarp',['rotation_color_narp',['../tests_2suites_2lib_2graphics_8c.html#abeeb13b127a68698a21db267a1044f66',1,'graphics.c']]],
+  ['rotation_5fcolor_5fyarp',['rotation_color_yarp',['../tests_2suites_2lib_2graphics_8c.html#ac14d6777d6746435b314b23fbb44d013',1,'graphics.c']]],
+  ['rotation_5ftestcases',['rotation_testcases',['../tests_2suites_2lib_2graphics_8c.html#af00533ccb97334ee1acb6930ad370a59',1,'graphics.c']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['wait_5ffor_5fkey',['wait_for_key',['../console_8h.html#a621288a08ecc9633729935737256e831',1,'wait_for_key():&#160;console.c'],['../console_8c.html#a621288a08ecc9633729935737256e831',1,'wait_for_key():&#160;console.c']]],
-  ['wctype_5ffloat',['wctype_float',['../cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001',1,'wctype_float(CHAR16 *string):&#160;cmdline.c'],['../library_2cmdline_8c.html#a264a66841e805f4872f04b7dcd2b9001',1,'wctype_float(CHAR16 *string):&#160;cmdline.c']]],
-  ['wctype_5fint',['wctype_int',['../cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7',1,'wctype_int(CHAR16 *string):&#160;cmdline.c'],['../library_2cmdline_8c.html#ad2bd762453c7bb9dac80458f36f38de7',1,'wctype_int(CHAR16 *string):&#160;cmdline.c']]],
-  ['write_5fidt_5fentry_5faddress',['write_idt_entry_address',['../cpuid_8c.html#ae69ef17788890cde2949caec4a6dc225',1,'cpuid.c']]]
+  ['validate_5fdouble_5frange',['validate_double_range',['../cmdline_8h.html#a1bc171d0f1c6004540a9e407bbab4316',1,'validate_double_range(double_uint64_t v, CHAR16 *field, double min, double max):&#160;cmdline.c'],['../library_2cmdline_8c.html#a1bc171d0f1c6004540a9e407bbab4316',1,'validate_double_range(double_uint64_t v, CHAR16 *field, double min, double max):&#160;cmdline.c']]],
+  ['validate_5fint',['validate_int',['../helloworld_8c.html#a45b0ebd71838726f131aa5eac8d8d7bb',1,'validate_int(double_uint64_t value):&#160;helloworld.c'],['../tests_2suites_2lib_2cmdline_8c.html#a8e242acdd762bc9698c1fe8bdff94cc2',1,'validate_int(double_uint64_t val):&#160;cmdline.c']]],
+  ['validate_5fuint64_5frange',['validate_uint64_range',['../cmdline_8h.html#aff5bec012aa0d390e2d46caf4fcf6c8f',1,'validate_uint64_range(double_uint64_t v, CHAR16 *field, UINT64 min, UINT64 max):&#160;cmdline.c'],['../library_2cmdline_8c.html#aff5bec012aa0d390e2d46caf4fcf6c8f',1,'validate_uint64_range(double_uint64_t v, CHAR16 *field, UINT64 min, UINT64 max):&#160;cmdline.c']]],
+  ['validate_5fverbosity',['validate_verbosity',['../tests_8c.html#a732b3015b06a2fdc6e1661c2edcb4a6c',1,'tests.c']]]
 ];

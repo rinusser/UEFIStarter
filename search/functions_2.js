@@ -5,5 +5,7 @@ var searchData=
   ['clear',['clear',['../snow_8c.html#ac8bb3912a3ce86b15842e79d0b421204',1,'snow.c']]],
   ['color_5fprint',['color_print',['../console_8h.html#a91c81fab21903fec8679231208e45f16',1,'color_print(UINTN color, CHAR16 *fmt,...):&#160;console.c'],['../console_8c.html#a91c81fab21903fec8679231208e45f16',1,'color_print(UINTN color, CHAR16 *fmt,...):&#160;console.c']]],
   ['cpuid',['cpuid',['../cpuid_8c.html#a1a416b188fd71a0ffb4f8cf2aea5bc59',1,'cpuid.c']]],
+  ['create_5fgraphics_5ffs_5fbuffer',['create_graphics_fs_buffer',['../include_2graphics_8h.html#a48c60d6a5470a2f9865a693a8add01d9',1,'create_graphics_fs_buffer():&#160;graphics.c'],['../library_2graphics_8c.html#a48c60d6a5470a2f9865a693a8add01d9',1,'create_graphics_fs_buffer():&#160;graphics.c']]],
+  ['create_5fimage',['create_image',['../include_2graphics_8h.html#aa9431e895198032884b9aadebc864ba7',1,'create_image(INTN width, INTN height):&#160;graphics.c'],['../library_2graphics_8c.html#aa9431e895198032884b9aadebc864ba7',1,'create_image(INTN width, INTN height):&#160;graphics.c']]],
   ['ctype_5fwhitespace',['ctype_whitespace',['../string_8h.html#ae387e3e9cefe2465ef17ec4718003a7a',1,'ctype_whitespace(char ch):&#160;string.c'],['../library_2string_8c.html#ae387e3e9cefe2465ef17ec4718003a7a',1,'ctype_whitespace(char ch):&#160;string.c']]]
 ];

@@ -8,8 +8,11 @@ var searchData=
   ['_5farguments',['_arguments',['../input_8c.html#a8cce9f8b526c2942e7541defc2bdd040',1,'_arguments():&#160;input.c'],['../snow_8c.html#a8cce9f8b526c2942e7541defc2bdd040',1,'_arguments():&#160;snow.c']]],
   ['_5fargv',['_argv',['../console_8c.html#a261f07162c8ee16bb2550e308963f057',1,'console.c']]],
   ['_5fargv_5fpages',['_argv_pages',['../console_8c.html#a06678e11ba7bfff4d6eb038faffd48db',1,'console.c']]],
+  ['_5fcos',['_cos',['../library_2graphics_8c.html#ae809d399c42b81dc3b99c9497cf8b7af',1,'graphics.c']]],
+  ['_5ffile_5fcontents_5fbuffer',['_file_contents_buffer',['../tests_2suites_2lib_2graphics_8c.html#a1b88e472237fef0ac4561905b488cd9a',1,'graphics.c']]],
   ['_5fground_5flifetime_5fframes',['_ground_lifetime_frames',['../snow_8c.html#ad9290569b186ab208abfa17a8a7f5100',1,'snow.c']]],
   ['_5finitial_5flog_5flevel',['_initial_log_level',['../tests_8c.html#a48971c20c2dc1877de23dd59e44e3f84',1,'tests.c']]],
+  ['_5finterpolation_5fdata',['_interpolation_data',['../tests_2suites_2lib_2graphics_8c.html#a8b3ed23722bcce9a18cf05149f283172',1,'graphics.c']]],
   ['_5flog_5fcounts',['_log_counts',['../tests_2suites_2lib_2logger_8c.html#a48222912b8d99a96726d91c3a160e8fa',1,'logger.c']]],
   ['_5fmemory_5fpage_5flist',['_memory_page_list',['../library_2memory_8c.html#a0ecc1a68a9b2f70a93532645acd4ad21',1,'memory.c']]],
   ['_5fpci_5fconfigs',['_pci_configs',['../library_2pci_8c.html#aa1c48385093b28c20020014d0a30c8be',1,'pci.c']]],
@@ -18,9 +21,11 @@ var searchData=
   ['_5fpci_5fid_5ffile',['_pci_id_file',['../library_2pci_8c.html#a83335012db8923bfb73f3b052aff9d5a',1,'pci.c']]],
   ['_5fpci_5fprotocols',['_pci_protocols',['../library_2pci_8c.html#aff212e6244ec5158192dfab111bf93e0',1,'pci.c']]],
   ['_5fpool_5fmemory_5flist',['_pool_memory_list',['../library_2memory_8c.html#a7fbf07f6dc9458a387f329de33ea1530',1,'memory.c']]],
+  ['_5fraw',['_raw',['../unioncontents__buffer__t.html#a69d487e8b3e3da063f300afa3b61cdd9',1,'contents_buffer_t']]],
   ['_5frdtsc_5fticks_5fper_5fsecond',['_rdtsc_ticks_per_second',['../timestamp_8c.html#ad78bda91658a6e66e19cb1db5fd88705',1,'timestamp.c']]],
   ['_5fscreen_5fheight',['_screen_height',['../snow_8c.html#a57071a863b971254a537252a21043dc9',1,'snow.c']]],
   ['_5fscreen_5fwidth',['_screen_width',['../snow_8c.html#adbcdcbf9b747cc224132726d7a6c9b67',1,'snow.c']]],
+  ['_5fsin',['_sin',['../library_2graphics_8c.html#ab7eb3d7379d0a3c54cdb7cdb498be447',1,'graphics.c']]],
   ['_5fskipped_5ftests_5fcount',['_skipped_tests_count',['../tests_8c.html#a6b7148c4d186070708f841f592f62c60',1,'tests.c']]],
   ['_5fskipped_5ftests_5flist',['_skipped_tests_list',['../tests_8c.html#a5a8ab0568498d6810db9a9021e665d59',1,'tests.c']]]
 ];

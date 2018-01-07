@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['memory_5fpage_5flist_5fentry_5ft',['memory_page_list_entry_t',['../structmemory__page__list__entry__t.html',1,'']]],
-  ['memory_5fpage_5flist_5ft',['memory_page_list_t',['../structmemory__page__list__t.html',1,'']]]
+  ['idt_5freg_5ft',['idt_reg_t',['../structidt__reg__t.html',1,'']]],
+  ['image_5fasset_5ft',['image_asset_t',['../structimage__asset__t.html',1,'']]],
+  ['image_5ft',['image_t',['../structimage__t.html',1,'']]]
 ];

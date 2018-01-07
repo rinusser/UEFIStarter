@@ -97,6 +97,9 @@ $(function() {
 <li>ARG_FLAKE_COUNT
 : <a class="el" href="snow_8c.html#a8f876774f86432f093b6fb5a7a2a0215">snow.c</a>
 </li>
+<li>ARG_FPS
+: <a class="el" href="include_2graphics_8h.html#a376a21fd0d9ba1a8c3dec8d02057a702">graphics.h</a>
+</li>
 <li>ARG_GROUND_LIFETIME
 : <a class="el" href="snow_8c.html#afdbea298d41add085cb1763975184953">snow.c</a>
 </li>
@@ -111,6 +114,9 @@ $(function() {
 </li>
 <li>ARG_MAX_CROSS_SPEED
 : <a class="el" href="snow_8c.html#a958a8a0fbbb5dc1f208d0216e558203b">snow.c</a>
+</li>
+<li>ARG_MODE
+: <a class="el" href="include_2graphics_8h.html#a9e458831d53424b63341c3b814708d99">graphics.h</a>
 </li>
 <li>ARG_MULTILINE
 : <a class="el" href="tests_8c.html#a59df3306ba38ed682190c030d8a2f83d">tests.c</a>
@@ -142,6 +148,9 @@ $(function() {
 <li>ARG_VERBOSITY
 : <a class="el" href="tests_8c.html#a528f14ce6eb5e4c98615d9b16167cacc">tests.c</a>
 </li>
+<li>ARG_VSYNC
+: <a class="el" href="include_2graphics_8h.html#a5b11fdf65b9fbcacde8790d06787209b">graphics.h</a>
+</li>
 <li>args1
 : <a class="el" href="helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d">helloworld.c</a>
 </li>
@@ -157,6 +166,17 @@ $(function() {
 </li>
 <li>assemble_and_set_verbosity()
 : <a class="el" href="tests_8c.html#a868bd84394b0fb3aad27521e92f3d93c">tests.c</a>
+</li>
+<li>assemble_file_contents()
+: <a class="el" href="tests_2suites_2lib_2graphics_8c.html#a31fea7ddf93f4d3595563ad30dfbd426">graphics.c</a>
+</li>
+<li>assert_box_equals()
+: <a class="el" href="tests_2framework_2graphics_8c.html#a947d5702928e05a72b693bade1ec686a">graphics.c</a>
+, <a class="el" href="tests_2framework_2graphics_8h.html#a947d5702928e05a72b693bade1ec686a">graphics.h</a>
+</li>
+<li>assert_differences_within_box()
+: <a class="el" href="tests_2framework_2graphics_8c.html#a29b034163ae02a125964fb8397e6f000">graphics.c</a>
+, <a class="el" href="tests_2framework_2graphics_8h.html#a29b034163ae02a125964fb8397e6f000">graphics.h</a>
 </li>
 <li>assert_double_greater_than()
 : <a class="el" href="framework_2asserts_8c.html#a6299497d95cc17ba1da36540cc66134e">asserts.c</a>
@@ -191,16 +211,16 @@ $(function() {
 , <a class="el" href="asserts_8h.html#ad36551b8eb0959cb346639dc46da643b">asserts.h</a>
 </li>
 <li>assert_intn_in_closed_interval()
-: <a class="el" href="asserts_8h.html#a6f06dd918f59c2fe3e8213fb07f63ead">asserts.h</a>
-, <a class="el" href="framework_2asserts_8c.html#a6f06dd918f59c2fe3e8213fb07f63ead">asserts.c</a>
+: <a class="el" href="framework_2asserts_8c.html#a6f06dd918f59c2fe3e8213fb07f63ead">asserts.c</a>
+, <a class="el" href="asserts_8h.html#a6f06dd918f59c2fe3e8213fb07f63ead">asserts.h</a>
 </li>
 <li>assert_intn_less_than_or_equal_to()
-: <a class="el" href="framework_2asserts_8c.html#adfc55254ed0d3758550b6cc369ae6802">asserts.c</a>
-, <a class="el" href="asserts_8h.html#adfc55254ed0d3758550b6cc369ae6802">asserts.h</a>
+: <a class="el" href="asserts_8h.html#adfc55254ed0d3758550b6cc369ae6802">asserts.h</a>
+, <a class="el" href="framework_2asserts_8c.html#adfc55254ed0d3758550b6cc369ae6802">asserts.c</a>
 </li>
 <li>assert_not_null()
-: <a class="el" href="framework_2asserts_8c.html#a86afb75e6efa0477f7792e254c002d8f">asserts.c</a>
-, <a class="el" href="asserts_8h.html#a86afb75e6efa0477f7792e254c002d8f">asserts.h</a>
+: <a class="el" href="asserts_8h.html#a86afb75e6efa0477f7792e254c002d8f">asserts.h</a>
+, <a class="el" href="framework_2asserts_8c.html#a86afb75e6efa0477f7792e254c002d8f">asserts.c</a>
 </li>
 <li>assert_null()
 : <a class="el" href="framework_2asserts_8c.html#abf9579e730bb3307df133f82326c86fe">asserts.c</a>
@@ -211,28 +231,28 @@ $(function() {
 , <a class="el" href="asserts_8h.html#a08eca1f5a13fe4bec3bf9878a6db8a12">asserts.h</a>
 </li>
 <li>assert_pixel_near()
-: <a class="el" href="framework_2asserts_8c.html#ac340378524ce7ca4a016f7314d2f269a">asserts.c</a>
-, <a class="el" href="asserts_8h.html#aa79262dce17a3079e6175b93c7865eea">asserts.h</a>
+: <a class="el" href="asserts_8h.html#aa79262dce17a3079e6175b93c7865eea">asserts.h</a>
+, <a class="el" href="framework_2asserts_8c.html#ac340378524ce7ca4a016f7314d2f269a">asserts.c</a>
 </li>
 <li>assert_pixel_values()
 : <a class="el" href="asserts_8h.html#a31875ec7c2a6d9d64aa23d6e7ddabc28">asserts.h</a>
 , <a class="el" href="framework_2asserts_8c.html#a20fd7342276cdda14f237eb21fe71d92">asserts.c</a>
 </li>
 <li>assert_pixel_values_near()
-: <a class="el" href="framework_2asserts_8c.html#a655b82aa0675c21c2ef0943712744d71">asserts.c</a>
-, <a class="el" href="asserts_8h.html#a549d869444deaae0d762cfd74d049602">asserts.h</a>
+: <a class="el" href="asserts_8h.html#a549d869444deaae0d762cfd74d049602">asserts.h</a>
+, <a class="el" href="framework_2asserts_8c.html#a655b82aa0675c21c2ef0943712744d71">asserts.c</a>
 </li>
 <li>assert_true()
 : <a class="el" href="asserts_8h.html#aaee86f6db057403545d73895bc4c41f3">asserts.h</a>
 , <a class="el" href="framework_2asserts_8c.html#aaee86f6db057403545d73895bc4c41f3">asserts.c</a>
 </li>
 <li>assert_uint64_equals()
-: <a class="el" href="asserts_8h.html#ae48d72de0a34cc5c15766c93d186bc20">asserts.h</a>
-, <a class="el" href="framework_2asserts_8c.html#ae48d72de0a34cc5c15766c93d186bc20">asserts.c</a>
+: <a class="el" href="framework_2asserts_8c.html#ae48d72de0a34cc5c15766c93d186bc20">asserts.c</a>
+, <a class="el" href="asserts_8h.html#ae48d72de0a34cc5c15766c93d186bc20">asserts.h</a>
 </li>
 <li>assert_uint8_array()
-: <a class="el" href="asserts_8h.html#a5963f2bde4e108154b0d9d75fe139eae">asserts.h</a>
-, <a class="el" href="framework_2asserts_8c.html#a5963f2bde4e108154b0d9d75fe139eae">asserts.c</a>
+: <a class="el" href="framework_2asserts_8c.html#a5963f2bde4e108154b0d9d75fe139eae">asserts.c</a>
+, <a class="el" href="asserts_8h.html#a5963f2bde4e108154b0d9d75fe139eae">asserts.h</a>
 </li>
 <li>assert_wcstr_equals()
 : <a class="el" href="framework_2asserts_8c.html#a468f1244451e853916cc801d5ae68e7a">asserts.c</a>
@@ -249,7 +269,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 5 2018 19:24:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 7 2018 10:09:52 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
