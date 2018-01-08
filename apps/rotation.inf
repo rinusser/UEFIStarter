@@ -1,0 +1,37 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = rotation
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00015
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT = ShellCEntryLib
+
+[Sources]
+  rotation.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+  StdLib/StdLib.dec
+
+[LibraryClasses]
+  UefiLib
+  ShellCEntryLib
+  UefiBootServicesTableLib
+  LibMath
+  logger
+  console
+  cmdline
+  graphics
+  timestamp
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+

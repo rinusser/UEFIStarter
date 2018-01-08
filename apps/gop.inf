@@ -1,0 +1,35 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = gop
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00014
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT = ShellCEntryLib
+
+[Sources]
+  gop.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiLib
+  ShellCEntryLib
+  PciLib
+  logger
+  console
+  cmdline
+  graphics
+  timestamp
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+

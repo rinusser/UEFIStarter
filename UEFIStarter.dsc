@@ -60,6 +60,8 @@
   UEFIStarter/apps/snow.inf
   UEFIStarter/apps/timer.inf
   UEFIStarter/apps/lspci.inf
+  UEFIStarter/apps/gop.inf
+  UEFIStarter/apps/rotation.inf
 
   UEFIStarter/library/logger.inf
   UEFIStarter/library/cmdline.inf
