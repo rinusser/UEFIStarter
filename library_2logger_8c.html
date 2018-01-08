@@ -95,7 +95,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aea2f85cf689a84eaa31f989c0528a7f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2logger_8c.html#aea2f85cf689a84eaa31f989c0528a7f7">log_print</a> (CHAR16 *level, CHAR16 *msg)</td></tr>
 <tr class="memdesc:aea2f85cf689a84eaa31f989c0528a7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default log writer: prints to text console.  <a href="#aea2f85cf689a84eaa31f989c0528a7f7">More...</a><br /></td></tr>
 <tr class="separator:aea2f85cf689a84eaa31f989c0528a7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae9543ef02c75d8633494685911b5098"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2logger_8c.html#aae9543ef02c75d8633494685911b5098">_logger_function_va</a> (<a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a> level, UINT16 *message, VA_LIST args)</td></tr>
+<tr class="memitem:aae9543ef02c75d8633494685911b5098"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2logger_8c.html#aae9543ef02c75d8633494685911b5098">_logger_function_va</a> (<a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a> level, UINT16 *message, VA_LIST <a class="el" href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a>)</td></tr>
 <tr class="memdesc:aae9543ef02c75d8633494685911b5098"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: formats log message and calls log writer with final string to log.  <a href="#aae9543ef02c75d8633494685911b5098">More...</a><br /></td></tr>
 <tr class="separator:aae9543ef02c75d8633494685911b5098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa10573f383069ee16b91ccc86a3dabae"><td class="memItemLeft" align="right" valign="top">static void EFIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2logger_8c.html#aa10573f383069ee16b91ccc86a3dabae">_trace</a> (CHAR16 *fmt,...)</td></tr>
@@ -180,7 +180,8 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> EFIAPI NAME(CHAR16 *fmt, ...) \</div><div class="line">{ \</div><div class="line">  VA_LIST args; \</div><div class="line">  VA_START(args,fmt); \</div><div class="line">  _logger_function_va(LEVEL,fmt,args); \</div><div class="line">  VA_END(args); \</div><div class="line">}</div></div><!-- fragment -->
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> EFIAPI NAME(CHAR16 *fmt, ...) \</div><div class="line">{ \</div><div class="line">  VA_LIST <a class="code" href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a>; \</div><div class="line">  VA_START(args,fmt); \</div><div class="line">  _logger_function_va(LEVEL,fmt,args); \</div><div class="line">  VA_END(args); \</div><div class="line">}</div><div class="ttc" id="rotation_8c_html_ae47c27a72953843205dc0711f1ce4a7a"><div class="ttname"><a href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a></div><div class="ttdeci">cmdline_argument_t args[]</div><div class="ttdoc">list of command-line arguments </div><div class="ttdef"><b>Definition:</b> rotation.c:34</div></div>
+</div><!-- fragment -->
 <p>helper macro for quickly defining a callable logging function </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -678,7 +679,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 7 2018 10:09:51 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 8 2018 18:17:45 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

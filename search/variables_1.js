@@ -2,6 +2,8 @@ var searchData=
 [
   ['address',['address',['../structidt__reg__t.html#a803531928468e3cb6b6b0cfa8f2cf870',1,'idt_reg_t::address()'],['../structmemory__page__list__entry__t.html#a6b3d50186624174d35e7e12851c1924c',1,'memory_page_list_entry_t::address()']]],
   ['after',['after',['../structgraphics__difftest__t.html#a56445e619e3daf51d73fea8116465a00',1,'graphics_difftest_t']]],
+  ['arggroup',['arggroup',['../rotation_8c.html#aa9b40340cf32363cfda621b790317d58',1,'rotation.c']]],
+  ['args',['args',['../rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a',1,'rotation.c']]],
   ['args1',['args1',['../helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d',1,'helloworld.c']]],
   ['args2',['args2',['../helloworld_8c.html#ae9f8aba11890e4ac9625a53861a72c94',1,'helloworld.c']]],
   ['assert_5fcount',['assert_count',['../structtest__results__t.html#afc3baeeee676c5fd739c20b64dcfa144',1,'test_results_t']]],

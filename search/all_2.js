@@ -5,5 +5,6 @@ var searchData=
   ['bottom',['bottom',['../structbounding__box__t.html#aa36abe0e8dc93c765bf01c6498fbccc0',1,'bounding_box_t']]],
   ['bounding_5fbox_5ft',['bounding_box_t',['../structbounding__box__t.html',1,'']]],
   ['box',['box',['../structgraphics__difftest__t.html#afba34fce99d61d49811cb3d397d1e8d1',1,'graphics_difftest_t']]],
+  ['buffer2',['buffer2',['../rotation_8c.html#a0e87db809dbc13f4f312d131b91b8152',1,'rotation.c']]],
   ['bytes_5fper_5fpixel',['BYTES_PER_PIXEL',['../tests_2framework_2graphics_8h.html#ae138b2e443649ca9546c99e80957faac',1,'graphics.h']]]
 ];

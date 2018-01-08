@@ -110,7 +110,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a205da2eaeb062e118e4ff6a8499d5d2b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a205da2eaeb062e118e4ff6a8499d5d2b">_print_argument_group_help</a> (<a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a> *arguments)</td></tr>
 <tr class="memdesc:a205da2eaeb062e118e4ff6a8499d5d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(internal) prints the help text for a command line argument group  <a href="#a205da2eaeb062e118e4ff6a8499d5d2b">More...</a><br /></td></tr>
 <tr class="separator:a205da2eaeb062e118e4ff6a8499d5d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09ad279eb7447f099725607237d2484d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a09ad279eb7447f099725607237d2484d">print_help_text</a> (UINTN argument_group_count, VA_LIST args)</td></tr>
+<tr class="memitem:a09ad279eb7447f099725607237d2484d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a09ad279eb7447f099725607237d2484d">print_help_text</a> (UINTN argument_group_count, VA_LIST <a class="el" href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a>)</td></tr>
 <tr class="memdesc:a09ad279eb7447f099725607237d2484d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the help text for all argument groups, including the built-in ones.  <a href="#a09ad279eb7447f099725607237d2484d">More...</a><br /></td></tr>
 <tr class="separator:a09ad279eb7447f099725607237d2484d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1115fe6b4aaf36a0b24826548315639e"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a1115fe6b4aaf36a0b24826548315639e">check_no_arguments_remaining</a> (INTN argc, CHAR16 **argv)</td></tr>
@@ -122,7 +122,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ab067861121a1dde851aa416cc1763bf0"><td class="memItemLeft" align="right" valign="top">static BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#ab067861121a1dde851aa416cc1763bf0">_parse_parameter_group</a> (INTN argc, CHAR16 **argv, <a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a> *arguments)</td></tr>
 <tr class="memdesc:ab067861121a1dde851aa416cc1763bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(internal) fills argument group structure with all matching command line arguments  <a href="#ab067861121a1dde851aa416cc1763bf0">More...</a><br /></td></tr>
 <tr class="separator:ab067861121a1dde851aa416cc1763bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5743181e0a9fe670f03a0b7a2ca92502"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a5743181e0a9fe670f03a0b7a2ca92502">parse_parameters</a> (INTN argc, CHAR16 **argv, UINTN group_count, VA_LIST args)</td></tr>
+<tr class="memitem:a5743181e0a9fe670f03a0b7a2ca92502"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a5743181e0a9fe670f03a0b7a2ca92502">parse_parameters</a> (INTN argc, CHAR16 **argv, UINTN group_count, VA_LIST <a class="el" href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a>)</td></tr>
 <tr class="memdesc:a5743181e0a9fe670f03a0b7a2ca92502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses command-line parameters.  <a href="#a5743181e0a9fe670f03a0b7a2ca92502">More...</a><br /></td></tr>
 <tr class="separator:a5743181e0a9fe670f03a0b7a2ca92502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -182,7 +182,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the string looks like a number</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>the wctype* functions should be replaced by a built-in, or moved to a separate lib </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>the wctype* functions should be replaced by a built-in, or moved to a separate lib </dd></dl>
 
 </div>
 </div>
@@ -265,7 +265,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed number; -1.0 on error</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
 
 </div>
 </div>
@@ -318,7 +318,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>add test </dd></dl>
 
 </div>
 </div>
@@ -371,7 +371,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>add test </dd></dl>
 
 </div>
 </div>
@@ -406,8 +406,8 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>could mind required parameters (currently numbers for double/int args) for pad length, then remove typetext padding in Print() below </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>combine pad length for different groups that were combined, e.g. builtin and custom audio options </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>could mind required parameters (currently numbers for double/int args) for pad length, then remove typetext padding in Print() below </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>combine pad length for different groups that were combined, e.g. builtin and custom audio options </dd></dl>
 
 </div>
 </div>
@@ -672,7 +672,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 7 2018 10:09:51 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 8 2018 18:17:45 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

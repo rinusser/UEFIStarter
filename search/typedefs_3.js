@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validate_5fargument_5ff',['validate_argument_f',['../cmdline_8h.html#a31e5789f35e7f930cad34f9027c2e5a5',1,'cmdline.h']]]
+  ['trig_5ffunc',['trig_func',['../include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb',1,'graphics.h']]]
 ];
