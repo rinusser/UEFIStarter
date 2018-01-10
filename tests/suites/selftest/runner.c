@@ -4,7 +4,7 @@
  * You'll have to check the test's result yourself, the console should show results matching the descriptions.
  *
  * \author Richard Nusser
- * \copyright 2017 Richard Nusser
+ * \copyright 2017-2018 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
  * \ingroup group_tests_selftest

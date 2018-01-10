@@ -2,7 +2,7 @@
  * This application is a simple example of how to read command line arguments and output to console.
  *
  * \author Richard Nusser
- * \copyright 2017 Richard Nusser
+ * \copyright 2017-2018 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
  * \ingroup group_apps

@@ -143,7 +143,7 @@ You can get a full list of parameters with "-help".
 
 ### Copyright
 
-Copyright (C) 2017 Richard Nusser
+Copyright (C) 2017-2018 Richard Nusser
 
 ### License
 

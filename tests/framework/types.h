@@ -2,7 +2,7 @@
  * Common types for tests
  *
  * \author Richard Nusser
- * \copyright 2017 Richard Nusser
+ * \copyright 2017-2018 Richard Nusser
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
  * \ingroup group_tests_runner
