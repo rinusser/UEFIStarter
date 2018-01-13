@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['id',['id',['../structac97__bar__t.html#a9159e40b0e427ebdb525bb3570c29362',1,'ac97_bar_t']]],
   ['idt_5freg_5ft',['idt_reg_t',['../structidt__reg__t.html',1,'']]],
   ['image',['image',['../structimage__asset__t.html#afb1c181c176ac62b216ecc1bbe300e22',1,'image_asset_t']]],
   ['image_5fasset_5ft',['image_asset_t',['../structimage__asset__t.html',1,'']]],
@@ -15,6 +16,8 @@ var searchData=
   ['individual_5ftests',['individual_tests',['../structtest__verbosity__t.html#a8b2bdeab37f503a8392b71f4aa0142d9',1,'test_verbosity_t']]],
   ['info',['info',['../structloggers__t.html#a78d56fa1f3cc9d003cb608853e82e364',1,'loggers_t::info()'],['../logger_8h.html#acc58a0a25bf6982de2b101803e46130aa748005382152808a72b1a9177d9dc806',1,'INFO():&#160;logger.h']]],
   ['init',['init',['../console_8h.html#a48fcdd00d67eb34c3a303c5a4cb53451',1,'init(INTN argc, CHAR16 **argv, UINTN arg_group_count,...):&#160;console.c'],['../console_8c.html#a48fcdd00d67eb34c3a303c5a4cb53451',1,'init(INTN argc, CHAR16 **argv, UINTN arg_group_count,...):&#160;console.c']]],
+  ['init_5fac97_5fhandle',['init_ac97_handle',['../ac97_8h.html#aed99671d941211fc28f20add2626bbf7',1,'init_ac97_handle(ac97_handle_t *handle, EFI_PCI_IO_PROTOCOL *pip):&#160;ac97.c'],['../library_2ac97_8c.html#aed99671d941211fc28f20add2626bbf7',1,'init_ac97_handle(ac97_handle_t *handle, EFI_PCI_IO_PROTOCOL *pip):&#160;ac97.c']]],
+  ['init_5fbuffers',['init_buffers',['../library_2ac97_8c.html#a306a55f982feefd8e7bf98f6f7071757',1,'ac97.c']]],
   ['init_5fflake',['init_flake',['../snow_8c.html#aceae224df6b78e7712b97176f4e2b244',1,'snow.c']]],
   ['init_5fgraphics',['init_graphics',['../include_2graphics_8h.html#a3d24f371c0911e0a50fefd9907769dba',1,'init_graphics():&#160;graphics.c'],['../library_2graphics_8c.html#a3d24f371c0911e0a50fefd9907769dba',1,'init_graphics():&#160;graphics.c']]],
   ['init_5fgraphics_5fdifftest',['init_graphics_difftest',['../tests_2framework_2graphics_8c.html#a49e8bb595a0f59a8d667158c694dda45',1,'init_graphics_difftest(graphics_difftest_t *difftest, INTN width, INTN height):&#160;graphics.c'],['../tests_2framework_2graphics_8h.html#a49e8bb595a0f59a8d667158c694dda45',1,'init_graphics_difftest(graphics_difftest_t *difftest, INTN width, INTN height):&#160;graphics.c']]],
@@ -29,5 +32,6 @@ var searchData=
   ['interpolate_5f2px',['interpolate_2px',['../include_2graphics_8h.html#af8304e9d109cdff80b09b61459ce710b',1,'interpolate_2px(COLOR *colors, float ratio):&#160;graphics.c'],['../library_2graphics_8c.html#af8304e9d109cdff80b09b61459ce710b',1,'interpolate_2px(COLOR *colors, float ratio):&#160;graphics.c']]],
   ['interpolate_5f4px',['interpolate_4px',['../include_2graphics_8h.html#a3f05b508c0ba74e27ae90634c3b27ea7',1,'interpolate_4px(COLOR *corners, UINTN row_width, float x, float y):&#160;graphics.c'],['../library_2graphics_8c.html#a3f05b508c0ba74e27ae90634c3b27ea7',1,'interpolate_4px(COLOR *corners, UINTN row_width, float x, float y):&#160;graphics.c']]],
   ['invert_5fnext_5fassert',['invert_next_assert',['../framework_2asserts_8c.html#aabfdfb122096394510eab06cdd10f076',1,'invert_next_assert():&#160;asserts.c'],['../asserts_8h.html#aabfdfb122096394510eab06cdd10f076',1,'invert_next_assert():&#160;asserts.c']]],
+  ['ioc',['ioc',['../structac97__buffer__descriptor__t.html#a42808f48ec48dc5c9fa8cdde8bef0319',1,'ac97_buffer_descriptor_t']]],
   ['is_5fskipped_5ftest',['is_skipped_test',['../tests_8c.html#ae0c0862fa57a2ce84082f7b3e64b2c44',1,'is_skipped_test(CHAR16 *name):&#160;tests.c'],['../tests_8h.html#ae0c0862fa57a2ce84082f7b3e64b2c44',1,'is_skipped_test(CHAR16 *name):&#160;tests.c']]]
 ];

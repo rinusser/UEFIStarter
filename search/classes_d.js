@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['wcstof_5ftestcase_5ft',['wcstof_testcase_t',['../structwcstof__testcase__t.html',1,'']]],
-  ['wctype_5ftestcase_5ft',['wctype_testcase_t',['../structwctype__testcase__t.html',1,'']]]
+  ['volume_5fmacro_5ftestcase_5ft',['volume_macro_testcase_t',['../structvolume__macro__testcase__t.html',1,'']]]
 ];

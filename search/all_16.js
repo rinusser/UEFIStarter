@@ -15,5 +15,7 @@ var searchData=
   ['wctype_5fint_5ftestcases',['wctype_int_testcases',['../tests_2suites_2lib_2string_8c.html#a973c2e098d4e6e578adad6a94355b669',1,'string.c']]],
   ['wctype_5ftestcase_5ft',['wctype_testcase_t',['../structwctype__testcase__t.html',1,'']]],
   ['width',['width',['../structimage__t.html#a6ded5c63b282721abff38ee8c81ec1c9',1,'image_t::width()'],['../structparse__image__data__testcase__t.html#a874e67663fd47c2a8de6e799cb118d0b',1,'parse_image_data_testcase_t::width()']]],
-  ['write_5fidt_5fentry_5faddress',['write_idt_entry_address',['../cpuid_8c.html#ae69ef17788890cde2949caec4a6dc225',1,'cpuid.c']]]
+  ['write_5fbusmaster_5freg',['write_busmaster_reg',['../ac97_8h.html#a3b98113ba4d329fbba0e755bdeb965bd',1,'write_busmaster_reg(ac97_handle_t *handle, UINT32 reg, UINTN value):&#160;ac97.c'],['../library_2ac97_8c.html#a3b98113ba4d329fbba0e755bdeb965bd',1,'write_busmaster_reg(ac97_handle_t *handle, UINT32 reg, UINTN value):&#160;ac97.c']]],
+  ['write_5fidt_5fentry_5faddress',['write_idt_entry_address',['../cpuid_8c.html#ae69ef17788890cde2949caec4a6dc225',1,'cpuid.c']]],
+  ['write_5fmixer_5freg',['write_mixer_reg',['../ac97_8h.html#a67eb0257167e08648ff192b1d90801bb',1,'write_mixer_reg(ac97_handle_t *handle, UINT32 reg, UINT16 value):&#160;ac97.c'],['../library_2ac97_8c.html#a67eb0257167e08648ff192b1d90801bb',1,'write_mixer_reg(ac97_handle_t *handle, UINT32 reg, UINT16 value):&#160;ac97.c']]]
 ];

@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['address',['address',['../structidt__reg__t.html#a803531928468e3cb6b6b0cfa8f2cf870',1,'idt_reg_t::address()'],['../structmemory__page__list__entry__t.html#a6b3d50186624174d35e7e12851c1924c',1,'memory_page_list_entry_t::address()']]],
+  ['ac97_5fargument_5flist',['ac97_argument_list',['../ac97_8h.html#aa8086b97d377f4ebe7779ea3d51ba8ff',1,'ac97_argument_list():&#160;ac97.c'],['../library_2ac97_8c.html#aa8086b97d377f4ebe7779ea3d51ba8ff',1,'ac97_argument_list():&#160;ac97.c']]],
+  ['ac97_5farguments',['ac97_arguments',['../ac97_8h.html#a4be6ec92832f0f9ecc9a1d4669433f3a',1,'ac97_arguments():&#160;ac97.c'],['../library_2ac97_8c.html#a4be6ec92832f0f9ecc9a1d4669433f3a',1,'ac97_arguments():&#160;ac97.c']]],
+  ['ac97_5fcodec_5fconfiguration_5fids',['AC97_CODEC_CONFIGURATION_IDS',['../library_2ac97_8c.html#a07c97106b417fd864c9f48e7504b766b',1,'ac97.c']]],
+  ['ac97_5frevision_5fids',['AC97_REVISION_IDS',['../library_2ac97_8c.html#a52b8c72d1e386dcfc527127fd2e439ec',1,'ac97.c']]],
+  ['address',['address',['../structidt__reg__t.html#a803531928468e3cb6b6b0cfa8f2cf870',1,'idt_reg_t::address()'],['../structac97__buffer__descriptor__t.html#a8936a723da32b6ee22266f0dba294128',1,'ac97_buffer_descriptor_t::address()'],['../structmemory__page__list__entry__t.html#a6b3d50186624174d35e7e12851c1924c',1,'memory_page_list_entry_t::address()']]],
   ['after',['after',['../structgraphics__difftest__t.html#a56445e619e3daf51d73fea8116465a00',1,'graphics_difftest_t']]],
+  ['amap',['amap',['../structac97__bar__t.html#ad690fc6d80d3ccb60168e0da45d70797',1,'ac97_bar_t']]],
   ['arggroup',['arggroup',['../rotation_8c.html#aa9b40340cf32363cfda621b790317d58',1,'rotation.c']]],
   ['args',['args',['../rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a',1,'rotation.c']]],
   ['args1',['args1',['../helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d',1,'helloworld.c']]],
@@ -9,5 +14,7 @@ var searchData=
   ['assert_5fcount',['assert_count',['../structtest__results__t.html#afc3baeeee676c5fd739c20b64dcfa144',1,'test_results_t']]],
   ['assert_5ffails',['assert_fails',['../structtest__results__t.html#ac516ac2ccd12b276bd4ea97b5f8e9fdc',1,'test_results_t']]],
   ['assertion_5fcounts',['assertion_counts',['../structtest__verbosity__t.html#ae4eb84447c8fbd4171d56987f3388b41',1,'test_verbosity_t']]],
-  ['atoui64_5ftestcases',['atoui64_testcases',['../tests_2suites_2lib_2string_8c.html#af0a0414d8a53a75c5f431dde0aae8500',1,'string.c']]]
+  ['atoui64_5ftestcases',['atoui64_testcases',['../tests_2suites_2lib_2string_8c.html#af0a0414d8a53a75c5f431dde0aae8500',1,'string.c']]],
+  ['aux_5fin_5fvol',['aux_in_vol',['../structac97__bar__t.html#a5b264d232bcd8e253387a35da0e47ec5',1,'ac97_bar_t']]],
+  ['aux_5fout_5fvol',['aux_out_vol',['../structac97__bar__t.html#a7f3e0f864c7836363d7f3377d9ca9e77',1,'ac97_bar_t']]]
 ];

@@ -1,6 +1,8 @@
 var searchData=
 [
   ['init',['init',['../console_8h.html#a48fcdd00d67eb34c3a303c5a4cb53451',1,'init(INTN argc, CHAR16 **argv, UINTN arg_group_count,...):&#160;console.c'],['../console_8c.html#a48fcdd00d67eb34c3a303c5a4cb53451',1,'init(INTN argc, CHAR16 **argv, UINTN arg_group_count,...):&#160;console.c']]],
+  ['init_5fac97_5fhandle',['init_ac97_handle',['../ac97_8h.html#aed99671d941211fc28f20add2626bbf7',1,'init_ac97_handle(ac97_handle_t *handle, EFI_PCI_IO_PROTOCOL *pip):&#160;ac97.c'],['../library_2ac97_8c.html#aed99671d941211fc28f20add2626bbf7',1,'init_ac97_handle(ac97_handle_t *handle, EFI_PCI_IO_PROTOCOL *pip):&#160;ac97.c']]],
+  ['init_5fbuffers',['init_buffers',['../library_2ac97_8c.html#a306a55f982feefd8e7bf98f6f7071757',1,'ac97.c']]],
   ['init_5fflake',['init_flake',['../snow_8c.html#aceae224df6b78e7712b97176f4e2b244',1,'snow.c']]],
   ['init_5fgraphics',['init_graphics',['../include_2graphics_8h.html#a3d24f371c0911e0a50fefd9907769dba',1,'init_graphics():&#160;graphics.c'],['../library_2graphics_8c.html#a3d24f371c0911e0a50fefd9907769dba',1,'init_graphics():&#160;graphics.c']]],
   ['init_5fgraphics_5fdifftest',['init_graphics_difftest',['../tests_2framework_2graphics_8c.html#a49e8bb595a0f59a8d667158c694dda45',1,'init_graphics_difftest(graphics_difftest_t *difftest, INTN width, INTN height):&#160;graphics.c'],['../tests_2framework_2graphics_8h.html#a49e8bb595a0f59a8d667158c694dda45',1,'init_graphics_difftest(graphics_difftest_t *difftest, INTN width, INTN height):&#160;graphics.c']]],

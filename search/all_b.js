@@ -2,10 +2,14 @@ var searchData=
 [
   ['library_20functions',['Library Functions',['../group__group__lib.html',1,'']]],
   ['logging_20functions',['Logging Functions',['../group__group__lib__logger.html',1,'']]],
-  ['left',['left',['../structbounding__box__t.html#a8fecce4722dbdb015143dcbb3b2c879f',1,'bounding_box_t']]],
+  ['last_5fvalid_5fbuffer_5fcompletion_5finterrupt',['last_valid_buffer_completion_interrupt',['../unionac97__busmaster__status__t.html#a89437ddc2edb3272ac99094254dcf1a4',1,'ac97_busmaster_status_t']]],
+  ['ldac',['ldac',['../structac97__bar__t.html#ac6f25e241daef26731cff8ae06b3631b',1,'ac97_bar_t']]],
+  ['left',['left',['../structbounding__box__t.html#a8fecce4722dbdb015143dcbb3b2c879f',1,'bounding_box_t::left()'],['../structvolume__macro__testcase__t.html#a71b17b579639da8b3b5024347c0939a9',1,'volume_macro_testcase_t::left()']]],
+  ['length',['length',['../structac97__buffer__descriptor__t.html#a06029fc21ed2b15e66072cdab8c5694f',1,'ac97_buffer_descriptor_t']]],
   ['level',['level',['../structlogger__args__mapping__t.html#ae441dba4578f018f44079ccc0128d3d5',1,'logger_args_mapping_t']]],
   ['limit',['limit',['../structidt__reg__t.html#a6fbe3d7f9f468326f5b615fb8e43a121',1,'idt_reg_t']]],
   ['limit_5fframerate',['limit_framerate',['../include_2graphics_8h.html#a61c353b1e5c2b58460baf61e9633d8e3',1,'limit_framerate(UINT64 *previous, UINT64 minimum_frame_ticks):&#160;graphics.c'],['../library_2graphics_8c.html#a61c353b1e5c2b58460baf61e9633d8e3',1,'limit_framerate(UINT64 *previous, UINT64 minimum_frame_ticks):&#160;graphics.c']]],
+  ['line_5fin_5fvol',['line_in_vol',['../structac97__bar__t.html#abf559ff5afb27b6edd648eb073ff1d4d',1,'ac97_bar_t']]],
   ['list',['list',['../structcmdline__argument__group__t.html#a1d19203ef9d733620bac4cb59c98c35d',1,'cmdline_argument_group_t']]],
   ['load_5ffont',['load_font',['../include_2graphics_8h.html#a5153d21f4545d93a136bef2b17ee5e95',1,'load_font():&#160;graphics.c'],['../library_2graphics_8c.html#a5153d21f4545d93a136bef2b17ee5e95',1,'load_font():&#160;graphics.c']]],
   ['load_5fimage_5fassets',['load_image_assets',['../include_2graphics_8h.html#a6c1b854b56b2458737ca4c4bfe6de481',1,'load_image_assets(UINTN count, image_asset_t *assets):&#160;graphics.c'],['../library_2graphics_8c.html#a6c1b854b56b2458737ca4c4bfe6de481',1,'load_image_assets(UINTN count, image_asset_t *assets):&#160;graphics.c']]],
@@ -30,5 +34,6 @@ var searchData=
   ['loggers_5ft',['loggers_t',['../structloggers__t.html',1,'']]],
   ['logging_5fthreshold',['logging_threshold',['../library_2logger_8c.html#af5f6241a327ccceab6c221cca710736b',1,'logger.c']]],
   ['loglevel',['LOGLEVEL',['../logger_8h.html#acc58a0a25bf6982de2b101803e46130a',1,'logger.h']]],
+  ['loop_5fciv',['loop_civ',['../apps_2ac97_8c.html#af9949fcf2d9adccd1af2d81910f3640c',1,'ac97.c']]],
   ['lspci_2ec',['lspci.c',['../lspci_8c.html',1,'']]]
 ];

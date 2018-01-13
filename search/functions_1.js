@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['ac97_5fplay',['ac97_play',['../ac97_8h.html#a70d6460cac7a0850240e61c3cd2a9c1d',1,'ac97_play(ac97_handle_t *handle):&#160;ac97.c'],['../library_2ac97_8c.html#a70d6460cac7a0850240e61c3cd2a9c1d',1,'ac97_play(ac97_handle_t *handle):&#160;ac97.c']]],
+  ['ac97_5fwait_5funtil_5flast_5fbuffer_5fsent',['ac97_wait_until_last_buffer_sent',['../ac97_8h.html#a344bb046a73f5fc155735726c5d3c512',1,'ac97_wait_until_last_buffer_sent(ac97_handle_t *handle, UINTN timeout_in_milliseconds):&#160;ac97.c'],['../library_2ac97_8c.html#a9621ae3fa31277376cbffcabe737edd1',1,'ac97_wait_until_last_buffer_sent(ac97_handle_t *handle, UINTN timeout):&#160;ac97.c']]],
   ['add_5ftest_5fresults',['add_test_results',['../tests_8c.html#adff13c60d3eb5fd86da5d69686a3ad67',1,'tests.c']]],
   ['allocate_5fpages',['allocate_pages',['../memory_8h.html#a8adb22b25b041745f383699724a4c46b',1,'allocate_pages(UINTN pages):&#160;memory.c'],['../library_2memory_8c.html#a8adb22b25b041745f383699724a4c46b',1,'allocate_pages(UINTN pages):&#160;memory.c']]],
   ['allocate_5fpages_5fex',['allocate_pages_ex',['../memory_8h.html#aed0755a4cf9eea5779b81b8e55c12a2f',1,'allocate_pages_ex(UINTN pages, BOOLEAN track):&#160;memory.c'],['../library_2memory_8c.html#a436d00c1e3f85e20841896d506e2838d',1,'allocate_pages_ex(UINTN pages, BOOLEAN track):&#160;memory.c']]],

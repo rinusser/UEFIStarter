@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['general_5fpurpose',['general_purpose',['../structac97__bar__t.html#aa1b2a12e1453ebf55d2e59f2379fccd7',1,'ac97_bar_t']]],
+  ['get_5fbusmaster_5fregister_5fwidth',['get_busmaster_register_width',['../library_2ac97_8c.html#ae2e61df8e0e986e79651bd4143fbcaae',1,'ac97.c']]],
   ['get_5ffile_5fcontents',['get_file_contents',['../files_8h.html#a976089765fe5769ac0cfdc2b1859370e',1,'get_file_contents(CHAR16 *filename):&#160;files.c'],['../library_2files_8c.html#a976089765fe5769ac0cfdc2b1859370e',1,'get_file_contents(CHAR16 *filename):&#160;files.c']]],
   ['get_5fgraphics_5fprotocol',['get_graphics_protocol',['../include_2graphics_8h.html#a28c45ed92f4fb143582a55047a7bd364',1,'get_graphics_protocol():&#160;graphics.c'],['../library_2graphics_8c.html#a28c45ed92f4fb143582a55047a7bd364',1,'get_graphics_protocol():&#160;graphics.c']]],
   ['get_5flog_5flevel',['get_log_level',['../logger_8h.html#a202956b91c11faf291a276a53d96c3dd',1,'get_log_level():&#160;logger.c'],['../library_2logger_8c.html#a202956b91c11faf291a276a53d96c3dd',1,'get_log_level():&#160;logger.c']]],

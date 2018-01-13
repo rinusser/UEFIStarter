@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['general_5fpurpose',['general_purpose',['../structac97__bar__t.html#aa1b2a12e1453ebf55d2e59f2379fccd7',1,'ac97_bar_t']]],
   ['global_5ftest_5fresults',['global_test_results',['../tests_8c.html#a16a96d2a191a29d87170af7a044a5a5c',1,'global_test_results():&#160;tests.c'],['../tests_8h.html#a16a96d2a191a29d87170af7a044a5a5c',1,'global_test_results():&#160;tests.c']]],
   ['glyph_5fcount',['glyph_count',['../structglyph__list__t.html#ac81abd7f731f12a3a04e25e7ffeddd95',1,'glyph_list_t']]],
   ['glyphs',['glyphs',['../structglyph__list__t.html#a848c0e19bd3ca6e62bfaf29ea0276576',1,'glyph_list_t']]],
