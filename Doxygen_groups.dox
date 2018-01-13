@@ -18,6 +18,7 @@
   /** \defgroup group_lib_timestamp Timer Functions */
   /** \defgroup group_lib_pci PCI Functions */
   /** \defgroup group_lib_graphics Graphics Functions */
+  /** \defgroup group_lib_ac97 AC'97 Audio Functions */
 
 /** \} */
 

@@ -1,0 +1,35 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = ac97app
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00017
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT = ShellCEntryLib
+
+[Sources]
+  ac97.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiLib
+  ShellCEntryLib
+  PciLib
+  logger
+  console
+  pci
+  cmdline
+  ac97
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+

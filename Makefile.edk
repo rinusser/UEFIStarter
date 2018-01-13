@@ -8,7 +8,7 @@ SRCFILES = $(shell find /mnt/ueficode/UEFIStarter/ -name '*.c' -or -name '*.h')
 STATICS = $(shell find /mnt/ueficode/UEFIStarter/static -type f ! -name '.*.swp')
 
 
-all: free build $(BUILD_DIR)/uefi.img
+all: build $(BUILD_DIR)/uefi.img
 
 build:
 	mkdir -p $(BUILD_DIR)
@@ -23,7 +23,7 @@ clean:
 	find UEFIStarter/ -name '*.o' -or -name '*.so' -or -name '*.efi' | xargs -r rm
 	rm -f $(BUILD_DIR)/uefi.img $(BUILD_DIR)/uefi.iso
 
-$(BUILD_DIR)/uefi.img: $(SRCFILES) $(STATICS) FORCE
+$(BUILD_DIR)/uefi.img: free $(SRCFILES) $(STATICS) FORCE
 	mkdir -p $(BUILD_DIR)
 	test -f $(BUILD_DIR)/uefi.img || dd if=/dev/zero of=$(BUILD_DIR)/uefi.img bs=512 count=93750
 	sgdisk -o -n 1:2048:93716 -t 1:ef00 $(BUILD_DIR)/uefi.img >/dev/null

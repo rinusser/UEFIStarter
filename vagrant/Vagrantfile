@@ -26,8 +26,8 @@ Vagrant.configure("2") do |config|
     docker_disk_file="./data.vdi"
     if not File.exists?(docker_disk_file)
       vb.customize ["createmedium","--filename",docker_disk_file,"--variant","Standard","--size",8192]
+      vb.customize ["storageattach",:id,"--storagectl","SCSI","--port",3,"--device",0,"--type","hdd","--medium",docker_disk_file]
     end
-    vb.customize ["storageattach",:id,"--storagectl","SCSI","--port",3,"--device",0,"--type","hdd","--medium",docker_disk_file]
   end
 
   # copy configuration and preference files to VM
@@ -61,7 +61,11 @@ Vagrant.configure("2") do |config|
     # install additional software
     apt-get update
     apt-get install -y git vim ctags vim-scripts screen dos2unix build-essential uuid-dev iasl nasm python mkisofs \\
-                       qemu-system-x86 doxygen
+                       qemu-system-x86 doxygen alsa-utils alsa-base linux-image-extra-`uname -r`
+
+    # load sound kernel module and grant access to the sound system
+    modprobe snd-intel8x0
+    usermod -G audio vagrant
 
     # customize a few applications and services
     cat /dev/shm/config/screenrc.additional >> /etc/screenrc

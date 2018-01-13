@@ -50,6 +50,7 @@
   files|UEFIStarter/library/files.inf
   pci|UEFIStarter/library/pci.inf
   graphics|UEFIStarter/library/graphics.inf
+  ac97|UEFIStarter/library/ac97.inf
 
 
 [Components]
@@ -62,6 +63,7 @@
   UEFIStarter/apps/lspci.inf
   UEFIStarter/apps/gop.inf
   UEFIStarter/apps/rotation.inf
+  UEFIStarter/apps/ac97.inf
 
   UEFIStarter/library/logger.inf
   UEFIStarter/library/cmdline.inf
@@ -72,6 +74,7 @@
   UEFIStarter/library/files.inf
   UEFIStarter/library/pci.inf
   UEFIStarter/library/graphics.inf
+  UEFIStarter/library/ac97.inf
 
   UEFIStarter/tests/suites/selftest/testself.inf
   UEFIStarter/tests/suites/lib/testlib.inf

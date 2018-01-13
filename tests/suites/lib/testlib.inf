@@ -19,6 +19,7 @@
   files.c
   pci.c
   graphics.c
+  ac97.c
 
 [Packages]
   MdePkg/MdePkg.dec
@@ -36,6 +37,7 @@
   files
   pci
   graphics
+  ac97
 
 [Guids]
 

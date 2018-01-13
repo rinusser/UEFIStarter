@@ -95,6 +95,8 @@ Either way, the default startup.nsh script will run all test suites and return t
 
 The root directory contains all built applications.
 
+:warning: Contains AC'97 audio output that may be too loud, see apps/ac97.c for details.
+
 ### Development
 
 There is a semi-automatically generated documentation hosted on [GitHub](https://rinusser.github.io/UEFIStarter/).

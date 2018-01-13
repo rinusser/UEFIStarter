@@ -1,0 +1,33 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = ac97
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00016
+  MODULE_TYPE = UEFI_DRIVER
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS = ac97|UEFI_APPLICATION UEFI_DRIVER DXE_RUNTIME_DRIVER DXE_DRIVER
+
+[Sources]
+  ac97.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiBootServicesTableLib
+  IoLib
+  PciLib
+  logger
+  memory
+  files
+
+[Guids]
+
+[Ppis]
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
+
