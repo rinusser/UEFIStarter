@@ -97,7 +97,7 @@ The root directory contains all built applications.
 
 :warning: Contains AC'97 audio output that may be too loud, see apps/ac97.c for details.
 
-### Development
+### Working on UEFIStarter
 
 There is a semi-automatically generated documentation hosted on [GitHub](https://rinusser.github.io/UEFIStarter/).
 The functions, data types etc. are described on the [Modules](https://rinusser.github.io/UEFIStarter/modules.html) page.
@@ -116,6 +116,29 @@ package:
 When this finishes successfully the UEFIStarter/target directory contains an .img file with a filesystem for QEMU, and
 an .iso image with the same contents for e.g. a VirtualBox virtual CD/DVD drive.
 
+### Including UEFIStarter
+
+To make the UEFIStarter's package contents (e.g. library files) available to your own EDK2 project you'll need to
+register the libraries in your package's .dsc file and add the "UEFIStarter/UEFIStarter.dec" package dependency in e.g.
+your applications' .inf files.
+
+If you want to start a new EDK2 project based on UEFIStarter from scratch you currently need to perform these steps:
+
+* create a new project directory - either directly in your edk2 source root, or linked to from there
+* copy UEFIStarter.dec, UEFIStarter.dsc and Makefile.edk to your new project root
+* rename and edit UEFIStarter.\* in your project: change the project names, paths and included libraries as necessary
+* edit Conf/target.txt (relative from your edk2 sources root) and change ACTIVE\_PLATFORM to your new .dsc file
+* edit Makefile.edk and change the project name and paths
+* replace the Makefile link in your edk2 sources root with a new link to your project's
+* (if you want to use the test framework you'll currently need to copy it or change the reference paths in .c, .h and
+  suite's .inf file; either way, you currently also need to change the paths in tools/\*.sh)
+
+These steps will be simplified and automated later. If you're unfamiliar with EDK2 it's easier to just make changes to
+your local copy of UEFIStarter for now, e.g. in a new git branch.
+
+There's already a separate project (a game, actually) using this framework but it hasn't been published yet. Once that's
+done its code will demonstrate how to include UEFIStarter in other edk2 packages.
+
 # Tests
 
 This project contains a test framework for writing tests. There are test suites for validating the framework functions
@@ -124,7 +147,7 @@ and the test framework itself. The tests are executed in the UEFI shell - there 
     FS0:\> cd tests
     FS0:\tests\> run
 
-Test suites are individual .efi executables that can be ran individually, e.g.:
+Test suites are individual .efi executables that can be run individually, e.g.:
 
     FS0:\tests\> testlib -verbosity 1
     .............

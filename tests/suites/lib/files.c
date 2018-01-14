@@ -19,7 +19,7 @@
  *
  * \test get_file_contents() returns a file's contents
  *
- * \TODO read a file that's guarantueed to exist, e.g. the currently running .efi, instead of startup.nsh.
+ * \TODO read a file that's guaranteed to exist, e.g. the currently running .efi, instead of startup.nsh.
  */
 void test_get_file_contents()
 {
