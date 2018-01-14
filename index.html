@@ -113,16 +113,30 @@ $(function() {
 <p>Either way, the default startup.nsh script will run all test suites and return to the UEFI shell.</p>
 <p>The root directory contains all built applications.</p>
 <p>:warning: Contains AC'97 audio output that may be too loud, see <a class="el" href="apps_2ac97_8c.html" title="AC&#39;97 audio demo. ">apps/ac97.c</a> for details.</p>
-<h3>Development</h3>
+<h3>Working on UEFIStarter</h3>
 <p>There is a semi-automatically generated documentation hosted on <a href="https://rinusser.github.io/UEFIStarter/">GitHub</a>. The functions, data types etc. are described on the <a href="https://rinusser.github.io/UEFIStarter/modules.html">Modules</a> page.</p>
 <p>The documentation is still a work in progress.</p>
 <p>Each shell you want to run the edk2 build process in needs to import <code>edksetup.sh</code> in the edk2 sources root: </p><pre class="fragment">$ . edksetup.sh
 </pre><p>You only need to do this once per shell. The Makefile contains everything else you need to build the UEFIStarter package: </p><pre class="fragment">$ make
 </pre><p>When this finishes successfully the UEFIStarter/target directory contains an .img file with a filesystem for QEMU, and an .iso image with the same contents for e.g. a VirtualBox virtual CD/DVD drive.</p>
+<h3>Including UEFIStarter</h3>
+<p>To make the UEFIStarter's package contents (e.g. library files) available to your own EDK2 project you'll need to register the libraries in your package's .dsc file and add the "UEFIStarter/UEFIStarter.dec" package dependency in e.g. your applications' .inf files.</p>
+<p>If you want to start a new EDK2 project based on UEFIStarter from scratch you currently need to perform these steps:</p>
+<ul>
+<li>create a new project directory - either directly in your edk2 source root, or linked to from there</li>
+<li>copy UEFIStarter.dec, UEFIStarter.dsc and Makefile.edk to your new project root</li>
+<li>rename and edit UEFIStarter.* in your project: change the project names, paths and included libraries as necessary</li>
+<li>edit Conf/target.txt (relative from your edk2 sources root) and change ACTIVE_PLATFORM to your new .dsc file</li>
+<li>edit Makefile.edk and change the project name and paths</li>
+<li>replace the Makefile link in your edk2 sources root with a new link to your project's</li>
+<li>(if you want to use the test framework you'll currently need to copy it or change the reference paths in .c, .h and suite's .inf file; either way, you currently also need to change the paths in tools/*.sh)</li>
+</ul>
+<p>These steps will be simplified and automated later. If you're unfamiliar with EDK2 it's easier to just make changes to your local copy of UEFIStarter for now, e.g. in a new git branch.</p>
+<p>There's already a separate project (a game, actually) using this framework but it hasn't been published yet. Once that's done its code will demonstrate how to include UEFIStarter in other edk2 packages.</p>
 <h1>Tests</h1>
 <p>This project contains a test framework for writing tests. There are test suites for validating the framework functions and the test framework itself. The tests are executed in the UEFI shell - there is a script to run all test suites: </p><pre class="fragment">FS0:\&gt; cd tests
 FS0:\tests\&gt; run
-</pre><p>Test suites are individual .efi executables that can be ran individually, e.g.: </p><pre class="fragment">FS0:\tests\&gt; testlib -verbosity 1
+</pre><p>Test suites are individual .efi executables that can be run individually, e.g.: </p><pre class="fragment">FS0:\tests\&gt; testlib -verbosity 1
 .............
 Result: SUCCESS
 
@@ -148,7 +162,7 @@ Skipped groups:   0
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 13 2018 21:26:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 14 2018 16:26:10 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
