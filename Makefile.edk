@@ -1,57 +1,85 @@
-BUILD_DIR = UEFIStarter/target
-PROJECT_NAME = UEFIStarter
-VERSIONFILE = .version
-OVMF_IMAGE = /usr/share/qemu/OVMF.fd
+######################
+# Basic Configuration
+####################
 
-CURRENT_USER = $(shell whoami)
-SRCFILES = $(shell find /mnt/ueficode/UEFIStarter/ -name '*.c' -or -name '*.h')
-STATICS = $(shell find /mnt/ueficode/UEFIStarter/static -type f ! -name '.*.swp')
+# Running UEFI applications with qemu requires an OVMF image. You can either download it or build it with edk2
+# (see vagrant/Vagrantfile on how to do that).
+# Either way, OVMF_IMAGE needs to point to the image for the "run" target to work.
+OVMF_IMAGE   = /usr/share/qemu/OVMF.fd
+
+# The build process generates a FAT32 file system that's accessed via loopback device.
+# Set LOOP_DEVICE to an available device.
+LOOP_DEVICE  = /dev/loop0
 
 
-all: build $(BUILD_DIR)/uefi.img
+#########################
+# Detailed Configuration
+#######################
+
+PROJECT_NAME   = UEFIStarter
+PROJECT_DIR    = UEFIStarter
+VERSIONFILE    = .version
+IMAGE_FILENAME = UEFIStarter.img
+ISO_FILENAME   = UEFIStarter.iso
+MOUNT_POINT   := $(shell readlink -f $(PROJECT_DIR))/tmp
+BUILD_DIR      = $(PROJECT_DIR)/target
+
+CURRENT_USER := $(shell whoami)
+SRCFILES     := $(shell find $(PROJECT_DIR)/ -name '*.c' -or -name '*.h')
+STATICS      := $(shell find $(PROJECT_DIR)/static -type f ! -name '.*.swp')
+
+
+##########
+# Targets
+########
+
+all: build $(BUILD_DIR)/$(IMAGE_FILENAME)
 
 build:
 	mkdir -p $(BUILD_DIR)
-	UEFIStarter/tools/generate_test_runner.sh
+	$(PROJECT_DIR)/tools/generate_test_runner.sh
 	build
 
 free:
-	mount | grep "/mnt/uefi " && sudo umount /mnt/uefi/ || true
-	losetup | grep /dev/loop0 && sudo losetup -d /dev/loop0 || true
+	mount | grep "$(MOUNT_POINT) " && sudo umount $(MOUNT_POINT) || true
+	losetup | grep $(LOOP_DEVICE) && sudo losetup -d $(LOOP_DEVICE) || true
 
 clean:
-	find UEFIStarter/ -name '*.o' -or -name '*.so' -or -name '*.efi' | xargs -r rm
-	rm -f $(BUILD_DIR)/uefi.img $(BUILD_DIR)/uefi.iso
+	find $(PROJECT_DIR)/ -name '*.o' -or -name '*.so' -or -name '*.efi' | xargs -r rm
+	rm -f $(BUILD_DIR)/$(IMAGE_FILENAME) $(BUILD_DIR)/$(ISO_FILENAME)
 
-$(BUILD_DIR)/uefi.img: free $(SRCFILES) $(STATICS) FORCE
-	mkdir -p $(BUILD_DIR)
-	test -f $(BUILD_DIR)/uefi.img || dd if=/dev/zero of=$(BUILD_DIR)/uefi.img bs=512 count=93750
-	sgdisk -o -n 1:2048:93716 -t 1:ef00 $(BUILD_DIR)/uefi.img >/dev/null
-	sudo losetup --offset 1048576 --sizelimit 46934528 /dev/loop0 $(BUILD_DIR)/uefi.img
-	sudo mkdosfs -F 32 /dev/loop0 >/dev/null
-	sudo mount -o uid=$(CURRENT_USER) /dev/loop0 /mnt/uefi/
+$(BUILD_DIR)/$(IMAGE_FILENAME): free $(SRCFILES) $(STATICS) FORCE
+	mkdir -p $(BUILD_DIR) $(MOUNT_POINT)
+	test -f $(BUILD_DIR)/$(IMAGE_FILENAME) || dd if=/dev/zero of=$(BUILD_DIR)/$(IMAGE_FILENAME) bs=512 count=93750
+	sgdisk -o -n 1:2048:93716 -t 1:ef00 $(BUILD_DIR)/$(IMAGE_FILENAME) >/dev/null
+	sudo losetup --offset 1048576 --sizelimit 46934528 $(LOOP_DEVICE) $(BUILD_DIR)/$(IMAGE_FILENAME)
+	sudo mkdosfs -F 32 $(LOOP_DEVICE) >/dev/null
+	sudo mount -o uid=$(CURRENT_USER) $(LOOP_DEVICE) $(MOUNT_POINT)
 
-	echo "$(PROJECT_NAME)" > /mnt/uefi/$(VERSIONFILE)
-	date +"%Y-%m-%d %H:%M:%S UTC%:::z (%Z)" >> /mnt/uefi/$(VERSIONFILE)
+	echo "$(PROJECT_NAME)" > $(MOUNT_POINT)/$(VERSIONFILE)
+	date +"%Y-%m-%d %H:%M:%S UTC%:::z (%Z)" >> $(MOUNT_POINT)/$(VERSIONFILE)
 
-	cp /usr/src/edk2/Build/UEFIStarter/DEBUG_GCC5/X64/*.efi /mnt/uefi/
-	cp -R UEFIStarter/static/* /mnt/uefi/
+	cp Build/$(PROJECT_NAME)/DEBUG_GCC5/X64/*.efi $(MOUNT_POINT)/
+	cp -R $(PROJECT_DIR)/static/* $(MOUNT_POINT)/
 
-#	mkdir -p /mnt/uefi/drivers
-#	cp /usr/src/edk2/Build/MdeModule/DEBUG_GCC5/X64/*Mouse*.efi /mnt/uefi/drivers/
+	mkdir -p $(MOUNT_POINT)/tests
+	mv $(MOUNT_POINT)/test*.efi $(MOUNT_POINT)/tests/
 
-	mkdir -p /mnt/uefi/tests
-	mv /mnt/uefi/test*.efi /mnt/uefi/tests/
+	$(PROJECT_DIR)/tools/generate_runall_tests_script.sh $(PROJECT_DIR)/tests/suites >> $(MOUNT_POINT)/tests/run.nsh
 
-	UEFIStarter/tools/generate_runall_tests_script.sh UEFIStarter/tests/suites >> /mnt/uefi/tests/run.nsh
+	mkisofs -quiet -input-charset utf8 -o $(BUILD_DIR)/$(ISO_FILENAME) $(MOUNT_POINT)/
+	sudo umount $(MOUNT_POINT)
+	sudo losetup -d $(LOOP_DEVICE)
 
-	mkisofs -quiet -input-charset utf8 -o $(BUILD_DIR)/uefi.iso /mnt/uefi/
-	sudo umount /mnt/uefi/
-	sudo losetup -d /dev/loop0
-
-img: $(BUILD_DIR)/uefi.img
+img: $(BUILD_DIR)/$(IMAGE_FILENAME)
 
 FORCE:
 
-run: $(BUILD_DIR)/uefi.img
-	qemu-system-x86_64 -cpu qemu64 -bios $(OVMF_IMAGE) -nographic -drive file=$(BUILD_DIR)/uefi.img,format=raw,if=ide -net none -soundhw ac97 -no-reboot
+run: $(BUILD_DIR)/$(IMAGE_FILENAME)
+	qemu-system-x86_64 -cpu qemu64 -bios $(OVMF_IMAGE) -nographic -drive file=$(BUILD_DIR)/$(IMAGE_FILENAME),format=raw,if=ide -net none -soundhw ac97 -no-reboot
+
+check:
+	@echo checking for TAB characters...
+	@! echo $(SRCFILES) | xargs grep -P '\x09'
+	@echo checking for duplicate GUIDs...
+	@! grep -hE '_GUID.*=' `find $(PROJECT_DIR)/ -name '*.inf' -or -name '*.d[es]c'` | sed 's/.*= *//' | sort | uniq -c | grep -vE '^ *1 '

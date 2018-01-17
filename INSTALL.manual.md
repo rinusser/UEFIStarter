@@ -32,12 +32,10 @@ You'll need to edit Conf/target.txt and set these values:
 Set the maximum thread number to the number of available CPU cores +1. I'm working in a VM with 6 cores, so I'm using 7
 threads. If you can spare the cores the build process will make good use of these.
 
-The Makefile needs a few changes (a lot of these issues will be improved in [EFI-5](https://github.com/rinusser/UEFIStarter/issues/5)):
+The Makefile needs a few changes:
 
-* set OVMF\_IMAGE to a copy of the OVMF image
-* replace /mnt/ueficode/ with the path to your copy of this repository
-* replace /mnt/uefi with a mount point for the generated file system
-* replace /dev/loop0 with an available loop device
+* set OVMF\_IMAGE to your copy of the OVMF image
+* set LOOP\_DEVICE to an available loop device
 
 The system user needs sudo privileges for these commands:
 

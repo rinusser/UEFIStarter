@@ -89,7 +89,7 @@ If you're using QEMU you can start it with:
 
     $ make run
 
-Alternatively you can mount the .iso image UEFIStarter/target/uefi.iso in e.g. VirtualBox and boot from it.
+Alternatively you can mount the .iso image UEFIStarter/target/UEFIStarter.iso in e.g. VirtualBox and boot from it.
 
 Either way, the default startup.nsh script will run all test suites and return to the UEFI shell.
 
