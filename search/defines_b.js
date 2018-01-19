@@ -1,6 +1,7 @@
 var searchData=
 [
   ['reg',['REG',['../gop_8c.html#af2a7de2886bec4dbdea789fb71460ac4',1,'gop.c']]],
+  ['rgba',['RGBA',['../rotation_8c.html#a3fc98cf7e0806a6108b81e9eb741a7e1',1,'rotation.c']]],
   ['run_5fparse_5fimage_5ftests',['RUN_PARSE_IMAGE_TESTS',['../tests_2suites_2lib_2graphics_8c.html#a583a278e89ab4c163661514977781609',1,'graphics.c']]],
   ['run_5ftest',['RUN_TEST',['../tests_8h.html#a323a441dbbbfc0b332560f2d2160294a',1,'tests.h']]],
   ['run_5fwctype_5ftestcases',['RUN_WCTYPE_TESTCASES',['../tests_2suites_2lib_2string_8c.html#ad35565d2be0214fe3a8f8a45a7b9e482',1,'string.c']]],

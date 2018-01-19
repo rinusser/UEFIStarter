@@ -93,14 +93,18 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rotation_8c.html#a7f25039fbbb137698c95fad5dfe81e41">ARG_RADIUS</a>&#160;&#160;&#160;<a class="el" href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a>[0].value.uint64</td></tr>
 <tr class="memdesc:a7f25039fbbb137698c95fad5dfe81e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro to access "radius" command-line parameter <br /></td></tr>
 <tr class="separator:a7f25039fbbb137698c95fad5dfe81e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc98cf7e0806a6108b81e9eb741a7e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rotation_8c.html#a3fc98cf7e0806a6108b81e9eb741a7e1">RGBA</a>(R,  G,  <a class="el" href="tests_2suites_2lib_2graphics_8c.html#a111da81ae5883147168bbb8366377b10">B</a>,  A)&#160;&#160;&#160;{<a class="el" href="tests_2suites_2lib_2graphics_8c.html#a111da81ae5883147168bbb8366377b10">B</a>,G,R,A}</td></tr>
+<tr class="memdesc:a3fc98cf7e0806a6108b81e9eb741a7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro: defines an EFI_GRAPHICS_OUTPUT_BLT_PIXEL color value  <a href="#a3fc98cf7e0806a6108b81e9eb741a7e1">More...</a><br /></td></tr>
+<tr class="separator:a3fc98cf7e0806a6108b81e9eb741a7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a6e3262bb6e5a5425ebaaf24d7165a42d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rotation_8c.html#a6e3262bb6e5a5425ebaaf24d7165a42d">draw_gradient</a> ()</td></tr>
 <tr class="memdesc:a6e3262bb6e5a5425ebaaf24d7165a42d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This draws an animated gradient.  <a href="#a6e3262bb6e5a5425ebaaf24d7165a42d">More...</a><br /></td></tr>
 <tr class="separator:a6e3262bb6e5a5425ebaaf24d7165a42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48f7c4e548fbfcc8159af260fff4cc26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rotation_8c.html#a48f7c4e548fbfcc8159af260fff4cc26">draw_circle</a> ()</td></tr>
-<tr class="memdesc:a48f7c4e548fbfcc8159af260fff4cc26"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: draws the image to be rotated to the full-screen graphics buffer  <a href="#a48f7c4e548fbfcc8159af260fff4cc26">More...</a><br /></td></tr>
+<tr class="memitem:a48f7c4e548fbfcc8159af260fff4cc26"><td class="memItemLeft" align="right" valign="top"><a id="a48f7c4e548fbfcc8159af260fff4cc26"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rotation_8c.html#a48f7c4e548fbfcc8159af260fff4cc26">draw_circle</a> ()</td></tr>
+<tr class="memdesc:a48f7c4e548fbfcc8159af260fff4cc26"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: draws the image to be rotated to the full-screen graphics buffer <br /></td></tr>
 <tr class="separator:a48f7c4e548fbfcc8159af260fff4cc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c488e083457f3e81b2596e60e803a4"><td class="memItemLeft" align="right" valign="top"><a id="a90c488e083457f3e81b2596e60e803a4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rotation_8c.html#a90c488e083457f3e81b2596e60e803a4">rotate_buffer</a> ()</td></tr>
@@ -131,7 +135,59 @@ EFI_GRAPHICS_OUTPUT_BLT_PIXEL *&#160;</td><td class="memItemRight" valign="botto
 <dl class="section copyright"><dt>Copyright</dt><dd>2017-2018 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a3fc98cf7e0806a6108b81e9eb741a7e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc98cf7e0806a6108b81e9eb741a7e1">&#9670;&nbsp;</a></span>RGBA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RGBA</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">R, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">G, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><a class="el" href="tests_2suites_2lib_2graphics_8c.html#a111da81ae5883147168bbb8366377b10">B</a>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">A&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;{<a class="el" href="tests_2suites_2lib_2graphics_8c.html#a111da81ae5883147168bbb8366377b10">B</a>,G,R,A}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>shortcut macro: defines an EFI_GRAPHICS_OUTPUT_BLT_PIXEL color value </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">R</td><td>red </td></tr>
+    <tr><td class="paramname">G</td><td>green </td></tr>
+    <tr><td class="paramname">B</td><td>blue </td></tr>
+    <tr><td class="paramname">A</td><td>alpha/reserved </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a6e3262bb6e5a5425ebaaf24d7165a42d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e3262bb6e5a5425ebaaf24d7165a42d">&#9670;&nbsp;</a></span>draw_gradient()</h2>
 
@@ -149,26 +205,6 @@ EFI_GRAPHICS_OUTPUT_BLT_PIXEL *&#160;</td><td class="memItemRight" valign="botto
 
 <p>This draws an animated gradient. </p>
 <p>It's actually a bilinear interpolation between the 4 corners of the screen: the corner colors change between frames. </p>
-
-</div>
-</div>
-<a id="a48f7c4e548fbfcc8159af260fff4cc26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48f7c4e548fbfcc8159af260fff4cc26">&#9670;&nbsp;</a></span>draw_circle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void draw_circle </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>internal: draws the image to be rotated to the full-screen graphics buffer </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>improve rotated image: this used to draw something else but had to be changed to fit the GPL license </dd></dl>
 
 </div>
 </div>
@@ -231,7 +267,7 @@ EFI_GRAPHICS_OUTPUT_BLT_PIXEL *&#160;</td><td class="memItemRight" valign="botto
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 14 2018 16:26:09 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 19 2018 19:43:44 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
