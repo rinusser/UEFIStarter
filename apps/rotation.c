@@ -105,9 +105,17 @@ void draw_gradient()
 }
 
 /**
- * internal: draws the image to be rotated to the full-screen graphics buffer
+ * shortcut macro: defines an EFI_GRAPHICS_OUTPUT_BLT_PIXEL color value
  *
- * \TODO improve rotated image: this used to draw something else but had to be changed to fit the GPL license
+ * \param R red
+ * \param G green
+ * \param B blue
+ * \param A alpha/reserved
+ */
+#define RGBA(R,G,B,A) {B,G,R,A}
+
+/**
+ * internal: draws the image to be rotated to the full-screen graphics buffer
  */
 void draw_circle()
 {
@@ -116,46 +124,36 @@ void draw_circle()
   UINTN center_x, center_y;
   UINTN y_sq;
   UINTN r_sq;
-  EFI_GRAPHICS_OUTPUT_BLT_PIXEL gray, orange;
+
+  COLOR ring=RGBA(92,92,92,0);
+  COLOR gray=RGBA(25,25,25,0);
+  COLOR orange=RGBA(255,128,0,0);
+
   INTN outer_circle_max=ARG_RADIUS;
-  INTN outer_circle_min=ARG_RADIUS*0.95;
-  INTN inner_circle_max=ARG_RADIUS*0.8;
-  INTN inner_circle_min=inner_circle_max*0.6;
+  INTN outer_circle_min=ARG_RADIUS*0.975;
   UINTN outer_circle_max_sq=outer_circle_max*outer_circle_max;
   UINTN outer_circle_min_sq=outer_circle_min*outer_circle_min;
-  UINTN inner_circle_max_sq=inner_circle_max*inner_circle_max;
-  UINTN inner_circle_min_sq=inner_circle_min*inner_circle_min;
   INTN diameter=outer_circle_max*2+1;
 
   center_x=ARG_RADIUS;
   center_y=ARG_RADIUS;
 
-  gray.Reserved=0;
-  gray.Red=25;
-  gray.Blue=25;
-  gray.Green=25;
-  orange.Reserved=0;
-  orange.Red=255;
-  orange.Blue=0;
-  orange.Green=128;
-
+  SetMem(graphics_fs_buffer,graphics_fs_pages*4096,0);
   for(y=-outer_circle_max;y<outer_circle_max;y++)
   {
     y_sq=y*y;
     for(x=-outer_circle_max;x<outer_circle_max;x++)
     {
       r_sq=x*x+y_sq;
-      if(r_sq<=outer_circle_max_sq && r_sq>=outer_circle_min_sq)
+      if(r_sq>outer_circle_max_sq)
+        continue;
+
+      if(r_sq>=outer_circle_min_sq)
+        graphics_fs_buffer[(center_y+y)*diameter+center_x+x]=ring;
+      else if((x<=0&&y<=0) || (x>0&&y>0))
+        graphics_fs_buffer[(center_y+y)*diameter+center_x+x]=orange;
+      else
         graphics_fs_buffer[(center_y+y)*diameter+center_x+x]=gray;
-      if(r_sq<=inner_circle_max_sq)
-      {
-        if(r_sq>=inner_circle_min_sq)
-          graphics_fs_buffer[(center_y+y)*diameter+center_x+x]=gray;
-        else if((x<=0&&y<=0) || (x>0&&y>0))
-          graphics_fs_buffer[(center_y+y)*diameter+center_x+x]=orange;
-        else
-          graphics_fs_buffer[(center_y+y)*diameter+center_x+x]=gray;
-      }
     }
   }
 
@@ -171,23 +169,24 @@ void rotate_buffer()
   EFI_STATUS result;
   float theta;
   INTN radius=ARG_RADIUS;
-  UINT64 prev_ts, cur_ts;
+  UINT64 prev_ts, minimum_frame_ticks;
 
   set_graphics_sin_func(sin);
   set_graphics_cos_func(cos);
   buffer2=allocate_pages(graphics_fs_pages);
   if(!buffer2)
     return;
+  SetMem(buffer2,graphics_fs_pages*4096,0);
+
+  minimum_frame_ticks=get_timestamp_ticks_per_second()/ARG_FPS;
   prev_ts=get_timestamp();
-  for(theta=0;theta<=20*M_PI;theta+=M_PI/128)
+  for(theta=0;theta<=10*M_PI;theta+=M_PI/128)
   {
     rotate_image(graphics_fs_buffer,buffer2,radius,theta);
     result=graphics_protocol->Blt(graphics_protocol,buffer2,EfiBltBufferToVideo,0,0,0,0,2*radius+1,2*radius+1,0);
     ON_ERROR_RETURN(L"graphics_protocol->Blt",);
-    cur_ts=get_timestamp();
     gST->ConOut->SetCursorPosition(gST->ConOut,0,0);
-    Print(L"%dms",(int)(timestamp_diff_seconds(prev_ts,cur_ts)*1000));
-    prev_ts=cur_ts;
+    limit_framerate(&prev_ts,minimum_frame_ticks);
   }
   free_graphics_fs_buffer(buffer2);
   wait_for_key();
