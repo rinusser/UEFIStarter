@@ -23,6 +23,7 @@ IMAGE_FILENAME = UEFIStarter.img
 ISO_FILENAME   = UEFIStarter.iso
 MOUNT_POINT   := $(shell readlink -f $(PROJECT_DIR))/tmp
 BUILD_DIR      = $(PROJECT_DIR)/target
+SHELL_BINARY   = ShellBinPkg/UefiShell/X64/Shell.efi
 
 CURRENT_USER := $(shell whoami)
 SRCFILES     := $(shell find $(PROJECT_DIR)/ -name '*.c' -or -name '*.h')
@@ -67,7 +68,10 @@ $(BUILD_DIR)/$(IMAGE_FILENAME): free $(SRCFILES) $(STATICS) FORCE
 
 	$(PROJECT_DIR)/tools/generate_runall_tests_script.sh $(PROJECT_DIR)/tests/suites >> $(MOUNT_POINT)/tests/run.nsh
 
-	mkisofs -quiet -input-charset utf8 -o $(BUILD_DIR)/$(ISO_FILENAME) $(MOUNT_POINT)/
+	mkdir -p $(MOUNT_POINT)/EFI/Boot
+	cp $(SHELL_BINARY) $(MOUNT_POINT)/EFI/Boot/bootx64.efi
+
+	mkisofs -quiet -J -input-charset utf8 -o $(BUILD_DIR)/$(ISO_FILENAME) $(MOUNT_POINT)/
 	sudo umount $(MOUNT_POINT)
 	sudo losetup -d $(LOOP_DEVICE)
 

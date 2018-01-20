@@ -71,6 +71,9 @@ but it's easier to use virtualization for development. There are multiple option
   at least on my machines.
 * Other: you're probably fine with any hypervisor that supports EFI.
 
+If you *do* want to actually boot a machine into the custom UEFI environment a spare USB stick you don't mind formatting
+comes in handy.
+
 
 # Installation
 
@@ -96,6 +99,18 @@ Either way, the default startup.nsh script will run all test suites and return t
 The root directory contains all built applications.
 
 :warning: Contains AC'97 audio output that may be too loud, see apps/ac97.c for details.
+
+### Booting from USB
+
+You'll need a USB storage device formatted with FAT32 for this. A USB stick will do, an external hard drive works just
+as well. You can boot from any UEFI-capable 64-bit x86 system, as long as "Secure Boot" is disabled.
+
+After successfully building UEFIStarter all you need to do is copy the ISO file's contents onto the USB device. If, for
+example, your USB device is mounted on /mnt/usb/, after copying there should be files/directories /mnt/usb/EFI,
+/mnt/usb/tests, /mnt/usb/.version and so on. On Windows it should be e.g. D:\\EFI, D:\\.version etc.
+
+After copying the .iso's contents onto the USB device you can boot from it. This usually involves pressing a
+vendor-specific key or key combination at boot time to get to a boot device selection, like F2, Shift-F8, F12 etc.
 
 ### Working on UEFIStarter
 
