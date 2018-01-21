@@ -41,7 +41,7 @@ var searchData=
   ['run_5fpci_5ftests',['run_pci_tests',['../tests_2suites_2lib_2pci_8c.html#a71a5bb10c2a23e905f8a68b2feecbfa1',1,'pci.c']]],
   ['run_5frunner_5ftests',['run_runner_tests',['../selftest_2runner_8c.html#a8630a501e512c95cf3a91fed4cdc90f0',1,'runner.c']]],
   ['run_5fstring_5ftests',['run_string_tests',['../tests_2suites_2lib_2string_8c.html#a287326013d264549fc0aff9dc3b0bae1',1,'string.c']]],
-  ['run_5ftest',['RUN_TEST',['../tests_8h.html#a323a441dbbbfc0b332560f2d2160294a',1,'RUN_TEST():&#160;tests.h'],['../tests_8c.html#ab3b8047092b9175ca79ca022d31bcae6',1,'run_test(void(*func)(), CHAR16 *description):&#160;tests.c'],['../tests_8h.html#ab3b8047092b9175ca79ca022d31bcae6',1,'run_test(void(*func)(), CHAR16 *description):&#160;tests.c']]],
+  ['run_5ftest',['run_test',['../tests_8c.html#ab3b8047092b9175ca79ca022d31bcae6',1,'run_test(void(*func)(), CHAR16 *description):&#160;tests.c'],['../tests_8h.html#ab3b8047092b9175ca79ca022d31bcae6',1,'run_test(void(*func)(), CHAR16 *description):&#160;tests.c'],['../tests_8h.html#a323a441dbbbfc0b332560f2d2160294a',1,'RUN_TEST():&#160;tests.h']]],
   ['run_5ftests',['run_tests',['../tests_8h.html#ac3ef4e4ac9b8681e56bf390cb4c152cd',1,'runner.c']]],
   ['run_5fwctype_5ftestcases',['RUN_WCTYPE_TESTCASES',['../tests_2suites_2lib_2string_8c.html#ad35565d2be0214fe3a8f8a45a7b9e482',1,'string.c']]],
   ['runner_2ec',['runner.c',['../selftest_2runner_8c.html',1,'']]],

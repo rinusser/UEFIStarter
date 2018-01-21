@@ -41,6 +41,7 @@ var searchData=
   ['arg_5fcross_5fspeed_5fbase',['ARG_CROSS_SPEED_BASE',['../snow_8c.html#a72b211cf3df72f970c2da030a5ff8244',1,'snow.c']]],
   ['arg_5fcross_5fspeed_5ffalloff_5fmult',['ARG_CROSS_SPEED_FALLOFF_MULT',['../snow_8c.html#a2cdc4f50636786f30c3f694bc2d1fdf2',1,'snow.c']]],
   ['arg_5fcross_5fstep',['ARG_CROSS_STEP',['../snow_8c.html#a8543ade10d41d389937946e504c6fa2b',1,'snow.c']]],
+  ['arg_5fdisplay',['ARG_DISPLAY',['../include_2graphics_8h.html#ae172d5a57a5e9975b3f126cf281e1e0a',1,'graphics.h']]],
   ['arg_5fdouble',['ARG_DOUBLE',['../cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15',1,'cmdline.h']]],
   ['arg_5fflake_5fcount',['ARG_FLAKE_COUNT',['../snow_8c.html#a8f876774f86432f093b6fb5a7a2a0215',1,'snow.c']]],
   ['arg_5ffps',['ARG_FPS',['../include_2graphics_8h.html#a376a21fd0d9ba1a8c3dec8d02057a702',1,'graphics.h']]],
