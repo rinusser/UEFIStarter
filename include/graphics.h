@@ -29,9 +29,10 @@ extern GFX_BUFFER graphics_fs_buffer;
 extern UINTN graphics_fs_pages;
 extern UINTN graphics_fs_pixel_count;
 
-#define ARG_MODE  graphics_argument_list[0].value.uint64 /**< helper macro to access the "graphics mode" command-line argument's value */
-#define ARG_VSYNC graphics_argument_list[1].value.uint64 /**< helper macro to access the "vsync mode" command-line argument's value */
-#define ARG_FPS   graphics_argument_list[2].value.uint64 /**< helper macro to access the "framerate limit" command-line argument's value */
+#define ARG_MODE    graphics_argument_list[0].value.uint64 /**< helper macro to access the "graphics mode" command-line argument's value */
+#define ARG_VSYNC   graphics_argument_list[1].value.uint64 /**< helper macro to access the "vsync mode" command-line argument's value */
+#define ARG_FPS     graphics_argument_list[2].value.uint64 /**< helper macro to access the "framerate limit" command-line argument's value */
+#define ARG_DISPLAY graphics_argument_list[3].value.uint64 /**< helper macro to access the "display handle" command-line argument's value */
 extern cmdline_argument_t graphics_argument_list[];
 extern cmdline_argument_group_t graphics_arguments;
 

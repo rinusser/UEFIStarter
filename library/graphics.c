@@ -56,37 +56,34 @@ void set_graphics_cos_func(trig_func *f)
 /**
  * Validates the "vsync mode" command-line parameter
  *
- * \param value the input to check
+ * \param v the input to check
  * \return whether the input is a valid vsync mode
  */
-BOOLEAN _validate_vsync(double_uint64_t value)
-{
-  if(value.uint64>=0 && value.uint64<=3)
-    return TRUE;
-  LOG.error(L"vsync mode must be 0..3, got %d instead",value.uint64);
-  return FALSE;
-}
+INT_RANGE_VALIDATOR(_validate_vsync,L"vsync mode",0,3);
 
 /**
  * Validates the "framerate limit" command-line parameter
  *
- * \param value the input to check
+ * \param v the input to check
  * \return whether the input is a valid framerate limit
  */
-BOOLEAN _validate_fps(double_uint64_t value)
-{
-  if(value.uint64>0)
-    return TRUE;
-  LOG.error(L"fps must be greater than 0");
-  return FALSE;
-}
+INT_RANGE_VALIDATOR(_validate_fps,L"fps",0,99999);
+
+/**
+ * Validates the "display handle" command-line parameter
+ *
+ * \param v the input to check
+ * \return whether the input is a valid display handle
+ */
+INT_RANGE_VALIDATOR(_validate_display_handle,L"display handle",0,99999);
 
 
 /** list of graphics-related command-line arguments */
 cmdline_argument_t graphics_argument_list[] = {
-  {{uint64:2},ARG_INT,NULL,L"-mode",L"Select graphics mode"}, //can't validate at start, needs graphics output protocol handle to check available modes
-  {{uint64:0},ARG_INT,_validate_vsync,L"-vsync",L"Select vsync mode: 0=off, 1,2=either, 3=both"},
-  {{uint64:100},ARG_INT,_validate_fps,L"-fps",L"Set approximate frames per second limit"},
+  {{uint64:2},  ARG_INT,NULL,                    L"-mode",   L"Select graphics mode"}, /**< can't validate at start, needs graphics output protocol handle to check available modes */
+  {{uint64:0},  ARG_INT,_validate_vsync,         L"-vsync",  L"Select vsync mode: 0=off, 1,2=either, 3=both"},
+  {{uint64:100},ARG_INT,_validate_fps,           L"-fps",    L"Set approximate frames per second limit"},
+  {{uint64:0},  ARG_INT,_validate_display_handle,L"-display",L"Select display handle"}, /**< actual number of handles gets determined much later */
 };
 
 /** group for graphics-related arguments */
@@ -621,8 +618,14 @@ EFI_GRAPHICS_OUTPUT_PROTOCOL *get_graphics_protocol()
   handle_count=handles_size/sizeof(EFI_HANDLE);
   LOG.debug(L"handles size: %d bytes (%d entries)",handles_size,handle_count);
 
-  LOG.trace(L"handle: %16lX",handles[0]);
-  result=gST->BootServices->OpenProtocol(handles[0],&gop_guid,(void **)&gop,gImageHandle,NULL,EFI_OPEN_PROTOCOL_BY_HANDLE_PROTOCOL);
+  if(handle_count<=ARG_DISPLAY)
+  {
+    LOG.error(L"requested display handle %d above maximum (%d)",ARG_DISPLAY,handle_count-1);
+    return NULL;
+  }
+
+  LOG.trace(L"handle: %16lX",handles[ARG_DISPLAY]);
+  result=gST->BootServices->OpenProtocol(handles[ARG_DISPLAY],&gop_guid,(void **)&gop,gImageHandle,NULL,EFI_OPEN_PROTOCOL_BY_HANDLE_PROTOCOL);
   ON_ERROR_RETURN(L"OpenProtocol",NULL);
   return gop;
 }
