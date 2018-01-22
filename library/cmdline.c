@@ -392,9 +392,9 @@ static BOOLEAN _parse_parameter_group(INTN argc, CHAR16 **argv, cmdline_argument
             arguments->list[td].value.uint64=1;
             break;
           case ARG_INT:
-            if(tc>(argc-2) || !wctype_int(argv[tc+1]))
+            if(tc>(argc-2) || !wctype_int(argv[tc+1]) || argv[tc+1][0]==L'-')
             {
-              LOG.error(L"argument %s must be followed by a number",arguments->list[td].name);
+              LOG.error(L"argument %s must be followed by a non-negative number",arguments->list[td].name);
               return FALSE;
             }
             arguments->list[td].value.uint64=StrDecimalToUint64(argv[tc+1]);

@@ -24,7 +24,7 @@
  */
 BOOLEAN validate_int(double_uint64_t val)
 {
-  return val.uint64%2;
+  return !(val.uint64%2);
 }
 
 /**
@@ -33,7 +33,7 @@ BOOLEAN validate_int(double_uint64_t val)
 cmdline_argument_t cmdline_args_list[]=
 {
   {{uint64:0},    ARG_BOOL,  NULL,        L"-bool",  L"some boolean"},
-  {{uint64:11},   ARG_INT,   validate_int,L"-int",   L"some integer"},
+  {{uint64:12},   ARG_INT,   validate_int,L"-int",   L"some integer"},
   {{dbl:2.5},     ARG_DOUBLE,NULL,        L"-double",L"some double"},
   {{wcstr:L"foo"},ARG_STRING,NULL,        L"-string",L"some string"},
 };
@@ -63,9 +63,12 @@ typedef struct
 /** testcases for test_parse_parameters() */
 cmdline_args_testcase_t cmdline_args_testcases[]=
 {
-  {L"empty list",       TRUE, 0,11,  2.5,    L"foo",NULL},
-  {L"failing validator",FALSE,0,22,  2.5,    L"foo",L"-int 22"},
-  {L"passing all",      TRUE, 1,23,-12.98766,L"bar",L"-double -12.98766 -int 23 -string bar -bool"},
+  {L"empty list",       TRUE, 0,12,  2.5,    L"foo",NULL},
+  {L"disable logging",  TRUE, 0,12,  2.5,    L"foo",L"-no-log "},         //keep whitespace: compiler breaks test otherwise
+  {L"negative uint64 1",FALSE,0,12,  2.5,    L"foo",L"-int -1 -no-log"},
+  {L"negative uint64 2",FALSE,0,12,  2.5,    L"foo",L"-int -2  -no-log"}, //keep whitespace: compiler breaks test otherwise
+  {L"failing validator",FALSE,0,23,  2.5,    L"foo",L"-int 23"},
+  {L"passing all",      TRUE, 1,22,-12.98766,L"bar",L"-double -12.98766 -int 22 -string bar -bool"},
 };
 
 /**
@@ -84,11 +87,16 @@ void EFIAPI do_parse_parameters_testcase(cmdline_args_testcase_t *testcase, cmdl
   VA_LIST args;
   UINTN argc;
   CHAR16 **argv;
+  LOGLEVEL previous_log_level;
 
   argc=split_string(&argv,testcase->input,L' ');
+  previous_log_level=get_log_level();
+
   VA_START(args,count);
   success=parse_parameters(argc,argv,count,args)==EFI_SUCCESS;
   VA_END(args);
+
+  set_log_level(previous_log_level);
 
   assert_intn_equals(testcase->expected_success,success,L"success");
   assert_intn_equals(testcase->expected_bool,list[0].value.uint64,L"bool");
@@ -105,6 +113,8 @@ void EFIAPI do_parse_parameters_testcase(cmdline_args_testcase_t *testcase, cmdl
  * \test not passing any parameters is OK
  * \test passing a parameter value a validator deems invalid results in parse failure
  * \test passing all valid values results in parse success
+ * \test passing negative numbers to unsigned integer parameters results in parse failure
+ * \test can supply logging parameters on command-line
  */
 void test_parse_parameters()
 {
