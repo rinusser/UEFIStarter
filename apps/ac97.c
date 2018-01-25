@@ -180,9 +180,9 @@ void output_audio(ac97_handle_t *handle)
  * This fills audio buffers while they're being played.
  * This is how you'd output audio on the fly, e.g. sound effects that depend on user inputs.
  *
- * \param handle the AC'97 handle to use
+ * Seems like the timer granularity can't be decreased much, setting it to e.g. 5ms loses count of a few ticks.
  *
- * \TODO increase timing granularity: actual length should be somewhere between 150ms and 200ms.
+ * \param handle the AC'97 handle to use
  */
 void loop_civ(ac97_handle_t *handle)
 {
@@ -196,12 +196,12 @@ void loop_civ(ac97_handle_t *handle)
 
   result=gST->BootServices->CreateEvent(EVT_TIMER,TPL_CALLBACK,NULL,NULL,&event);
   ON_ERROR_RETURN(L"CreateEvent",);
-  result=gST->BootServices->SetTimer(event,TimerPeriodic,50*1000*10); //50ms
+  result=gST->BootServices->SetTimer(event,TimerPeriodic,25*1000*10); //25ms
   ON_ERROR_RETURN(L"SetTimer",);
 
   for(tc=0;tc<64;tc++)
   {
-    for(td=0;td<20;td++)
+    for(td=0;td<40;td++)
     {
       result=gST->BootServices->WaitForEvent(1,&event,&index);
       ON_ERROR_RETURN(L"WaitForEvent",);
@@ -210,7 +210,7 @@ void loop_civ(ac97_handle_t *handle)
       ON_ERROR_RETURN(L"read_busmaster_reg",);
       if(last==value)
         continue;
-      LOG.trace(L"civ=%02d (%3dms)",value,td*50);
+      LOG.trace(L"civ=%02d (%3dms)",value,td*25);
 
       if(value==31 && tc<40)
       {

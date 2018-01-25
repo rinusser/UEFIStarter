@@ -52,7 +52,7 @@ void test_page_tracking()
   assert_intn_equals(1,get_logger_entry_count(ERROR)-prev_error_count,L"freeing pages twice should throw an error");
 
   //allocating untracked pages then stopping shouldn't throw an error
-  ptr=allocate_pages_ex(1,FALSE);
+  ptr=allocate_pages_ex(1,FALSE,AllocateAnyPages,NULL);
   prev_error_count=get_logger_entry_count(ERROR);
   stop_tracking_memory();
   assert_intn_equals(0,get_logger_entry_count(ERROR)-prev_error_count,L"unfreed untracked page entries should be ignored on stopping");

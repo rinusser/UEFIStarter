@@ -17,7 +17,7 @@
 /** the number of pages required for each allocation list node */
 #define MEMORY_PAGE_LIST_PAGE_COUNT ((sizeof(memory_page_list_t)-1)/4096+1)
 
-void *allocate_pages_ex(UINTN,BOOLEAN);
+void *allocate_pages_ex(UINTN,BOOLEAN,EFI_ALLOCATE_TYPE,void *);
 
 /** internal pointer to first memory page allocation list node */
 static memory_page_list_t *_memory_page_list;
@@ -73,7 +73,7 @@ static BOOLEAN _get_next_free_entry(memory_page_list_t **page_list, UINTN *index
 
   if(!_memory_page_list)
   {
-    _memory_page_list=allocate_pages_ex(MEMORY_PAGE_LIST_PAGE_COUNT,FALSE);
+    _memory_page_list=allocate_pages_ex(MEMORY_PAGE_LIST_PAGE_COUNT,FALSE,AllocateAnyPages,NULL);
     LOG.trace(L"memory page list is at %lX",_memory_page_list);
     _memory_page_list->entry_count=0;
     _memory_page_list->next=NULL;
@@ -121,14 +121,16 @@ static memory_page_list_entry_t *_find_page_list_entry(void *address)
  * internal: allocates memory pages.
  * This function isn't static - if you declare it with "extern" in a header you can access it directly.
  *
- * \param pages the amount of pages to allocate
- * \param track whether to track the pages
+ * \param pages          the amount of pages to allocate
+ * \param track          whether to track the pages
+ * \param type           see UEFI's boot services AllocatePages() MemoryType parameter, usually `AllocateAnyPages`
+ * \param target_address see UEFI's boot services AllocatePages() Memory parameter, usually ignored
  * \return the first page's address, or NULL on error
  */
-void *allocate_pages_ex(UINTN pages, BOOLEAN track)
+void *allocate_pages_ex(UINTN pages, BOOLEAN track, EFI_ALLOCATE_TYPE type, void *target_address)
 {
   EFI_STATUS result;
-  EFI_PHYSICAL_ADDRESS address;
+  EFI_PHYSICAL_ADDRESS address=(EFI_PHYSICAL_ADDRESS)target_address;
   memory_page_list_t *page_list;
   UINTN index;
 
@@ -139,7 +141,7 @@ void *allocate_pages_ex(UINTN pages, BOOLEAN track)
     LOG.trace(L"got next free page list entry index %ld",index);
   }
 
-  result=gST->BootServices->AllocatePages(AllocateAnyPages,EfiLoaderData,pages,&address);
+  result=gST->BootServices->AllocatePages(type,EfiLoaderData,pages,&address);
   if(result!=EFI_SUCCESS)
   {
     LOG.error(L"could not allocate %d page(s): %r",pages,result);
@@ -166,7 +168,7 @@ void *allocate_pages_ex(UINTN pages, BOOLEAN track)
  */
 void *allocate_pages(UINTN pages)
 {
-  return allocate_pages_ex(pages,TRUE);
+  return allocate_pages_ex(pages,TRUE,AllocateAnyPages,NULL);
 }
 
 /**

@@ -21,6 +21,9 @@
 #include "../include/cmdline.h"
 
 
+#define AC97_BUFFER_COUNT 32 /**< number of audio data buffers, up to 32 supported by AC'97 specs */
+
+
 #define ARG_MUTE   ac97_argument_list[0].value.uint64      /**< shortcut macro to access "mute" argument */
 #define ARG_VOLUME ac97_argument_list[1].value.dbl         /**< shortcut macro to access "volume" argument */
 #define ARG_SAMPLE_RATE ac97_argument_list[2].value.uint64 /**< shortcut macro to access "sample rate" argument */

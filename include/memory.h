@@ -55,7 +55,7 @@ void reset_memory_tracking();
 void *allocate_pages(UINTN pages);
 BOOLEAN free_pages(void *address, UINTN pages);
 
-void *allocate_pages_ex(UINTN pages, BOOLEAN track);
+void *allocate_pages_ex(UINTN pages, BOOLEAN track, EFI_ALLOCATE_TYPE type, void *target_address);
 BOOLEAN free_pages_ex(void *address, UINTN pages, BOOLEAN track);
 
 

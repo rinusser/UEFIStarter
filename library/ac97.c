@@ -6,6 +6,8 @@
  * \license GPLv3 (see http://www.gnu.org/licenses/)
  * \sa https://github.com/rinusser/UEFIStarter
  * \ingroup group_lib_ac97
+ *
+ * \XXX could add double-rate audio support
  */
 
 #include <Uefi.h>
@@ -37,14 +39,20 @@ BOOLEAN validate_volume(double_uint64_t value)
  *
  * \param value the value to validate
  * \return whether the valid is a valid sample rate
- *
- * \XXX this function could check the input value better, right now it's just a simple 0..65534 range
  */
 BOOLEAN validate_sample_rate(double_uint64_t value)
 {
-  if(value.uint64<65535)
-    return TRUE;
-  LOG.error(L"sample rate must be <65536, double-rate audio not implemented");
+  UINTN allowed[]={8000,11025,16000,22050,32000,44100,48000};
+  UINTN tc;
+  CHAR16 *helpstr=L"";
+
+  for(tc=0;tc<sizeof(allowed)/sizeof(UINTN);tc++)
+    if(value.uint64==allowed[tc])
+      return TRUE;
+
+  for(tc=0;tc<sizeof(allowed)/sizeof(UINTN);tc++)
+    helpstr=memsprintf(L"%s, %d",helpstr,allowed[tc]);
+  LOG.error(L"sample rate must one of %s",helpstr+2);
   return FALSE;
 }
 
@@ -75,12 +83,9 @@ EFI_PCI_IO_PROTOCOL *find_ac97_device()
  *
  * \param buffers          the buffer structure to initialize
  * \param hardware_address the hardware memory address to write into the descriptor structure
- * \param count            the number of buffers to initialize
  * \return 0 on success, anything else on error
- *
- * \TODO seems like currently there's both a "count" parameter and the number "32" hard-coded. Pick one.
  */
-int init_buffers(ac97_buffers_s16_t *buffers, UINT64 hardware_address, int count)
+int init_buffers(ac97_buffers_s16_t *buffers, UINT64 hardware_address)
 {
   unsigned int tc;
   void *hardware_base_addr;
@@ -89,13 +94,13 @@ int init_buffers(ac97_buffers_s16_t *buffers, UINT64 hardware_address, int count
   if(hardware_address>0xfffff000) //needs to be castable to 32 bit, probably reduce limit further
     return -1;
 
-  LOG.debug(L"setting up %d audio buffers at virtual %X, hardware %X",count,buffers,hardware_address);
+  LOG.debug(L"setting up audio buffers at virtual %X, hardware %X",buffers,hardware_address);
 
-  ZeroMem(buffers->descriptors,sizeof(ac97_buffer_descriptor_t)*32+sizeof(INT16 *)*32);
+  ZeroMem(buffers->descriptors,sizeof(ac97_buffer_descriptor_t)*AC97_BUFFER_COUNT+sizeof(INT16 *)*AC97_BUFFER_COUNT);
   hardware_base_addr=(void *)(hardware_address+sizeof(ac97_buffers_s16_t));
   virtual_base_addr=(void *)buffers+sizeof(ac97_buffers_s16_t);
 
-  for(tc=0;tc<count;tc++)
+  for(tc=0;tc<AC97_BUFFER_COUNT;tc++)
   {
     buffers->descriptors[tc].address=(UINT64)(hardware_base_addr+tc*65536*2);
     buffers->buffers[tc]=virtual_base_addr+tc*65536*2;
@@ -267,20 +272,18 @@ static void _determine_maximum_master_volume(ac97_handle_t *handle)
  */
 void *init_ac97_handle(ac97_handle_t *handle, EFI_PCI_IO_PROTOCOL *pip)
 {
-  int buffer_count=32;
   UINTN pages;
   EFI_STATUS result;
   UINTN bufsize;
 
   handle->pci=pip;
 
-  bufsize=buffer_count*65536*2+sizeof(ac97_buffers_s16_t);
+  bufsize=AC97_BUFFER_COUNT*65536*2+sizeof(ac97_buffers_s16_t);
   pages=bufsize/4096+1;
 
   handle->buffer_pages=0;
 
-  /** \TODO restrict maximum address, something like 2^32-4096*pages */
-  if((handle->buffers=allocate_pages(pages))==NULL)
+  if((handle->buffers=allocate_pages_ex(pages,TRUE,AllocateMaxAddress,(void *)((1ULL<<32)-bufsize-4096)))==NULL)
     return NULL;
   handle->buffer_pages=pages;
 
@@ -294,7 +297,7 @@ void *init_ac97_handle(ac97_handle_t *handle, EFI_PCI_IO_PROTOCOL *pip)
     return NULL;
   }
 
-  init_buffers(handle->buffers,handle->device_address,buffer_count);
+  init_buffers(handle->buffers,handle->device_address);
 
   //write buffer descriptors base
   result=write_busmaster_reg(handle,AC97_DESCRIPTOR_PCM_OUT,handle->device_address);

@@ -159,7 +159,7 @@ CHAR16 **argv_from_ascii(int argc, char **argv_ascii)
   bytes=argc*sizeof(CHAR16 *);
   _argv_pages=(bytes-1)/4096+1;
   previous_log_level=set_log_level(INFO);
-  _argv=allocate_pages_ex(_argv_pages,FALSE);
+  _argv=allocate_pages_ex(_argv_pages,FALSE,AllocateAnyPages,NULL);
   for(tc=0;tc<argc;tc++)
     _argv[tc]=memsprintf(L"%a",argv_ascii[tc]); //this is
   set_log_level(previous_log_level);
