@@ -89,9 +89,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a436d00c1e3f85e20841896d506e2838d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2memory_8c.html#a436d00c1e3f85e20841896d506e2838d">allocate_pages_ex</a> (UINTN pages, BOOLEAN track)</td></tr>
-<tr class="memdesc:a436d00c1e3f85e20841896d506e2838d"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: allocates memory pages.  <a href="#a436d00c1e3f85e20841896d506e2838d">More...</a><br /></td></tr>
-<tr class="separator:a436d00c1e3f85e20841896d506e2838d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55512b357423c90bfd542f6f238396bd"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2memory_8c.html#a55512b357423c90bfd542f6f238396bd">allocate_pages_ex</a> (UINTN pages, BOOLEAN track, EFI_ALLOCATE_TYPE type, void *target_address)</td></tr>
+<tr class="memdesc:a55512b357423c90bfd542f6f238396bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: allocates memory pages.  <a href="#a55512b357423c90bfd542f6f238396bd">More...</a><br /></td></tr>
+<tr class="separator:a55512b357423c90bfd542f6f238396bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8517944a703c7166d6e72ac547b8dc4a"><td class="memItemLeft" align="right" valign="top"><a id="a8517944a703c7166d6e72ac547b8dc4a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2memory_8c.html#a8517944a703c7166d6e72ac547b8dc4a">print_memory_page_list</a> ()</td></tr>
 <tr class="memdesc:a8517944a703c7166d6e72ac547b8dc4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debugging function: prints a human-readable list of tracked memory pages. <br /></td></tr>
@@ -150,8 +150,8 @@ static <a class="el" href="structpool__memory__list__t.html">pool_memory_list_t<
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a436d00c1e3f85e20841896d506e2838d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a436d00c1e3f85e20841896d506e2838d">&#9670;&nbsp;</a></span>allocate_pages_ex()</h2>
+<a id="a55512b357423c90bfd542f6f238396bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55512b357423c90bfd542f6f238396bd">&#9670;&nbsp;</a></span>allocate_pages_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +166,19 @@ static <a class="el" href="structpool__memory__list__t.html">pool_memory_list_t<
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">BOOLEAN&#160;</td>
-          <td class="paramname"><em>track</em>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EFI_ALLOCATE_TYPE&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>target_address</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -182,6 +194,8 @@ static <a class="el" href="structpool__memory__list__t.html">pool_memory_list_t<
   <table class="params">
     <tr><td class="paramname">pages</td><td>the amount of pages to allocate </td></tr>
     <tr><td class="paramname">track</td><td>whether to track the pages </td></tr>
+    <tr><td class="paramname">type</td><td>see UEFI's boot services AllocatePages() MemoryType parameter, usually <code>AllocateAnyPages</code> </td></tr>
+    <tr><td class="paramname">target_address</td><td>see UEFI's boot services AllocatePages() Memory parameter, usually ignored </td></tr>
   </table>
   </dd>
 </dl>
@@ -252,7 +266,7 @@ static <a class="el" href="structpool__memory__list__t.html">pool_memory_list_t<
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the lookup succeeded </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd>if there's a next page_list, check that. if not, allocate new page_list and link to it </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo:</a></b></dt><dd>if there's a next page_list, check that. if not, allocate new page_list and link to it </dd></dl>
 
 </div>
 </div>
@@ -426,7 +440,7 @@ static <a class="el" href="structpool__memory__list__t.html">pool_memory_list_t<
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd>implement linked list for pool memory tracking </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>implement linked list for pool memory tracking </dd></dl>
 
 </div>
 </div>
@@ -468,14 +482,14 @@ static <a class="el" href="structpool__memory__list__t.html">pool_memory_list_t<
 <p>Stops tracking all memory. </p>
 <p>This will log errors if there are unfreed memory pages.</p>
 <dl class="section return"><dt>Returns</dt><dd>the number of errors, 0 if there were no tracked memory pages remaining </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd>the <a class="el" href="library_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>the <a class="el" href="library_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 22 2018 21:12:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

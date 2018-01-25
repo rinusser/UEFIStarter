@@ -110,9 +110,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a0232c1810b1a055707e468a1e0e619ee"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a0232c1810b1a055707e468a1e0e619ee">free_pages</a> (void *address, UINTN pages)</td></tr>
 <tr class="memdesc:a0232c1810b1a055707e468a1e0e619ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees tracked memory pages.  <a href="#a0232c1810b1a055707e468a1e0e619ee">More...</a><br /></td></tr>
 <tr class="separator:a0232c1810b1a055707e468a1e0e619ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0755a4cf9eea5779b81b8e55c12a2f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#aed0755a4cf9eea5779b81b8e55c12a2f">allocate_pages_ex</a> (UINTN pages, BOOLEAN track)</td></tr>
-<tr class="memdesc:aed0755a4cf9eea5779b81b8e55c12a2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: allocates memory pages.  <a href="#aed0755a4cf9eea5779b81b8e55c12a2f">More...</a><br /></td></tr>
-<tr class="separator:aed0755a4cf9eea5779b81b8e55c12a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6fb206ffe09d53dd060d1c228510b0f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#ab6fb206ffe09d53dd060d1c228510b0f">allocate_pages_ex</a> (UINTN pages, BOOLEAN track, EFI_ALLOCATE_TYPE type, void *target_address)</td></tr>
+<tr class="memdesc:ab6fb206ffe09d53dd060d1c228510b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: allocates memory pages.  <a href="#ab6fb206ffe09d53dd060d1c228510b0f">More...</a><br /></td></tr>
+<tr class="separator:ab6fb206ffe09d53dd060d1c228510b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a884d555413c1881bbf129c527f17013f"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8h.html#a884d555413c1881bbf129c527f17013f">free_pages_ex</a> (void *address, UINTN pages, BOOLEAN track)</td></tr>
 <tr class="memdesc:a884d555413c1881bbf129c527f17013f"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: frees memory pages.  <a href="#a884d555413c1881bbf129c527f17013f">More...</a><br /></td></tr>
 <tr class="separator:a884d555413c1881bbf129c527f17013f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,8 +249,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memo
 
 </div>
 </div>
-<a id="aed0755a4cf9eea5779b81b8e55c12a2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed0755a4cf9eea5779b81b8e55c12a2f">&#9670;&nbsp;</a></span>allocate_pages_ex()</h2>
+<a id="ab6fb206ffe09d53dd060d1c228510b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6fb206ffe09d53dd060d1c228510b0f">&#9670;&nbsp;</a></span>allocate_pages_ex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +265,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memo
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">BOOLEAN&#160;</td>
-          <td class="paramname"><em>track</em>&#160;</td>
+          <td class="paramname"><em>track</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EFI_ALLOCATE_TYPE&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>target_address</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -281,6 +293,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memo
   <table class="params">
     <tr><td class="paramname">pages</td><td>the amount of pages to allocate </td></tr>
     <tr><td class="paramname">track</td><td>whether to track the pages </td></tr>
+    <tr><td class="paramname">type</td><td>see UEFI's boot services AllocatePages() MemoryType parameter, usually <code>AllocateAnyPages</code> </td></tr>
+    <tr><td class="paramname">target_address</td><td>see UEFI's boot services AllocatePages() Memory parameter, usually ignored </td></tr>
   </table>
   </dd>
 </dl>
@@ -358,7 +372,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memo
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd>implement linked list for pool memory tracking </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd>implement linked list for pool memory tracking </dd></dl>
 
 </div>
 </div>
@@ -400,14 +414,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memo
 <p>Stops tracking all memory. </p>
 <p>This will log errors if there are unfreed memory pages.</p>
 <dl class="section return"><dt>Returns</dt><dd>the number of errors, 0 if there were no tracked memory pages remaining </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd>the <a class="el" href="library_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd>the <a class="el" href="library_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 22 2018 21:12:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

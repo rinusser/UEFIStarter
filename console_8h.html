@@ -150,7 +150,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the same command-line arguments, as UTF-16</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
 
 </div>
 </div>
@@ -170,7 +170,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Frees the memory pages for the internal _argv storage. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000020">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
 
 </div>
 </div>
@@ -226,7 +226,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an EFI status code: EFI_SUCCESS if everything went well and application can continue executing </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo:</a></b></dt><dd>could add cmdline arg </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>could add cmdline arg </dd></dl>
 
 </div>
 </div>
@@ -248,7 +248,7 @@ Functions</h2></td></tr>
 <p>Shuts the UEFIStarter internals down. </p>
 <p>This will stop the memory tracker, upon which any unfreed memory gets reported.</p>
 <p>Unfreed memory will continue to use up memory in the UEFI environment even after the application stopped. If you didn't keep the pages allocated on purpose you'll probably want to free them before calling this.</p>
-<p>If you're keeping the pages allocated on purpose (e.g. because you need to mark memory as reserved) you can disable tracking (and thus reporting) for them by using <a class="el" href="memory_8h.html#aed0755a4cf9eea5779b81b8e55c12a2f" title="internal: allocates memory pages. ">allocate_pages_ex()</a> with track=FALSE (if you make it accessible with "extern"). Alternatively you can just use UEFI's AllocatePages() function, it doesn't track allocated pages at all. </p>
+<p>If you're keeping the pages allocated on purpose (e.g. because you need to mark memory as reserved) you can disable tracking (and thus reporting) for them by using <a class="el" href="memory_8h.html#ab6fb206ffe09d53dd060d1c228510b0f" title="internal: allocates memory pages. ">allocate_pages_ex()</a> with track=FALSE (if you make it accessible with "extern"). Alternatively you can just use UEFI's AllocatePages() function, it doesn't track allocated pages at all. </p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 22 2018 21:12:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

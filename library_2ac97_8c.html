@@ -93,9 +93,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a04a9517ab810bde1b75746e38c7c59ab"><td class="memItemLeft" align="right" valign="top">EFI_PCI_IO_PROTOCOL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2ac97_8c.html#a04a9517ab810bde1b75746e38c7c59ab">find_ac97_device</a> ()</td></tr>
 <tr class="memdesc:a04a9517ab810bde1b75746e38c7c59ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a PCI device handle for the AC'97 device.  <a href="#a04a9517ab810bde1b75746e38c7c59ab">More...</a><br /></td></tr>
 <tr class="separator:a04a9517ab810bde1b75746e38c7c59ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a306a55f982feefd8e7bf98f6f7071757"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2ac97_8c.html#a306a55f982feefd8e7bf98f6f7071757">init_buffers</a> (<a class="el" href="structac97__buffers__s16__t.html">ac97_buffers_s16_t</a> *buffers, UINT64 hardware_address, int count)</td></tr>
-<tr class="memdesc:a306a55f982feefd8e7bf98f6f7071757"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes AC'97 audio buffers.  <a href="#a306a55f982feefd8e7bf98f6f7071757">More...</a><br /></td></tr>
-<tr class="separator:a306a55f982feefd8e7bf98f6f7071757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5640591b20c818afdc2338ed3c741c06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2ac97_8c.html#a5640591b20c818afdc2338ed3c741c06">init_buffers</a> (<a class="el" href="structac97__buffers__s16__t.html">ac97_buffers_s16_t</a> *buffers, UINT64 hardware_address)</td></tr>
+<tr class="memdesc:a5640591b20c818afdc2338ed3c741c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes AC'97 audio buffers.  <a href="#a5640591b20c818afdc2338ed3c741c06">More...</a><br /></td></tr>
+<tr class="separator:a5640591b20c818afdc2338ed3c741c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67eb0257167e08648ff192b1d90801bb"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2ac97_8c.html#a67eb0257167e08648ff192b1d90801bb">write_mixer_reg</a> (<a class="el" href="structac97__handle__t.html">ac97_handle_t</a> *handle, UINT32 reg, UINT16 value)</td></tr>
 <tr class="memdesc:a67eb0257167e08648ff192b1d90801bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes to an AC'97 mixer register.  <a href="#a67eb0257167e08648ff192b1d90801bb">More...</a><br /></td></tr>
 <tr class="separator:a67eb0257167e08648ff192b1d90801bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,7 +169,8 @@ Variables</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017-2018 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>could add double-rate audio support </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="af0dd053686bdb8adbb4a1fd5c2db3900"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0dd053686bdb8adbb4a1fd5c2db3900">&#9670;&nbsp;</a></span>validate_volume()</h2>
@@ -221,8 +222,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the valid is a valid sample rate</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>this function could check the input value better, right now it's just a simple 0..65534 range </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the valid is a valid sample rate </dd></dl>
 
 </div>
 </div>
@@ -246,8 +246,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a306a55f982feefd8e7bf98f6f7071757"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a306a55f982feefd8e7bf98f6f7071757">&#9670;&nbsp;</a></span>init_buffers()</h2>
+<a id="a5640591b20c818afdc2338ed3c741c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5640591b20c818afdc2338ed3c741c06">&#9670;&nbsp;</a></span>init_buffers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,13 +262,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">UINT64&#160;</td>
-          <td class="paramname"><em>hardware_address</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>count</em>&#160;</td>
+          <td class="paramname"><em>hardware_address</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -283,12 +277,10 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">buffers</td><td>the buffer structure to initialize </td></tr>
     <tr><td class="paramname">hardware_address</td><td>the hardware memory address to write into the descriptor structure </td></tr>
-    <tr><td class="paramname">count</td><td>the number of buffers to initialize </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on success, anything else on error</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>seems like currently there's both a "count" parameter and the number "32" hard-coded. Pick one. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, anything else on error </dd></dl>
 
 </div>
 </div>
@@ -632,7 +624,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the handle on success, NULL otherwise </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>restrict maximum address, something like 2^32-4096*pages </dd></dl>
 
 </div>
 </div>
@@ -921,7 +912,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {{uint64:0},    <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,                L<span class="stringliteral">&quot;-mute&quot;</span>,       L<span class="stringliteral">&quot;mutes output&quot;</span>},</div><div class="line">  {{dbl:0.66},    <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15">ARG_DOUBLE</a>,<a class="code" href="library_2ac97_8c.html#af0dd053686bdb8adbb4a1fd5c2db3900">validate_volume</a>,     L<span class="stringliteral">&quot;-volume&quot;</span>,     L<span class="stringliteral">&quot;sets output volume min=0.0, max=1.0&quot;</span>},</div><div class="line">  {{uint64:44100},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,   <a class="code" href="library_2ac97_8c.html#a9fe4ec02c0b8d430e0b31ad83477421b">validate_sample_rate</a>,L<span class="stringliteral">&quot;-sample-rate&quot;</span>,L<span class="stringliteral">&quot;sets sample rate (only 48000 guaranteed by AC&#39;97 specs)&quot;</span>},</div><div class="line">}</div><div class="ttc" id="library_2ac97_8c_html_af0dd053686bdb8adbb4a1fd5c2db3900"><div class="ttname"><a href="library_2ac97_8c.html#af0dd053686bdb8adbb4a1fd5c2db3900">validate_volume</a></div><div class="ttdeci">BOOLEAN validate_volume(double_uint64_t value)</div><div class="ttdoc">validator for &quot;-volume&quot; command-line argument </div><div class="ttdef"><b>Definition:</b> ac97.c:27</div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {{uint64:0},    <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,                L<span class="stringliteral">&quot;-mute&quot;</span>,       L<span class="stringliteral">&quot;mutes output&quot;</span>},</div><div class="line">  {{dbl:0.66},    <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15">ARG_DOUBLE</a>,<a class="code" href="library_2ac97_8c.html#af0dd053686bdb8adbb4a1fd5c2db3900">validate_volume</a>,     L<span class="stringliteral">&quot;-volume&quot;</span>,     L<span class="stringliteral">&quot;sets output volume min=0.0, max=1.0&quot;</span>},</div><div class="line">  {{uint64:44100},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,   <a class="code" href="library_2ac97_8c.html#a9fe4ec02c0b8d430e0b31ad83477421b">validate_sample_rate</a>,L<span class="stringliteral">&quot;-sample-rate&quot;</span>,L<span class="stringliteral">&quot;sets sample rate (only 48000 guaranteed by AC&#39;97 specs)&quot;</span>},</div><div class="line">}</div><div class="ttc" id="library_2ac97_8c_html_af0dd053686bdb8adbb4a1fd5c2db3900"><div class="ttname"><a href="library_2ac97_8c.html#af0dd053686bdb8adbb4a1fd5c2db3900">validate_volume</a></div><div class="ttdeci">BOOLEAN validate_volume(double_uint64_t value)</div><div class="ttdoc">validator for &quot;-volume&quot; command-line argument </div><div class="ttdef"><b>Definition:</b> ac97.c:29</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a></div><div class="ttdoc">boolean </div><div class="ttdef"><b>Definition:</b> cmdline.h:22</div></div>
 <div class="ttc" id="library_2ac97_8c_html_a9fe4ec02c0b8d430e0b31ad83477421b"><div class="ttname"><a href="library_2ac97_8c.html#a9fe4ec02c0b8d430e0b31ad83477421b">validate_sample_rate</a></div><div class="ttdeci">BOOLEAN validate_sample_rate(double_uint64_t value)</div><div class="ttdoc">validator for &quot;-sample-rate&quot; command-line argument </div><div class="ttdef"><b>Definition:</b> ac97.c:43</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a></div><div class="ttdoc">integer </div><div class="ttdef"><b>Definition:</b> cmdline.h:23</div></div>
@@ -982,7 +973,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 22 2018 21:12:23 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
