@@ -77,7 +77,7 @@ var searchData=
   ['args1',['args1',['../helloworld_8c.html#ac96e26ff3b0cd954247d7e0816397b6d',1,'helloworld.c']]],
   ['args2',['args2',['../helloworld_8c.html#ae9f8aba11890e4ac9625a53861a72c94',1,'helloworld.c']]],
   ['argument_5ftype',['argument_type',['../cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058',1,'cmdline.h']]],
-  ['argv_5ffrom_5fascii',['argv_from_ascii',['../console_8h.html#a1f5c8d8951ef257f1322d74832da03ae',1,'argv_from_ascii(int argc, char **argv_ascii):&#160;console.c'],['../console_8c.html#a1f5c8d8951ef257f1322d74832da03ae',1,'argv_from_ascii(int argc, char **argv_ascii):&#160;console.c']]],
+  ['argv_5ffrom_5fascii',['argv_from_ascii',['../cmdline_8h.html#a1f5c8d8951ef257f1322d74832da03ae',1,'argv_from_ascii(int argc, char **argv_ascii):&#160;cmdline.c'],['../library_2cmdline_8c.html#a1f5c8d8951ef257f1322d74832da03ae',1,'argv_from_ascii(int argc, char **argv_ascii):&#160;cmdline.c']]],
   ['assemble_5fand_5fset_5fverbosity',['assemble_and_set_verbosity',['../tests_8c.html#a868bd84394b0fb3aad27521e92f3d93c',1,'tests.c']]],
   ['assemble_5ffile_5fcontents',['assemble_file_contents',['../tests_2suites_2lib_2graphics_8c.html#a31fea7ddf93f4d3595563ad30dfbd426',1,'graphics.c']]],
   ['assert_5fbox_5fequals',['assert_box_equals',['../tests_2framework_2graphics_8c.html#a947d5702928e05a72b693bade1ec686a',1,'assert_box_equals(bounding_box_t *box, INTN left, INTN top, INTN right, INTN bottom, CHAR16 *message):&#160;graphics.c'],['../tests_2framework_2graphics_8h.html#a947d5702928e05a72b693bade1ec686a',1,'assert_box_equals(bounding_box_t *box, INTN left, INTN top, INTN right, INTN bottom, CHAR16 *message):&#160;graphics.c']]],

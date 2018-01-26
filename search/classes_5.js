@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['glyph_5flist_5ft',['glyph_list_t',['../structglyph__list__t.html',1,'']]],
-  ['glyph_5ft',['glyph_t',['../structglyph__t.html',1,'']]],
-  ['graphics_5fdifftest_5ft',['graphics_difftest_t',['../structgraphics__difftest__t.html',1,'']]]
+  ['idt_5freg_5ft',['idt_reg_t',['../structidt__reg__t.html',1,'']]],
+  ['image_5fasset_5ft',['image_asset_t',['../structimage__asset__t.html',1,'']]],
+  ['image_5ft',['image_t',['../structimage__t.html',1,'']]]
 ];

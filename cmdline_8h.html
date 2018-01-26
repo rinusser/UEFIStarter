@@ -82,8 +82,8 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">one parsed command line value  <a href="uniondouble__uint64__t.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">one parsed command line value  <a href="unioncmdline__value__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">model for one command line argument  <a href="structcmdline__argument__t.html#details">More...</a><br /></td></tr>
@@ -101,19 +101,19 @@ Macros</h2></td></tr>
 <tr class="memitem:a11c931f63d2e508858e26c38953ca93f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a11c931f63d2e508858e26c38953ca93f">ARG_GROUP</a>(VARIABLE,  LIST,  DESCRIPTION)&#160;&#160;&#160;<a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a> VARIABLE={DESCRIPTION,sizeof(LIST)/sizeof(<a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>),LIST};</td></tr>
 <tr class="memdesc:a11c931f63d2e508858e26c38953ca93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro for quickly defining an argument group  <a href="#a11c931f63d2e508858e26c38953ca93f">More...</a><br /></td></tr>
 <tr class="separator:a11c931f63d2e508858e26c38953ca93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d3f0f236e4eb5879b3bf42fef481651"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a2d3f0f236e4eb5879b3bf42fef481651">DOUBLE_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#a1bc171d0f1c6004540a9e407bbab4316">validate_double_range</a>(v,FIELD,MIN,MAX); }</td></tr>
+<tr class="memitem:a2d3f0f236e4eb5879b3bf42fef481651"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a2d3f0f236e4eb5879b3bf42fef481651">DOUBLE_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a>(v,FIELD,MIN,MAX); }</td></tr>
 <tr class="memdesc:a2d3f0f236e4eb5879b3bf42fef481651"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro for quickly defining a validator for "double" type arguments  <a href="#a2d3f0f236e4eb5879b3bf42fef481651">More...</a><br /></td></tr>
 <tr class="separator:a2d3f0f236e4eb5879b3bf42fef481651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5842bce61f2b94b34f1d8064c878a6d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a5842bce61f2b94b34f1d8064c878a6d7">INT_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#aff5bec012aa0d390e2d46caf4fcf6c8f">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td></tr>
+<tr class="memitem:a5842bce61f2b94b34f1d8064c878a6d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a5842bce61f2b94b34f1d8064c878a6d7">INT_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td></tr>
 <tr class="memdesc:a5842bce61f2b94b34f1d8064c878a6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro for quickly defining a validator for "integer" type arguments  <a href="#a5842bce61f2b94b34f1d8064c878a6d7">More...</a><br /></td></tr>
 <tr class="separator:a5842bce61f2b94b34f1d8064c878a6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a31e5789f35e7f930cad34f9027c2e5a5"><td class="memItemLeft" align="right" valign="top"><a id="a31e5789f35e7f930cad34f9027c2e5a5"></a>
-typedef BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a31e5789f35e7f930cad34f9027c2e5a5">validate_argument_f</a>(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>)</td></tr>
-<tr class="memdesc:a31e5789f35e7f930cad34f9027c2e5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">function pointer type for command line argument validators <br /></td></tr>
-<tr class="separator:a31e5789f35e7f930cad34f9027c2e5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25074e6d5b5647398e85b3d5ddb04d8f"><td class="memItemLeft" align="right" valign="top"><a id="a25074e6d5b5647398e85b3d5ddb04d8f"></a>
+typedef BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a25074e6d5b5647398e85b3d5ddb04d8f">validate_argument_f</a>(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a>)</td></tr>
+<tr class="memdesc:a25074e6d5b5647398e85b3d5ddb04d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">function pointer type for command line argument validators <br /></td></tr>
+<tr class="separator:a25074e6d5b5647398e85b3d5ddb04d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -136,18 +136,25 @@ Functions</h2></td></tr>
 <tr class="memitem:a556233560a87ebefba6d1ea766df485e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a556233560a87ebefba6d1ea766df485e">_wcstof</a> (CHAR16 *str)</td></tr>
 <tr class="memdesc:a556233560a87ebefba6d1ea766df485e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a numeric string into a double value.  <a href="#a556233560a87ebefba6d1ea766df485e">More...</a><br /></td></tr>
 <tr class="separator:a556233560a87ebefba6d1ea766df485e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc171d0f1c6004540a9e407bbab4316"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a1bc171d0f1c6004540a9e407bbab4316">validate_double_range</a> (<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v, CHAR16 *field, double min, double max)</td></tr>
-<tr class="memdesc:a1bc171d0f1c6004540a9e407bbab4316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a double command line parameter is within boundaries.  <a href="#a1bc171d0f1c6004540a9e407bbab4316">More...</a><br /></td></tr>
-<tr class="separator:a1bc171d0f1c6004540a9e407bbab4316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5bec012aa0d390e2d46caf4fcf6c8f"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#aff5bec012aa0d390e2d46caf4fcf6c8f">validate_uint64_range</a> (<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v, CHAR16 *field, UINT64 min, UINT64 max)</td></tr>
-<tr class="memdesc:aff5bec012aa0d390e2d46caf4fcf6c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a uint64 command line parameter is within boundaries.  <a href="#aff5bec012aa0d390e2d46caf4fcf6c8f">More...</a><br /></td></tr>
-<tr class="separator:aff5bec012aa0d390e2d46caf4fcf6c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bd118cd01723606b2fc73ffa0398f4"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a> (<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v, CHAR16 *field, double min, double max)</td></tr>
+<tr class="memdesc:af0bd118cd01723606b2fc73ffa0398f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a double command line parameter is within boundaries.  <a href="#af0bd118cd01723606b2fc73ffa0398f4">More...</a><br /></td></tr>
+<tr class="separator:af0bd118cd01723606b2fc73ffa0398f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8952be352d3f02f2bd1329b944671918"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a> (<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v, CHAR16 *field, UINT64 min, UINT64 max)</td></tr>
+<tr class="memdesc:a8952be352d3f02f2bd1329b944671918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a uint64 command line parameter is within boundaries.  <a href="#a8952be352d3f02f2bd1329b944671918">More...</a><br /></td></tr>
+<tr class="separator:a8952be352d3f02f2bd1329b944671918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5bf567340f210da4dccd5c43ed6df6d"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#ab5bf567340f210da4dccd5c43ed6df6d">parse_parameters</a> (INTN argc, CHAR16 **argv, UINTN group_count, VA_LIST groups)</td></tr>
 <tr class="memdesc:ab5bf567340f210da4dccd5c43ed6df6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses command-line parameters.  <a href="#ab5bf567340f210da4dccd5c43ed6df6d">More...</a><br /></td></tr>
 <tr class="separator:ab5bf567340f210da4dccd5c43ed6df6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44930cdf5c2c39e5a54799a5fb24aaf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a44930cdf5c2c39e5a54799a5fb24aaf3">print_help_text</a> (UINTN group_count, VA_LIST groups)</td></tr>
 <tr class="memdesc:a44930cdf5c2c39e5a54799a5fb24aaf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs the help text for all argument groups, including the built-in ones.  <a href="#a44930cdf5c2c39e5a54799a5fb24aaf3">More...</a><br /></td></tr>
 <tr class="separator:a44930cdf5c2c39e5a54799a5fb24aaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5c8d8951ef257f1322d74832da03ae"><td class="memItemLeft" align="right" valign="top">CHAR16 **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a1f5c8d8951ef257f1322d74832da03ae">argv_from_ascii</a> (int argc, char **argv_ascii)</td></tr>
+<tr class="memdesc:a1f5c8d8951ef257f1322d74832da03ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ASCII command line parameters to UTF-16.  <a href="#a1f5c8d8951ef257f1322d74832da03ae">More...</a><br /></td></tr>
+<tr class="separator:a1f5c8d8951ef257f1322d74832da03ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memItemLeft" align="right" valign="top"><a id="a0403d8fdaac4eeab200551e15b4b95bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a0403d8fdaac4eeab200551e15b4b95bc">free_argv</a> ()</td></tr>
+<tr class="memdesc:a0403d8fdaac4eeab200551e15b4b95bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory pages for the internal _argv storage. <br /></td></tr>
+<tr class="separator:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Command line parameter parser. </p>
@@ -233,7 +240,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#a1bc171d0f1c6004540a9e407bbab4316">validate_double_range</a>(v,FIELD,MIN,MAX); }</td>
+          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a>(v,FIELD,MIN,MAX); }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,7 +291,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#aff5bec012aa0d390e2d46caf4fcf6c8f">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td>
+          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -409,12 +416,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed number; -1.0 on error</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
 
 </div>
 </div>
-<a id="a1bc171d0f1c6004540a9e407bbab4316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bc171d0f1c6004540a9e407bbab4316">&#9670;&nbsp;</a></span>validate_double_range()</h2>
+<a id="af0bd118cd01723606b2fc73ffa0398f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0bd118cd01723606b2fc73ffa0398f4">&#9670;&nbsp;</a></span>validate_double_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,7 +429,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">BOOLEAN validate_double_range </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a>&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -461,13 +468,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries </dd></dl>
 
 </div>
 </div>
-<a id="aff5bec012aa0d390e2d46caf4fcf6c8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff5bec012aa0d390e2d46caf4fcf6c8f">&#9670;&nbsp;</a></span>validate_uint64_range()</h2>
+<a id="a8952be352d3f02f2bd1329b944671918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8952be352d3f02f2bd1329b944671918">&#9670;&nbsp;</a></span>validate_uint64_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,7 +481,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">BOOLEAN validate_uint64_range </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a>&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -514,8 +520,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries </dd></dl>
 
 </div>
 </div>
@@ -608,10 +613,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1f5c8d8951ef257f1322d74832da03ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5c8d8951ef257f1322d74832da03ae">&#9670;&nbsp;</a></span>argv_from_ascii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CHAR16** argv_from_ascii </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv_ascii</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts ASCII command line parameters to UTF-16. </p>
+<p>The StdLib's entry function passes arguments as ASCII, you can use this function to convert the arguments list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>the number of command-line arguments </td></tr>
+    <tr><td class="paramname">argv_ascii</td><td>the list of command-line arguments, as ASCII </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the same command-line arguments, as UTF-16 </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 20:29:25 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

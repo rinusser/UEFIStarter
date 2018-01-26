@@ -64,8 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">console.c File Reference<div class="ingroups"><a class="el" href="group__group__lib.html">Library Functions</a> &raquo; <a class="el" href="group__group__lib__console.html">Console Functions</a></div></div>  </div>
 </div><!--header-->
@@ -98,29 +97,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a621288a08ecc9633729935737256e831"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a621288a08ecc9633729935737256e831">wait_for_key</a> ()</td></tr>
 <tr class="memdesc:a621288a08ecc9633729935737256e831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waits for any keystroke.  <a href="#a621288a08ecc9633729935737256e831">More...</a><br /></td></tr>
 <tr class="separator:a621288a08ecc9633729935737256e831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f5c8d8951ef257f1322d74832da03ae"><td class="memItemLeft" align="right" valign="top">CHAR16 **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a1f5c8d8951ef257f1322d74832da03ae">argv_from_ascii</a> (int argc, char **argv_ascii)</td></tr>
-<tr class="memdesc:a1f5c8d8951ef257f1322d74832da03ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ASCII command line parameters to UTF-16.  <a href="#a1f5c8d8951ef257f1322d74832da03ae">More...</a><br /></td></tr>
-<tr class="separator:a1f5c8d8951ef257f1322d74832da03ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a0403d8fdaac4eeab200551e15b4b95bc">free_argv</a> ()</td></tr>
-<tr class="memdesc:a0403d8fdaac4eeab200551e15b4b95bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory pages for the internal _argv storage.  <a href="#a0403d8fdaac4eeab200551e15b4b95bc">More...</a><br /></td></tr>
-<tr class="separator:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48fcdd00d67eb34c3a303c5a4cb53451"><td class="memItemLeft" align="right" valign="top">EFI_STATUS EFIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a48fcdd00d67eb34c3a303c5a4cb53451">init</a> (INTN argc, CHAR16 **argv, UINTN arg_group_count,...)</td></tr>
 <tr class="memdesc:a48fcdd00d67eb34c3a303c5a4cb53451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an UEFIStarter application.  <a href="#a48fcdd00d67eb34c3a303c5a4cb53451">More...</a><br /></td></tr>
 <tr class="separator:a48fcdd00d67eb34c3a303c5a4cb53451"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7861ee1569802186a619778efc85af13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a7861ee1569802186a619778efc85af13">shutdown</a> ()</td></tr>
 <tr class="memdesc:a7861ee1569802186a619778efc85af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuts the UEFIStarter internals down.  <a href="#a7861ee1569802186a619778efc85af13">More...</a><br /></td></tr>
 <tr class="separator:a7861ee1569802186a619778efc85af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a261f07162c8ee16bb2550e308963f057"><td class="memItemLeft" align="right" valign="top"><a id="a261f07162c8ee16bb2550e308963f057"></a>
-static CHAR16 **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a261f07162c8ee16bb2550e308963f057">_argv</a> =NULL</td></tr>
-<tr class="memdesc:a261f07162c8ee16bb2550e308963f057"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal storage for command line arguments converted to UTF-16 <br /></td></tr>
-<tr class="separator:a261f07162c8ee16bb2550e308963f057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06678e11ba7bfff4d6eb038faffd48db"><td class="memItemLeft" align="right" valign="top"><a id="a06678e11ba7bfff4d6eb038faffd48db"></a>
-static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a06678e11ba7bfff4d6eb038faffd48db">_argv_pages</a> =0</td></tr>
-<tr class="memdesc:a06678e11ba7bfff4d6eb038faffd48db"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of memory pages allocated for _argv <br /></td></tr>
-<tr class="separator:a06678e11ba7bfff4d6eb038faffd48db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Console initialization and I/O helpers. </p>
@@ -262,66 +244,6 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="a1f5c8d8951ef257f1322d74832da03ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f5c8d8951ef257f1322d74832da03ae">&#9670;&nbsp;</a></span>argv_from_ascii()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CHAR16** argv_from_ascii </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv_ascii</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts ASCII command line parameters to UTF-16. </p>
-<p>The StdLib's entry function passes arguments as ASCII, you can use this function to convert the arguments list.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">argc</td><td>the number of command-line arguments </td></tr>
-    <tr><td class="paramname">argv_ascii</td><td>the list of command-line arguments, as ASCII </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the same command-line arguments, as UTF-16</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
-
-</div>
-</div>
-<a id="a0403d8fdaac4eeab200551e15b4b95bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0403d8fdaac4eeab200551e15b4b95bc">&#9670;&nbsp;</a></span>free_argv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void free_argv </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Frees the memory pages for the internal _argv storage. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
-
-</div>
-</div>
 <a id="a48fcdd00d67eb34c3a303c5a4cb53451"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48fcdd00d67eb34c3a303c5a4cb53451">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -374,7 +296,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an EFI status code: EFI_SUCCESS if everything went well and application can continue executing </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>could add cmdline arg </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>could add cmdline arg </dd></dl>
 
 </div>
 </div>
@@ -403,7 +325,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -276,7 +276,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000018">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> should fail NULL, empty strings and non-numeric strings </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000019">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> should fail NULL, empty strings and non-numeric strings </p>
 <p><a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> should pass positive and negative integers </p>
 <p class="enddd"><a class="el" href="cmdline_8h.html#ad2bd762453c7bb9dac80458f36f38de7" title="Checks whether a string looks like an integer. ">wctype_int()</a> should fail decimal numbers </p>
 </dd></dl>
@@ -299,7 +299,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000019">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should fail NULL, empty strings and non-numeric strings </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000020">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should fail NULL, empty strings and non-numeric strings </p>
 <p><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should pass positive and negative integers </p>
 <p><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should pass positive and negative decimal numbers </p>
 <p class="enddd"><a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> should fail invalid number-like strings similar to decimals </p>
@@ -323,7 +323,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000020">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> rounds positive and negative values to 2 decimals with "half away from zero" </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000021">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> rounds positive and negative values to 2 decimals with "half away from zero" </p>
 <p class="enddd"><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> always zero-pads to 2 decimals </p>
 </dd></dl>
 
@@ -345,7 +345,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> errors out if input exceeds value boundaries. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000021">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> logs an error when trying to convert very low or very high numbers </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000022">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> logs an error when trying to convert very low or very high numbers </dd></dl>
 
 </div>
 </div>
@@ -365,7 +365,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure wcstof() works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000022">Test:</a></b></dt><dd><a class="el" href="cmdline_8h.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> parses a numeric string into a double value </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000023">Test:</a></b></dt><dd><a class="el" href="cmdline_8h.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> parses a numeric string into a double value </dd></dl>
 
 </div>
 </div>
@@ -385,7 +385,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000023">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> parses integer strings from 0 to 2^64-1 </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000024">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> parses integer strings from 0 to 2^64-1 </dd></dl>
 
 </div>
 </div>
@@ -405,7 +405,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000024">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the given function's name in the result </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000025">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the given function's name in the result </p>
 <p><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the raw EFI_STATUS code in the result </p>
 <p class="enddd"><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> converts EFI_STATUS codes to readable messages in the result </p>
 </dd></dl>
@@ -428,7 +428,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> tracks the pool memory it reserves. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000025">Test:</a></b></dt><dd>each call to <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> should add exactly 1 tracked pool memory entry, regardless of how many arguments were passed. </dd></dl>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000026">Test:</a></b></dt><dd>each call to <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> should add exactly 1 tracked pool memory entry, regardless of how many arguments were passed. </dd></dl>
 
 </div>
 </div>
@@ -448,7 +448,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure <a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000026">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 0 entries and writes NULL when requested to split a NULL string </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000027">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 0 entries and writes NULL when requested to split a NULL string </p>
 <p><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> splits a string by the given delimiter into the correct parts </p>
 <p><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> includes empty string parts between delimiters </p>
 <p class="enddd"><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 1 entry and outputs the input string as array when requested to split an empty string </p>
@@ -593,7 +593,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -78,6 +78,7 @@ $(function() {
 <code>#include &lt;Library/BaseMemoryLib.h&gt;</code><br />
 <code>#include &lt;Library/MemoryAllocationLib.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="cmdline_8h_source.html">../include/cmdline.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory_8h_source.html">../include/memory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="logger_8h_source.html">../include/logger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="string_8h_source.html">../include/string.h</a>&quot;</code><br />
 </div><table class="memberdecls">
@@ -101,12 +102,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a556233560a87ebefba6d1ea766df485e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e">_wcstof</a> (CHAR16 *str)</td></tr>
 <tr class="memdesc:a556233560a87ebefba6d1ea766df485e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a numeric string into a double value.  <a href="#a556233560a87ebefba6d1ea766df485e">More...</a><br /></td></tr>
 <tr class="separator:a556233560a87ebefba6d1ea766df485e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bc171d0f1c6004540a9e407bbab4316"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a1bc171d0f1c6004540a9e407bbab4316">validate_double_range</a> (<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v, CHAR16 *field, double min, double max)</td></tr>
-<tr class="memdesc:a1bc171d0f1c6004540a9e407bbab4316"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a double command line parameter is within boundaries.  <a href="#a1bc171d0f1c6004540a9e407bbab4316">More...</a><br /></td></tr>
-<tr class="separator:a1bc171d0f1c6004540a9e407bbab4316"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5bec012aa0d390e2d46caf4fcf6c8f"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#aff5bec012aa0d390e2d46caf4fcf6c8f">validate_uint64_range</a> (<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v, CHAR16 *field, UINT64 min, UINT64 max)</td></tr>
-<tr class="memdesc:aff5bec012aa0d390e2d46caf4fcf6c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a uint64 command line parameter is within boundaries.  <a href="#aff5bec012aa0d390e2d46caf4fcf6c8f">More...</a><br /></td></tr>
-<tr class="separator:aff5bec012aa0d390e2d46caf4fcf6c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0bd118cd01723606b2fc73ffa0398f4"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a> (<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v, CHAR16 *field, double min, double max)</td></tr>
+<tr class="memdesc:af0bd118cd01723606b2fc73ffa0398f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a double command line parameter is within boundaries.  <a href="#af0bd118cd01723606b2fc73ffa0398f4">More...</a><br /></td></tr>
+<tr class="separator:af0bd118cd01723606b2fc73ffa0398f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8952be352d3f02f2bd1329b944671918"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a> (<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v, CHAR16 *field, UINT64 min, UINT64 max)</td></tr>
+<tr class="memdesc:a8952be352d3f02f2bd1329b944671918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether a uint64 command line parameter is within boundaries.  <a href="#a8952be352d3f02f2bd1329b944671918">More...</a><br /></td></tr>
+<tr class="separator:a8952be352d3f02f2bd1329b944671918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a205da2eaeb062e118e4ff6a8499d5d2b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a205da2eaeb062e118e4ff6a8499d5d2b">_print_argument_group_help</a> (<a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a> *arguments)</td></tr>
 <tr class="memdesc:a205da2eaeb062e118e4ff6a8499d5d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(internal) prints the help text for a command line argument group  <a href="#a205da2eaeb062e118e4ff6a8499d5d2b">More...</a><br /></td></tr>
 <tr class="separator:a205da2eaeb062e118e4ff6a8499d5d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,12 +126,27 @@ Functions</h2></td></tr>
 <tr class="memitem:a5743181e0a9fe670f03a0b7a2ca92502"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a5743181e0a9fe670f03a0b7a2ca92502">parse_parameters</a> (INTN argc, CHAR16 **argv, UINTN group_count, VA_LIST <a class="el" href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a>)</td></tr>
 <tr class="memdesc:a5743181e0a9fe670f03a0b7a2ca92502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses command-line parameters.  <a href="#a5743181e0a9fe670f03a0b7a2ca92502">More...</a><br /></td></tr>
 <tr class="separator:a5743181e0a9fe670f03a0b7a2ca92502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5c8d8951ef257f1322d74832da03ae"><td class="memItemLeft" align="right" valign="top">CHAR16 **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a1f5c8d8951ef257f1322d74832da03ae">argv_from_ascii</a> (int argc, char **argv_ascii)</td></tr>
+<tr class="memdesc:a1f5c8d8951ef257f1322d74832da03ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ASCII command line parameters to UTF-16.  <a href="#a1f5c8d8951ef257f1322d74832da03ae">More...</a><br /></td></tr>
+<tr class="separator:a1f5c8d8951ef257f1322d74832da03ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memItemLeft" align="right" valign="top"><a id="a0403d8fdaac4eeab200551e15b4b95bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a0403d8fdaac4eeab200551e15b4b95bc">free_argv</a> ()</td></tr>
+<tr class="memdesc:a0403d8fdaac4eeab200551e15b4b95bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory pages for the internal _argv storage. <br /></td></tr>
+<tr class="separator:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ae86deb68b5607efc8a7d3af2b3ce31d1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structlogger__args__mapping__t.html">logger_args_mapping_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#ae86deb68b5607efc8a7d3af2b3ce31d1">logger_args</a> []</td></tr>
 <tr class="memdesc:ae86deb68b5607efc8a7d3af2b3ce31d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">log level -&gt; command line argument mappings  <a href="#ae86deb68b5607efc8a7d3af2b3ce31d1">More...</a><br /></td></tr>
 <tr class="separator:ae86deb68b5607efc8a7d3af2b3ce31d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a261f07162c8ee16bb2550e308963f057"><td class="memItemLeft" align="right" valign="top"><a id="a261f07162c8ee16bb2550e308963f057"></a>
+static CHAR16 **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a261f07162c8ee16bb2550e308963f057">_argv</a> =NULL</td></tr>
+<tr class="memdesc:a261f07162c8ee16bb2550e308963f057"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal storage for command line arguments converted to UTF-16 <br /></td></tr>
+<tr class="separator:a261f07162c8ee16bb2550e308963f057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06678e11ba7bfff4d6eb038faffd48db"><td class="memItemLeft" align="right" valign="top"><a id="a06678e11ba7bfff4d6eb038faffd48db"></a>
+static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2cmdline_8c.html#a06678e11ba7bfff4d6eb038faffd48db">_argv_pages</a> =0</td></tr>
+<tr class="memdesc:a06678e11ba7bfff4d6eb038faffd48db"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of memory pages allocated for _argv <br /></td></tr>
+<tr class="separator:a06678e11ba7bfff4d6eb038faffd48db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Command line parameter parser. </p>
@@ -182,7 +198,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the string looks like a number</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>the wctype* functions should be replaced by a built-in, or moved to a separate lib </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>the wctype* functions should be replaced by a built-in, or moved to a separate lib </dd></dl>
 
 </div>
 </div>
@@ -265,12 +281,12 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed number; -1.0 on error</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
 
 </div>
 </div>
-<a id="a1bc171d0f1c6004540a9e407bbab4316"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bc171d0f1c6004540a9e407bbab4316">&#9670;&nbsp;</a></span>validate_double_range()</h2>
+<a id="af0bd118cd01723606b2fc73ffa0398f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0bd118cd01723606b2fc73ffa0398f4">&#9670;&nbsp;</a></span>validate_double_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +294,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">BOOLEAN validate_double_range </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a>&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -317,13 +333,12 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries </dd></dl>
 
 </div>
 </div>
-<a id="aff5bec012aa0d390e2d46caf4fcf6c8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff5bec012aa0d390e2d46caf4fcf6c8f">&#9670;&nbsp;</a></span>validate_uint64_range()</h2>
+<a id="a8952be352d3f02f2bd1329b944671918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8952be352d3f02f2bd1329b944671918">&#9670;&nbsp;</a></span>validate_uint64_range()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +346,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">BOOLEAN validate_uint64_range </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a>&#160;</td>
           <td class="paramname"><em>v</em>, </td>
         </tr>
         <tr>
@@ -370,8 +385,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>add test </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>whether the parameter is within the boundaries </dd></dl>
 
 </div>
 </div>
@@ -406,8 +420,8 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000014">Todo:</a></b></dt><dd>could mind required parameters (currently numbers for double/int args) for pad length, then remove typetext padding in Print() below </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>combine pad length for different groups that were combined, e.g. builtin and custom audio options </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>could mind required parameters (currently numbers for double/int args) for pad length, then remove typetext padding in Print() below </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>combine pad length for different groups that were combined, e.g. builtin and custom audio options </dd></dl>
 
 </div>
 </div>
@@ -638,6 +652,45 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a1f5c8d8951ef257f1322d74832da03ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5c8d8951ef257f1322d74832da03ae">&#9670;&nbsp;</a></span>argv_from_ascii()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CHAR16** argv_from_ascii </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv_ascii</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts ASCII command line parameters to UTF-16. </p>
+<p>The StdLib's entry function passes arguments as ASCII, you can use this function to convert the arguments list.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>the number of command-line arguments </td></tr>
+    <tr><td class="paramname">argv_ascii</td><td>the list of command-line arguments, as ASCII </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the same command-line arguments, as UTF-16 </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="ae86deb68b5607efc8a7d3af2b3ce31d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae86deb68b5607efc8a7d3af2b3ce31d1">&#9670;&nbsp;</a></span>logger_args</h2>
@@ -672,7 +725,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

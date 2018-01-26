@@ -19,6 +19,7 @@ var searchData=
   ['cmdline_5fargs_5ftestcases',['cmdline_args_testcases',['../tests_2suites_2lib_2cmdline_8c.html#a19b7164bea1a0857931b94c41e441175',1,'cmdline.c']]],
   ['cmdline_5fargument_5fgroup_5ft',['cmdline_argument_group_t',['../structcmdline__argument__group__t.html',1,'']]],
   ['cmdline_5fargument_5ft',['cmdline_argument_t',['../structcmdline__argument__t.html',1,'']]],
+  ['cmdline_5fvalue_5ft',['cmdline_value_t',['../unioncmdline__value__t.html',1,'']]],
   ['code',['code',['../structsprint__status__testcase__t.html#a887aa85df5717092a4c2cb0a4d0cfe54',1,'sprint_status_testcase_t']]],
   ['color',['COLOR',['../include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82',1,'graphics.h']]],
   ['color_5fprint',['color_print',['../console_8h.html#a91c81fab21903fec8679231208e45f16',1,'color_print(UINTN color, CHAR16 *fmt,...):&#160;console.c'],['../console_8c.html#a91c81fab21903fec8679231208e45f16',1,'color_print(UINTN color, CHAR16 *fmt,...):&#160;console.c']]],

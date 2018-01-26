@@ -79,12 +79,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1f5c8d8951ef257f1322d74832da03ae"><td class="memItemLeft" align="right" valign="top">CHAR16 **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8h.html#a1f5c8d8951ef257f1322d74832da03ae">argv_from_ascii</a> (int argc, char **argv_ascii)</td></tr>
-<tr class="memdesc:a1f5c8d8951ef257f1322d74832da03ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts ASCII command line parameters to UTF-16.  <a href="#a1f5c8d8951ef257f1322d74832da03ae">More...</a><br /></td></tr>
-<tr class="separator:a1f5c8d8951ef257f1322d74832da03ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8h.html#a0403d8fdaac4eeab200551e15b4b95bc">free_argv</a> ()</td></tr>
-<tr class="memdesc:a0403d8fdaac4eeab200551e15b4b95bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees the memory pages for the internal _argv storage.  <a href="#a0403d8fdaac4eeab200551e15b4b95bc">More...</a><br /></td></tr>
-<tr class="separator:a0403d8fdaac4eeab200551e15b4b95bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48fcdd00d67eb34c3a303c5a4cb53451"><td class="memItemLeft" align="right" valign="top">EFI_STATUS EFIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8h.html#a48fcdd00d67eb34c3a303c5a4cb53451">init</a> (INTN argc, CHAR16 **argv, UINTN arg_group_count,...)</td></tr>
 <tr class="memdesc:a48fcdd00d67eb34c3a303c5a4cb53451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an UEFIStarter application.  <a href="#a48fcdd00d67eb34c3a303c5a4cb53451">More...</a><br /></td></tr>
 <tr class="separator:a48fcdd00d67eb34c3a303c5a4cb53451"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,66 +108,6 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a1f5c8d8951ef257f1322d74832da03ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f5c8d8951ef257f1322d74832da03ae">&#9670;&nbsp;</a></span>argv_from_ascii()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CHAR16** argv_from_ascii </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv_ascii</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts ASCII command line parameters to UTF-16. </p>
-<p>The StdLib's entry function passes arguments as ASCII, you can use this function to convert the arguments list.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">argc</td><td>the number of command-line arguments </td></tr>
-    <tr><td class="paramname">argv_ascii</td><td>the list of command-line arguments, as ASCII </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>the same command-line arguments, as UTF-16</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
-
-</div>
-</div>
-<a id="a0403d8fdaac4eeab200551e15b4b95bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0403d8fdaac4eeab200551e15b4b95bc">&#9670;&nbsp;</a></span>free_argv()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void free_argv </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Frees the memory pages for the internal _argv storage. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>move the argv functions to cmdline.c </dd></dl>
-
-</div>
-</div>
 <a id="a48fcdd00d67eb34c3a303c5a4cb53451"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48fcdd00d67eb34c3a303c5a4cb53451">&#9670;&nbsp;</a></span>init()</h2>
 
@@ -226,7 +160,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an EFI status code: EFI_SUCCESS if everything went well and application can continue executing </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>could add cmdline arg </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>could add cmdline arg </dd></dl>
 
 </div>
 </div>
@@ -388,7 +322,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 20:29:25 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

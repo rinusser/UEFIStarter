@@ -113,9 +113,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a732b3015b06a2fdc6e1661c2edcb4a6c"><td class="memItemLeft" align="right" valign="top">static BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8c.html#a732b3015b06a2fdc6e1661c2edcb4a6c">validate_verbosity</a> (<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> v)</td></tr>
-<tr class="memdesc:a732b3015b06a2fdc6e1661c2edcb4a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validator for the <code>-verbosity &lt;level&gt;</code> argument.  <a href="#a732b3015b06a2fdc6e1661c2edcb4a6c">More...</a><br /></td></tr>
-<tr class="separator:a732b3015b06a2fdc6e1661c2edcb4a6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a107e3d6d172682b122680dff1782d477"><td class="memItemLeft" align="right" valign="top">static BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8c.html#a107e3d6d172682b122680dff1782d477">validate_verbosity</a> (<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v)</td></tr>
+<tr class="memdesc:a107e3d6d172682b122680dff1782d477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validator for the <code>-verbosity &lt;level&gt;</code> argument.  <a href="#a107e3d6d172682b122680dff1782d477">More...</a><br /></td></tr>
+<tr class="separator:a107e3d6d172682b122680dff1782d477"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae81acb71ce4a4aa98d512c3e27d4f64a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_8c.html#ae81acb71ce4a4aa98d512c3e27d4f64a">log_errorprint</a> (CHAR16 *level, CHAR16 *msg)</td></tr>
 <tr class="memdesc:ae81acb71ce4a4aa98d512c3e27d4f64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log printer function writing to STDERR.  <a href="#ae81acb71ce4a4aa98d512c3e27d4f64a">More...</a><br /></td></tr>
 <tr class="separator:ae81acb71ce4a4aa98d512c3e27d4f64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,12 +204,12 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="section copyright"><dt>Copyright</dt><dd>2017-2018 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Todo:</a></b></dt><dd><p class="startdd">add pause-on-error/incomplete feature </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd><p class="startdd">add pause-on-error/incomplete feature </p>
 <p class="enddd">could add a way to capture error messages and output them later </p>
 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a732b3015b06a2fdc6e1661c2edcb4a6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a732b3015b06a2fdc6e1661c2edcb4a6c">&#9670;&nbsp;</a></span>validate_verbosity()</h2>
+<a id="a107e3d6d172682b122680dff1782d477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a107e3d6d172682b122680dff1782d477">&#9670;&nbsp;</a></span>validate_verbosity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,7 +220,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">static BOOLEAN validate_verbosity </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a>&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
           <td></td>
         </tr>
@@ -591,10 +591,10 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">={</div><div class="line">  {{wcstr:L<span class="stringliteral">&quot;&quot;</span>},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa">ARG_STRING</a>,NULL,              L<span class="stringliteral">&quot;-skip&quot;</span>,         L<span class="stringliteral">&quot;Comma-separated test groups to skip&quot;</span>},</div><div class="line">  {{uint64:4}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,   <a class="code" href="tests_8c.html#a732b3015b06a2fdc6e1661c2edcb4a6c">validate_verbosity</a>,L<span class="stringliteral">&quot;-verbosity&quot;</span>,    L<span class="stringliteral">&quot;Set verbosity (the higher the more detailed) [1..4]&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-multiline&quot;</span>,    L<span class="stringliteral">&quot;Use multiple lines per test (verbosity 4 only)&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-no-counts&quot;</span>,    L<span class="stringliteral">&quot;Disable assertion counts (shown at verbosities 2 and 4 only)&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-assertions&quot;</span>,   L<span class="stringliteral">&quot;Show successful assertions (verbosity 4 only)&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-no-statistics&quot;</span>,L<span class="stringliteral">&quot;Disable summary statistics&quot;</span>},</div><div class="line">}</div><div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a></div><div class="ttdoc">boolean </div><div class="ttdef"><b>Definition:</b> cmdline.h:22</div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">={</div><div class="line">  {{wcstr:L<span class="stringliteral">&quot;&quot;</span>},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa">ARG_STRING</a>,NULL,              L<span class="stringliteral">&quot;-skip&quot;</span>,         L<span class="stringliteral">&quot;Comma-separated test groups to skip&quot;</span>},</div><div class="line">  {{uint64:4}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,   <a class="code" href="tests_8c.html#a107e3d6d172682b122680dff1782d477">validate_verbosity</a>,L<span class="stringliteral">&quot;-verbosity&quot;</span>,    L<span class="stringliteral">&quot;Set verbosity (the higher the more detailed) [1..4]&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-multiline&quot;</span>,    L<span class="stringliteral">&quot;Use multiple lines per test (verbosity 4 only)&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-no-counts&quot;</span>,    L<span class="stringliteral">&quot;Disable assertion counts (shown at verbosities 2 and 4 only)&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-assertions&quot;</span>,   L<span class="stringliteral">&quot;Show successful assertions (verbosity 4 only)&quot;</span>},</div><div class="line">  {{uint64:0}, <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,              L<span class="stringliteral">&quot;-no-statistics&quot;</span>,L<span class="stringliteral">&quot;Disable summary statistics&quot;</span>},</div><div class="line">}</div><div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a></div><div class="ttdoc">boolean </div><div class="ttdef"><b>Definition:</b> cmdline.h:22</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a></div><div class="ttdoc">integer </div><div class="ttdef"><b>Definition:</b> cmdline.h:23</div></div>
-<div class="ttc" id="tests_8c_html_a732b3015b06a2fdc6e1661c2edcb4a6c"><div class="ttname"><a href="tests_8c.html#a732b3015b06a2fdc6e1661c2edcb4a6c">validate_verbosity</a></div><div class="ttdeci">static BOOLEAN validate_verbosity(double_uint64_t v)</div><div class="ttdoc">Validator for the -verbosity &lt;level&gt; argument. </div><div class="ttdef"><b>Definition:</b> tests.c:54</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa">ARG_STRING</a></div><div class="ttdoc">UTF-16 string. </div><div class="ttdef"><b>Definition:</b> cmdline.h:25</div></div>
+<div class="ttc" id="tests_8c_html_a107e3d6d172682b122680dff1782d477"><div class="ttname"><a href="tests_8c.html#a107e3d6d172682b122680dff1782d477">validate_verbosity</a></div><div class="ttdeci">static BOOLEAN validate_verbosity(cmdline_value_t v)</div><div class="ttdoc">Validator for the -verbosity &lt;level&gt; argument. </div><div class="ttdef"><b>Definition:</b> tests.c:54</div></div>
 </div><!-- fragment -->
 <p>list of command-line arguments </p>
 
@@ -603,7 +603,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

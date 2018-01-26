@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UEFIStarter: memory_page_list_t Struct Reference</title>
+<title>UEFIStarter: cmdline_value_t Union Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,34 +62,34 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">memory_page_list_t Struct Reference</div>  </div>
+<div class="title">cmdline_value_t Union Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>type for a list node of tracked memory page allocations  
- <a href="structmemory__page__list__t.html#details">More...</a></p>
+<p>one parsed command line value  
+ <a href="unioncmdline__value__t.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="memory_8h_source.html">memory.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="cmdline_8h_source.html">cmdline.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a452009498f99f513d852809a2a77069f"><td class="memItemLeft" align="right" valign="top"><a id="a452009498f99f513d852809a2a77069f"></a>
-UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmemory__page__list__t.html#a452009498f99f513d852809a2a77069f">entry_count</a></td></tr>
-<tr class="memdesc:a452009498f99f513d852809a2a77069f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of entries in this node <br /></td></tr>
-<tr class="separator:a452009498f99f513d852809a2a77069f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace5d4b25ce2263fac16dff1acbb8f77e"><td class="memItemLeft" align="right" valign="top"><a id="ace5d4b25ce2263fac16dff1acbb8f77e"></a>
-<a class="el" href="structmemory__page__list__entry__t.html">memory_page_list_entry_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmemory__page__list__t.html#ace5d4b25ce2263fac16dff1acbb8f77e">entries</a> [<a class="el" href="memory_8h.html#ae52d8739a63c59ac291c7422ec675d69">MEMORY_PAGE_LIST_MAX_ENTRY_COUNT</a>]</td></tr>
-<tr class="memdesc:ace5d4b25ce2263fac16dff1acbb8f77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">the allocation entries in this node <br /></td></tr>
-<tr class="separator:ace5d4b25ce2263fac16dff1acbb8f77e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9042093ce129e98655220d67d04c306d"><td class="memItemLeft" align="right" valign="top"><a id="a9042093ce129e98655220d67d04c306d"></a>
-struct <a class="el" href="structmemory__page__list__t.html">memory_page_list_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmemory__page__list__t.html#a9042093ce129e98655220d67d04c306d">next</a></td></tr>
-<tr class="memdesc:a9042093ce129e98655220d67d04c306d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the next list node, may be null <br /></td></tr>
-<tr class="separator:a9042093ce129e98655220d67d04c306d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a803a7bc2ed9320e0b59f3e1883e1665d"><td class="memItemLeft" align="right" valign="top"><a id="a803a7bc2ed9320e0b59f3e1883e1665d"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unioncmdline__value__t.html#a803a7bc2ed9320e0b59f3e1883e1665d">dbl</a></td></tr>
+<tr class="memdesc:a803a7bc2ed9320e0b59f3e1883e1665d"><td class="mdescLeft">&#160;</td><td class="mdescRight">double variant <br /></td></tr>
+<tr class="separator:a803a7bc2ed9320e0b59f3e1883e1665d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a193e190a7c8daef16960dd5233db0f13"><td class="memItemLeft" align="right" valign="top"><a id="a193e190a7c8daef16960dd5233db0f13"></a>
+UINT64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unioncmdline__value__t.html#a193e190a7c8daef16960dd5233db0f13">uint64</a></td></tr>
+<tr class="memdesc:a193e190a7c8daef16960dd5233db0f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">UINT64 variant. <br /></td></tr>
+<tr class="separator:a193e190a7c8daef16960dd5233db0f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f4a54e3a50929ce8ff11171bfe8492"><td class="memItemLeft" align="right" valign="top"><a id="a13f4a54e3a50929ce8ff11171bfe8492"></a>
+CHAR16 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unioncmdline__value__t.html#a13f4a54e3a50929ce8ff11171bfe8492">wcstr</a></td></tr>
+<tr class="memdesc:a13f4a54e3a50929ce8ff11171bfe8492"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTF-16 string variant. <br /></td></tr>
+<tr class="separator:a13f4a54e3a50929ce8ff11171bfe8492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>type for a list node of tracked memory page allocations </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>include/<a class="el" href="memory_8h_source.html">memory.h</a></li>
+<div class="textblock"><p>one parsed command line value </p>
+</div><hr/>The documentation for this union was generated from the following file:<ul>
+<li>include/<a class="el" href="cmdline_8h_source.html">cmdline.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

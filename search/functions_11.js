@@ -37,6 +37,7 @@ var searchData=
   ['test_5fsplit_5fstring',['test_split_string',['../tests_2suites_2lib_2string_8c.html#a14f6361a68f2f85b04c26c53f81bff8b',1,'string.c']]],
   ['test_5fsprint_5fstatus',['test_sprint_status',['../tests_2suites_2lib_2string_8c.html#ab6d951c8dc524b41b1721290a4e32042',1,'string.c']]],
   ['test_5fstruct_5fsizes',['test_struct_sizes',['../tests_2suites_2lib_2ac97_8c.html#a840b50f78ef3d91e240c11e3fd1ea9df',1,'ac97.c']]],
+  ['test_5fvalidate_5franges',['test_validate_ranges',['../tests_2suites_2lib_2cmdline_8c.html#a8de67b09c45e23ad94e2efee5127b072',1,'cmdline.c']]],
   ['test_5fvolume_5fmacro',['test_volume_macro',['../tests_2suites_2lib_2ac97_8c.html#aba28da892d07ac809a4d4fae3086d8e8',1,'ac97.c']]],
   ['test_5fwcstof',['test_wcstof',['../tests_2suites_2lib_2string_8c.html#a34fc4ccd5d54228c0dce0cc8769d6aac',1,'string.c']]],
   ['test_5fwctype_5ffloat',['test_wctype_float',['../tests_2suites_2lib_2string_8c.html#a31a59a646f51ab27144dfa3a9ea2538f',1,'string.c']]],

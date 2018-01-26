@@ -86,18 +86,24 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcmdline__args__testcase__t.html">cmdline_args_testcase_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data type for command-line argument parser testcase  <a href="structcmdline__args__testcase__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvalidate__range__testcase__t.html">validate_range_testcase_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data type for command-line argument validator testcases  <a href="structvalidate__range__testcase__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8e242acdd762bc9698c1fe8bdff94cc2"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#a8e242acdd762bc9698c1fe8bdff94cc2">validate_int</a> (<a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a> val)</td></tr>
-<tr class="memdesc:a8e242acdd762bc9698c1fe8bdff94cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A validator function for integers, used in tests.  <a href="#a8e242acdd762bc9698c1fe8bdff94cc2">More...</a><br /></td></tr>
-<tr class="separator:a8e242acdd762bc9698c1fe8bdff94cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43b08a182112524aadc330a8cabd1a9"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#ae43b08a182112524aadc330a8cabd1a9">validate_int</a> (<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> val)</td></tr>
+<tr class="memdesc:ae43b08a182112524aadc330a8cabd1a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A validator function for integers, used in tests.  <a href="#ae43b08a182112524aadc330a8cabd1a9">More...</a><br /></td></tr>
+<tr class="separator:ae43b08a182112524aadc330a8cabd1a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7249ac486a7916e18bb3782d5757874"><td class="memItemLeft" align="right" valign="top">void EFIAPI&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#af7249ac486a7916e18bb3782d5757874">do_parse_parameters_testcase</a> (<a class="el" href="structcmdline__args__testcase__t.html">cmdline_args_testcase_t</a> *testcase, <a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a> *list, UINTN count,...)</td></tr>
 <tr class="memdesc:af7249ac486a7916e18bb3782d5757874"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs an individual testcase.  <a href="#af7249ac486a7916e18bb3782d5757874">More...</a><br /></td></tr>
 <tr class="separator:af7249ac486a7916e18bb3782d5757874"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab50556bcac414caa1560b2e89b19c59f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#ab50556bcac414caa1560b2e89b19c59f">test_parse_parameters</a> ()</td></tr>
 <tr class="memdesc:ab50556bcac414caa1560b2e89b19c59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure the command-line parser works.  <a href="#ab50556bcac414caa1560b2e89b19c59f">More...</a><br /></td></tr>
 <tr class="separator:ab50556bcac414caa1560b2e89b19c59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de67b09c45e23ad94e2efee5127b072"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#a8de67b09c45e23ad94e2efee5127b072">test_validate_ranges</a> ()</td></tr>
+<tr class="memdesc:a8de67b09c45e23ad94e2efee5127b072"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure the double and uint64 range validators work.  <a href="#a8de67b09c45e23ad94e2efee5127b072">More...</a><br /></td></tr>
+<tr class="separator:a8de67b09c45e23ad94e2efee5127b072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40274b843fad7aaded0499cd06dd4d0a"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#a40274b843fad7aaded0499cd06dd4d0a">run_cmdline_tests</a> ()</td></tr>
 <tr class="memdesc:a40274b843fad7aaded0499cd06dd4d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner for this group.  <a href="#a40274b843fad7aaded0499cd06dd4d0a">More...</a><br /></td></tr>
 <tr class="separator:a40274b843fad7aaded0499cd06dd4d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +119,12 @@ Variables</h2></td></tr>
 <tr class="memitem:a19b7164bea1a0857931b94c41e441175"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcmdline__args__testcase__t.html">cmdline_args_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#a19b7164bea1a0857931b94c41e441175">cmdline_args_testcases</a> []</td></tr>
 <tr class="memdesc:a19b7164bea1a0857931b94c41e441175"><td class="mdescLeft">&#160;</td><td class="mdescRight">testcases for <a class="el" href="tests_2suites_2lib_2cmdline_8c.html#ab50556bcac414caa1560b2e89b19c59f" title="Makes sure the command-line parser works. ">test_parse_parameters()</a>  <a href="#a19b7164bea1a0857931b94c41e441175">More...</a><br /></td></tr>
 <tr class="separator:a19b7164bea1a0857931b94c41e441175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a963ce7be8d0273f76ec93393a44a7947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvalidate__range__testcase__t.html">validate_range_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#a963ce7be8d0273f76ec93393a44a7947">double_range_testcases</a> []</td></tr>
+<tr class="memdesc:a963ce7be8d0273f76ec93393a44a7947"><td class="mdescLeft">&#160;</td><td class="mdescRight">double test cases for test_validate_ranges  <a href="#a963ce7be8d0273f76ec93393a44a7947">More...</a><br /></td></tr>
+<tr class="separator:a963ce7be8d0273f76ec93393a44a7947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c8208f47b869d3f32817ab4644a01b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvalidate__range__testcase__t.html">validate_range_testcase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2cmdline_8c.html#a61c8208f47b869d3f32817ab4644a01b">uint64_range_testcases</a> []</td></tr>
+<tr class="memdesc:a61c8208f47b869d3f32817ab4644a01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">UINT64 test cases for test_validate_ranges.  <a href="#a61c8208f47b869d3f32817ab4644a01b">More...</a><br /></td></tr>
+<tr class="separator:a61c8208f47b869d3f32817ab4644a01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tests for the command line parameter parser. </p>
@@ -121,8 +133,8 @@ Variables</h2></td></tr>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a8e242acdd762bc9698c1fe8bdff94cc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e242acdd762bc9698c1fe8bdff94cc2">&#9670;&nbsp;</a></span>validate_int()</h2>
+<a id="ae43b08a182112524aadc330a8cabd1a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae43b08a182112524aadc330a8cabd1a9">&#9670;&nbsp;</a></span>validate_int()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,7 +142,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">BOOLEAN validate_int </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="uniondouble__uint64__t.html">double_uint64_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a>&#160;</td>
           <td class="paramname"><em>val</em></td><td>)</td>
           <td></td>
         </tr>
@@ -225,6 +237,28 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a8de67b09c45e23ad94e2efee5127b072"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de67b09c45e23ad94e2efee5127b072">&#9670;&nbsp;</a></span>test_validate_ranges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void test_validate_ranges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Makes sure the double and uint64 range validators work. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000004">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4" title="Checks whether a double command line parameter is within boundaries. ">validate_double_range()</a> and validate_uint64_range allow values only if they're in the closed interval between minimum and maximum </p>
+<p class="enddd"><a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4" title="Checks whether a double command line parameter is within boundaries. ">validate_double_range()</a> and validate_uint64_range still work if minimum=maximum </p>
+</dd></dl>
+
+</div>
+</div>
 <a id="a40274b843fad7aaded0499cd06dd4d0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40274b843fad7aaded0499cd06dd4d0a">&#9670;&nbsp;</a></span>run_cmdline_tests()</h2>
 
@@ -258,11 +292,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  {{uint64:0},    <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,        L<span class="stringliteral">&quot;-bool&quot;</span>,  L<span class="stringliteral">&quot;some boolean&quot;</span>},</div><div class="line">  {{uint64:12},   <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,   <a class="code" href="tests_2suites_2lib_2cmdline_8c.html#a8e242acdd762bc9698c1fe8bdff94cc2">validate_int</a>,L<span class="stringliteral">&quot;-int&quot;</span>,   L<span class="stringliteral">&quot;some integer&quot;</span>},</div><div class="line">  {{dbl:2.5},     <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15">ARG_DOUBLE</a>,NULL,        L<span class="stringliteral">&quot;-double&quot;</span>,L<span class="stringliteral">&quot;some double&quot;</span>},</div><div class="line">  {{wcstr:L<span class="stringliteral">&quot;foo&quot;</span>},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa">ARG_STRING</a>,NULL,        L<span class="stringliteral">&quot;-string&quot;</span>,L<span class="stringliteral">&quot;some string&quot;</span>},</div><div class="line">}</div><div class="ttc" id="tests_2suites_2lib_2cmdline_8c_html_a8e242acdd762bc9698c1fe8bdff94cc2"><div class="ttname"><a href="tests_2suites_2lib_2cmdline_8c.html#a8e242acdd762bc9698c1fe8bdff94cc2">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(double_uint64_t val)</div><div class="ttdoc">A validator function for integers, used in tests. </div><div class="ttdef"><b>Definition:</b> cmdline.c:25</div></div>
-<div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a></div><div class="ttdoc">boolean </div><div class="ttdef"><b>Definition:</b> cmdline.h:22</div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  {{uint64:0},    <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a>,  NULL,        L<span class="stringliteral">&quot;-bool&quot;</span>,  L<span class="stringliteral">&quot;some boolean&quot;</span>},</div><div class="line">  {{uint64:12},   <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,   <a class="code" href="tests_2suites_2lib_2cmdline_8c.html#ae43b08a182112524aadc330a8cabd1a9">validate_int</a>,L<span class="stringliteral">&quot;-int&quot;</span>,   L<span class="stringliteral">&quot;some integer&quot;</span>},</div><div class="line">  {{dbl:2.5},     <a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15">ARG_DOUBLE</a>,NULL,        L<span class="stringliteral">&quot;-double&quot;</span>,L<span class="stringliteral">&quot;some double&quot;</span>},</div><div class="line">  {{wcstr:L<span class="stringliteral">&quot;foo&quot;</span>},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa">ARG_STRING</a>,NULL,        L<span class="stringliteral">&quot;-string&quot;</span>,L<span class="stringliteral">&quot;some string&quot;</span>},</div><div class="line">}</div><div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058abf7a62aa02218bffcdea72b3cb36ac0d">ARG_BOOL</a></div><div class="ttdoc">boolean </div><div class="ttdef"><b>Definition:</b> cmdline.h:22</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a></div><div class="ttdoc">integer </div><div class="ttdef"><b>Definition:</b> cmdline.h:23</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa">ARG_STRING</a></div><div class="ttdoc">UTF-16 string. </div><div class="ttdef"><b>Definition:</b> cmdline.h:25</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15">ARG_DOUBLE</a></div><div class="ttdoc">double </div><div class="ttdef"><b>Definition:</b> cmdline.h:24</div></div>
+<div class="ttc" id="tests_2suites_2lib_2cmdline_8c_html_ae43b08a182112524aadc330a8cabd1a9"><div class="ttname"><a href="tests_2suites_2lib_2cmdline_8c.html#ae43b08a182112524aadc330a8cabd1a9">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(cmdline_value_t val)</div><div class="ttdoc">A validator function for integers, used in tests. </div><div class="ttdef"><b>Definition:</b> cmdline.c:25</div></div>
 </div><!-- fragment -->
 <p>A list of arguments, used in tests. </p>
 
@@ -279,7 +313,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  NULL,</div><div class="line">  <span class="keyword">sizeof</span>(<a class="code" href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a>)/<span class="keyword">sizeof</span>(<a class="code" href="structcmdline__argument__t.html">cmdline_argument_t</a>),</div><div class="line">  <a class="code" href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a></div><div class="line">}</div><div class="ttc" id="structcmdline__argument__t_html"><div class="ttname"><a href="structcmdline__argument__t.html">cmdline_argument_t</a></div><div class="ttdoc">model for one command line argument </div><div class="ttdef"><b>Definition:</b> cmdline.h:42</div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  NULL,</div><div class="line">  <span class="keyword">sizeof</span>(<a class="code" href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a>)/<span class="keyword">sizeof</span>(<a class="code" href="structcmdline__argument__t.html">cmdline_argument_t</a>),</div><div class="line">  <a class="code" href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a></div><div class="line">}</div><div class="ttc" id="structcmdline__argument__t_html"><div class="ttname"><a href="structcmdline__argument__t.html">cmdline_argument_t</a></div><div class="ttdoc">model for one command line argument </div><div class="ttdef"><b>Definition:</b> cmdline.h:41</div></div>
 <div class="ttc" id="tests_2suites_2lib_2cmdline_8c_html_a5892a73d0d541efccd717ceb03a207d4"><div class="ttname"><a href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a></div><div class="ttdeci">cmdline_argument_t cmdline_args_list[]</div><div class="ttdoc">A list of arguments, used in tests. </div><div class="ttdef"><b>Definition:</b> cmdline.c:33</div></div>
 </div><!-- fragment -->
 <p>An argument group, used in tests. </p>
@@ -302,10 +336,42 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a963ce7be8d0273f76ec93393a44a7947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a963ce7be8d0273f76ec93393a44a7947">&#9670;&nbsp;</a></span>double_range_testcases</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvalidate__range__testcase__t.html">validate_range_testcase_t</a> double_range_testcases[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  </div><div class="line">  {L<span class="stringliteral">&quot;below&quot;</span>,  FALSE,{dbl:-10.0}, {dbl:-5.0},  {dbl:5.0}},</div><div class="line">  {L<span class="stringliteral">&quot;min&quot;</span>,    TRUE, {dbl:-5.0},  {dbl:-5.0},  {dbl:5.0}},</div><div class="line">  {L<span class="stringliteral">&quot;between&quot;</span>,TRUE, {dbl:-123.0},{dbl:-124.0},{dbl:-122.0}},</div><div class="line">  {L<span class="stringliteral">&quot;max&quot;</span>,    TRUE, {dbl:5.0},   {dbl:-5.0},  {dbl:5.0}},</div><div class="line">  {L<span class="stringliteral">&quot;above&quot;</span>,  FALSE,{dbl:1.0},   {dbl:1.2},   {dbl:1.3}},</div><div class="line">  {L<span class="stringliteral">&quot;at&quot;</span>,     TRUE, {dbl:12.3},  {dbl:12.3},  {dbl:12.3}},</div><div class="line">}</div></div><!-- fragment -->
+<p>double test cases for test_validate_ranges </p>
+
+</div>
+</div>
+<a id="a61c8208f47b869d3f32817ab4644a01b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c8208f47b869d3f32817ab4644a01b">&#9670;&nbsp;</a></span>uint64_range_testcases</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvalidate__range__testcase__t.html">validate_range_testcase_t</a> uint64_range_testcases[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  </div><div class="line">  {L<span class="stringliteral">&quot;below&quot;</span>,  FALSE,{uint64:1}, {uint64:5}, {uint64:10}},</div><div class="line">  {L<span class="stringliteral">&quot;min&quot;</span>,    TRUE, {uint64:2}, {uint64:2}, {uint64:6}},</div><div class="line">  {L<span class="stringliteral">&quot;between&quot;</span>,TRUE, {uint64:50},{uint64:10},{uint64:100}},</div><div class="line">  {L<span class="stringliteral">&quot;max&quot;</span>,    TRUE, {uint64:15},{uint64:5}, {uint64:15}},</div><div class="line">  {L<span class="stringliteral">&quot;above&quot;</span>,  FALSE,{uint64:3}, {uint64:1}, {uint64:2}},</div><div class="line">  {L<span class="stringliteral">&quot;at&quot;</span>,     TRUE, {uint64:12},{uint64:12},{uint64:12}},</div><div class="line">}</div></div><!-- fragment -->
+<p>UINT64 test cases for test_validate_ranges. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 25 2018 21:30:14 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

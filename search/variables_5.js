@@ -14,6 +14,7 @@ var searchData=
   ['expected_5fpbm_5fpixels',['expected_pbm_pixels',['../tests_2suites_2lib_2graphics_8c.html#a1563a4c85b8008c2c554d23af6a6c50e',1,'graphics.c']]],
   ['expected_5fpgm_5fpixels',['expected_pgm_pixels',['../tests_2suites_2lib_2graphics_8c.html#ab8848967bc0aaa9d91b086c9530112c8',1,'graphics.c']]],
   ['expected_5fppm_5fpixels',['expected_ppm_pixels',['../tests_2suites_2lib_2graphics_8c.html#a7e5501e1782b7add535ed182e5f48422',1,'graphics.c']]],
+  ['expected_5fresult',['expected_result',['../structvalidate__range__testcase__t.html#a68c02499284a8d162a60d2ee6354412a',1,'validate_range_testcase_t']]],
   ['expected_5fstring',['expected_string',['../structcmdline__args__testcase__t.html#a30641d0c1b04d01285bb7a74113707c2',1,'cmdline_args_testcase_t']]],
   ['expected_5fsuccess',['expected_success',['../structcmdline__args__testcase__t.html#a050cc5b85cda4c80c36c91977ed2f44a',1,'cmdline_args_testcase_t']]],
   ['extended_5faudio_5fid',['extended_audio_id',['../structac97__bar__t.html#a8d8e8573064c1620361d80682b84d638',1,'ac97_bar_t']]],
