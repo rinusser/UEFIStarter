@@ -22,7 +22,7 @@
  * \param val the value to validate
  * \return whether the value is valid
  */
-BOOLEAN validate_int(double_uint64_t val)
+BOOLEAN validate_int(cmdline_value_t val)
 {
   return !(val.uint64%2);
 }
@@ -127,6 +127,68 @@ void test_parse_parameters()
 }
 
 
+/** data type for command-line argument validator testcases */
+typedef struct
+{
+  CHAR16 *message;         /**< a descriptive message for the testcase */
+  BOOLEAN expected_result; /**< whether the validator is expected to accept the value */
+  cmdline_value_t input;   /**< the input value */
+  cmdline_value_t min;     /**< the lowest allowed value */
+  cmdline_value_t max;     /**< the highest allowed value */
+} validate_range_testcase_t;
+
+/** double test cases for test_validate_ranges */
+validate_range_testcase_t double_range_testcases[]=
+{
+  //msg       expct  input        min          max
+  {L"below",  FALSE,{dbl:-10.0}, {dbl:-5.0},  {dbl:5.0}},
+  {L"min",    TRUE, {dbl:-5.0},  {dbl:-5.0},  {dbl:5.0}},
+  {L"between",TRUE, {dbl:-123.0},{dbl:-124.0},{dbl:-122.0}},
+  {L"max",    TRUE, {dbl:5.0},   {dbl:-5.0},  {dbl:5.0}},
+  {L"above",  FALSE,{dbl:1.0},   {dbl:1.2},   {dbl:1.3}},
+  {L"at",     TRUE, {dbl:12.3},  {dbl:12.3},  {dbl:12.3}},
+};
+
+/** UINT64 test cases for test_validate_ranges */
+validate_range_testcase_t uint64_range_testcases[]=
+{
+  //msg       expct  input       min         max
+  {L"below",  FALSE,{uint64:1}, {uint64:5}, {uint64:10}},
+  {L"min",    TRUE, {uint64:2}, {uint64:2}, {uint64:6}},
+  {L"between",TRUE, {uint64:50},{uint64:10},{uint64:100}},
+  {L"max",    TRUE, {uint64:15},{uint64:5}, {uint64:15}},
+  {L"above",  FALSE,{uint64:3}, {uint64:1}, {uint64:2}},
+  {L"at",     TRUE, {uint64:12},{uint64:12},{uint64:12}},
+};
+
+
+/**
+ * Makes sure the double and uint64 range validators work
+ *
+ * \test validate_double_range() and validate_uint64_range allow values only if they're in the closed interval between minimum and maximum
+ * \test validate_double_range() and validate_uint64_range still work if minimum=maximum
+ */
+void test_validate_ranges()
+{
+  UINTN count=sizeof(double_range_testcases)/sizeof(validate_range_testcase_t);
+  UINTN tc;
+  LOGLEVEL previous_log_level=get_log_level();
+  validate_range_testcase_t *cases=double_range_testcases;
+
+  set_log_level(OFF);
+
+  for(tc=0;tc<count;tc++)
+    assert_intn_equals(cases[tc].expected_result,validate_double_range(cases[tc].input,L"",cases[tc].min.dbl,cases[tc].max.dbl),cases[tc].message);
+
+  count=sizeof(uint64_range_testcases)/sizeof(validate_range_testcase_t);
+  cases=uint64_range_testcases;
+  for(tc=0;tc<count;tc++)
+    assert_intn_equals(cases[tc].expected_result,validate_uint64_range(cases[tc].input,L"",cases[tc].min.uint64,cases[tc].max.uint64),cases[tc].message);
+
+  set_log_level(previous_log_level);
+}
+
+
 /**
  * Test runner for this group.
  * Gets called via the generated test runner.
@@ -137,5 +199,6 @@ BOOLEAN run_cmdline_tests()
 {
   INIT_TESTGROUP(L"command line");
   RUN_TEST(test_parse_parameters,L"parsing parameters");
+  RUN_TEST(test_validate_ranges,L"validating value ranges");
   FINISH_TESTGROUP();
 }

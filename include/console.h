@@ -14,9 +14,6 @@
 #include <Uefi.h>
 #include "cmdline.h"
 
-CHAR16 **argv_from_ascii(int argc, char **argv_ascii);
-void free_argv();
-
 EFI_STATUS EFIAPI init(INTN argc, CHAR16 **argv, UINTN arg_group_count, ...);
 void shutdown();
 

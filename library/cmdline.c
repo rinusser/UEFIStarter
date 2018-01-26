@@ -12,6 +12,7 @@
 #include <Library/BaseMemoryLib.h>
 #include <Library/MemoryAllocationLib.h>
 #include "../include/cmdline.h"
+#include "../include/memory.h"
 #include "../include/logger.h"
 #include "../include/string.h"
 
@@ -154,10 +155,8 @@ double _wcstof(CHAR16 *str)
  * \param min   the lowest allowed value (inclusive)
  * \param max   the highest allowed value (inclusive)
  * \return whether the parameter is within the boundaries
- *
- * \TODO add test
  */
-BOOLEAN validate_double_range(double_uint64_t v, CHAR16 *field, double min, double max)
+BOOLEAN validate_double_range(cmdline_value_t v, CHAR16 *field, double min, double max)
 {
   if(v.dbl>=min && v.dbl<=max)
     return TRUE;
@@ -173,10 +172,8 @@ BOOLEAN validate_double_range(double_uint64_t v, CHAR16 *field, double min, doub
  * \param min   the lowest allowed value (inclusive)
  * \param max   the highest allowed value (inclusive)
  * \return whether the parameter is within the boundaries
- *
- * \TODO add test
  */
-BOOLEAN validate_uint64_range(double_uint64_t v, CHAR16 *field, UINT64 min, UINT64 max)
+BOOLEAN validate_uint64_range(cmdline_value_t v, CHAR16 *field, UINT64 min, UINT64 max)
 {
   if(v.uint64>=min && v.uint64<=max)
     return TRUE;
@@ -471,4 +468,44 @@ EFI_STATUS parse_parameters(INTN argc, CHAR16 **argv, UINTN group_count, VA_LIST
     return EFI_INVALID_PARAMETER;
 
   return EFI_SUCCESS;
+}
+
+
+/** internal storage for command line arguments converted to UTF-16 */
+static CHAR16 **_argv=NULL;
+
+/** number of memory pages allocated for _argv */
+static UINTN _argv_pages=0;
+
+
+/**
+ * Converts ASCII command line parameters to UTF-16.
+ * The StdLib's entry function passes arguments as ASCII, you can use this function to convert the arguments list.
+ *
+ * \param argc       the number of command-line arguments
+ * \param argv_ascii the list of command-line arguments, as ASCII
+ * \return the same command-line arguments, as UTF-16
+ */
+CHAR16 **argv_from_ascii(int argc, char **argv_ascii)
+{
+  unsigned int tc;
+  unsigned int bytes;
+  LOGLEVEL previous_log_level;
+
+  bytes=argc*sizeof(CHAR16 *);
+  _argv_pages=(bytes-1)/4096+1;
+  previous_log_level=set_log_level(INFO);
+  _argv=allocate_pages_ex(_argv_pages,FALSE,AllocateAnyPages,NULL);
+  for(tc=0;tc<argc;tc++)
+    _argv[tc]=memsprintf(L"%a",argv_ascii[tc]); //this is
+  set_log_level(previous_log_level);
+  return _argv;
+}
+
+/**
+ * Frees the memory pages for the internal _argv storage
+ */
+void free_argv()
+{
+  free_pages_ex(_argv,_argv_pages,FALSE);
 }

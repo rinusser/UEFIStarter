@@ -133,50 +133,6 @@ void wait_for_key()
 }
 
 
-/** internal storage for command line arguments converted to UTF-16 */
-static CHAR16 **_argv=NULL;
-
-/** number of memory pages allocated for _argv */
-static UINTN _argv_pages=0;
-
-
-/**
- * Converts ASCII command line parameters to UTF-16.
- * The StdLib's entry function passes arguments as ASCII, you can use this function to convert the arguments list.
- *
- * \param argc       the number of command-line arguments
- * \param argv_ascii the list of command-line arguments, as ASCII
- * \return the same command-line arguments, as UTF-16
- *
- * \TODO move the argv functions to cmdline.c
- */
-CHAR16 **argv_from_ascii(int argc, char **argv_ascii)
-{
-  unsigned int tc;
-  unsigned int bytes;
-  LOGLEVEL previous_log_level;
-
-  bytes=argc*sizeof(CHAR16 *);
-  _argv_pages=(bytes-1)/4096+1;
-  previous_log_level=set_log_level(INFO);
-  _argv=allocate_pages_ex(_argv_pages,FALSE,AllocateAnyPages,NULL);
-  for(tc=0;tc<argc;tc++)
-    _argv[tc]=memsprintf(L"%a",argv_ascii[tc]); //this is
-  set_log_level(previous_log_level);
-  return _argv;
-}
-
-/**
- * Frees the memory pages for the internal _argv storage
- *
- * \TODO move the argv functions to cmdline.c
- */
-void free_argv()
-{
-  free_pages_ex(_argv,_argv_pages,FALSE);
-}
-
-
 /**
  * Initializes an UEFIStarter application.
  * Call this as early as possible to gain access to the memory tracking, logging and other features.

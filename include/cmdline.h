@@ -27,20 +27,19 @@ typedef enum
 
 /**
  * one parsed command line value
- * \TODO rename this to something generic, strings have been added since the first version
  */
 typedef union {
   double dbl;    /**< double variant */
   UINT64 uint64; /**< UINT64 variant */
   CHAR16 *wcstr; /**< UTF-16 string variant */
-} double_uint64_t;
+} cmdline_value_t;
 
 /** function pointer type for command line argument validators */
-typedef BOOLEAN validate_argument_f(double_uint64_t);
+typedef BOOLEAN validate_argument_f(cmdline_value_t);
 
 /** model for one command line argument */
 typedef struct {
-  double_uint64_t value;                /**< the parsed value */
+  cmdline_value_t value;                /**< the parsed value */
   argument_type type;                   /**< the argument's type */
   validate_argument_f *validator_func;  /**< the validator function, may be NULL */
   CHAR16 *name;                         /**< the argument's name */
@@ -76,9 +75,9 @@ double _wcstof(CHAR16 *str);
  * \param MIN   the minimum value (inclusive)
  * \param MAX   the maximum value (inclusive)
  */
-#define DOUBLE_RANGE_VALIDATOR(FUNC,FIELD,MIN,MAX) static BOOLEAN FUNC(double_uint64_t v) { return validate_double_range(v,FIELD,MIN,MAX); }
+#define DOUBLE_RANGE_VALIDATOR(FUNC,FIELD,MIN,MAX) static BOOLEAN FUNC(cmdline_value_t v) { return validate_double_range(v,FIELD,MIN,MAX); }
 
-BOOLEAN validate_double_range(double_uint64_t v, CHAR16 *field, double min, double max);
+BOOLEAN validate_double_range(cmdline_value_t v, CHAR16 *field, double min, double max);
 
 /**
  * shortcut macro for quickly defining a validator for "integer" type arguments
@@ -88,12 +87,14 @@ BOOLEAN validate_double_range(double_uint64_t v, CHAR16 *field, double min, doub
  * \param MIN   the minimum value (inclusive)
  * \param MAX   the maximum value (inclusive)
  */
-#define INT_RANGE_VALIDATOR(FUNC,FIELD,MIN,MAX) static BOOLEAN FUNC(double_uint64_t v) { return validate_uint64_range(v,FIELD,MIN,MAX); }
+#define INT_RANGE_VALIDATOR(FUNC,FIELD,MIN,MAX) static BOOLEAN FUNC(cmdline_value_t v) { return validate_uint64_range(v,FIELD,MIN,MAX); }
 
-BOOLEAN validate_uint64_range(double_uint64_t v, CHAR16 *field, UINT64 min, UINT64 max);
+BOOLEAN validate_uint64_range(cmdline_value_t v, CHAR16 *field, UINT64 min, UINT64 max);
 
 EFI_STATUS parse_parameters(INTN argc, CHAR16 **argv, UINTN group_count, VA_LIST groups);
 void print_help_text(UINTN group_count, VA_LIST groups);
 
+CHAR16 **argv_from_ascii(int argc, char **argv_ascii);
+void free_argv();
 
 #endif

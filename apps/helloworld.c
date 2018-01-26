@@ -27,7 +27,7 @@
  * \param value the value to validate
  * \return whether the value is >=2
  */
-BOOLEAN validate_int(double_uint64_t value)
+BOOLEAN validate_int(cmdline_value_t value)
 {
   if(value.uint64>=2)
     return TRUE;

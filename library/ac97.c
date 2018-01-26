@@ -26,7 +26,7 @@
  * \param value the value to validate
  * \return whether the valid is a valid volume
  */
-BOOLEAN validate_volume(double_uint64_t value)
+BOOLEAN validate_volume(cmdline_value_t value)
 {
   if(value.dbl>=0.0 && value.dbl<=1.0)
     return TRUE;
@@ -40,7 +40,7 @@ BOOLEAN validate_volume(double_uint64_t value)
  * \param value the value to validate
  * \return whether the valid is a valid sample rate
  */
-BOOLEAN validate_sample_rate(double_uint64_t value)
+BOOLEAN validate_sample_rate(cmdline_value_t value)
 {
   UINTN allowed[]={8000,11025,16000,22050,32000,44100,48000};
   UINTN tc;
