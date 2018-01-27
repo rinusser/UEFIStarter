@@ -77,10 +77,10 @@ $(function() {
 <div class="textblock"><code>#include &lt;Library/UefiLib.h&gt;</code><br />
 <code>#include &lt;Library/BaseMemoryLib.h&gt;</code><br />
 <code>#include &lt;Library/MemoryAllocationLib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="cmdline_8h_source.html">../include/cmdline.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="memory_8h_source.html">../include/memory.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="logger_8h_source.html">../include/logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="string_8h_source.html">../include/string.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="cmdline_8h_source.html">UEFIStarter/cmdline.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="memory_8h_source.html">UEFIStarter/memory.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">UEFIStarter/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="string_8h_source.html">UEFIStarter/string.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -198,7 +198,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>whether the string looks like a number</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>the wctype* functions should be replaced by a built-in, or moved to a separate lib </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>the wctype* functions should be replaced by a built-in, or moved to a separate lib </dd></dl>
 
 </div>
 </div>
@@ -281,7 +281,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed number; -1.0 on error</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
 
 </div>
 </div>
@@ -420,8 +420,8 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>could mind required parameters (currently numbers for double/int args) for pad length, then remove typetext padding in Print() below </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>combine pad length for different groups that were combined, e.g. builtin and custom audio options </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>could mind required parameters (currently numbers for double/int args) for pad length, then remove typetext padding in Print() below </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>combine pad length for different groups that were combined, e.g. builtin and custom audio options </dd></dl>
 
 </div>
 </div>
@@ -725,7 +725,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 10:31:50 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

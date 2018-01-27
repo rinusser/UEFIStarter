@@ -1,10 +1,10 @@
 var searchData=
 [
   ['test_5fatoui64',['test_atoui64',['../tests_2suites_2lib_2string_8c.html#a1cc989d3dceb351426b33f603b1cb7ab',1,'string.c']]],
-  ['test_5fboolean',['test_boolean',['../suites_2selftest_2asserts_8c.html#a702e6d23afb8a156186be544841c7955',1,'asserts.c']]],
+  ['test_5fboolean',['test_boolean',['../tests_2suites_2selftest_2asserts_8c.html#a702e6d23afb8a156186be544841c7955',1,'asserts.c']]],
   ['test_5fbounding_5fbox',['test_bounding_box',['../tests_2suites_2selftest_2graphics_8c.html#a103221517fe21c3f424f419831994edb',1,'graphics.c']]],
-  ['test_5fcompounds',['test_compounds',['../suites_2selftest_2asserts_8c.html#a47be4f0f721a8912ca0f3556b35ff43f',1,'asserts.c']]],
-  ['test_5fdouble',['test_double',['../suites_2selftest_2asserts_8c.html#a426d36b7fd8d66fd02d8427bcff38853',1,'asserts.c']]],
+  ['test_5fcompounds',['test_compounds',['../tests_2suites_2selftest_2asserts_8c.html#a47be4f0f721a8912ca0f3556b35ff43f',1,'asserts.c']]],
+  ['test_5fdouble',['test_double',['../tests_2suites_2selftest_2asserts_8c.html#a426d36b7fd8d66fd02d8427bcff38853',1,'asserts.c']]],
   ['test_5fdraw_5ftext',['test_draw_text',['../tests_2suites_2lib_2graphics_8c.html#a1d94cd1b580e81e56dca8c7594ae0ca1',1,'graphics.c']]],
   ['test_5fex_5finput',['test_ex_input',['../input_8c.html#ae4e72bb3427cd6befd7ba2e9484e021a',1,'input.c']]],
   ['test_5fex_5fnotify',['test_ex_notify',['../input_8c.html#a61b268e16837d3fc9950808bf21c00be',1,'input.c']]],
@@ -13,9 +13,9 @@ var searchData=
   ['test_5fftowcs',['test_ftowcs',['../tests_2suites_2lib_2string_8c.html#a994f8d1e001f5d50c4d89539d710d75d',1,'string.c']]],
   ['test_5fftowcs_5fboundaries',['test_ftowcs_boundaries',['../tests_2suites_2lib_2string_8c.html#a5daf14c772977bf830309e80911c540e',1,'string.c']]],
   ['test_5fget_5ffile_5fcontents',['test_get_file_contents',['../tests_2suites_2lib_2files_8c.html#a54e8355e5435a53f5c9dd57e3afafd26',1,'files.c']]],
-  ['test_5fgraphics',['test_graphics',['../suites_2selftest_2asserts_8c.html#a89bcf76ed80de320ba177bb1851ac640',1,'asserts.c']]],
+  ['test_5fgraphics',['test_graphics',['../tests_2suites_2selftest_2asserts_8c.html#a89bcf76ed80de320ba177bb1851ac640',1,'asserts.c']]],
   ['test_5fidt',['test_idt',['../cpuid_8c.html#a2ee44547dee1dc73298373090d3ec4a3',1,'cpuid.c']]],
-  ['test_5finteger',['test_integer',['../suites_2selftest_2asserts_8c.html#aaa19c0f901676614375c20da1bbe4d69',1,'asserts.c']]],
+  ['test_5finteger',['test_integer',['../tests_2suites_2selftest_2asserts_8c.html#aaa19c0f901676614375c20da1bbe4d69',1,'asserts.c']]],
   ['test_5finterpolate_5f2px',['test_interpolate_2px',['../tests_2suites_2lib_2graphics_8c.html#a8c5766bd777ba7c573e08fbdd8f917f3',1,'graphics.c']]],
   ['test_5finterpolate_5f4px',['test_interpolate_4px',['../tests_2suites_2lib_2graphics_8c.html#ab6c750fa9fdbf23532b19a11c113ded8',1,'graphics.c']]],
   ['test_5flogger',['test_logger',['../tests_2suites_2lib_2logger_8c.html#acea13f6c9d2f9540cdec9d177f6fd025',1,'logger.c']]],
@@ -43,5 +43,5 @@ var searchData=
   ['test_5fwctype_5ffloat',['test_wctype_float',['../tests_2suites_2lib_2string_8c.html#a31a59a646f51ab27144dfa3a9ea2538f',1,'string.c']]],
   ['test_5fwctype_5fint',['test_wctype_int',['../tests_2suites_2lib_2string_8c.html#a134cf4044ad67f5785d3c7b6e6e229ac',1,'string.c']]],
   ['timestamp_5fdiff_5fseconds',['timestamp_diff_seconds',['../timestamp_8h.html#a17015b82d7011fd14cf69d4b168506f8',1,'timestamp_diff_seconds(UINT64 start, UINT64 end):&#160;timestamp.c'],['../timestamp_8c.html#a17015b82d7011fd14cf69d4b168506f8',1,'timestamp_diff_seconds(UINT64 start, UINT64 end):&#160;timestamp.c']]],
-  ['track_5fpool_5fmemory',['track_pool_memory',['../memory_8h.html#a2d54518679f8257223791a8a767531de',1,'track_pool_memory(void *address):&#160;memory.c'],['../library_2memory_8c.html#a2d54518679f8257223791a8a767531de',1,'track_pool_memory(void *address):&#160;memory.c']]]
+  ['track_5fpool_5fmemory',['track_pool_memory',['../memory_8h.html#a2d54518679f8257223791a8a767531de',1,'track_pool_memory(void *address):&#160;memory.c'],['../library_2core_2memory_8c.html#a2d54518679f8257223791a8a767531de',1,'track_pool_memory(void *address):&#160;memory.c']]]
 ];

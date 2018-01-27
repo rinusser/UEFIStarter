@@ -76,11 +76,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
 <code>#include &lt;Library/ShellCEntryLib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="logger_8h_source.html">../include/logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="cmdline_8h_source.html">../include/cmdline.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="string_8h_source.html">../include/string.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="console_8h_source.html">../include/console.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="files_8h_source.html">../include/files.h</a>&quot;</code><br />
+<code>#include &lt;UEFIStarter/core.h&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -113,8 +109,7 @@ Variables</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Richard Nusser </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>2017-2018 Richard Nusser </dd></dl>
 <dl class="section user"><dt>License</dt><dd>GPLv3 (see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>) </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a></dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>pkg/mod config must be incomplete, why do we need relative paths for includes?! </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://github.com/rinusser/UEFIStarter">https://github.com/rinusser/UEFIStarter</a> </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a109632042008b72e6ac01918dc6e0077"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a109632042008b72e6ac01918dc6e0077">&#9670;&nbsp;</a></span>validate_int()</h2>
@@ -212,7 +207,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {{uint64:2},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,<a class="code" href="helloworld_8c.html#a109632042008b72e6ac01918dc6e0077">validate_int</a>,L<span class="stringliteral">&quot;-int&quot;</span>,L<span class="stringliteral">&quot;integer parameter&quot;</span>},</div><div class="line">}</div><div class="ttc" id="helloworld_8c_html_a109632042008b72e6ac01918dc6e0077"><div class="ttname"><a href="helloworld_8c.html#a109632042008b72e6ac01918dc6e0077">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(cmdline_value_t value)</div><div class="ttdoc">Validator function for &quot;-int&quot; parameter. </div><div class="ttdef"><b>Definition:</b> helloworld.c:30</div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div><div class="line">  {{uint64:2},<a class="code" href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a>,<a class="code" href="helloworld_8c.html#a109632042008b72e6ac01918dc6e0077">validate_int</a>,L<span class="stringliteral">&quot;-int&quot;</span>,L<span class="stringliteral">&quot;integer parameter&quot;</span>},</div><div class="line">}</div><div class="ttc" id="helloworld_8c_html_a109632042008b72e6ac01918dc6e0077"><div class="ttname"><a href="helloworld_8c.html#a109632042008b72e6ac01918dc6e0077">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(cmdline_value_t value)</div><div class="ttdoc">Validator function for &quot;-int&quot; parameter. </div><div class="ttdef"><b>Definition:</b> helloworld.c:24</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a></div><div class="ttdoc">integer </div><div class="ttdef"><b>Definition:</b> cmdline.h:23</div></div>
 </div><!-- fragment -->
 <p>command-line arguments in group 2 </p>
@@ -222,7 +217,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:25 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 12:04:05 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

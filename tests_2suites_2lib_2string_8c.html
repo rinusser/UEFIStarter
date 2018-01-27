@@ -77,11 +77,8 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="string_8h_source.html">../../../include/string.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="logger_8h_source.html">../../../include/logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="memory_8h_source.html">../../../include/memory.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="cmdline_8h_source.html">../../../include/cmdline.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="tests_8h_source.html">../../framework/tests.h</a>&quot;</code><br />
+<code>#include &lt;UEFIStarter/core.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="tests_8h_source.html">UEFIStarter/tests/tests.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -123,25 +120,25 @@ Functions</h2></td></tr>
 <tr class="memdesc:a31a59a646f51ab27144dfa3a9ea2538f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="cmdline_8h.html#a264a66841e805f4872f04b7dcd2b9001" title="Checks whether a string looks like a number. ">wctype_float()</a> works.  <a href="#a31a59a646f51ab27144dfa3a9ea2538f">More...</a><br /></td></tr>
 <tr class="separator:a31a59a646f51ab27144dfa3a9ea2538f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a994f8d1e001f5d50c4d89539d710d75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a994f8d1e001f5d50c4d89539d710d75d">test_ftowcs</a> ()</td></tr>
-<tr class="memdesc:a994f8d1e001f5d50c4d89539d710d75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> works.  <a href="#a994f8d1e001f5d50c4d89539d710d75d">More...</a><br /></td></tr>
+<tr class="memdesc:a994f8d1e001f5d50c4d89539d710d75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2core_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> works.  <a href="#a994f8d1e001f5d50c4d89539d710d75d">More...</a><br /></td></tr>
 <tr class="separator:a994f8d1e001f5d50c4d89539d710d75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5daf14c772977bf830309e80911c540e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a5daf14c772977bf830309e80911c540e">test_ftowcs_boundaries</a> ()</td></tr>
-<tr class="memdesc:a5daf14c772977bf830309e80911c540e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> errors out if input exceeds value boundaries.  <a href="#a5daf14c772977bf830309e80911c540e">More...</a><br /></td></tr>
+<tr class="memdesc:a5daf14c772977bf830309e80911c540e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2core_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> errors out if input exceeds value boundaries.  <a href="#a5daf14c772977bf830309e80911c540e">More...</a><br /></td></tr>
 <tr class="separator:a5daf14c772977bf830309e80911c540e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34fc4ccd5d54228c0dce0cc8769d6aac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a34fc4ccd5d54228c0dce0cc8769d6aac">test_wcstof</a> ()</td></tr>
 <tr class="memdesc:a34fc4ccd5d54228c0dce0cc8769d6aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure wcstof() works.  <a href="#a34fc4ccd5d54228c0dce0cc8769d6aac">More...</a><br /></td></tr>
 <tr class="separator:a34fc4ccd5d54228c0dce0cc8769d6aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc989d3dceb351426b33f603b1cb7ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a1cc989d3dceb351426b33f603b1cb7ab">test_atoui64</a> ()</td></tr>
-<tr class="memdesc:a1cc989d3dceb351426b33f603b1cb7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> works.  <a href="#a1cc989d3dceb351426b33f603b1cb7ab">More...</a><br /></td></tr>
+<tr class="memdesc:a1cc989d3dceb351426b33f603b1cb7ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2core_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> works.  <a href="#a1cc989d3dceb351426b33f603b1cb7ab">More...</a><br /></td></tr>
 <tr class="separator:a1cc989d3dceb351426b33f603b1cb7ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d951c8dc524b41b1721290a4e32042"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#ab6d951c8dc524b41b1721290a4e32042">test_sprint_status</a> ()</td></tr>
-<tr class="memdesc:ab6d951c8dc524b41b1721290a4e32042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> works.  <a href="#ab6d951c8dc524b41b1721290a4e32042">More...</a><br /></td></tr>
+<tr class="memdesc:ab6d951c8dc524b41b1721290a4e32042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2core_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> works.  <a href="#ab6d951c8dc524b41b1721290a4e32042">More...</a><br /></td></tr>
 <tr class="separator:ab6d951c8dc524b41b1721290a4e32042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83bee20755aa4a144b5196503c21f18b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a83bee20755aa4a144b5196503c21f18b">test_memsprintf</a> ()</td></tr>
-<tr class="memdesc:a83bee20755aa4a144b5196503c21f18b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> tracks the pool memory it reserves.  <a href="#a83bee20755aa4a144b5196503c21f18b">More...</a><br /></td></tr>
+<tr class="memdesc:a83bee20755aa4a144b5196503c21f18b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2core_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> tracks the pool memory it reserves.  <a href="#a83bee20755aa4a144b5196503c21f18b">More...</a><br /></td></tr>
 <tr class="separator:a83bee20755aa4a144b5196503c21f18b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14f6361a68f2f85b04c26c53f81bff8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a14f6361a68f2f85b04c26c53f81bff8b">test_split_string</a> ()</td></tr>
-<tr class="memdesc:a14f6361a68f2f85b04c26c53f81bff8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> works.  <a href="#a14f6361a68f2f85b04c26c53f81bff8b">More...</a><br /></td></tr>
+<tr class="memdesc:a14f6361a68f2f85b04c26c53f81bff8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes sure <a class="el" href="library_2core_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> works.  <a href="#a14f6361a68f2f85b04c26c53f81bff8b">More...</a><br /></td></tr>
 <tr class="separator:a14f6361a68f2f85b04c26c53f81bff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a287326013d264549fc0aff9dc3b0bae1"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2string_8c.html#a287326013d264549fc0aff9dc3b0bae1">run_string_tests</a> ()</td></tr>
 <tr class="memdesc:a287326013d264549fc0aff9dc3b0bae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test runner for this group.  <a href="#a287326013d264549fc0aff9dc3b0bae1">More...</a><br /></td></tr>
@@ -322,9 +319,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000021">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> rounds positive and negative values to 2 decimals with "half away from zero" </p>
-<p class="enddd"><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> always zero-pads to 2 decimals </p>
+<p>Makes sure <a class="el" href="library_2core_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000021">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2core_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> rounds positive and negative values to 2 decimals with "half away from zero" </p>
+<p class="enddd"><a class="el" href="library_2core_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> always zero-pads to 2 decimals </p>
 </dd></dl>
 
 </div>
@@ -344,8 +341,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes sure <a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> errors out if input exceeds value boundaries. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000022">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> logs an error when trying to convert very low or very high numbers </dd></dl>
+<p>Makes sure <a class="el" href="library_2core_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> errors out if input exceeds value boundaries. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000022">Test:</a></b></dt><dd><a class="el" href="library_2core_2string_8c.html#afeec9a564e01cc8ee7baf6079b4c93de" title="Converts a double value into a UTF-16 string with 3 decimals. ">ftowcs()</a> logs an error when trying to convert very low or very high numbers </dd></dl>
 
 </div>
 </div>
@@ -384,8 +381,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes sure <a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000024">Test:</a></b></dt><dd><a class="el" href="library_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> parses integer strings from 0 to 2^64-1 </dd></dl>
+<p>Makes sure <a class="el" href="library_2core_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000024">Test:</a></b></dt><dd><a class="el" href="library_2core_2string_8c.html#a334eeda5794fa2b34dfb3d56db38d100" title="Converts an ASCII integer string to UINT64. ">atoui64()</a> parses integer strings from 0 to 2^64-1 </dd></dl>
 
 </div>
 </div>
@@ -404,10 +401,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes sure <a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000025">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the given function's name in the result </p>
-<p><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the raw EFI_STATUS code in the result </p>
-<p class="enddd"><a class="el" href="library_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> converts EFI_STATUS codes to readable messages in the result </p>
+<p>Makes sure <a class="el" href="library_2core_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000025">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2core_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the given function's name in the result </p>
+<p><a class="el" href="library_2core_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> includes the raw EFI_STATUS code in the result </p>
+<p class="enddd"><a class="el" href="library_2core_2string_8c.html#a62bd13f93f532e3217763fee1f114468" title="Helper function to format an EFI function call result into a human-readable string. ">sprint_status()</a> converts EFI_STATUS codes to readable messages in the result </p>
 </dd></dl>
 
 </div>
@@ -427,8 +424,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes sure <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> tracks the pool memory it reserves. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000026">Test:</a></b></dt><dd>each call to <a class="el" href="library_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> should add exactly 1 tracked pool memory entry, regardless of how many arguments were passed. </dd></dl>
+<p>Makes sure <a class="el" href="library_2core_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> tracks the pool memory it reserves. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000026">Test:</a></b></dt><dd>each call to <a class="el" href="library_2core_2string_8c.html#adcf21f4d14ad55087948b17ad51f9f5c" title="sprintf() replacement that tracks allocated pool memory for automatic cleanup. ">memsprintf()</a> should add exactly 1 tracked pool memory entry, regardless of how many arguments were passed. </dd></dl>
 
 </div>
 </div>
@@ -447,11 +444,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Makes sure <a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> works. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000027">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 0 entries and writes NULL when requested to split a NULL string </p>
-<p><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> splits a string by the given delimiter into the correct parts </p>
-<p><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> includes empty string parts between delimiters </p>
-<p class="enddd"><a class="el" href="library_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 1 entry and outputs the input string as array when requested to split an empty string </p>
+<p>Makes sure <a class="el" href="library_2core_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> works. </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000027">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2core_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 0 entries and writes NULL when requested to split a NULL string </p>
+<p><a class="el" href="library_2core_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> splits a string by the given delimiter into the correct parts </p>
+<p><a class="el" href="library_2core_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> includes empty string parts between delimiters </p>
+<p class="enddd"><a class="el" href="library_2core_2string_8c.html#a03bf695eaee9e70718f7ba53047b9b78" title="Splits a string by a separator character into an array of strings. ">split_string()</a> returns 1 entry and outputs the input string as array when requested to split an empty string </p>
 </dd></dl>
 
 </div>
@@ -593,7 +590,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 12:04:05 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

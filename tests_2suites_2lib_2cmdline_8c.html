@@ -77,9 +77,8 @@ $(function() {
 <div class="textblock"><code>#include &lt;Uefi.h&gt;</code><br />
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
 <code>#include &lt;Library/MemoryAllocationLib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="logger_8h_source.html">../../../include/logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="string_8h_source.html">../../../include/string.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="tests_8h_source.html">../../framework/tests.h</a>&quot;</code><br />
+<code>#include &lt;UEFIStarter/core.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="tests_8h_source.html">UEFIStarter/tests/tests.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -199,7 +198,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Runs an individual testcase. </p>
-<p>This currently doesn't really support multiple argument groups, the vararg setup is just there to convert the argument group to VA_LIST for <a class="el" href="library_2cmdline_8c.html#a5743181e0a9fe670f03a0b7a2ca92502" title="Parses command-line parameters. ">parse_parameters()</a>.</p>
+<p>This currently doesn't really support multiple argument groups, the vararg setup is just there to convert the argument group to VA_LIST for <a class="el" href="library_2core_2cmdline_8c.html#a5743181e0a9fe670f03a0b7a2ca92502" title="Parses command-line parameters. ">parse_parameters()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">testcase</td><td>the testcase to run </td></tr>
@@ -253,8 +252,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Makes sure the double and uint64 range validators work. </p>
-<dl class="test"><dt><b><a class="el" href="test.html#_test000004">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4" title="Checks whether a double command line parameter is within boundaries. ">validate_double_range()</a> and validate_uint64_range allow values only if they're in the closed interval between minimum and maximum </p>
-<p class="enddd"><a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4" title="Checks whether a double command line parameter is within boundaries. ">validate_double_range()</a> and validate_uint64_range still work if minimum=maximum </p>
+<dl class="test"><dt><b><a class="el" href="test.html#_test000004">Test:</a></b></dt><dd><p class="startdd"><a class="el" href="library_2core_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4" title="Checks whether a double command line parameter is within boundaries. ">validate_double_range()</a> and validate_uint64_range allow values only if they're in the closed interval between minimum and maximum </p>
+<p class="enddd"><a class="el" href="library_2core_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4" title="Checks whether a double command line parameter is within boundaries. ">validate_double_range()</a> and validate_uint64_range still work if minimum=maximum </p>
 </dd></dl>
 
 </div>
@@ -296,7 +295,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a58393752406d163205fa18f450909993">ARG_INT</a></div><div class="ttdoc">integer </div><div class="ttdef"><b>Definition:</b> cmdline.h:23</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058a1e0904ee5e3baf2aa4070ab0718a3afa">ARG_STRING</a></div><div class="ttdoc">UTF-16 string. </div><div class="ttdef"><b>Definition:</b> cmdline.h:25</div></div>
 <div class="ttc" id="cmdline_8h_html_a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15"><div class="ttname"><a href="cmdline_8h.html#a3ba763fb77eb06a8628d013e1aff8058ac6595ea97a5746cf60e1b3a102bb5f15">ARG_DOUBLE</a></div><div class="ttdoc">double </div><div class="ttdef"><b>Definition:</b> cmdline.h:24</div></div>
-<div class="ttc" id="tests_2suites_2lib_2cmdline_8c_html_ae43b08a182112524aadc330a8cabd1a9"><div class="ttname"><a href="tests_2suites_2lib_2cmdline_8c.html#ae43b08a182112524aadc330a8cabd1a9">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(cmdline_value_t val)</div><div class="ttdoc">A validator function for integers, used in tests. </div><div class="ttdef"><b>Definition:</b> cmdline.c:25</div></div>
+<div class="ttc" id="tests_2suites_2lib_2cmdline_8c_html_ae43b08a182112524aadc330a8cabd1a9"><div class="ttname"><a href="tests_2suites_2lib_2cmdline_8c.html#ae43b08a182112524aadc330a8cabd1a9">validate_int</a></div><div class="ttdeci">BOOLEAN validate_int(cmdline_value_t val)</div><div class="ttdoc">A validator function for integers, used in tests. </div><div class="ttdef"><b>Definition:</b> cmdline.c:24</div></div>
 </div><!-- fragment -->
 <p>A list of arguments, used in tests. </p>
 
@@ -314,7 +313,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">{</div><div class="line">  NULL,</div><div class="line">  <span class="keyword">sizeof</span>(<a class="code" href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a>)/<span class="keyword">sizeof</span>(<a class="code" href="structcmdline__argument__t.html">cmdline_argument_t</a>),</div><div class="line">  <a class="code" href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a></div><div class="line">}</div><div class="ttc" id="structcmdline__argument__t_html"><div class="ttname"><a href="structcmdline__argument__t.html">cmdline_argument_t</a></div><div class="ttdoc">model for one command line argument </div><div class="ttdef"><b>Definition:</b> cmdline.h:41</div></div>
-<div class="ttc" id="tests_2suites_2lib_2cmdline_8c_html_a5892a73d0d541efccd717ceb03a207d4"><div class="ttname"><a href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a></div><div class="ttdeci">cmdline_argument_t cmdline_args_list[]</div><div class="ttdoc">A list of arguments, used in tests. </div><div class="ttdef"><b>Definition:</b> cmdline.c:33</div></div>
+<div class="ttc" id="tests_2suites_2lib_2cmdline_8c_html_a5892a73d0d541efccd717ceb03a207d4"><div class="ttname"><a href="tests_2suites_2lib_2cmdline_8c.html#a5892a73d0d541efccd717ceb03a207d4">cmdline_args_list</a></div><div class="ttdeci">cmdline_argument_t cmdline_args_list[]</div><div class="ttdoc">A list of arguments, used in tests. </div><div class="ttdef"><b>Definition:</b> cmdline.c:32</div></div>
 </div><!-- fragment -->
 <p>An argument group, used in tests. </p>
 
@@ -371,7 +370,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 12:04:05 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -134,7 +134,7 @@ $(function() {
 <li>edit Conf/target.txt (relative from your edk2 sources root) and change ACTIVE_PLATFORM to your new .dsc file</li>
 <li>edit Makefile.edk and change the project name and paths</li>
 <li>replace the Makefile link in your edk2 sources root with a new link to your project's</li>
-<li>(if you want to use the test framework you'll currently need to copy it or change the reference paths in .c, .h and suite's .inf file; either way, you currently also need to change the paths in tools/*.sh)</li>
+<li>if you want to use the test framework you'll currently need to copy the tools/ scripts (and change the paths in them)</li>
 </ul>
 <p>These steps will be simplified and automated later. If you're unfamiliar with EDK2 it's easier to just make changes to your local copy of UEFIStarter for now, e.g. in a new git branch.</p>
 <p>There's already a separate project (a game, actually) using this framework but it hasn't been published yet. Once that's done its code will demonstrate how to include UEFIStarter in other edk2 packages.</p>
@@ -167,7 +167,7 @@ Skipped groups:   0
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 12:04:05 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

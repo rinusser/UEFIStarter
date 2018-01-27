@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UEFIStarter: include/cmdline.h File Reference</title>
+<title>UEFIStarter: include/UEFIStarter/core/cmdline.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,7 +59,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_156cdec00affffc5d989f3046081ba69.html">UEFIStarter</a></li><li class="navelem"><a class="el" href="dir_1df31aa6bf822e925d5ff373881b3362.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,10 +101,10 @@ Macros</h2></td></tr>
 <tr class="memitem:a11c931f63d2e508858e26c38953ca93f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a11c931f63d2e508858e26c38953ca93f">ARG_GROUP</a>(VARIABLE,  LIST,  DESCRIPTION)&#160;&#160;&#160;<a class="el" href="structcmdline__argument__group__t.html">cmdline_argument_group_t</a> VARIABLE={DESCRIPTION,sizeof(LIST)/sizeof(<a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>),LIST};</td></tr>
 <tr class="memdesc:a11c931f63d2e508858e26c38953ca93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro for quickly defining an argument group  <a href="#a11c931f63d2e508858e26c38953ca93f">More...</a><br /></td></tr>
 <tr class="separator:a11c931f63d2e508858e26c38953ca93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d3f0f236e4eb5879b3bf42fef481651"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a2d3f0f236e4eb5879b3bf42fef481651">DOUBLE_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a>(v,FIELD,MIN,MAX); }</td></tr>
+<tr class="memitem:a2d3f0f236e4eb5879b3bf42fef481651"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a2d3f0f236e4eb5879b3bf42fef481651">DOUBLE_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2core_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a>(v,FIELD,MIN,MAX); }</td></tr>
 <tr class="memdesc:a2d3f0f236e4eb5879b3bf42fef481651"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro for quickly defining a validator for "double" type arguments  <a href="#a2d3f0f236e4eb5879b3bf42fef481651">More...</a><br /></td></tr>
 <tr class="separator:a2d3f0f236e4eb5879b3bf42fef481651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5842bce61f2b94b34f1d8064c878a6d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a5842bce61f2b94b34f1d8064c878a6d7">INT_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td></tr>
+<tr class="memitem:a5842bce61f2b94b34f1d8064c878a6d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdline_8h.html#a5842bce61f2b94b34f1d8064c878a6d7">INT_RANGE_VALIDATOR</a>(FUNC,  FIELD,  MIN,  MAX)&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2core_2cmdline_8c.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td></tr>
 <tr class="memdesc:a5842bce61f2b94b34f1d8064c878a6d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">shortcut macro for quickly defining a validator for "integer" type arguments  <a href="#a5842bce61f2b94b34f1d8064c878a6d7">More...</a><br /></td></tr>
 <tr class="separator:a5842bce61f2b94b34f1d8064c878a6d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -240,7 +240,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdl
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a>(v,FIELD,MIN,MAX); }</td>
+          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2core_2cmdline_8c.html#af0bd118cd01723606b2fc73ffa0398f4">validate_double_range</a>(v,FIELD,MIN,MAX); }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -291,7 +291,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdl
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2cmdline_8c.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td>
+          <td></td><td>&#160;&#160;&#160;static BOOLEAN FUNC(<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v) { return <a class="el" href="library_2core_2cmdline_8c.html#a8952be352d3f02f2bd1329b944671918">validate_uint64_range</a>(v,FIELD,MIN,MAX); }</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -416,7 +416,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdl
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the parsed number; -1.0 on error</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>replace <a class="el" href="library_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>replace <a class="el" href="library_2core_2cmdline_8c.html#a556233560a87ebefba6d1ea766df485e" title="Converts a numeric string into a double value. ">_wcstof()</a> with built-in, or move to separate file </dd></dl>
 
 </div>
 </div>
@@ -655,7 +655,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmdl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:25 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 12:04:05 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

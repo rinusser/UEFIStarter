@@ -79,12 +79,12 @@ $(function() {
 <code>#include &lt;Library/UefiLib.h&gt;</code><br />
 <code>#include &lt;Library/UefiBootServicesTableLib.h&gt;</code><br />
 <code>#include &lt;Library/BaseMemoryLib.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="include_2graphics_8h_source.html">../include/graphics.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="memory_8h_source.html">../include/memory.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="logger_8h_source.html">../include/logger.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="cmdline_8h_source.html">../include/cmdline.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="timestamp_8h_source.html">../include/timestamp.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="string_8h_source.html">../include/string.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="graphics_8h_source.html">UEFIStarter/graphics.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="memory_8h_source.html">UEFIStarter/core/memory.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="logger_8h_source.html">UEFIStarter/core/logger.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="cmdline_8h_source.html">UEFIStarter/core/cmdline.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="timestamp_8h_source.html">UEFIStarter/core/timestamp.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="string_8h_source.html">UEFIStarter/core/string.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -101,10 +101,10 @@ typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1f71d9735f9657f94dcf0f505a96f89d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a1f71d9735f9657f94dcf0f505a96f89d">set_graphics_sin_func</a> (<a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *f)</td></tr>
+<tr class="memitem:a1f71d9735f9657f94dcf0f505a96f89d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a1f71d9735f9657f94dcf0f505a96f89d">set_graphics_sin_func</a> (<a class="el" href="graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *f)</td></tr>
 <tr class="memdesc:a1f71d9735f9657f94dcf0f505a96f89d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the sin() function pointer to use in graphics operations.  <a href="#a1f71d9735f9657f94dcf0f505a96f89d">More...</a><br /></td></tr>
 <tr class="separator:a1f71d9735f9657f94dcf0f505a96f89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bb9bfe9b02b86b4a35dd50c7347a1b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a8bb9bfe9b02b86b4a35dd50c7347a1b2">set_graphics_cos_func</a> (<a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *f)</td></tr>
+<tr class="memitem:a8bb9bfe9b02b86b4a35dd50c7347a1b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a8bb9bfe9b02b86b4a35dd50c7347a1b2">set_graphics_cos_func</a> (<a class="el" href="graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *f)</td></tr>
 <tr class="memdesc:a8bb9bfe9b02b86b4a35dd50c7347a1b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the cos() function pointer to use in graphics operations.  <a href="#a8bb9bfe9b02b86b4a35dd50c7347a1b2">More...</a><br /></td></tr>
 <tr class="separator:a8bb9bfe9b02b86b4a35dd50c7347a1b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab00fb80af41d372a8ec9751b346e9231"><td class="memItemLeft" align="right" valign="top">static BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ab00fb80af41d372a8ec9751b346e9231">_validate_vsync</a> (<a class="el" href="unioncmdline__value__t.html">cmdline_value_t</a> v)</td></tr>
@@ -140,13 +140,13 @@ Functions</h2></td></tr>
 <tr class="memitem:ac9d9d408fc202c6ae72cf7ed8ee29382"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structimage__t.html">image_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ac9d9d408fc202c6ae72cf7ed8ee29382">parse_pbm_image_data</a> (<a class="el" href="structfile__contents__t.html">file_contents_t</a> *contents)</td></tr>
 <tr class="memdesc:ac9d9d408fc202c6ae72cf7ed8ee29382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a PBM (black/white bitmap) image.  <a href="#ac9d9d408fc202c6ae72cf7ed8ee29382">More...</a><br /></td></tr>
 <tr class="separator:ac9d9d408fc202c6ae72cf7ed8ee29382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f05b508c0ba74e27ae90634c3b27ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a3f05b508c0ba74e27ae90634c3b27ea7">interpolate_4px</a> (<a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *corners, UINTN row_width, float x, float y)</td></tr>
+<tr class="memitem:a3f05b508c0ba74e27ae90634c3b27ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a3f05b508c0ba74e27ae90634c3b27ea7">interpolate_4px</a> (<a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *corners, UINTN row_width, float x, float y)</td></tr>
 <tr class="memdesc:a3f05b508c0ba74e27ae90634c3b27ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs bilinear interpolation of a pixel value within a square of 4 surrounding pixels.  <a href="#a3f05b508c0ba74e27ae90634c3b27ea7">More...</a><br /></td></tr>
 <tr class="separator:a3f05b508c0ba74e27ae90634c3b27ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8304e9d109cdff80b09b61459ce710b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#af8304e9d109cdff80b09b61459ce710b">interpolate_2px</a> (<a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *colors, float ratio)</td></tr>
+<tr class="memitem:af8304e9d109cdff80b09b61459ce710b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#af8304e9d109cdff80b09b61459ce710b">interpolate_2px</a> (<a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *colors, float ratio)</td></tr>
 <tr class="memdesc:af8304e9d109cdff80b09b61459ce710b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs linear interpolation of a pixel value between 2 pixels.  <a href="#af8304e9d109cdff80b09b61459ce710b">More...</a><br /></td></tr>
 <tr class="separator:af8304e9d109cdff80b09b61459ce710b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d140cc79fd62646dae7515787ebdc54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a9d140cc79fd62646dae7515787ebdc54">rotate_image</a> (<a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> original, <a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> rotated, INTN radius, float theta)</td></tr>
+<tr class="memitem:a9d140cc79fd62646dae7515787ebdc54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a9d140cc79fd62646dae7515787ebdc54">rotate_image</a> (<a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> original, <a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> rotated, INTN radius, float theta)</td></tr>
 <tr class="memdesc:a9d140cc79fd62646dae7515787ebdc54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates an image by an arbitrary angle.  <a href="#a9d140cc79fd62646dae7515787ebdc54">More...</a><br /></td></tr>
 <tr class="separator:a9d140cc79fd62646dae7515787ebdc54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa2efa91c7d15f7c2d823718deb03b7a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structimage__t.html">image_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#aaa2efa91c7d15f7c2d823718deb03b7a">_load_netpbm_file</a> (CHAR16 *filename, <a class="el" href="structimage__t.html">image_t</a> *parse_f(<a class="el" href="structfile__contents__t.html">file_contents_t</a> *))</td></tr>
@@ -176,7 +176,7 @@ Functions</h2></td></tr>
 <tr class="memitem:acc5392d1bd8cdd6d7886c109cdf30947"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#acc5392d1bd8cdd6d7886c109cdf30947">print_graphics_modes</a> (EFI_GRAPHICS_OUTPUT_PROTOCOL *gop)</td></tr>
 <tr class="memdesc:acc5392d1bd8cdd6d7886c109cdf30947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the list of available graphics modes.  <a href="#acc5392d1bd8cdd6d7886c109cdf30947">More...</a><br /></td></tr>
 <tr class="separator:acc5392d1bd8cdd6d7886c109cdf30947"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae7d408365fcd2adc91e6668b36d1dcb"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#aae7d408365fcd2adc91e6668b36d1dcb">draw_filled_rect</a> (EFI_GRAPHICS_OUTPUT_PROTOCOL *gop, UINTN x, UINTN y, UINTN width, UINTN height, <a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *color)</td></tr>
+<tr class="memitem:aae7d408365fcd2adc91e6668b36d1dcb"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#aae7d408365fcd2adc91e6668b36d1dcb">draw_filled_rect</a> (EFI_GRAPHICS_OUTPUT_PROTOCOL *gop, UINTN x, UINTN y, UINTN width, UINTN height, <a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *color)</td></tr>
 <tr class="memdesc:aae7d408365fcd2adc91e6668b36d1dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws an unbuffered rectangle to the screen.  <a href="#aae7d408365fcd2adc91e6668b36d1dcb">More...</a><br /></td></tr>
 <tr class="separator:aae7d408365fcd2adc91e6668b36d1dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28c45ed92f4fb143582a55047a7bd364"><td class="memItemLeft" align="right" valign="top">EFI_GRAPHICS_OUTPUT_PROTOCOL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a28c45ed92f4fb143582a55047a7bd364">get_graphics_protocol</a> ()</td></tr>
@@ -197,10 +197,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a5153d21f4545d93a136bef2b17ee5e95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structglyph__list__t.html">glyph_list_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a5153d21f4545d93a136bef2b17ee5e95">load_font</a> ()</td></tr>
 <tr class="memdesc:a5153d21f4545d93a136bef2b17ee5e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the font file.  <a href="#a5153d21f4545d93a136bef2b17ee5e95">More...</a><br /></td></tr>
 <tr class="separator:a5153d21f4545d93a136bef2b17ee5e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4dec836b67852a7088610be45297e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#aa4dec836b67852a7088610be45297e06">draw_glyph</a> (<a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> start, UINTN buffer_width, <a class="el" href="structglyph__t.html">glyph_t</a> *glyph, <a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> color)</td></tr>
+<tr class="memitem:aa4dec836b67852a7088610be45297e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#aa4dec836b67852a7088610be45297e06">draw_glyph</a> (<a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> start, UINTN buffer_width, <a class="el" href="structglyph__t.html">glyph_t</a> *glyph, <a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> color)</td></tr>
 <tr class="memdesc:aa4dec836b67852a7088610be45297e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a single glyph to a sprite or output buffer.  <a href="#aa4dec836b67852a7088610be45297e06">More...</a><br /></td></tr>
 <tr class="separator:aa4dec836b67852a7088610be45297e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7eb8e5a13b27dde694a4111ff3e45b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ad7eb8e5a13b27dde694a4111ff3e45b1">draw_text</a> (<a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> buffer, UINTN buffer_width, <a class="el" href="structglyph__list__t.html">glyph_list_t</a> *glyphs, UINT32 x, UINT32 y, <a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> color, CHAR16 *text)</td></tr>
+<tr class="memitem:ad7eb8e5a13b27dde694a4111ff3e45b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ad7eb8e5a13b27dde694a4111ff3e45b1">draw_text</a> (<a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a> buffer, UINTN buffer_width, <a class="el" href="structglyph__list__t.html">glyph_list_t</a> *glyphs, UINT32 x, UINT32 y, <a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> color, CHAR16 *text)</td></tr>
 <tr class="memdesc:ad7eb8e5a13b27dde694a4111ff3e45b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws text to a sprite or output buffer.  <a href="#ad7eb8e5a13b27dde694a4111ff3e45b1">More...</a><br /></td></tr>
 <tr class="separator:ad7eb8e5a13b27dde694a4111ff3e45b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e404af5dc59d1e250656dba6b58259"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ac5e404af5dc59d1e250656dba6b58259">free_glyphs</a> (<a class="el" href="structglyph__list__t.html">glyph_list_t</a> *glyphs)</td></tr>
@@ -212,13 +212,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a61c353b1e5c2b58460baf61e9633d8e3"><td class="memItemLeft" align="right" valign="top">BOOLEAN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a61c353b1e5c2b58460baf61e9633d8e3">limit_framerate</a> (UINT64 *previous, UINT64 minimum_frame_ticks)</td></tr>
 <tr class="memdesc:a61c353b1e5c2b58460baf61e9633d8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limits graphics animation framerates.  <a href="#a61c353b1e5c2b58460baf61e9633d8e3">More...</a><br /></td></tr>
 <tr class="separator:a61c353b1e5c2b58460baf61e9633d8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48c60d6a5470a2f9865a693a8add01d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a48c60d6a5470a2f9865a693a8add01d9">create_graphics_fs_buffer</a> ()</td></tr>
+<tr class="memitem:a48c60d6a5470a2f9865a693a8add01d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a48c60d6a5470a2f9865a693a8add01d9">create_graphics_fs_buffer</a> ()</td></tr>
 <tr class="memdesc:a48c60d6a5470a2f9865a693a8add01d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a full-screen graphics buffer.  <a href="#a48c60d6a5470a2f9865a693a8add01d9">More...</a><br /></td></tr>
 <tr class="separator:a48c60d6a5470a2f9865a693a8add01d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d50e322f290c76b57b619a1e1d5ed08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a8d50e322f290c76b57b619a1e1d5ed08">free_graphics_fs_buffer</a> (void *addr)</td></tr>
 <tr class="memdesc:a8d50e322f290c76b57b619a1e1d5ed08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees a full-screen graphics buffer.  <a href="#a8d50e322f290c76b57b619a1e1d5ed08">More...</a><br /></td></tr>
 <tr class="separator:a8d50e322f290c76b57b619a1e1d5ed08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca892367e5b1763ee59c012960d39235"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#aca892367e5b1763ee59c012960d39235">graphics_fs_blt</a> (<a class="el" href="include_2graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a> buffer)</td></tr>
+<tr class="memitem:aca892367e5b1763ee59c012960d39235"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#aca892367e5b1763ee59c012960d39235">graphics_fs_blt</a> (<a class="el" href="graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a> buffer)</td></tr>
 <tr class="memdesc:aca892367e5b1763ee59c012960d39235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs a full-screen graphics buffer to the graphics display.  <a href="#aca892367e5b1763ee59c012960d39235">More...</a><br /></td></tr>
 <tr class="separator:aca892367e5b1763ee59c012960d39235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d24f371c0911e0a50fefd9907769dba"><td class="memItemLeft" align="right" valign="top">EFI_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a3d24f371c0911e0a50fefd9907769dba">init_graphics</a> ()</td></tr>
@@ -259,11 +259,11 @@ UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib
 <tr class="memdesc:aa5e19ab140bd5d4c49e9a52bdf66f915"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of pixels in output buffer <br /></td></tr>
 <tr class="separator:aa5e19ab140bd5d4c49e9a52bdf66f915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7eb3d7379d0a3c54cdb7cdb498be447"><td class="memItemLeft" align="right" valign="top"><a id="ab7eb3d7379d0a3c54cdb7cdb498be447"></a>
-static <a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ab7eb3d7379d0a3c54cdb7cdb498be447">_sin</a> =NULL</td></tr>
+static <a class="el" href="graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ab7eb3d7379d0a3c54cdb7cdb498be447">_sin</a> =NULL</td></tr>
 <tr class="memdesc:ab7eb3d7379d0a3c54cdb7cdb498be447"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to sin() function <br /></td></tr>
 <tr class="separator:ab7eb3d7379d0a3c54cdb7cdb498be447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae809d399c42b81dc3b99c9497cf8b7af"><td class="memItemLeft" align="right" valign="top"><a id="ae809d399c42b81dc3b99c9497cf8b7af"></a>
-static <a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ae809d399c42b81dc3b99c9497cf8b7af">_cos</a> =NULL</td></tr>
+static <a class="el" href="graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#ae809d399c42b81dc3b99c9497cf8b7af">_cos</a> =NULL</td></tr>
 <tr class="memdesc:ae809d399c42b81dc3b99c9497cf8b7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to cos() function <br /></td></tr>
 <tr class="separator:ae809d399c42b81dc3b99c9497cf8b7af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f2633371391cde8945e3d709453cb6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcmdline__argument__t.html">cmdline_argument_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2graphics_8c.html#a8f2633371391cde8945e3d709453cb6c">graphics_argument_list</a> []</td></tr>
@@ -317,7 +317,7 @@ static <a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed2
         <tr>
           <td class="memname">void set_graphics_sin_func </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
@@ -343,7 +343,7 @@ static <a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed2
         <tr>
           <td class="memname">void set_graphics_cos_func </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#ada5eef47f72c3ff9afd3f56ed23ce3eb">trig_func</a> *&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
@@ -828,9 +828,9 @@ static <a class="el" href="include_2graphics_8h.html#ada5eef47f72c3ff9afd3f56ed2
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> interpolate_4px </td>
+          <td class="memname"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> interpolate_4px </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *&#160;</td>
           <td class="paramname"><em>corners</em>, </td>
         </tr>
         <tr>
@@ -891,9 +891,9 @@ y|
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> interpolate_2px </td>
+          <td class="memname"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> interpolate_2px </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *&#160;</td>
           <td class="paramname"><em>colors</em>, </td>
         </tr>
         <tr>
@@ -932,13 +932,13 @@ y|
         <tr>
           <td class="memname">void rotate_image </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
           <td class="paramname"><em>original</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
           <td class="paramname"><em>rotated</em>, </td>
         </tr>
         <tr>
@@ -1295,7 +1295,7 @@ y|
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a> *&#160;</td>
           <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
@@ -1466,7 +1466,7 @@ y|
 </div><div class="memdoc">
 
 <p>internal: parses a character from a font sprite sheet into glyph data. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>this currently only reads the red color channel, the source image should be grayscale anyway. Could check or average all channels just to be safe.</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000021">Todo:</a></b></dt><dd>this currently only reads the red color channel, the source image should be grayscale anyway. Could check or average all channels just to be safe.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>the glyph data to write to </td></tr>
@@ -1547,7 +1547,7 @@ y|
         <tr>
           <td class="memname">void draw_glyph </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
           <td class="paramname"><em>start</em>, </td>
         </tr>
         <tr>
@@ -1565,7 +1565,7 @@ y|
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td>
           <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
@@ -1598,7 +1598,7 @@ y|
         <tr>
           <td class="memname">void draw_text </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#af0ee9b6704f1841b6c367aa080abf0a5">SPRITE</a>&#160;</td>
           <td class="paramname"><em>buffer</em>, </td>
         </tr>
         <tr>
@@ -1628,7 +1628,7 @@ y|
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#a4b5014034c9aac136ab8c82c2d16dc82">COLOR</a>&#160;</td>
           <td class="paramname"><em>color</em>, </td>
         </tr>
         <tr>
@@ -1658,7 +1658,7 @@ y|
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>warn about exceeding width, then either do a line break or clip current line </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo:</a></b></dt><dd>warn about exceeding width, then either do a line break or clip current line </dd></dl>
 
 </div>
 </div>
@@ -1754,7 +1754,7 @@ y|
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="include_2graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a> create_graphics_fs_buffer </td>
+          <td class="memname"><a class="el" href="graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a> create_graphics_fs_buffer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1803,7 +1803,7 @@ y|
         <tr>
           <td class="memname">EFI_STATUS graphics_fs_blt </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="include_2graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="graphics_8h.html#aa6e491927194fbb57c6cc5531f93d2f1">GFX_BUFFER</a>&#160;</td>
           <td class="paramname"><em>buffer</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1886,7 +1886,7 @@ y|
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 12:04:05 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

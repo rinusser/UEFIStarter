@@ -11,6 +11,6 @@ var searchData=
   ['flake_5fmax_5fcross_5fspeed',['FLAKE_MAX_CROSS_SPEED',['../snow_8c.html#a94c2adb351c4adbd56d01d15b89db549',1,'snow.c']]],
   ['flake_5fscreen_5fheight',['FLAKE_SCREEN_HEIGHT',['../snow_8c.html#acc8dd46835761c0e4c6ec0e50afde948',1,'snow.c']]],
   ['flake_5fscreen_5fwidth',['FLAKE_SCREEN_WIDTH',['../snow_8c.html#a641bb45154ea042bc893b4dba2b3bbaa',1,'snow.c']]],
-  ['ftowcs_5fmax_5fvalue',['FTOWCS_MAX_VALUE',['../library_2string_8c.html#a96025c0bc6cb73c2d12efe976ff0c907',1,'string.c']]],
-  ['ftowcs_5fmin_5fvalue',['FTOWCS_MIN_VALUE',['../library_2string_8c.html#a53cccd8acf8f92e2b1a65840026f9559',1,'string.c']]]
+  ['ftowcs_5fmax_5fvalue',['FTOWCS_MAX_VALUE',['../library_2core_2string_8c.html#a96025c0bc6cb73c2d12efe976ff0c907',1,'string.c']]],
+  ['ftowcs_5fmin_5fvalue',['FTOWCS_MIN_VALUE',['../library_2core_2string_8c.html#a53cccd8acf8f92e2b1a65840026f9559',1,'string.c']]]
 ];

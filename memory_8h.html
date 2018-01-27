@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UEFIStarter: include/memory.h File Reference</title>
+<title>UEFIStarter: include/UEFIStarter/core/memory.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,7 +59,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_156cdec00affffc5d989f3046081ba69.html">UEFIStarter</a></li><li class="navelem"><a class="el" href="dir_1df31aa6bf822e925d5ff373881b3362.html">core</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -365,14 +365,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memo
 </div><div class="memdoc">
 
 <p>Starts tracking a pool memory address. </p>
-<p>Once pool memory is tracked the next call to <a class="el" href="library_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> will free all currently tracked pool memory entries. Consider this function call to mean "I don't need this piece of memory anymore, free it whenever".</p>
+<p>Once pool memory is tracked the next call to <a class="el" href="library_2core_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> will free all currently tracked pool memory entries. Consider this function call to mean "I don't need this piece of memory anymore, free it whenever".</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">address</td><td>the start of the pool memory</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>implement linked list for pool memory tracking </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>implement linked list for pool memory tracking </dd></dl>
 
 </div>
 </div>
@@ -414,14 +414,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memo
 <p>Stops tracking all memory. </p>
 <p>This will log errors if there are unfreed memory pages.</p>
 <dl class="section return"><dt>Returns</dt><dd>the number of errors, 0 if there were no tracked memory pages remaining </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd>the <a class="el" href="library_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd>the <a class="el" href="library_2core_2memory_8c.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 26 2018 20:29:26 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 27 2018 12:04:05 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
