@@ -17,8 +17,8 @@
 #ifndef __AC97_H
 #define __AC97_H
 
-#include "../include/pci.h"
-#include "../include/cmdline.h"
+#include <UEFIStarter/pci.h>
+#include <UEFIStarter/core/cmdline.h>
 
 
 #define AC97_BUFFER_COUNT 32 /**< number of audio data buffers, up to 32 supported by AC'97 specs */

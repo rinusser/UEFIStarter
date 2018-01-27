@@ -12,9 +12,9 @@
 #include <Library/UefiBootServicesTableLib.h>
 #include <Protocol/SimpleFileSystem.h>
 #include <Guid/FileInfo.h>
-#include "../include/files.h"
-#include "../include/memory.h"
-#include "../include/logger.h"
+#include <UEFIStarter/core/files.h>
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/logger.h>
 
 /**
  * Opens a handle for the first filesystem root.

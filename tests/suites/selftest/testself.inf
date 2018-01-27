@@ -7,10 +7,6 @@
   ENTRY_POINT = ShellCEntryLib
 
 [Sources]
-  ../../framework/tests.c
-  ../../framework/asserts.c
-  ../../framework/output.c
-  ../../framework/graphics.c
   generated/runner.c
   asserts.c
   runner.c
@@ -20,16 +16,16 @@
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec
   StdLib/StdLib.dec
+  UEFIStarter/UEFIStarter.dec
 
 [LibraryClasses]
   UefiLib
   ShellCEntryLib
   LibMath
   StdLib
-  console
-  cmdline
-  string
-  graphics
+  UEFIStarterCore
+  UEFIStarterGraphics
+  UEFIStarterTests
 
 [Guids]
 

@@ -12,9 +12,9 @@
 #include <Library/UefiLib.h>
 #include <Library/BaseMemoryLib.h>
 #include <math.h>
-#include "../../../include/graphics.h"
-#include "../../../include/string.h"
-#include "../../framework/tests.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/graphics.h>
+#include <UEFIStarter/tests/tests.h>
 
 
 /******************

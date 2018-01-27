@@ -12,15 +12,12 @@
 [Packages]
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec
+  UEFIStarter/UEFIStarter.dec
 
 [LibraryClasses]
   UefiLib
   ShellCEntryLib
-  logger
-  cmdline
-  string
-  console
-  files
+  UEFIStarterCore
 
 [Guids]
 

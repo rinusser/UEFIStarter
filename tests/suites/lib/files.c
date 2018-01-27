@@ -10,9 +10,8 @@
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../../../include/files.h"
-#include "../../../include/memory.h"
-#include "../../framework/tests.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/tests/tests.h>
 
 /**
  * Makes sure get_file_content() works.

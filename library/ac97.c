@@ -14,10 +14,10 @@
 #include <Library/UefiLib.h>
 #include <Library/BaseMemoryLib.h>
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/ac97.h"
-#include "../include/memory.h"
-#include "../include/string.h"
-#include "../include/logger.h"
+#include <UEFIStarter/ac97.h>
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/string.h>
+#include <UEFIStarter/core/logger.h>
 
 
 /**

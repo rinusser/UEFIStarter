@@ -15,9 +15,7 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/console.h"
-#include "../include/cmdline.h"
-#include "../include/logger.h"
+#include <UEFIStarter/core.h>
 
 /** helper macro to access the "handle offset" command-line argument's value */
 #define ARG_HANDLE           _args[0].value.uint64

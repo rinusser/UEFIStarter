@@ -12,9 +12,9 @@
  */
 
 #include <Library/BaseMemoryLib.h>
-#include "../../include/string.h"
-#include "graphics.h"
-#include "asserts.h"
+#include <UEFIStarter/core/string.h>
+#include <UEFIStarter/tests/graphics.h>
+#include <UEFIStarter/tests/asserts.h>
 
 
 /**

@@ -9,7 +9,7 @@
  */
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../../framework/tests.h"
+#include <UEFIStarter/tests/tests.h>
 
 
 /**

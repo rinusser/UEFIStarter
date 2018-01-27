@@ -11,10 +11,10 @@
 #include <Library/UefiLib.h>
 #include <Library/BaseMemoryLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "../include/cmdline.h"
-#include "../include/memory.h"
-#include "../include/logger.h"
-#include "../include/string.h"
+#include <UEFIStarter/core/cmdline.h>
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/logger.h>
+#include <UEFIStarter/core/string.h>
 
 /**
  * (internal) performs check whether string is numeric

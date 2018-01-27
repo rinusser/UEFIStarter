@@ -14,12 +14,7 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/timestamp.h"
-#include "../include/string.h"
-#include "../include/cmdline.h"
-#include "../include/console.h"
-#include "../include/logger.h"
-#include "../include/memory.h"
+#include <UEFIStarter/core.h>
 
 //if defined, this will output the current crosswind speed
 //#define SHOW_CROSS_SPEED

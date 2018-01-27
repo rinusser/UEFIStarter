@@ -11,11 +11,11 @@
 #include <Library/UefiLib.h>
 #include <Library/BaseMemoryLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "tests.h"
-#include "asserts.h"
-#include "output.h"
-#include "../../include/logger.h"
-#include "../../include/string.h"
+#include <UEFIStarter/tests/tests.h>
+#include <UEFIStarter/tests/asserts.h>
+#include <UEFIStarter/tests/output.h>
+#include <UEFIStarter/core/logger.h>
+#include <UEFIStarter/core/string.h>
 
 
 /**

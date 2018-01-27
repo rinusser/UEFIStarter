@@ -11,8 +11,8 @@
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "../include/memory.h"
-#include "../include/logger.h"
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/logger.h>
 
 /** the number of pages required for each allocation list node */
 #define MEMORY_PAGE_LIST_PAGE_COUNT ((sizeof(memory_page_list_t)-1)/4096+1)

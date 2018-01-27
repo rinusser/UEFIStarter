@@ -8,8 +8,8 @@
  * \ingroup group_tests_runner
  */
 
-#include "output.h"
-#include "tests.h"
+#include <UEFIStarter/tests/output.h>
+#include <UEFIStarter/tests/tests.h>
 
 
 #if 0

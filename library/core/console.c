@@ -11,10 +11,10 @@
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "../include/console.h"
-#include "../include/memory.h"
-#include "../include/string.h"
-#include "../include/logger.h"
+#include <UEFIStarter/core/console.h>
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/string.h>
+#include <UEFIStarter/core/logger.h>
 
 
 /**

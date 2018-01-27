@@ -13,8 +13,8 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/ShellCEntryLib.h>
-#include "../include/console.h"
-#include "../include/pci.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/pci.h>
 
 
 /** helper macro to access the `-print-classes` argument value */

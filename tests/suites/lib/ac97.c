@@ -10,8 +10,8 @@
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../../../include/ac97.h"
-#include "../../framework/tests.h"
+#include <UEFIStarter/ac97.h>
+#include <UEFIStarter/tests/tests.h>
 
 
 /**

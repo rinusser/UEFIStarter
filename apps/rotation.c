@@ -15,12 +15,8 @@
 #include <Library/UefiBootServicesTableLib.h>
 #include <math.h>
 #include <stdio.h>
-#include "../include/graphics.h"
-#include "../include/memory.h"
-#include "../include/console.h"
-#include "../include/cmdline.h"
-#include "../include/timestamp.h"
-#include "../include/logger.h"
+#include <UEFIStarter/graphics.h>
+#include <UEFIStarter/core.h>
 
 
 /** additional buffer required to rotate image */

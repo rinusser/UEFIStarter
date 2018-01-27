@@ -28,7 +28,7 @@ generate() {
   echo "//This file was generated automatically by $0 at $now" >> $runner
   echo "" >> $runner
 
-  echo "#include \"../../../framework/tests.h\"" >> $runner
+  echo "#include <UEFIStarter/tests/tests.h>" >> $runner
   echo "" >> $runner
 
   for func in $funcs; do

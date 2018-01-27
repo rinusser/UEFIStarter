@@ -15,12 +15,12 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "../../include/memory.h"
-#include "../../include/logger.h"
-#include "../../include/cmdline.h"
-#include "../../include/string.h"
-#include "tests.h"
-#include "output.h"
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/logger.h>
+#include <UEFIStarter/core/cmdline.h>
+#include <UEFIStarter/core/string.h>
+#include <UEFIStarter/tests/tests.h>
+#include <UEFIStarter/tests/output.h>
 
 
 /** internal storage for the initial log level to set before each test */

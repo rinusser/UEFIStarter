@@ -20,12 +20,9 @@
 #include <Library/UefiLib.h>
 #include <Library/ShellCEntryLib.h>
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/cmdline.h"
-#include "../include/console.h"
-#include "../include/ac97.h"
-#include "../include/pci.h"
-#include "../include/memory.h"
-#include "../include/logger.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/ac97.h>
+#include <UEFIStarter/pci.h>
 
 
 /**

@@ -15,7 +15,7 @@
 #include "types.h"
 #include "asserts.h"
 #include "output.h"
-#include "../../include/console.h"
+#include <UEFIStarter/core/console.h>
 
 
 extern test_results_t individual_test_results;

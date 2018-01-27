@@ -11,9 +11,8 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "../../../include/memory.h"
-#include "../../../include/logger.h"
-#include "../../framework/tests.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/tests/tests.h>
 
 
 /**

@@ -41,16 +41,20 @@
   UefiHiiServicesLib|MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf
   StdLib|StdLib/LibC/StdLib/StdLib.inf
 
-  logger|UEFIStarter/library/logger.inf
-  cmdline|UEFIStarter/library/cmdline.inf
-  string|UEFIStarter/library/string.inf
-  console|UEFIStarter/library/console.inf
-  memory|UEFIStarter/library/memory.inf
-  timestamp|UEFIStarter/library/timestamp.inf
-  files|UEFIStarter/library/files.inf
-  pci|UEFIStarter/library/pci.inf
-  graphics|UEFIStarter/library/graphics.inf
-  ac97|UEFIStarter/library/ac97.inf
+  UEFIStarterCore|UEFIStarter/library/core.inf
+  logger|UEFIStarter/library/core/logger.inf
+  cmdline|UEFIStarter/library/core/cmdline.inf
+  string|UEFIStarter/library/core/string.inf
+  console|UEFIStarter/library/core/console.inf
+  memory|UEFIStarter/library/core/memory.inf
+  timestamp|UEFIStarter/library/core/timestamp.inf
+  files|UEFIStarter/library/core/files.inf
+
+  UEFIStarterPCI|UEFIStarter/library/pci.inf
+  UEFIStarterGraphics|UEFIStarter/library/graphics.inf
+  UEFIStarterAC97|UEFIStarter/library/ac97.inf
+
+  UEFIStarterTests|UEFIStarter/library/tests/tests.inf
 
 
 [Components]
@@ -65,16 +69,19 @@
   UEFIStarter/apps/rotation.inf
   UEFIStarter/apps/ac97.inf
 
-  UEFIStarter/library/logger.inf
-  UEFIStarter/library/cmdline.inf
-  UEFIStarter/library/string.inf
-  UEFIStarter/library/memory.inf
-  UEFIStarter/library/console.inf
-  UEFIStarter/library/timestamp.inf
-  UEFIStarter/library/files.inf
+  UEFIStarter/library/core/logger.inf
+  UEFIStarter/library/core/cmdline.inf
+  UEFIStarter/library/core/string.inf
+  UEFIStarter/library/core/memory.inf
+  UEFIStarter/library/core/console.inf
+  UEFIStarter/library/core/timestamp.inf
+  UEFIStarter/library/core/files.inf
+
   UEFIStarter/library/pci.inf
   UEFIStarter/library/graphics.inf
   UEFIStarter/library/ac97.inf
+
+  UEFIStarter/library/tests/tests.inf
 
   UEFIStarter/tests/suites/selftest/testself.inf
   UEFIStarter/tests/suites/lib/testlib.inf

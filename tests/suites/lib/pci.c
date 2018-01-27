@@ -10,8 +10,8 @@
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../../../include/pci.h"
-#include "../../framework/tests.h"
+#include <UEFIStarter/pci.h>
+#include <UEFIStarter/tests/tests.h>
 
 
 /** data type for test_find_pci_device_name() testcases */

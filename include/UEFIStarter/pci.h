@@ -14,7 +14,7 @@
 #include <Uefi.h>
 #include <Protocol/PciIo.h>
 #include <IndustryStandard/Pci.h>
-#include "logger.h"
+#include "core/logger.h"
 
 
 /** data type for PCI device subclass names */

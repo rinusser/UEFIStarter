@@ -9,9 +9,9 @@
  */
 
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/timestamp.h"
-#include "../include/logger.h"
-#include "../include/string.h"
+#include <UEFIStarter/core/timestamp.h>
+#include <UEFIStarter/core/logger.h>
+#include <UEFIStarter/core/string.h>
 
 
 //when defined the RDTSC assembly call details will be checked and logged.

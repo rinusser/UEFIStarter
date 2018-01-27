@@ -12,12 +12,12 @@
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
 #include <Library/BaseMemoryLib.h>
-#include "../include/graphics.h"
-#include "../include/memory.h"
-#include "../include/logger.h"
-#include "../include/cmdline.h"
-#include "../include/timestamp.h"
-#include "../include/string.h"
+#include <UEFIStarter/graphics.h>
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/logger.h>
+#include <UEFIStarter/core/cmdline.h>
+#include <UEFIStarter/core/timestamp.h>
+#include <UEFIStarter/core/string.h>
 
 
 EFI_GRAPHICS_OUTPUT_PROTOCOL *graphics_protocol;     /**< UEFI's graphics output protocol */

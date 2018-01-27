@@ -13,8 +13,7 @@
 #include <Library/UefiLib.h>
 #include <Library/ShellCEntryLib.h>
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/cmdline.h"
-#include "../include/console.h"
+#include <UEFIStarter/core.h>
 
 /**
  * Main function, gets invoked by UEFI shell.

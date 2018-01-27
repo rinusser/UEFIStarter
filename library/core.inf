@@ -1,0 +1,26 @@
+[Defines]
+  INF_VERSION = 1.25
+  BASE_NAME = core
+  FILE_GUID = 871898a8-41d5-4fa5-a813-f6bea9f00019
+  MODULE_TYPE = UEFI_DRIVER
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS = UEFIStarterCore|UEFI_APPLICATION UEFI_DRIVER DXE_RUNTIME_DRIVER DXE_DRIVER
+
+[Sources]
+  core/core.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  UEFIStarter/UEFIStarter.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiBootServicesTableLib
+  IoLib
+  cmdline
+  console
+  files
+  timestamp
+  string
+  memory
+  logger

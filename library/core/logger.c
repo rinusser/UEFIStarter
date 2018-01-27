@@ -10,7 +10,7 @@
 
 #include <Library/UefiLib.h>
 #include <Library/MemoryAllocationLib.h>
-#include "../include/logger.h"
+#include <UEFIStarter/core/logger.h>
 
 
 /** list of log level's printable names */

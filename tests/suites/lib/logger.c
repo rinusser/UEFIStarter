@@ -10,8 +10,8 @@
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../../../include/logger.h"
-#include "../../framework/tests.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/tests/tests.h>
 
 /**
  * The number of entries in the log counter array.

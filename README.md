@@ -145,8 +145,7 @@ If you want to start a new EDK2 project based on UEFIStarter from scratch you cu
 * edit Conf/target.txt (relative from your edk2 sources root) and change ACTIVE\_PLATFORM to your new .dsc file
 * edit Makefile.edk and change the project name and paths
 * replace the Makefile link in your edk2 sources root with a new link to your project's
-* (if you want to use the test framework you'll currently need to copy it or change the reference paths in .c, .h and
-  suite's .inf file; either way, you currently also need to change the paths in tools/\*.sh)
+* if you want to use the test framework you'll currently need to copy the tools/ scripts (and change the paths in them)
 
 These steps will be simplified and automated later. If you're unfamiliar with EDK2 it's easier to just make changes to
 your local copy of UEFIStarter for now, e.g. in a new git branch.

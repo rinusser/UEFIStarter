@@ -13,17 +13,15 @@
   MdePkg/MdePkg.dec
   ShellPkg/ShellPkg.dec
   StdLib/StdLib.dec
+  UEFIStarter/UEFIStarter.dec
 
 [LibraryClasses]
   UefiLib
   ShellCEntryLib
   UefiBootServicesTableLib
   LibMath
-  logger
-  console
-  cmdline
-  graphics
-  timestamp
+  UEFIStarterCore
+  UEFIStarterGraphics
 
 [Guids]
 

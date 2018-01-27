@@ -13,9 +13,9 @@
 
 #include <Uefi.h>
 #include <Protocol/GraphicsOutput.h>
-#include "cmdline.h"
-#include "files.h"
-#include "logger.h"
+#include "core/cmdline.h"
+#include "core/files.h"
+#include "core/logger.h"
 
 #define COLOR      EFI_GRAPHICS_OUTPUT_BLT_PIXEL    /**< shortcut macro: indicates pixel data is intended to be used as paint color */
 #define SPRITE     EFI_GRAPHICS_OUTPUT_BLT_PIXEL *  /**< shortcut macro: indicates pixel data is intended to be as a drawable image */

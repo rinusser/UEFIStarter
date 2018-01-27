@@ -9,8 +9,8 @@
  */
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../../framework/tests.h"
-#include "../../framework/graphics.h"
+#include <UEFIStarter/tests/tests.h>
+#include <UEFIStarter/tests/graphics.h>
 
 
 /**

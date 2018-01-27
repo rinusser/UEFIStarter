@@ -11,10 +11,7 @@
 #include <Uefi.h>
 #include <Library/UefiLib.h>
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/console.h"
-#include "../include/string.h"
-#include "../include/timestamp.h"
-#include "../include/logger.h"
+#include <UEFIStarter/core.h>
 
 
 /**

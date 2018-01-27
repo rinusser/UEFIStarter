@@ -9,7 +9,7 @@
  */
 
 #include <Uefi.h>
-#include "../../include/graphics.h"
+#include <UEFIStarter/graphics.h>
 
 
 /** shortcut macro for pixel's size in bytes */

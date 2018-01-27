@@ -10,8 +10,7 @@
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../include/console.h"
-#include "../include/logger.h"
+#include <UEFIStarter/core.h>
 
 
 /**

@@ -10,11 +10,8 @@
 
 #include <Uefi.h>
 #include <Library/UefiLib.h>
-#include "../../../include/string.h"
-#include "../../../include/logger.h"
-#include "../../../include/memory.h"
-#include "../../../include/cmdline.h"
-#include "../../framework/tests.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/tests/tests.h>
 
 
 /** data structure for wctype_* function test cases */

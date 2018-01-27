@@ -25,15 +25,8 @@
 #include <Library/ShellCEntryLib.h>
 #include <Library/UefiBootServicesTableLib.h>
 #include <Library/BaseMemoryLib.h>
-#include "../include/cmdline.h"
-#include "../include/console.h"
-#include "../include/graphics.h"
-#include "../include/console.h"
-#include "../include/cmdline.h"
-#include "../include/memory.h"
-#include "../include/logger.h"
-#include "../include/timestamp.h"
-#include "../include/string.h"
+#include <UEFIStarter/core.h>
+#include <UEFIStarter/graphics.h>
 
 
 #define ARG_SKIP_BARS     _argument_list[0].value.uint64 /**< helper macro to access the "-skip-bars" command-line argument */

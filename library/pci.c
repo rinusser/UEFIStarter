@@ -13,11 +13,11 @@
 #include <Library/UefiLib.h>
 #include <Library/BaseMemoryLib.h>
 #include <Library/UefiBootServicesTableLib.h>
-#include "../include/pci.h"
-#include "../include/memory.h"
-#include "../include/files.h"
-#include "../include/string.h"
-#include "../include/logger.h"
+#include <UEFIStarter/pci.h>
+#include <UEFIStarter/core/memory.h>
+#include <UEFIStarter/core/files.h>
+#include <UEFIStarter/core/string.h>
+#include <UEFIStarter/core/logger.h>
 
 
 /** the highest number of PCI device entries supported */
