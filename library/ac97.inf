@@ -18,9 +18,7 @@
   UefiBootServicesTableLib
   IoLib
   PciLib
-  logger
-  memory
-  files
+  UEFIStarterCore
 
 [Guids]
 
