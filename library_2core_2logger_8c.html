@@ -92,9 +92,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a6e4d847cb0481c628771ee7c18bdaa80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a6e4d847cb0481c628771ee7c18bdaa80">set_log_level</a> (<a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a> level)</td></tr>
 <tr class="memdesc:a6e4d847cb0481c628771ee7c18bdaa80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new log level.  <a href="#a6e4d847cb0481c628771ee7c18bdaa80">More...</a><br /></td></tr>
 <tr class="separator:a6e4d847cb0481c628771ee7c18bdaa80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea2f85cf689a84eaa31f989c0528a7f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#aea2f85cf689a84eaa31f989c0528a7f7">log_print</a> (CHAR16 *level, CHAR16 *msg)</td></tr>
-<tr class="memdesc:aea2f85cf689a84eaa31f989c0528a7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default log writer: prints to text console.  <a href="#aea2f85cf689a84eaa31f989c0528a7f7">More...</a><br /></td></tr>
-<tr class="separator:aea2f85cf689a84eaa31f989c0528a7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039bd7c84906909411f82023b2b5f633"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a039bd7c84906909411f82023b2b5f633">log_print</a> (<a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a> level, CHAR16 *msg)</td></tr>
+<tr class="memdesc:a039bd7c84906909411f82023b2b5f633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default log writer: prints to text console.  <a href="#a039bd7c84906909411f82023b2b5f633">More...</a><br /></td></tr>
+<tr class="separator:a039bd7c84906909411f82023b2b5f633"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9543ef02c75d8633494685911b5098"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#aae9543ef02c75d8633494685911b5098">_logger_function_va</a> (<a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a> level, UINT16 *message, VA_LIST <a class="el" href="rotation_8c.html#ae47c27a72953843205dc0711f1ce4a7a">args</a>)</td></tr>
 <tr class="memdesc:aae9543ef02c75d8633494685911b5098"><td class="mdescLeft">&#160;</td><td class="mdescRight">internal: formats log message and calls log writer with final string to log.  <a href="#aae9543ef02c75d8633494685911b5098">More...</a><br /></td></tr>
 <tr class="separator:aae9543ef02c75d8633494685911b5098"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -122,16 +122,16 @@ Functions</h2></td></tr>
 <tr class="memitem:aae9d52caad9fb2892deeb25596cfd2ab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#aae9d52caad9fb2892deeb25596cfd2ab">kill</a> ()</td></tr>
 <tr class="memdesc:aae9d52caad9fb2892deeb25596cfd2ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Immediately halts the UEFI environment.  <a href="#aae9d52caad9fb2892deeb25596cfd2ab">More...</a><br /></td></tr>
 <tr class="separator:aae9d52caad9fb2892deeb25596cfd2ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dee204fcabca60c9e421ca84fca8e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#a4b9a473d8a6274cf6c9ffb1c8c43ed12">logger_print_function_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a8dee204fcabca60c9e421ca84fca8e37">set_logger_function</a> (<a class="el" href="logger_8h.html#a4b9a473d8a6274cf6c9ffb1c8c43ed12">logger_print_function_t</a> *func)</td></tr>
+<tr class="memitem:a8dee204fcabca60c9e421ca84fca8e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#abaf5a923c687f5cfba109bcfe5856e89">logger_print_function_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a8dee204fcabca60c9e421ca84fca8e37">set_logger_function</a> (<a class="el" href="logger_8h.html#abaf5a923c687f5cfba109bcfe5856e89">logger_print_function_t</a> *func)</td></tr>
 <tr class="memdesc:a8dee204fcabca60c9e421ca84fca8e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new log writer.  <a href="#a8dee204fcabca60c9e421ca84fca8e37">More...</a><br /></td></tr>
 <tr class="separator:a8dee204fcabca60c9e421ca84fca8e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a88c136a169bc517bde0e093db7eac349"><td class="memItemLeft" align="right" valign="top"><a id="a88c136a169bc517bde0e093db7eac349"></a>
-static CHAR16 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a88c136a169bc517bde0e093db7eac349">logger_level_names</a> [] ={L&quot;&quot;,L&quot;ERROR&quot;,L&quot;WARN&quot;,L&quot;INFO&quot;,L&quot;DEBUG&quot;,L&quot;TRACE&quot;}</td></tr>
-<tr class="memdesc:a88c136a169bc517bde0e093db7eac349"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of log level's printable names <br /></td></tr>
-<tr class="separator:a88c136a169bc517bde0e093db7eac349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50587bc5ca5607598d919df9bfed2d0f"><td class="memItemLeft" align="right" valign="top"><a id="a50587bc5ca5607598d919df9bfed2d0f"></a>
+const CHAR16 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a50587bc5ca5607598d919df9bfed2d0f">logger_level_names</a> [] ={L&quot;&quot;,L&quot;ERROR&quot;,L&quot;WARN&quot;,L&quot;INFO&quot;,L&quot;DEBUG&quot;,L&quot;TRACE&quot;}</td></tr>
+<tr class="memdesc:a50587bc5ca5607598d919df9bfed2d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">list of log level's printable names <br /></td></tr>
+<tr class="separator:a50587bc5ca5607598d919df9bfed2d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5f6241a327ccceab6c221cca710736b"><td class="memItemLeft" align="right" valign="top"><a id="af5f6241a327ccceab6c221cca710736b"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#af5f6241a327ccceab6c221cca710736b">logging_threshold</a> =<a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130aa7fa27e82c6c4f69434225ed81e5d151e">TRACE</a></td></tr>
 <tr class="memdesc:af5f6241a327ccceab6c221cca710736b"><td class="mdescLeft">&#160;</td><td class="mdescRight">current log level; anything higher that won't be logged <br /></td></tr>
@@ -141,7 +141,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memdesc:ab4ed22e44749ee3b46ef542f3eb47b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">numbers of logged messages for each log level <br /></td></tr>
 <tr class="separator:ab4ed22e44749ee3b46ef542f3eb47b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a549c290c34527ed65ef5ac5993185cb9"><td class="memItemLeft" align="right" valign="top"><a id="a549c290c34527ed65ef5ac5993185cb9"></a>
-<a class="el" href="logger_8h.html#a4b9a473d8a6274cf6c9ffb1c8c43ed12">logger_print_function_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a549c290c34527ed65ef5ac5993185cb9">logger_print_func</a> =<a class="el" href="library_2core_2logger_8c.html#aea2f85cf689a84eaa31f989c0528a7f7">log_print</a></td></tr>
+<a class="el" href="logger_8h.html#abaf5a923c687f5cfba109bcfe5856e89">logger_print_function_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#a549c290c34527ed65ef5ac5993185cb9">logger_print_func</a> =<a class="el" href="library_2core_2logger_8c.html#a039bd7c84906909411f82023b2b5f633">log_print</a></td></tr>
 <tr class="memdesc:a549c290c34527ed65ef5ac5993185cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer to the current log writer <br /></td></tr>
 <tr class="separator:a549c290c34527ed65ef5ac5993185cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab15722f3fa88851610e6bafc90bd014"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structloggers__t.html">loggers_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="library_2core_2logger_8c.html#aab15722f3fa88851610e6bafc90bd014">LOG</a></td></tr>
@@ -242,8 +242,8 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
-<a id="aea2f85cf689a84eaa31f989c0528a7f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea2f85cf689a84eaa31f989c0528a7f7">&#9670;&nbsp;</a></span>log_print()</h2>
+<a id="a039bd7c84906909411f82023b2b5f633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039bd7c84906909411f82023b2b5f633">&#9670;&nbsp;</a></span>log_print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +251,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
         <tr>
           <td class="memname">void log_print </td>
           <td>(</td>
-          <td class="paramtype">CHAR16 *&#160;</td>
+          <td class="paramtype"><a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a>&#160;</td>
           <td class="paramname"><em>level</em>, </td>
         </tr>
         <tr>
@@ -632,9 +632,9 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="logger_8h.html#a4b9a473d8a6274cf6c9ffb1c8c43ed12">logger_print_function_t</a>* set_logger_function </td>
+          <td class="memname"><a class="el" href="logger_8h.html#abaf5a923c687f5cfba109bcfe5856e89">logger_print_function_t</a>* set_logger_function </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="logger_8h.html#a4b9a473d8a6274cf6c9ffb1c8c43ed12">logger_print_function_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="logger_8h.html#abaf5a923c687f5cfba109bcfe5856e89">logger_print_function_t</a> *&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -679,7 +679,7 @@ static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 27 2018 21:26:52 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 29 2018 00:04:02 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

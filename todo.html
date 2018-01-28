@@ -64,8 +64,6 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000027"></a>Global <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725">_counting_logger</a>  (CHAR16 *level, CHAR16 *msg)</dt>
-<dd>there <em>has</em> to be a better way to match log levels.. maybe add numeric level to print function?  </dd>
 <dt><a class="anchor" id="_todo000014"></a>Global <a class="el" href="library_2core_2memory_8c.html#a0479354cc6d998e88f047845028bf222">_get_next_free_entry</a>  (<a class="el" href="structmemory__page__list__t.html" title="type for a list node of tracked memory page allocations ">memory_page_list_t</a> **page_list, UINTN *index)</dt>
 <dd>if there's a next page_list, check that. if not, allocate new page_list and link to it  </dd>
 <dt><a class="anchor" id="_todo000021"></a>Global <a class="el" href="library_2graphics_8c.html#a97bc287acdc7fd004881b856d95a4821">_parse_glyph_data</a>  (UINT8 *data, <a class="el" href="structimage__t.html" title="data type for image data, size is dynamic ">image_t</a> *image, unsigned int left, unsigned int top)</dt>
@@ -112,7 +110,7 @@ $(function() {
 <dd>the <a class="el" href="memory_8h.html#a137cc84f85ede3cd2586385c437fbb76" title="Frees all currently tracked pool memory entries. ">free_pool_memory_entries()</a> call was at the end of this function - make sure there aren't any side-effects from calling this before the NULL check below  </dd>
 <dt><a class="anchor" id="_todo000026"></a>Global <a class="el" href="tests_2suites_2lib_2files_8c.html#a54e8355e5435a53f5c9dd57e3afafd26">test_get_file_contents</a>  ()</dt>
 <dd>read a file that's guaranteed to exist, e.g. the currently running .efi, instead of startup.nsh.  </dd>
-<dt><a class="anchor" id="_todo000028"></a>Global <a class="el" href="tests_2suites_2selftest_2asserts_8c.html#a89bcf76ed80de320ba177bb1851ac640">test_graphics</a>  ()</dt>
+<dt><a class="anchor" id="_todo000027"></a>Global <a class="el" href="tests_2suites_2selftest_2asserts_8c.html#a89bcf76ed80de320ba177bb1851ac640">test_graphics</a>  ()</dt>
 <dd>move this to the graphics tests, once they're in this repository  </dd>
 <dt><a class="anchor" id="_todo000025"></a>File <a class="el" href="tests_8c.html">tests.c</a>  </dt>
 <dd><p class="startdd">add pause-on-error/incomplete feature </p>
@@ -126,7 +124,7 @@ $(function() {
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 27 2018 21:26:52 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 29 2018 00:04:02 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

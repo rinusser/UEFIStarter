@@ -11,7 +11,7 @@ var searchData=
   ['_5fassert_5flog_5fcounts',['_assert_log_counts',['../tests_2suites_2lib_2logger_8c.html#abaeeea6af3a3cb18f3f96f38c881eae4',1,'logger.c']]],
   ['_5fcombine_5foutcomes',['_combine_outcomes',['../tests_8c.html#a465511c2976279e5124737f32c9403e1',1,'tests.c']]],
   ['_5fcos',['_cos',['../library_2graphics_8c.html#ae809d399c42b81dc3b99c9497cf8b7af',1,'graphics.c']]],
-  ['_5fcounting_5flogger',['_counting_logger',['../tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725',1,'logger.c']]],
+  ['_5fcounting_5flogger',['_counting_logger',['../tests_2suites_2lib_2logger_8c.html#ac5fb191a77941bb1ada351e0280108a2',1,'logger.c']]],
   ['_5fdebug',['_debug',['../library_2core_2logger_8c.html#adfb7e311f8189642e6f0d18d4ea68b5e',1,'logger.c']]],
   ['_5fdetermine_5fmaximum_5fmaster_5fvolume',['_determine_maximum_master_volume',['../library_2ac97_8c.html#a7230886ef4e0842401a46cc8db573609',1,'ac97.c']]],
   ['_5fdo_5frotation_5fchecks',['_do_rotation_checks',['../tests_2suites_2lib_2graphics_8c.html#a4f5ee377eea1831e0fcea3b45c5790a2',1,'graphics.c']]],

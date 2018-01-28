@@ -91,9 +91,9 @@ Functions</h2></td></tr>
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a05add72887ab237a563fe8f9ce9769d1">_reset_log_counts</a> ()</td></tr>
 <tr class="memdesc:a05add72887ab237a563fe8f9ce9769d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset's the log message counters to 0. <br /></td></tr>
 <tr class="separator:a05add72887ab237a563fe8f9ce9769d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fbbe49bc180d0fc5b9a3bfe081c725"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725">_counting_logger</a> (CHAR16 *level, CHAR16 *msg)</td></tr>
-<tr class="memdesc:a04fbbe49bc180d0fc5b9a3bfe081c725"><td class="mdescLeft">&#160;</td><td class="mdescRight">A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entries were generated at which log level.  <a href="#a04fbbe49bc180d0fc5b9a3bfe081c725">More...</a><br /></td></tr>
-<tr class="separator:a04fbbe49bc180d0fc5b9a3bfe081c725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fb191a77941bb1ada351e0280108a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#ac5fb191a77941bb1ada351e0280108a2">_counting_logger</a> (<a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a> level, CHAR16 *msg)</td></tr>
+<tr class="memdesc:ac5fb191a77941bb1ada351e0280108a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entries were generated at which log level.  <a href="#ac5fb191a77941bb1ada351e0280108a2">More...</a><br /></td></tr>
+<tr class="separator:ac5fb191a77941bb1ada351e0280108a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaeeea6af3a3cb18f3f96f38c881eae4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#abaeeea6af3a3cb18f3f96f38c881eae4">_assert_log_counts</a> (UINTN error, UINTN warn, UINTN info, UINTN debug, UINTN trace)</td></tr>
 <tr class="memdesc:abaeeea6af3a3cb18f3f96f38c881eae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assertion for log counters.  <a href="#abaeeea6af3a3cb18f3f96f38c881eae4">More...</a><br /></td></tr>
 <tr class="separator:abaeeea6af3a3cb18f3f96f38c881eae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,7 +107,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a48222912b8d99a96726d91c3a160e8fa"><td class="memItemLeft" align="right" valign="top">static UINTN&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tests_2suites_2lib_2logger_8c.html#a48222912b8d99a96726d91c3a160e8fa">_log_counts</a> [<a class="el" href="tests_2suites_2lib_2logger_8c.html#a9fca5b5cbb9666f431d1af4b02d3d2d8">LOG_COUNT_ENTRIES</a>]</td></tr>
-<tr class="memdesc:a48222912b8d99a96726d91c3a160e8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal storage for the <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725" title="A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entr...">_counting_logger()</a> function.  <a href="#a48222912b8d99a96726d91c3a160e8fa">More...</a><br /></td></tr>
+<tr class="memdesc:a48222912b8d99a96726d91c3a160e8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal storage for the <a class="el" href="tests_2suites_2lib_2logger_8c.html#ac5fb191a77941bb1ada351e0280108a2" title="A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entr...">_counting_logger()</a> function.  <a href="#a48222912b8d99a96726d91c3a160e8fa">More...</a><br /></td></tr>
 <tr class="separator:a48222912b8d99a96726d91c3a160e8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -135,8 +135,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a04fbbe49bc180d0fc5b9a3bfe081c725"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04fbbe49bc180d0fc5b9a3bfe081c725">&#9670;&nbsp;</a></span>_counting_logger()</h2>
+<a id="ac5fb191a77941bb1ada351e0280108a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5fb191a77941bb1ada351e0280108a2">&#9670;&nbsp;</a></span>_counting_logger()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +147,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">static void _counting_logger </td>
           <td>(</td>
-          <td class="paramtype">CHAR16 *&#160;</td>
+          <td class="paramtype"><a class="el" href="logger_8h.html#acc58a0a25bf6982de2b101803e46130a">LOGLEVEL</a>&#160;</td>
           <td class="paramname"><em>level</em>, </td>
         </tr>
         <tr>
@@ -177,7 +177,6 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd>there <em>has</em> to be a better way to match log levels.. maybe add numeric level to print function? </dd></dl>
 
 </div>
 </div>
@@ -314,7 +313,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Internal storage for the <a class="el" href="tests_2suites_2lib_2logger_8c.html#a04fbbe49bc180d0fc5b9a3bfe081c725" title="A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entr...">_counting_logger()</a> function. </p>
+<p>Internal storage for the <a class="el" href="tests_2suites_2lib_2logger_8c.html#ac5fb191a77941bb1ada351e0280108a2" title="A (mostly silent) log printer: instead of showing messages somewhere it just counts how many log entr...">_counting_logger()</a> function. </p>
 <p>Contains the number of entries issued per log level. </p>
 
 </div>
@@ -322,7 +321,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 27 2018 21:26:52 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 29 2018 00:04:02 for UEFIStarter by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>
