@@ -14,7 +14,7 @@
 
 
 /** list of log level's printable names */
-static CHAR16 *logger_level_names[]={L"",L"ERROR",L"WARN",L"INFO",L"DEBUG",L"TRACE"};
+const CHAR16 *logger_level_names[]={L"",L"ERROR",L"WARN",L"INFO",L"DEBUG",L"TRACE"};
 
 /** current log level; anything higher that won't be logged */
 static int logging_threshold=TRACE;
@@ -53,9 +53,9 @@ LOGLEVEL set_log_level(LOGLEVEL level)
  * \param level the log level to log at
  * \param msg   the log message, as UTF-16
  */
-void log_print(CHAR16 *level, CHAR16 *msg)
+void log_print(LOGLEVEL level, CHAR16 *msg)
 {
-  Print(L"%s: %s\n",level,msg);
+  Print(L"%s: %s\n",logger_level_names[level],msg);
 }
 
 /** pointer to the current log writer */
@@ -78,7 +78,7 @@ static void _logger_function_va(LOGLEVEL level, UINT16 *message, VA_LIST args)
     return;
 
   msg=CatVSPrint(NULL,message,args);
-  logger_print_func(logger_level_names[level],msg);
+  logger_print_func(level,msg);
   FreePool(msg);
 }
 

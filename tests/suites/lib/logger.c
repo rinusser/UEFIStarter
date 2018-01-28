@@ -42,21 +42,9 @@ static void _reset_log_counts()
  * \param level the entry's log level
  * \param msg   the entry's log message
  */
-static void _counting_logger(CHAR16 *level, CHAR16 *msg)
+static void _counting_logger(LOGLEVEL level, CHAR16 *msg)
 {
-  /** \XXX there _has_ to be a better way to match log levels.. maybe add numeric level to print function? */
-  if(StrCmp(level,L"ERROR")==0)
-    _log_counts[ERROR]++;
-  else if(StrCmp(level,L"WARN")==0)
-    _log_counts[WARN]++;
-  else if(StrCmp(level,L"INFO")==0)
-    _log_counts[INFO]++;
-  else if(StrCmp(level,L"DEBUG")==0)
-    _log_counts[DEBUG]++;
-  else if(StrCmp(level,L"TRACE")==0)
-    _log_counts[TRACE]++;
-  else
-    ErrorPrint(L"unhandled level \"%s\"\n",level);
+  _log_counts[level]++;
 }
 
 /**

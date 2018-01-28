@@ -74,9 +74,9 @@ ARG_GROUP(tests_arggroup,tests_args,L"Test options")
  * \param level the log entry's log level
  * \param msg   the log entry's message
  */
-void log_errorprint(CHAR16 *level, CHAR16 *msg)
+void log_errorprint(LOGLEVEL level, CHAR16 *msg)
 {
-  ErrorPrint(L"%s: %s\n",level,msg);
+  ErrorPrint(L"%s: %s\n",logger_level_names[level],msg);
 }
 
 

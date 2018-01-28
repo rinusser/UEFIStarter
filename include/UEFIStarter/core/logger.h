@@ -49,13 +49,16 @@ typedef enum
   TRACE   /**< trace messages:       something breaks and I don't know what or where */
 } LOGLEVEL;
 
+extern const CHAR16 *logger_level_names[];
+
+
 /**
  * function pointer for log output functions
  *
  * \param level the log level to output at
  * \param msg the log message to print, as UTF-16
  */
-typedef void logger_print_function_t(CHAR16 *level, CHAR16 *msg);
+typedef void logger_print_function_t(LOGLEVEL level, CHAR16 *msg);
 
 /**
  * function pointer for logging functions to be invoked directly
